@@ -81,7 +81,7 @@ body {
 
 h1 {
   font-family: 'Cereal';
-  font-size: 22px !important;
+  font-size: 22px; 
   font-weight: 900;
   color: $indigo2;
 }
@@ -190,10 +190,14 @@ h6 {
     padding: 1.5rem;
     transition: all 0s ease-in-out;
     width: 2.5rem;
+    border-right: 2px solid $indigo3;
+    margin-right: -2px;
 
     &:hover {
       background: $indigo2;
       color: #fff;
+      border-right: 2px solid $indigo3;
+      margin-right: -2px;
     }
   }
 
@@ -325,8 +329,8 @@ h6 {
         flex-direction: row;
         height: 2.2rem;
         justify-content: center;
-        margin-bottom: 1.5rem;
-        margin-top: 1.5rem;
+        margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
 
         svg {
           stroke: $indigo2;
@@ -369,6 +373,42 @@ h6 {
     }
   }
 }
+
+
+.filters {
+  height: 4rem !important;
+  text-align: right;
+  background: $indigo2 !important;
+  color: $indigo1 !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: Cereal;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  align-content:right;
+  padding-bottom: 1rem;
+
+  h1{
+    position: absolute;
+    top:0.005rem;
+    right: 5%;
+    padding-bottom:0.5rem;
+    align-self:right;
+    color:$indigo1;
+    font-size: 2rem;
+  }
+}
+
+
+   
+
+
+
+
 
 
 
@@ -432,4 +472,9 @@ h6 {
     opacity: 0;
     transform: translateY(20px);
   }
+}
+
+
+app-bar{
+  margin-left: 5rem;
 }

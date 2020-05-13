@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
+import Appbar from './components/appbar';
 import './App.css';
 
 function App() {
@@ -73,6 +74,9 @@ function App() {
                     )}
                 />
             </Router>
+            <main>
+                <Appbar />
+            </main>
         </div>
     );
 }
