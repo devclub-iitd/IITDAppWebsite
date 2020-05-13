@@ -1,38 +1,305 @@
+body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    margin: 0;
+    padding: 0;
+    background-color: #e8eaf6;
+}
+
+h1 {
+    font-family: 'Cereal';
+    font-size: 22px !important;
+    font-weight: 900;
+    color: #9ea9ec;
+}
+
+h2 {
+    font-family: 'Cereal';
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'Cereal';
+    font-size: 14px !important;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: 'Cereal';
+    font-size: 13px !important;
+    font-weight: 900;
+}
+
+h5 {
+    font-family: 'Cereal';
+    font-size: 12px !important;
+    font-weight: 900;
+}
+
+h6 {
+    font-family: 'Cereal';
+    font-size: 11px !important;
+    font-weight: 600;
+}
+
 .App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    background-color: #282c34;
     min-height: 100vh;
+}
+
+.switch-wrapper {
+    position: relative;
+}
+
+.switch-wrapper > div {
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    width: 100%;
+}
+
+.arrow-up {
+    border-bottom: 5px solid #4051b5;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-left: 0.25rem;
+}
+
+.arrow-down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #9ea9ec;
+    margin-left: 0.25rem;
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+.Navbar > * {
+    align-self: center;
+}
+.Navbar a {
+    color: inherit;
+    text-decoration: none;
+}
+.Navbar .navbar-left {
+    color: #4051b5;
+    cursor: pointer;
+    font-family: 'Cereal';
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+.Navbar .navbar-middle {
+    color: #9ea9ec;
+    font-family: 'Cereal';
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.Navbar .navbar-middle span {
+    color: #9ea9ec;
+}
+.Navbar .navbar-right {
+    color: #4051b5;
+    cursor: pointer;
+    font-family: 'Cereal';
+    font-size: 40px;
+    font-weight: 600;
+    padding: 1.5rem;
+    transition: all 0s ease-in-out;
+    width: 2.5rem;
+}
+.Navbar .navbar-right:hover {
+    background: #9ea9ec;
+    color: #fff;
+}
+.Navbar .expand {
+    background: #4051b5;
+    color: #9ea9ec;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    font-family: 'Cereal';
+    height: 100vh;
+    position: absolute;
+    transform: none;
+    width: 100vw;
+    z-index: 9999;
+}
+.Navbar .expand > * {
+    border-bottom: 1px solid #4051b5;
+    border-top: 1px solid #4051b5;
+    padding: 1.5rem;
+    transition: all 0.15s ease-in-out;
+}
+.Navbar .expand > *:hover {
+    background: #5160bc;
+    border-radius: 15px;
+    width: 55%;
+    margin-left: 1vw;
+}
+.Navbar .expand > * span.focused {
+    background: #9ea9ec;
+    border-radius: 10px;
+    color: #fff;
+    padding: 0.75rem;
+}
+.Navbar .expand .expand-bottom {
+    align-self: flex-start;
+    border: 0;
+}
+.Navbar .expand .expand-bottom:hover {
+    background: none;
+}
+.Navbar .expand .expand-top {
+    height: 0;
+}
+.Navbar .expand .expand-top:hover {
+    background: #4051b5;
 }
 
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+@media (min-width: 769px) {
+    .Home,
+    .State {
+        padding-top: 5rem;
     }
-    to {
-        transform: rotate(360deg);
+    .Navbar {
+        background: #4051b5;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        min-width: 5rem;
+        position: fixed;
+        z-index: 99999;
+    }
+    .Navbar .navbar-left {
+        margin-top: auto;
+        order: 3;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+        width: 5rem;
+    }
+    .Navbar .navbar-left:hover {
+        background: #4051b5;
+    }
+    .Navbar .navbar-middle {
+        font-size: 0.6rem;
+        order: 1;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+        width: 2.9rem;
+        word-wrap: break-word;
+    }
+    .Navbar .navbar-right {
+        background: #4051b5;
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .Navbar .navbar-right:hover {
+        background: #4051b5 !important;
+    }
+    .Navbar .navbar-right > span {
+        display: flex;
+        flex-direction: row;
+        height: 2.2rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .Navbar .navbar-right > span svg {
+        stroke: #9ea9ec;
+    }
+    .Navbar .expand {
+        background: #4051b5;
+        border-right: solid 2px #fff;
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 5.5rem;
+        top: 0;
+        width: 15rem;
+        z-index: -1 !important;
+    }
+    .Navbar .expand > * {
+        border: 0;
+        border-left: 1px solid #4051b5;
+        color: #9ea9ec;
+        font-weight: 600;
+        height: 2rem;
+        width: 12rem;
+        font-size: 1.25rem;
+    }
+    .dark-mode .Navbar,
+    .dark-mode .expand {
+        background: #1e1e30 !important;
+    }
+    .dark-mode .navbar-right {
+        background: #1e1e30 !important;
+    }
+}
+
+.fadeInUp {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.rotateDownRight {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: rotateDownRight;
+}
+
+@keyframes rotateDownRight {
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+.rotateRightDown {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: rotateRightDown;
+}
+
+@keyframes rotateRightDown {
+    0% {
+        transform: rotate(-90deg);
+    }
+}
+
+.fadeOutDown {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
     }
 }
