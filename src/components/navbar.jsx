@@ -33,10 +33,7 @@ function Navbar({ pages, darkMode, setDarkMode }) {
 
     return (
         <div className="Navbar">
-            <div
-                className="navbar-left"
-            >
-            </div>
+            <div className="navbar-left" />
             <div className="navbar-middle">
                 <Link
                     to="/"
@@ -47,7 +44,7 @@ function Navbar({ pages, darkMode, setDarkMode }) {
                     <h1>IITD</h1>
                 </Link>
             </div>
-            
+
             <div
                 className="navbar-right"
                 onClick={() => {
@@ -75,46 +72,67 @@ function Navbar({ pages, darkMode, setDarkMode }) {
                 )}
                 {windowSize.width > 769 && (
                     <>
-               
                         <span>
                             <Link to="/">
-                                <Icon.Home strokeWidth='3' height='40' {...activeNavIcon('/')} />
+                                <Icon.Home
+                                    strokeWidth="3"
+                                    height="40"
+                                    {...activeNavIcon('/')}
+                                />
                             </Link>
                         </span>
                         <span>
                             <Link to="/explore">
-                                <Icon.Search strokeWidth='3' height='40'
+                                <Icon.Search
+                                    strokeWidth="3"
+                                    height="40"
                                     {...activeNavIcon('/explore')}
                                 />
                             </Link>
                         </span>
                         <span>
                             <Link to="/news">
-                                <Icon.Rss strokeWidth='3' height='40'
+                                <Icon.Rss
+                                    strokeWidth="3"
+                                    height="40"
                                     {...activeNavIcon('/news')}
                                 />
                             </Link>
                         </span>
                         <span>
                             <Link to="/campus">
-                                <Icon.MapPin strokeWidth='3' height='40'
+                                <Icon.MapPin
+                                    strokeWidth="3"
+                                    height="40"
                                     {...activeNavIcon('/campus')}
                                 />
                             </Link>
                         </span>
                         <span>
                             <Link to="/hostels">
-                                <Icon.Briefcase  strokeWidth='3' height='40' {...activeNavIcon('/hostels')} />
+                                <Icon.Briefcase
+                                    strokeWidth="3"
+                                    height="40"
+                                    {...activeNavIcon('/hostels')}
+                                />
                             </Link>
                         </span>
                         <span>
                             <Link to="/map">
-                                <Icon.Map strokeWidth='3' height='40' {...activeNavIcon('/map')} />
+                                <Icon.Map
+                                    strokeWidth="3"
+                                    height="40"
+                                    {...activeNavIcon('/map')}
+                                />
                             </Link>
                         </span>
                         <span>
                             <Link to="/links">
-                                <Icon.Link strokeWidth='3' height='40' {...activeNavIcon('/links')} />
+                                <Icon.Link
+                                    strokeWidth="3"
+                                    height="40"
+                                    {...activeNavIcon('/links')}
+                                />
                             </Link>
                         </span>
                     </>
@@ -149,9 +167,8 @@ function Expand({ expand, pages, setExpand }) {
                 setExpand(false);
             }}
         >
-          
-        <div className="expand-top" />
-        
+            <div className="expand-top" />
+
             {pages.map((page, i) => {
                 if (page.showInNavbar === true) {
                     return (
