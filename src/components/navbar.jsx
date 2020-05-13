@@ -225,11 +225,13 @@ function Expand({ expand, pages, setExpand }) {
     );
 }
 Navbar.propTypes = {
-    pages: PropTypes.arrayOf.isRequired,
+    // eslint-disable-next-line react/require-default-props
+    pages: PropTypes.instanceOf(Array),
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,
-    pages: PropTypes.arrayOf.isRequired,
+    // eslint-disable-next-line react/require-default-props
+    pages: PropTypes.instanceOf(Array),
     setExpand: PropTypes.bool.isRequired,
 };
 
