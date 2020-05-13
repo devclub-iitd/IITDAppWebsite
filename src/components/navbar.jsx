@@ -23,7 +23,7 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages, darkMode, setDarkMode }) {
+function Navbar({ pages }) {
     const [expand, setExpand] = useState(false);
     // eslint-disable-next-line
     const [isThemeSet, setIsThemeSet] = useLocalStorage('isThemeSet', false);

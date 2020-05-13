@@ -1,13 +1,6 @@
 import React from 'react';
 
-import SideNav, {
-    Toggle,
-    Nav,
-    NavItem,
-    NavIcon,
-    NavText,
-} from '@trendmicro/react-sidenav';
-import { Route, Link } from 'react-router-dom';
+import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import * as Icon from 'react-feather';
 
 // Be sure to include styles at some point, probably during your bootstraping
