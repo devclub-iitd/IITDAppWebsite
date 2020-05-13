@@ -1,0 +1,435 @@
+// Color Pallete
+
+$blue: #007bff;
+$blue-light: #007bff10;
+$blue-hover: #007bff30;
+$blue-light-opaque: #eff7ff;
+$blue-mid: #007bff99;
+$pblue: #4c75f2;
+$pblue-light: #4c75f210;
+$pblue-hover: #4c75f230;
+$pblue-light-opaque: #eff7ff;
+$pblue-mid: #4c75f299;
+$cherry: #ff073a;
+$cherry-mid: #ff073a99;
+$cherry-light: #ff073a20;
+$cherry-hover: #ff073a30;
+$cherry-light-opaque: #ffe0e6;
+$red: #dc3545;
+$red-light: #dc354520;
+$red-mid: #dc354599;
+$orange: #fd7e14;
+$orange-mid: #fd7e1499;
+$orange-light: #fd7e1420;
+$orange-hover: #fd7e1430;
+$orange-light-opaque: #ffefe2;
+$yellow: #ffc107;
+$yellow-light: #ffc10720;
+$yellow-hover: #ffc10730;
+$yellow-mid: #ffc10799;
+$yellow-light-opaque: #fff7e0;
+$green: #28a745;
+$green-light: #28a74520;
+$green-hover: #28a74530;
+$green-mid: #28a74599;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #6c757d;
+$gray-light: #6c757d10;
+$gray-light-opaque: #f6f6f7;
+$gray-hover: #6c757d20;
+$gray-mid: #6c757d99;
+$gray-dark: #343a40;
+$gray-opaque: #f1f1f1;
+$light: #f8f9fa;
+$dark: #343a40;
+$purple: #201aa2dd;
+$purple-light: #201aa220;
+$purple-hover: #201aa230;
+$purple-mid: #201aa299;
+$purple-light-opaque: #e3e2f3;
+$pink: #fb5581;
+$pink-light: #ffa8cb30;
+$pink-hover: #ffa8cb60;
+$pink-mid: #fb558199;
+$brown: #b6854d;
+$brown-light: #b6854d10;
+$brown-hover: #b6854d30;
+$brown-mid: #b6854d99;
+$brick: #e23028;
+
+// Dark mode variables
+$dark-m-gray: #161625;
+$dark-mid-subtext: #bdb8ae;
+$dark-m-white: #e1e1e1;
+$dark-m-purple: #7ba1ea;
+$dark-m-blue: #3391ff;
+
+
+$indigo1: #4051B5;
+$indigo2: #9EA9EC;
+$indigo3 : #E8EAF6;
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+  background-color: $indigo3;
+}
+
+h1 {
+  font-family: 'Cereal';
+  font-size: 22px !important;
+  font-weight: 900;
+  color: $indigo2;
+}
+
+h2 {
+  font-family: 'Cereal';
+  font-size: 18px !important;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Cereal';
+  font-size: 14px !important;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Cereal';
+  font-size: 13px !important;
+  font-weight: 900;
+}
+
+h5 {
+  font-family: 'Cereal';
+  font-size: 12px !important;
+  font-weight: 900;
+}
+
+h6 {
+  font-family: 'Cereal';
+  font-size: 11px !important;
+  font-weight: 600;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  transition: all .25s ease-in-out;
+  width: 100%;
+}
+
+.arrow-up {
+  border-bottom: 5px solid $indigo1;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: .25rem;
+}
+
+.arrow-down {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $indigo2;
+  margin-left: .25rem;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  height: 10rem;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+
+  & > * {
+    align-self: center;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .navbar-left {
+    color: $indigo1;
+    cursor: pointer;
+    font-family: 'Cereal';
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+
+  .navbar-middle {
+    color: $indigo2;
+    font-family: 'Cereal';
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    span {
+      color: $indigo2;
+    }
+  }
+
+  .navbar-right {
+    color: $indigo1;
+    cursor: pointer;
+    font-family: 'Cereal';
+    font-size: 40px;
+    font-weight: 600;
+    padding: 1.5rem;
+    transition: all 0s ease-in-out;
+    width: 2.5rem;
+
+    &:hover {
+      background: $indigo2;
+      color: #fff;
+    }
+  }
+
+  .expand {
+    background: $indigo1;
+    color: $indigo2;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cereal';
+    height: 100vh;
+    position: absolute;
+    transform: none;
+    width: 100vw;
+    z-index: 9999;
+
+    
+
+    
+
+    & > * {
+      border-bottom: 1px solid $indigo1;
+      border-top: 1px solid $indigo1;
+      padding:1.5rem;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        background: #5160BC;
+        border-radius: 15px;
+        width: 9vw;
+        margin-left: 1vw;
+      }
+
+      span {
+        &.focused {
+          background: $indigo2;
+          border-radius: 10px;
+          color: $white;
+          padding: .75rem;
+        
+          
+        }
+      }
+    }
+
+    .expand-bottom {
+      align-self: flex-start;
+      border: 0;
+
+      &:hover {
+        background: none;
+      }
+    }
+    
+    .expand-top{
+        height:0;
+        
+        
+    }
+    .expand-top:hover{
+        background: $indigo1;
+    }
+
+    
+  }
+}
+
+
+
+// @media (max-width: 769px) {
+//  margin-left: unset;
+// padding: 1rem;
+//   }
+
+
+@media (min-width: 769px) {
+  .Home,
+  .State {
+    padding-top: 5rem;
+  }
+
+  .Navbar {
+    background: $indigo1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    min-width: 5rem;
+    position: fixed;
+    z-index: 99999;
+
+
+    .navbar-left {
+      margin-top: auto;
+      order: 3;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      transition: all .2s ease-in-out;
+      width: 5rem;
+
+      &:hover {
+        background: $indigo1;
+      }
+    }
+
+    .navbar-middle {
+      font-size: .6rem;
+      order: 1;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      text-align: center;
+      width: 2.9rem;
+      word-wrap: break-word;
+    }
+
+    .navbar-right {
+      background: $indigo1;
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      padding-bottom: 0;
+      padding-top: 0;
+
+      &:hover {
+        background: $indigo1 !important;
+      }
+
+      & > span {
+        display: flex;
+        flex-direction: row;
+        height: 2.2rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        margin-top: 1.5rem;
+
+        svg {
+          stroke: $indigo2;
+        }
+      }
+    }
+
+    .expand {
+      background: $indigo1;
+      border-right: solid 2px $white;
+      flex-direction: column;
+      padding-left: 0;
+      padding-top: 5.5rem;
+      top: 0;
+      width: 15rem;
+      z-index: -1 !important;
+
+      & > * {
+        border: 0;
+        // padding: 1.59rem;
+        border-left: 1px solid $indigo1;
+        color: $indigo2;
+        font-weight: 600;
+        height: 2rem;
+        width: 12rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+
+  .dark-mode {
+    .Navbar,
+    .expand {
+      background: #1e1e30 !important;
+    }
+
+    .navbar-right {
+      background: #1e1e30 !important;
+    }
+  }
+}
+
+
+
+// Animation Support
+
+.fadeInUp {
+  animation-duration: .45s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rotateDownRight {
+  animation-duration: .25s;
+  animation-fill-mode: both;
+  animation-name: rotateDownRight;
+}
+
+@keyframes rotateDownRight {
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.rotateRightDown {
+  animation-duration: .25s;
+  animation-fill-mode: both;
+  animation-name: rotateRightDown;
+}
+
+@keyframes rotateRightDown {
+  0% {
+    transform: rotate(-90deg);
+  }
+}
+
+.fadeOutDown {
+  animation-duration: .45s;
+  animation-fill-mode: both;
+  animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

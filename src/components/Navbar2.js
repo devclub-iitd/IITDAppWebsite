@@ -6,10 +6,10 @@ import * as Icon from 'react-feather';
 
 // Be sure to include styles at some point, probably during your bootstraping
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
-import '../styles/Navbar.css'
+import '../styles/Navbar2.css'
 
 
-export default function Navbar(){
+export default function Navbar2(){
   return(
     <React.Fragment>
     <SideNav
