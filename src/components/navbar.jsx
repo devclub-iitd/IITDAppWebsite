@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
@@ -9,6 +10,7 @@ import {
     useWindowSize,
     useLocalStorage,
 } from 'react-use';
+import PropTypes from 'prop-types';
 
 const navLinkProps = (path, animationDelay) => ({
     className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
@@ -46,11 +48,30 @@ function Navbar({ pages }) {
             </div>
 
             <div
+                role="button"
+                tabIndex="0"
                 className="navbar-right"
                 onClick={() => {
                     setExpand(!expand);
                 }}
                 onMouseEnter={() => {
+                    if (window.innerWidth > 769) {
+                        setExpand(true);
+                        anime({
+                            targets: '.navbar-right path',
+                            strokeDashoffset: [anime.setDashoffset, 0],
+                            easing: 'easeInOutSine',
+                            duration: 250,
+                            delay(el, i) {
+                                return i * 250;
+                            },
+                            direction: 'alternate',
+                            loop: false,
+                        });
+                    }
+                }}
+                // On Key Down does not work yet, accessible features to be added to the site gradually
+                onKeyDown={() => {
                     if (window.innerWidth > 769) {
                         setExpand(true);
                         anime({
@@ -146,6 +167,7 @@ function Navbar({ pages }) {
     );
 }
 
+// eslint-disable-next-line no-unused-vars
 function Expand({ expand, pages, setExpand }) {
     const expandElement = useRef(null);
     const { t } = useTranslation();
@@ -169,12 +191,12 @@ function Expand({ expand, pages, setExpand }) {
         >
             <div className="expand-top" />
 
-            {pages.map((page, i) => {
+            {pages.map((page) => {
                 if (page.showInNavbar === true) {
                     return (
                         <Link
                             to={page.pageLink}
-                            key={i}
+                            key={page.id}
                             onClick={() => {
                                 setExpand(false);
                             }}
@@ -202,5 +224,13 @@ function Expand({ expand, pages, setExpand }) {
         </div>
     );
 }
+Navbar.propTypes = {
+    pages: PropTypes.arrayOf.isRequired,
+};
+Expand.propTypes = {
+    expand: PropTypes.bool.isRequired,
+    pages: PropTypes.arrayOf.isRequired,
+    setExpand: PropTypes.bool.isRequired,
+};
 
 export default Navbar;
