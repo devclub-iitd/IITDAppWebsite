@@ -285,5 +285,57 @@ h6 {
   margin-bottom: 10rem; }
 
 .hostelGrid {
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center; }
+
+.card-bg {
+  margin: 3rem 1rem 2rem 1rem;
   background-color: #C5CAE9;
-  border-radius: 15px; }
+  width: 95%;
+  height: 80%;
+  border-radius: 10px;
+  z-index: 3;
+  text-align: center; }
+  .card-bg .card-subtitle {
+    position: fixed;
+    display: inline-block;
+    margin-top: 2rem;
+    color: #4051B5;
+    z-index: 3;
+    margin-left: -2rem;
+    font-weight: 600;
+    font-size: 1rem; }
+  .card-bg .card-img {
+    position: fixed;
+    margin-top: 4rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    margin-left: -4rem; }
+  .card-bg p {
+    color: #4051B5;
+    font-family: 'Cereal';
+    position: absolute;
+    margin-top: 4rem;
+    padding: 0.5rem;
+    z-index: 3;
+    margin-left: 0rem;
+    width: 80%;
+    height: 50%; }
+
+.card-title {
+  position: absolute;
+  z-index: 4;
+  background-color: #4051B5;
+  color: #C5CAE9;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-left: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem; }
+  .card-title h1 {
+    color: #E8EAF6;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Cereal'; }

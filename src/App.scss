@@ -484,6 +484,74 @@ h6 {
 }
 
 .hostelGrid {
-  background-color: $indigo-content;
+  // background-color: $indigo3;
   border-radius: 15px;
+  justify-content: center;
+  text-align: center;
 }
+
+
+.card-bg{
+  margin: 3rem 1rem 2rem 1rem;
+  background-color:$indigo-content;
+  width:95%;
+  height:80%;
+  border-radius:10px;
+  z-index: 3;
+  text-align: center;
+  .card-subtitle{
+    position:fixed;
+    display: inline-block;
+    margin-top: 2rem;
+    color:$indigo1;
+    z-index: 3;
+    margin-left: -2rem;
+    font-weight: 600;
+    font-size:1rem;
+  }
+  .card-img{
+    position: fixed;
+    margin-top: 4rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    margin-left:-4rem;
+  }
+  p{
+    color:$indigo1;
+    font-family: 'Cereal';
+    position: absolute;
+    margin-top:4rem;
+    padding:0.5rem;
+    z-index: 3;
+    margin-left:0rem;
+    width: 80%;
+    height: 50%;
+  }
+  
+  
+
+}
+
+.card-title{
+  // display: inline-block;
+  position:absolute;
+  z-index: 4;
+  background-color: $indigo1;
+  color: $indigo-content;
+  border-radius:10px;
+  margin-top: 1rem;
+
+  margin-left: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  h1
+  {
+    color: $indigo3;
+    font-size:1.2rem;
+    font-weight:600;
+    font-family: 'Cereal';
+  }
+}
+
+
