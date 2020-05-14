@@ -281,7 +281,9 @@ h6 {
 .content-area {
   margin-left: 8rem;
   margin-top: 6rem;
-  margin-right: 3rem; }
+  margin-right: 3rem;
+  margin-bottom: 10rem; }
 
 .hostelGrid {
-  background-color: #C5CAE9; }
+  background-color: #C5CAE9;
+  border-radius: 15px; }
