@@ -76,7 +76,7 @@ h6 {
     font-family: 'Cereal';
     font-size: 15px;
     font-weight: 600;
-    padding: 0.5rem; }
+    padding-right: 0.5rem; }
   .Navbar .navbar-middle {
     color: #9EA9EC;
     font-family: 'Cereal';
@@ -231,7 +231,8 @@ h6 {
     padding-bottom: 0.5rem;
     align-self: right;
     color: #4051B5;
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-weight: 400; }
 
 .fadeInUp {
   animation-duration: .45s;
@@ -277,5 +278,10 @@ h6 {
     opacity: 0;
     transform: translateY(20px); } }
 
-app-bar {
-  margin-left: 5rem; }
+.content-area {
+  margin-left: 8rem;
+  margin-top: 6rem;
+  margin-right: 3rem; }
+
+.hostelGrid {
+  background-color: #C5CAE9; }

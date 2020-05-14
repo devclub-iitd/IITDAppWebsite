@@ -70,6 +70,7 @@ $dark-m-blue: #3391ff;
 $indigo1: #4051B5;
 $indigo2: #9EA9EC;
 $indigo3 : #E8EAF6;
+$indigo-content: #C5CAE9;
 
 body {
   -webkit-tap-highlight-color: transparent;
@@ -166,7 +167,7 @@ h6 {
     font-family: 'Cereal';
     font-size: 15px;
     font-weight: 600;
-    padding: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .navbar-middle {
@@ -400,6 +401,7 @@ h6 {
     align-self:right;
     color:$indigo1;
     font-size: 2rem;
+    font-weight: 400;
   }
 }
 
@@ -474,7 +476,12 @@ h6 {
   }
 }
 
+.content-area{
+  margin-left: 8rem;
+  margin-top: 6rem;
+  margin-right: 3rem;
+}
 
-app-bar{
-  margin-left: 5rem;
+.hostelGrid {
+  background-color: $indigo-content;
 }
