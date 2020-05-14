@@ -13,7 +13,7 @@ const HostelCard = () => (
             <h1>Jwalamukhi Hostel</h1>
         </div>
         <div className="card-bg">
-        <h1 className="card-subtitle">Est. 1965</h1>
+            <h1 className="card-subtitle">Est. 1965</h1>
             <GridLayout
                 className="layout"
                 layout={layout}
@@ -22,17 +22,19 @@ const HostelCard = () => (
                 width={200}
             >
                 <div key="a">
-                <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />
+                    <img
+                        src={jwala}
+                        alt="Jwalamukhi Hostel"
+                        className="card-img"
+                    />
                 </div>
                 <div key="b">
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor {' '}
-            </p></div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor{' '}
+                    </p>
+                </div>
             </GridLayout>
-
-            
-            
         </div>
     </>
 );
