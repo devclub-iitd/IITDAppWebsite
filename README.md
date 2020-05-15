@@ -12,7 +12,7 @@ Tasks
 - [ ] Explore Cards Styling
 - [ ] Campus Cards
 - [ ] Campus Cards Styling
-- [ ] Maps (leaf?)
+- [ ] Maps https://react-leaflet.js.org/
 - [ ] Hostels Data
 - [ ] Explore Data
 - [ ] Campus/Maps Data
