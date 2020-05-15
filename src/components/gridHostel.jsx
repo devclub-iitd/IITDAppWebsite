@@ -16,23 +16,129 @@ class MyFirstGrid extends React.Component {
                 h: 2,
                 isResizable: false,
                 useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
             },
-            { i: 'b', x: 3, y: 0, w: 3, h: 2, isResizable: false },
-            { i: 'c', x: 6, y: 0, w: 3, h: 2, isResizable: false },
-            { i: 'd', x: 9, y: 0, w: 3, h: 2, isResizable: false },
-            { i: 'e', x: 0, y: 1, w: 3, h: 2, isResizable: false },
-            { i: 'f', x: 3, y: 1, w: 3, h: 2, isResizable: false },
-            { i: 'g', x: 6, y: 1, w: 3, h: 2, isResizable: false },
-            { i: 'h', x: 9, y: 1, w: 3, h: 2, isResizable: false },
-            { i: 'i', x: 9, y: 2, w: 3, h: 2, isResizable: false },
-            { i: 'j', x: 0, y: 2, w: 3, h: 2, isResizable: false },
-            { i: 'k', x: 3, y: 2, w: 3, h: 2, isResizable: false },
-            { i: 'l', x: 6, y: 2, w: 3, h: 2, isResizable: false },
-            { i: 'm', x: 0, y: 3, w: 3, h: 2, isResizable: false },
-            { i: 'n', x: 3, y: 3, w: 3, h: 2, isResizable: false },
-            { i: 'o', x: 6, y: 3, w: 3, h: 1, isResizable: false },
-            { i: 'p', x: 9, y: 4, w: 3, h: 1, isResizable: false },
-            { i: 'q', x: 0, y: 5, w: 3, h: 1, isResizable: false },
+            {
+                i: 'b',
+                x: 3,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'c',
+                x: 6,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'd',
+                x: 9,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'e',
+                x: 0,
+                y: 1,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'f',
+                x: 3,
+                y: 1,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'g',
+                x: 6,
+                y: 1,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'h',
+                x: 9,
+                y: 1,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'i',
+                x: 9,
+                y: 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'j',
+                x: 0,
+                y: 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'k',
+                x: 3,
+                y: 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'l',
+                x: 6,
+                y: 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
+            {
+                i: 'm',
+                x: 0,
+                y: 3,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+            },
         ];
         const layouts = { lg: layoutLg };
         return (
@@ -40,47 +146,67 @@ class MyFirstGrid extends React.Component {
                 className="layout"
                 layouts={layouts}
                 breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-                cols={{ lg: 12, md: 8, sm: 3, xs: 2, xxs: 1 }}
-                isResizable="true"
-                useCSSTransforms="true"
+                cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
+                horizontalCompact
+                autoSize
             >
-                <div key="a" className="hostelGrid" isResizable="true">
+                <div
+                    key="a"
+                    className="hostelGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
                     <HostelCard />
                 </div>
-                <div key="b" className="hostelGrid">
+                <div key="b" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="c" className="hostelGrid">
+                <div key="c" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="d" className="hostelGrid" isResizable="true">
+                <div
+                    key="d"
+                    className="hostelGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
                     <HostelCard />
                 </div>
-                <div key="e" className="hostelGrid">
+                <div key="e" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="f" className="hostelGrid">
+                <div key="f" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="g" className="hostelGrid" isResizable="true">
+                <div key="g" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="h" className="hostelGrid">
+                <div key="h" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="i" className="hostelGrid">
+                <div key="i" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="j" className="hostelGrid" isResizable="true">
+                <div
+                    key="j"
+                    className="hostelGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
                     <HostelCard />
                 </div>
-                <div key="k" className="hostelGrid">
+                <div key="k" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="l" className="hostelGrid">
+                <div key="l" className="hostelGrid" autoSize="true">
                     <HostelCard />
                 </div>
-                <div key="m" className="hostelGrid" isResizable="true">
+                <div
+                    key="m"
+                    className="hostelGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
                     <HostelCard />
                 </div>
             </ResponsiveGridLayout>
