@@ -8,7 +8,7 @@ body {
 
 h1 {
     font-family: 'Cereal';
-    font-size: 22px !important;
+    font-size: 22px;
     font-weight: 900;
     color: #9ea9ec;
 }
@@ -91,7 +91,7 @@ h6 {
     font-family: 'Cereal';
     font-size: 15px;
     font-weight: 600;
-    padding: 0.5rem;
+    padding-right: 0.5rem;
 }
 .Navbar .navbar-middle {
     color: #9ea9ec;
@@ -112,10 +112,14 @@ h6 {
     padding: 1.5rem;
     transition: all 0s ease-in-out;
     width: 2.5rem;
+    border-right: 2px solid #e8eaf6;
+    margin-right: -2px;
 }
 .Navbar .navbar-right:hover {
     background: #9ea9ec;
     color: #fff;
+    border-right: 2px solid #e8eaf6;
+    margin-right: -2px;
 }
 .Navbar .expand {
     background: #4051b5;
@@ -246,6 +250,34 @@ h6 {
     }
 }
 
+.filters {
+    height: 4rem !important;
+    text-align: right;
+    background: #9ea9ec !important;
+    color: #4051b5 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Cereal;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    align-content: right;
+    padding-bottom: 1rem;
+}
+.filters h1 {
+    position: absolute;
+    top: 0.005rem;
+    right: 5%;
+    padding-bottom: 0.5rem;
+    align-self: right;
+    color: #4051b5;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 .fadeInUp {
     animation-duration: 0.45s;
     animation-fill-mode: both;
@@ -298,8 +330,107 @@ h6 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.rotateRightDown {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: rotateRightDown;
+}
+
+@keyframes rotateRightDown {
+    0% {
+        transform: rotate(-90deg);
+    }
+}
+
+.fadeOutDown {
+    animation-duration: 0.45s;
+    animation-fill-mode: both;
+    animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
     100% {
         opacity: 0;
         transform: translateY(20px);
     }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.content-area {
+    margin-left: 8rem;
+    margin-top: 6rem;
+    margin-right: 3rem;
+    margin-bottom: 10rem;
+}
+
+.hostelGrid {
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-bg {
+    margin: 3rem 1rem 2rem 1rem;
+    background-color: #c5cae9;
+    width: 95%;
+    height: 80%;
+    border-radius: 10px;
+    z-index: 3;
+    text-align: center;
+}
+.card-bg .card-subtitle {
+    position: fixed;
+    display: inline-block;
+    margin-top: 2rem;
+    color: #4051b5;
+    z-index: 3;
+    margin-left: -2rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.card-bg .card-img {
+    position: fixed;
+    margin-top: 4rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    margin-left: -4rem;
+}
+.card-bg p {
+    color: #4051b5;
+    font-family: 'Cereal';
+    position: absolute;
+    margin-top: 4rem;
+    padding: 0.5rem;
+    z-index: 3;
+    margin-left: 0rem;
+    width: 80%;
+    height: 50%;
+}
+
+.card-title {
+    position: absolute;
+    z-index: 4;
+    background-color: #4051b5;
+    color: #c5cae9;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: 20%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.card-title h1 {
+    color: #e8eaf6;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Cereal';
 }

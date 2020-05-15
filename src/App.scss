@@ -70,6 +70,7 @@ $dark-m-blue: #3391ff;
 $indigo1: #4051B5;
 $indigo2: #9EA9EC;
 $indigo3 : #E8EAF6;
+$indigo-content: #C5CAE9;
 
 body {
   -webkit-tap-highlight-color: transparent;
@@ -81,7 +82,7 @@ body {
 
 h1 {
   font-family: 'Cereal';
-  font-size: 22px !important;
+  font-size: 22px; 
   font-weight: 900;
   color: $indigo2;
 }
@@ -166,6 +167,7 @@ h6 {
     font-family: 'Cereal';
     font-size: 15px;
     font-weight: 600;
+    padding-right: 0.5rem;
     padding: 0.5rem;
   }
 
@@ -190,10 +192,14 @@ h6 {
     padding: 1.5rem;
     transition: all 0s ease-in-out;
     width: 2.5rem;
+    border-right: 2px solid $indigo3;
+    margin-right: -2px;
 
     &:hover {
       background: $indigo2;
       color: #fff;
+      border-right: 2px solid $indigo3;
+      margin-right: -2px;
     }
   }
 
@@ -327,7 +333,7 @@ h6 {
         justify-content: center;
         margin-bottom: 1.5rem;
         margin-top: 1.5rem;
-
+        
         svg {
           stroke: $indigo2;
         }
@@ -369,6 +375,42 @@ h6 {
     }
   }
 }
+
+
+.filters {
+  height: 4rem !important;
+  text-align: right;
+  background: $indigo2 !important;
+  color: $indigo1 !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: Cereal;
+  justify-content: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 101;
+  align-content:right;
+  padding-bottom: 1rem;
+
+  h1{
+    position: absolute;
+    top:0.005rem;
+    right: 5%;
+    padding-bottom:0.5rem;
+    align-self:right;
+    color:$indigo1;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
+
+   
+
+
+
 
 
 
@@ -431,5 +473,82 @@ h6 {
   100% {
     opacity: 0;
     transform: translateY(20px);
+  }
+}
+
+.content-area{
+  margin-left: 8rem;
+  margin-top: 6rem;
+  margin-right: 3rem;
+  margin-bottom: 10rem;
+}
+
+.hostelGrid {
+  // background-color: $indigo3;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.card-bg{
+  margin: 3rem 1rem 2rem 1rem;
+  background-color:$indigo-content;
+  width:95%;
+  height:80%;
+  border-radius:10px;
+  z-index: 3;
+  text-align: center;
+  .card-subtitle{
+    position:fixed;
+    display: inline-block;
+    margin-top: 2rem;
+    color:$indigo1;
+    z-index: 3;
+    margin-left: -2rem;
+    font-weight: 600;
+    font-size:1rem;
+  }
+  .card-img{
+    position: fixed;
+    margin-top: 4rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    margin-left:-4rem;
+  }
+  p{
+    color:$indigo1;
+    font-family: 'Cereal';
+    position: absolute;
+    margin-top:4rem;
+    padding:0.5rem;
+    z-index: 3;
+    margin-left:0rem;
+    width: 80%;
+    height: 50%;
+  }
+  
+  
+
+}
+
+.card-title{
+  // display: inline-block;
+  position:absolute;
+  z-index: 4;
+  background-color: $indigo1;
+  color: $indigo-content;
+  border-radius:10px;
+  margin-top: 1rem;
+  margin-left: 20%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  h1
+  {
+    color: $indigo3;
+    font-size:1.2rem;
+    font-weight:600;
+    font-family: 'Cereal';
   }
 }
