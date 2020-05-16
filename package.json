@@ -22,9 +22,11 @@
         "react-grid-layout": "^0.18.3",
         "react-helmet": "^6.0.0",
         "react-i18next": "^11.4.0",
+        "react-leaflet": "^2.7.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
-        "react-use": "^14.2.0"
+        "react-use": "^14.2.0",
+        "semantic-ui-react": "^0.88.2"
     },
     "scripts": {
         "start": "react-scripts start",

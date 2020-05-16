@@ -1,7 +1,10 @@
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-import GridLayout from 'react-grid-layout';
+import { Responsive, WidthProvider } from 'react-grid-layout';
+import { Button } from 'semantic-ui-react';
 import jwala from './images/jwala.png';
+
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const layout = [
     {
@@ -9,22 +12,30 @@ const layout = [
         x: 0,
         y: 0,
         w: 1,
-        h: 2.2,
-        static: true,
-        isResizable: false,
+        h: 0.75,
         autoSize: true,
-        marginLeft: 5,
-        marginRight: 5,
+        isResizable: false,
+        isDraggable: false,
     },
     {
         i: 'b',
         x: 1,
         y: 0,
         w: 1,
-        h: 2.2,
-        static: true,
-        isResizable: false,
+        h: 1.5,
         autoSize: true,
+        isResizable: false,
+        isDraggable: false,
+    },
+    {
+        i: 'c',
+        x: 0,
+        y: 0.75,
+        w: 1,
+        h: 0.5,
+        autoSize: true,
+        isResizable: false,
+        isDraggable: false,
     },
 ];
 const HostelCard = () => (
@@ -34,30 +45,34 @@ const HostelCard = () => (
         </div>
         <div className="card-bg">
             <h1 className="card-subtitle">Est. 1965</h1>
-            <GridLayout
+            <ResponsiveGridLayout
                 className="layout"
-                layout={layout}
-                cols={2}
-                rowHeight={30}
-                width={200}
-                // eslint-disable-next-line react/jsx-boolean-value
-                autoSize={true}
-                containerPadding={[0, 0]}
+                layouts={{ xs: layout, xxs: layout }}
+                breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
+                cols={{ lg: 12, md: 10, sm: 6, xs: 2, xxs: 2 }}
             >
-                <div key="a" autoSize="true">
+                <div key="a" autoSize="true" className="left1">
                     <img
                         src={jwala}
                         alt="Jwalamukhi Hostel"
                         className="card-img"
                     />
                 </div>
-                <div key="b" autoSize="true">
+                <div key="b" autoSize="true" className="right">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         Lorem ipsum dolor sit amet.{' '}
                     </p>
                 </div>
-            </GridLayout>
+                <div key="c" autoSize="true" className="left2">
+                    <Button fluid className="learn">
+                        Learn More
+                    </Button>
+                    <Button fluid className="map-link">
+                        Find On Google Maps
+                    </Button>
+                </div>
+            </ResponsiveGridLayout>
         </div>
     </>
 );

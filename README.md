@@ -7,7 +7,7 @@ Tasks
 - [x] Appbar Structure
 - [x] Grid 
 - [x] Hostel Cards outline
-- [ ] Hostel Cards Styling
+- [x] Hostel Cards Styling
 - [ ] Explore Cards
 - [ ] Explore Cards Styling
 - [ ] Campus Cards
