@@ -8,8 +8,8 @@ Tasks
 - [x] Grid 
 - [x] Hostel Cards outline
 - [x] Hostel Cards Styling
-- [ ] Explore Cards
-- [ ] Explore Cards Styling
+- [x] Explore Cards
+- [x] Explore Cards Styling
 - [ ] Campus Cards
 - [ ] Campus Cards Styling
 - [ ] Maps https://react-leaflet.js.org/

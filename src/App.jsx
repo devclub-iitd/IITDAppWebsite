@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Appbar from './components/appbar';
-import MyFirstGrid from './components/gridHostel';
+import HostelGrid from './components/gridHostel';
+import Explore from './components/gridExplore';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
@@ -15,7 +16,7 @@ function App() {
             pageLink: '/',
             view: <div />,
             displayName: 'Home',
-            animationDelayForNavbar: 0.2,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
@@ -23,7 +24,7 @@ function App() {
             pageLink: '/explore',
             view: <div />,
             displayName: 'Explore',
-            animationDelayForNavbar: 0.4,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
@@ -31,7 +32,7 @@ function App() {
             pageLink: '/news',
             view: <div />,
             displayName: 'News',
-            animationDelayForNavbar: 0.6,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
@@ -39,15 +40,15 @@ function App() {
             pageLink: '/campus',
             view: <div />,
             displayName: 'Campus',
-            animationDelayForNavbar: 0.8,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
             id: 4,
             pageLink: '/hostels',
-            view: <div />,
+            view: HostelGrid,
             displayName: 'Hostels',
-            animationDelayForNavbar: 1.0,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
@@ -55,7 +56,7 @@ function App() {
             pageLink: '/map',
             view: <div />,
             displayName: 'Map',
-            animationDelayForNavbar: 1.2,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
         {
@@ -63,7 +64,7 @@ function App() {
             pageLink: '/links',
             view: <div />,
             displayName: 'Links',
-            animationDelayForNavbar: 1.4,
+            animationDelayForNavbar: 0.1,
             showInNavbar: true,
         },
     ];
@@ -81,7 +82,7 @@ function App() {
             <main>
                 <Appbar />
                 <div className="content-area">
-                    <MyFirstGrid />
+                    <Explore />
                 </div>
             </main>
         </div>

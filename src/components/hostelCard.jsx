@@ -2,7 +2,7 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import { Button } from 'semantic-ui-react';
-import jwala from './images/jwala.png';
+import jwala from './images/hostels/jwala.png';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 

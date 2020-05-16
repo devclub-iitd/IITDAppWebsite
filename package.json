@@ -15,6 +15,7 @@
         "animejs": "^3.2.0",
         "clsx": "^1.1.0",
         "feather-icons": "^4.28.0",
+        "mdbreact": "^4.26.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
@@ -23,9 +24,13 @@
         "react-helmet": "^6.0.0",
         "react-i18next": "^11.4.0",
         "react-leaflet": "^2.7.0",
+        "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
+        "react-share": "^4.1.0",
+        "react-social-icons": "^4.1.0",
         "react-use": "^14.2.0",
+        "semantic-ui-css": "^2.4.1",
         "semantic-ui-react": "^0.88.2"
     },
     "scripts": {
@@ -68,6 +73,7 @@
         "eslint-plugin-react-hooks": "^2.5.1",
         "material-ui": "^0.20.2",
         "node-sass": "^4.14.1",
-        "prettier": "^2.0.5"
+        "prettier": "^2.0.5",
+        "react-social-icons": "^4.1.0"
     }
 }
