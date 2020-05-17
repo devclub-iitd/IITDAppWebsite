@@ -1,7 +1,7 @@
 # iitd-app-website
 A website to provide various services related to IIT Delhi
 
-Tasks 
+Tasks v1.0.0 
 
 - [x] Navbar Structure
 - [x] Appbar Structure
@@ -17,3 +17,4 @@ Tasks
 - [ ] Explore Data
 - [ ] Campus/Maps Data
 - [ ] Routing
+- [x] Small Screen Support
