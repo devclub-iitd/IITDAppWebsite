@@ -1,13 +1,10 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Responsive, WidthProvider } from 'react-grid-layout';
 // eslint-disable-next-line no-unused-vars
 import Link from 'react-router';
 import * as Icon from 'react-feather';
 import devclub from './images/explore/devclub.jpg';
-
-
 
 class ExploreCard extends React.Component {
     render() {
