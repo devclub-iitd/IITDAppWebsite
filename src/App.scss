@@ -812,6 +812,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     padding: 0.25rem;
     padding-bottom: 0;
   }
+  .fd{
+    background-color:$red;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .map{
+    background-color: $pblue;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
+  .ph{
+    background-color: $orange;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
 }
 .c-btn-group > .c-btn {
   border-radius: 0;
@@ -820,5 +839,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 .c-btn-group > .c-btn:last-child {
   border-right: none;
 }
+
+
+.campus-card{
+  width: 100%;
+  background-color:$indigo-content;
+  font-family: 'Cereal';
+  color: $indigo1;
+  border-radius: 10px;
+  .campus-card-heading{
+    font-weight:900;
+    font-size: 1.5rem;
+    padding-bottom:0.5rem;
+  }
+  small{
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    width: 90%;
+  }
+  .campus-img{
+    width: 85%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 10px;
+    margin:1rem;
+  }
+}
+
+  
 
 

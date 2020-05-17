@@ -658,6 +658,25 @@ h6 {
     padding: 0.25rem;
     padding-bottom: 0;
 }
+.c-btn-group .fd {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.c-btn-group .map {
+    background-color: #4c75f2;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+}
+.c-btn-group .ph {
+    background-color: #fd7e14;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+}
 
 .c-btn-group > .c-btn {
     border-radius: 0;
@@ -666,4 +685,30 @@ h6 {
 
 .c-btn-group > .c-btn:last-child {
     border-right: none;
+}
+
+.campus-card {
+    width: 100%;
+    background-color: #c5cae9;
+    font-family: 'Cereal';
+    color: #4051b5;
+    border-radius: 10px;
+}
+.campus-card .campus-card-heading {
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+.campus-card small {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    width: 90%;
+}
+.campus-card .campus-img {
+    width: 85%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem;
 }
