@@ -89,7 +89,13 @@ function Navbar({ pages }) {
                 }}
             >
                 {windowSize.width < 769 && (
-                    <span>{expand ? 'Close' : 'Menu'}</span>
+                    <span>
+                        {expand ? (
+                            <Icon.X height="30" strokeWidth="3" />
+                        ) : (
+                            <Icon.Menu height="30" strokeWidth="3" />
+                        )}
+                    </span>
                 )}
                 {windowSize.width > 769 && (
                     <>

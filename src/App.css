@@ -105,7 +105,7 @@ h6 {
     color: #9ea9ec;
 }
 .Navbar .navbar-right {
-    color: #4051b5;
+    color: #9ea9ec;
     cursor: pointer;
     font-family: 'Cereal';
     font-size: 40px;
@@ -167,11 +167,68 @@ h6 {
 }
 
 @media (max-width: 769px) {
+    .body {
+        text-align: center;
+    }
     .content-area {
-        margin-left: 0rem;
-        margin-top: 3rem;
-        margin-right: 0rem;
-        margin-bottom: 10rem;
+        display: inline-block;
+        width: 90%;
+        margin: 1rem;
+        margin-top: 6rem;
+    }
+    .Navbar {
+        height: 3rem;
+        background-color: #4051b5;
+    }
+    .Navbar .navbar-right {
+        margin-right: 0;
+        color: #9ea9ec;
+        background-color: #4051b5;
+        height: 1.75rem;
+        border-right: none;
+    }
+    .Navbar .navbar-middle {
+        background-color: #4051b5;
+    }
+    .Navbar .navbar-middle h1 {
+        margin-top: 2rem;
+        margin-left: 30%;
+        color: #9ea9ec;
+        background-color: #4051b5;
+    }
+    .Navbar .filters .fadeInUp {
+        height: 0;
+    }
+    .Navbar .filters .fadeInUp .legend {
+        height: 0;
+    }
+    .expand {
+        background: #4051b5;
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 0rem;
+        top: 0;
+        width: 100vw;
+        z-index: 9999;
+    }
+    .expand > * {
+        border-bottom: 1px solid #4051b5;
+        border-top: 1px solid #4051b5;
+        padding: 0rem;
+        transition: all 0.15s ease-in-out;
+    }
+    .expand > *:hover {
+        background: #5160bc;
+        border-radius: 5px;
+        width: 20%;
+        margin-left: 0;
+    }
+    .expand > * span.focused {
+        background: #9ea9ec;
+        border-radius: 10px;
+        color: #fff;
+        padding: 0rem;
+        width: 20%;
     }
 }
 
@@ -234,7 +291,7 @@ h6 {
     }
     .Navbar .expand {
         background: #4051b5;
-        border-right: solid 2px #fff;
+        border-right: solid 2px;
         flex-direction: column;
         padding-left: 0;
         padding-top: 5.5rem;
@@ -251,41 +308,39 @@ h6 {
         width: 12rem;
         font-size: 1.25rem;
     }
-    .dark-mode .Navbar,
-    .dark-mode .expand {
-        background: #1e1e30 !important;
+    .filters {
+        height: 4rem;
+        text-align: right;
+        background: #9ea9ec !important;
+        color: #4051b5 !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-family: Cereal;
+        justify-content: center;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 101;
+        align-content: right;
+        padding-bottom: 1rem;
     }
-    .dark-mode .navbar-right {
-        background: #1e1e30 !important;
+    .filters h1 {
+        position: absolute;
+        top: 0.005rem;
+        right: 5%;
+        padding-bottom: 0.5rem;
+        align-self: right;
+        color: #4051b5;
+        font-size: 2rem;
+        font-weight: 400;
     }
-}
-
-.filters {
-    height: 4rem !important;
-    text-align: right;
-    background: #9ea9ec !important;
-    color: #4051b5 !important;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: Cereal;
-    justify-content: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 101;
-    align-content: right;
-    padding-bottom: 1rem;
-}
-.filters h1 {
-    position: absolute;
-    top: 0.005rem;
-    right: 5%;
-    padding-bottom: 0.5rem;
-    align-self: right;
-    color: #4051b5;
-    font-size: 2rem;
-    font-weight: 400;
+    .content-area {
+        margin-left: 8rem;
+        margin-top: 6rem;
+        margin-right: 3rem;
+        margin-bottom: 10rem;
+    }
 }
 
 .fadeInUp {
@@ -344,13 +399,6 @@ h6 {
         opacity: 0;
         transform: translateY(20px);
     }
-}
-
-.content-area {
-    margin-left: 8rem;
-    margin-top: 6rem;
-    margin-right: 3rem;
-    margin-bottom: 10rem;
 }
 
 .hostelGrid {

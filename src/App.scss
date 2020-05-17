@@ -184,7 +184,7 @@ h6 {
   }
 
   .navbar-right {
-    color: $indigo1;
+    color: $indigo2;
     cursor: pointer;
     font-family: 'Cereal';
     font-size: 40px;
@@ -269,14 +269,87 @@ h6 {
 
 
 @media (max-width: 769px) {
+
+  .body{
+    text-align: center;
+  }
   .content-area{
-    margin-left: 0rem;
-    margin-top: 3rem;
-    margin-right: 0rem;
-    margin-bottom: 10rem;
+    display: inline-block;
+    width:90%;
+    margin:1rem;
+    margin-top: 6rem;;
   }
+
+  .Navbar{
+    height:3rem;
+    background-color: $indigo1;
+    .navbar-right{
+      margin-right:0;
+      color: $indigo2;
+      background-color: $indigo1;
+      height:1.75rem;
+      border-right:none;
+    }
+    .navbar-middle{
+      background-color: $indigo1;
+      h1{
+        margin-top:2rem;
+        margin-left: 30%;
+        color: $indigo2;
+        background-color: $indigo1;
+      }
+    }
+
+    .filters {
+    .fadeInUp{
+      height:0;
+      .legend{
+        height:0;
+      }
+    }
+  }
+  }
+
+
+  .expand {
+    background: $indigo1;
+    flex-direction: column;
+    padding-left: 0;
+    padding-top: 0rem;
+    top: 0;
+    width: 100vw;
+    z-index: 9999 ;
+
+    & > * {
+      border-bottom: 1px solid $indigo1;
+      border-top: 1px solid $indigo1;
+      padding:0rem;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        background: #5160BC;
+        border-radius:5px;
+        width: 20%;
+        margin-left:0;
+      }
+
+      span {
+        &.focused {
+          background: $indigo2;
+          border-radius: 10px;
+          color: $white;
+          padding: 0rem;
+          width: 20%;
+        
+          
+        }
+      }
+    }
+  }
+
+
  
-  }
+}
 
 
 @media (min-width: 769px) {
@@ -347,7 +420,7 @@ h6 {
 
     .expand {
       background: $indigo1;
-      border-right: solid 2px $white;
+      border-right: solid 2px ;
       flex-direction: column;
       padding-left: 0;
       padding-top: 5.5rem;
@@ -369,47 +442,46 @@ h6 {
   }
 
 
-  .dark-mode {
-    .Navbar,
-    .expand {
-      background: #1e1e30 !important;
-    }
-
-    .navbar-right {
-      background: #1e1e30 !important;
+  .filters {
+    height: 4rem ;
+    text-align: right;
+    background: $indigo2 !important;
+    color: $indigo1 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Cereal;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    align-content:right;
+    padding-bottom: 1rem;
+  
+    h1{
+      position: absolute;
+      top:0.005rem;
+      right: 5%;
+      padding-bottom:0.5rem;
+      align-self:right;
+      color:$indigo1;
+      font-size: 2rem;
+      font-weight: 400;
     }
   }
+
+  .content-area{
+    margin-left: 8rem;
+    margin-top: 6rem;
+    margin-right: 3rem;
+    margin-bottom: 10rem;
+  }
+
 }
 
 
-.filters {
-  height: 4rem !important;
-  text-align: right;
-  background: $indigo2 !important;
-  color: $indigo1 !important;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: Cereal;
-  justify-content: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 101;
-  align-content:right;
-  padding-bottom: 1rem;
 
-  h1{
-    position: absolute;
-    top:0.005rem;
-    right: 5%;
-    padding-bottom:0.5rem;
-    align-self:right;
-    color:$indigo1;
-    font-size: 2rem;
-    font-weight: 400;
-  }
-}
 
 
    
@@ -481,12 +553,7 @@ h6 {
   }
 }
 
-.content-area{
-  margin-left: 8rem;
-  margin-top: 6rem;
-  margin-right: 3rem;
-  margin-bottom: 10rem;
-}
+
 
 .hostelGrid {
   // background-color: $indigo3;
