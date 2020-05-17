@@ -72,6 +72,7 @@ $indigo2: #9EA9EC;
 $indigo3 : #E8EAF6;
 $indigo-content: #C5CAE9;
 
+
 body {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -289,14 +290,17 @@ h6 {
       background-color: $indigo1;
       height:1.75rem;
       border-right:none;
+      z-index: 99999;
     }
     .navbar-middle{
       background-color: $indigo1;
+      z-index: 9999999;
       h1{
         margin-top:2rem;
         margin-left: 30%;
         color: $indigo2;
         background-color: $indigo1;
+        
       }
     }
 
@@ -318,7 +322,7 @@ h6 {
     padding-top: 0rem;
     top: 0;
     width: 100vw;
-    z-index: 9999 ;
+    z-index: 9998 ;
 
     & > * {
       border-bottom: 1px solid $indigo1;
@@ -682,7 +686,6 @@ h6 {
 .left-e{
   // background-color: $green;
   .card-img{
-    display: inline-block;
     height:80%;
     width:80%;
     margin-left: 0.5rem;
@@ -720,6 +723,101 @@ h6 {
   .si{
     display: inline-block;
   }
+}
+
+
+.box{
+  box-sizing: border-box;
+  display: grid ;
+  grid-template-columns:  50% 50%;
+  grid-template-rows: 50% 50%;
+  gap: 0px 20px;
+  .left-e{
+    grid-column-start: 1;
+    grid-row-start:1;
+    img{
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+    }
+  }
+  .right-e{
+    grid-column-start: 2;
+    grid-row-start:1;
+  }
+  .links-e{
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start:2;
+    
+  }
+}
+
+
+
+.c-btn:hover,
+.c-btn:focus {
+  cursor: pointer;
+  background-color: red;
+  color: #fff;
+}
+.c-btn-group {
+  line-height:1rem;
+  white-space: nowrap;
+  margin:0.25rem;
+  font-family: 'Cereal';
+  margin-top:-4rem;
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 10px;
+  .learn-e{
+    span{
+      display:inline;
+    }
+    display: flex;
+    flex-direction: row;
+    font-size:1rem;
+    justify-content: center;
+    padding:0.25rem;
+    background-color: $green;
+    color: $white;
+    font-family: 'Cereal';
+  }
+  .fb{
+    background-color:$blue;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }  
+  .insta{
+    background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
+  .web{
+    background-color: $teal;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
+  .git{
+    background-color: #000000;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
+}
+.c-btn-group > .c-btn {
+  border-radius: 0;
+  border: none;
+}
+.c-btn-group > .c-btn:last-child {
+  border-right: none;
 }
 
 
