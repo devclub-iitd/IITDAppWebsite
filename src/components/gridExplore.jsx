@@ -1,11 +1,11 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import HostelCard from './hostelCard';
+import ExploreCard from './exploreCard';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-class MyFirstGrid extends React.Component {
+class Explore extends React.Component {
     render() {
         const layoutLg = [
             {
@@ -13,7 +13,7 @@ class MyFirstGrid extends React.Component {
                 x: 0,
                 y: 0,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -24,7 +24,7 @@ class MyFirstGrid extends React.Component {
                 x: 3,
                 y: 0,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -34,7 +34,7 @@ class MyFirstGrid extends React.Component {
                 x: 6,
                 y: 0,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -44,7 +44,7 @@ class MyFirstGrid extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -52,9 +52,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'e',
                 x: 0,
-                y: 1,
+                y: 1.75,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -62,9 +62,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'f',
                 x: 3,
-                y: 1,
+                y: 1.75,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -72,9 +72,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'g',
                 x: 6,
-                y: 1,
+                y: 1.75,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -82,9 +82,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'h',
                 x: 9,
-                y: 1,
+                y: 1.75,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -92,9 +92,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'i',
                 x: 9,
-                y: 2,
+                y: 3.5,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -102,9 +102,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'j',
                 x: 0,
-                y: 2,
+                y: 3.5,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -112,9 +112,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'k',
                 x: 3,
-                y: 2,
+                y: 3.5,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -122,9 +122,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'l',
                 x: 6,
-                y: 2,
+                y: 3.5,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -132,9 +132,9 @@ class MyFirstGrid extends React.Component {
             {
                 i: 'm',
                 x: 0,
-                y: 3,
+                y: 3.5,
                 w: 3,
-                h: 2,
+                h: 1.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -146,72 +146,72 @@ class MyFirstGrid extends React.Component {
                 className="layout"
                 layouts={layouts}
                 breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-                cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
+                cols={{ lg: 12, md: 9, sm: 6, xs: 6, xxs: 3 }}
                 horizontalCompact
                 autoSize
             >
                 <div
                     key="a"
-                    className="hostelGrid"
+                    className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <HostelCard />
+                    <ExploreCard />
                 </div>
-                <div key="b" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="b" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="c" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="c" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
                 <div
                     key="d"
-                    className="hostelGrid"
+                    className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <HostelCard />
+                    <ExploreCard />
                 </div>
-                <div key="e" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="e" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="f" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="f" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="g" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="g" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="h" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="h" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="i" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="i" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
                 <div
                     key="j"
-                    className="hostelGrid"
+                    className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <HostelCard />
+                    <ExploreCard />
                 </div>
-                <div key="k" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="k" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
-                <div key="l" className="hostelGrid" autoSize="true">
-                    <HostelCard />
+                <div key="l" className="exploreGrid" autoSize="true">
+                    <ExploreCard />
                 </div>
                 <div
                     key="m"
-                    className="hostelGrid"
+                    className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <HostelCard />
+                    <ExploreCard />
                 </div>
             </ResponsiveGridLayout>
         );
     }
 }
 
-export default MyFirstGrid;
+export default Explore;
