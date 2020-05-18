@@ -19,6 +19,7 @@ Tasks v1.0.0
 - [ ] Explore Data
 - [ ] Campus/Maps Data
 - [ ] News Data Model
-- [ ] Routing
+- [x] Routing
+- [ ] Dynamic App Bar (both Mobile and Desktop screens)
 - [ ] Home Page
 - [x] Small Screen Support
