@@ -80,63 +80,63 @@ function App() {
             <Router>
                 <Switch>
                     <Route path="/home">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Home" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Home" />
                             <div className="content-area">
                                 <h1>Home</h1>
                             </div>
                         </main>
                     </Route>
                     <Route path="/explore">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Explore" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Explore Clubs and Activities" />
                             <div className="content-area">
                                 <Explore />
                             </div>
                         </main>
                     </Route>
                     <Route path="/news">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="News" />
                         <main>
-                            <Appbar />
+                            <Appbar name="News" />
                             <div className="content-area">
                                 <News />
                             </div>
                         </main>
                     </Route>
                     <Route path="/campus">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Campus" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Campus" />
                             <div className="content-area">
                                 <Campus />
                             </div>
                         </main>
                     </Route>
                     <Route path="/hostels">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Hostels" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Hostels" />
                             <div className="content-area">
                                 <HostelGrid />
                             </div>
                         </main>
                     </Route>
                     <Route path="/map">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Map" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Institute Map" />
                             <div className="content-area">
                                 <h1>Map</h1>
                             </div>
                         </main>
                     </Route>
                     <Route path="/links">
-                        <Navbar pages={pages} />
+                        <Navbar pages={pages} name="Links" />
                         <main>
-                            <Appbar />
+                            <Appbar name="Quick Links" />
                             <div className="content-area">
                                 <h1>Links</h1>
                             </div>

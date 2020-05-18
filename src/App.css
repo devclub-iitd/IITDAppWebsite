@@ -85,6 +85,8 @@ h6 {
     font-weight: 900;
     text-transform: uppercase; }
     .Navbar .navbar-middle span {
+      font-weight: 600; }
+    .Navbar .navbar-middle span {
       color: #9EA9EC; }
   .Navbar .navbar-right {
     color: #9EA9EC;

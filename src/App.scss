@@ -173,11 +173,16 @@ h6 {
   }
 
   .navbar-middle {
+    span{
+      font-weight:600;
+    }
+    
     color: $indigo2;
     font-family: 'Cereal';
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
+    
 
     span {
       color: $indigo2;
