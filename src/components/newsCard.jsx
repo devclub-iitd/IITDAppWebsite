@@ -37,7 +37,7 @@ class CampusCard extends React.Component {
                             <Icon.Bookmark />
                         </span>
                         <a href="https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0">
-                        Read Complete Article
+                            Read Complete Article
                         </a>
                     </p>
                 </div>
