@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Appbar from './components/appbar';
 import HostelGrid from './components/gridHostel';
+import News from './components/gridNews';
 import Campus from './components/gridCampus';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
@@ -82,7 +83,7 @@ function App() {
             <main>
                 <Appbar />
                 <div className="content-area">
-                    <Campus />
+                    <News />
                 </div>
             </main>
         </div>

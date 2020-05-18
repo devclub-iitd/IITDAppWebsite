@@ -351,8 +351,83 @@ h6 {
     }
   }
 
+  
+
 
  
+}
+
+@media (max-width: 600px) {
+  .news-card{
+    align-items: center;
+    align-content: center;
+    padding:1rem;
+    display: flex ;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .news-img{
+      border-radius:10px;
+      display: inline-block;
+      order: 1;
+      height: 40%;
+      max-width: 240px;
+      max-height: 240px;
+      height: auto;
+    }
+    .news-card-heading{
+      height: 60%;
+      order: 2;
+      font-weight: 600;
+      font-family: 'Cereal';
+      color: $indigo1;
+      h3{
+        font-weight: 900;
+      }
+      .news-desc{
+        font-size:0.8rem;
+      }
+      .news-link{
+        font-size: 0.7rem;
+        color:#4074c6;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 601px){
+  .news-card{
+    padding:1rem;
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .news-img{
+      border-radius:10px;
+      order: 1;
+      width: 40%;
+      max-width: 240px;
+      max-height: 240px;
+      height: auto;
+    }
+    .news-card-heading{
+      width: 60%;
+      order: 2;
+      font-weight: 600;
+      font-family: 'Cereal';
+      color: $indigo1;
+      h3{
+        font-weight: 900;
+      }
+      .news-desc{
+        font-size:0.8rem;
+      }
+      .news-link{
+        font-size: 0.7rem;
+        color:#4074c6;
+      }
+    }
+  }
+
 }
 
 
@@ -481,6 +556,8 @@ h6 {
     margin-right: 3rem;
     margin-bottom: 10rem;
   }
+
+  
 
 }
 
@@ -866,6 +943,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin:1rem;
   }
 }
+
+
+
 
   
 
