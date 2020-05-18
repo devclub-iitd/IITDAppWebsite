@@ -104,7 +104,7 @@ function Navbar({ pages }) {
                                 <Icon.Home
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/')}
+                                    {...activeNavIcon('/home')}
                                 />
                             </Link>
                         </span>

@@ -1,11 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Route,
+    Redirect,
+    Switch,
+} from 'react-router-dom';
 import Navbar from './components/navbar';
 import Appbar from './components/appbar';
 import HostelGrid from './components/gridHostel';
 import News from './components/gridNews';
 import Campus from './components/gridCampus';
+import Explore from './components/gridExplore';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
@@ -14,7 +20,7 @@ function App() {
     const pages = [
         {
             id: 0,
-            pageLink: '/',
+            pageLink: '/home',
             view: <div />,
             displayName: 'Home',
             animationDelayForNavbar: 0.1,
@@ -72,20 +78,73 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Route
-                    render={() => (
-                        <div className="Almighty-Router">
-                            <Navbar pages={pages} />
-                        </div>
-                    )}
-                />
+                <Switch>
+                    <Route path="/home">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <h1>Home</h1>
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/explore">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <Explore />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/news">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <News />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/campus">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <Campus />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/hostels">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <HostelGrid />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/map">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <h1>Map</h1>
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/links">
+                        <Navbar pages={pages} />
+                        <main>
+                            <Appbar />
+                            <div className="content-area">
+                                <h1>Links</h1>
+                            </div>
+                        </main>
+                    </Route>
+                    <Redirect to="/home" />
+                </Switch>
             </Router>
-            <main>
-                <Appbar />
-                <div className="content-area">
-                    <News />
-                </div>
-            </main>
         </div>
     );
 }
