@@ -22,4 +22,5 @@ Tasks v1.0.0
 - [x] Routing
 - [ ] Dynamic App Bar (both Mobile and Desktop screens)
 - [ ] Home Page
+- [ ] Links Page
 - [x] Small Screen Support
