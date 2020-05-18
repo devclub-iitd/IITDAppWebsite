@@ -10,11 +10,12 @@ Tasks v1.0.0
 - [x] Hostel Cards Styling
 - [x] Explore Cards
 - [x] Explore Cards Styling
-- [ ] Campus Cards
-- [ ] Campus Cards Styling
+- [x] Campus Cards
+- [x] Campus Cards Styling
 - [ ] Maps https://react-leaflet.js.org/
 - [ ] Hostels Data
 - [ ] Explore Data
 - [ ] Campus/Maps Data
 - [ ] Routing
+- [ ] Home Page
 - [x] Small Screen Support
