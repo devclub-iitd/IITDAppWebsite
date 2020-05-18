@@ -23,4 +23,5 @@ Tasks v1.0.0
 - [ ] Dynamic App Bar (both Mobile and Desktop screens)
 - [ ] Home Page
 - [ ] Links Page
+- [ ] Search
 - [x] Small Screen Support
