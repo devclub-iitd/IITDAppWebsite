@@ -12,10 +12,13 @@ Tasks v1.0.0
 - [x] Explore Cards Styling
 - [x] Campus Cards
 - [x] Campus Cards Styling
+- [x] News Cards
+- [ ] News cards Styling
 - [ ] Maps https://react-leaflet.js.org/
 - [ ] Hostels Data
 - [ ] Explore Data
 - [ ] Campus/Maps Data
+- [ ] News Data Model
 - [ ] Routing
 - [ ] Home Page
 - [x] Small Screen Support
