@@ -50,7 +50,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <Link to="/news">
                         Read Latest IIT Delhi News{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
@@ -58,7 +58,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <Link to="/campus">
                         Find Places To Visit in IIT Delhi{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
@@ -66,7 +66,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <Link to="/hostels">
                         Student Hostels in IIT Delhi{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
@@ -74,7 +74,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <Link to="/campus">
                         View the Campus Map{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
@@ -82,7 +82,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <Link to="/links">
                         Links to IITD Resources{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
@@ -90,12 +90,12 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/explore">
+                    <a href="https://devclub.in/">
                         Learn More About DevClub IIT Delhi{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />
                         </span>
-                    </Link>
+                    </a>
                 </div>
 
                 {windowSize.width < 769 && (
