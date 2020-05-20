@@ -13,6 +13,7 @@ import News from './components/gridNews';
 import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
 import Home from './components/home';
+import Links from './components/gridLinks';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
@@ -54,7 +55,7 @@ function App() {
         {
             id: 4,
             pageLink: '/hostels',
-            view: HostelGrid,
+            view: <div />,
             displayName: 'Hostels',
             animationDelayForNavbar: 0.1,
             showInNavbar: true,
@@ -70,7 +71,7 @@ function App() {
         {
             id: 6,
             pageLink: '/links',
-            view: <div />,
+            view: <Links />,
             displayName: 'Links',
             animationDelayForNavbar: 0.1,
             showInNavbar: true,
@@ -137,7 +138,7 @@ function App() {
                         <main>
                             <Appbar name="Quick Links" />
                             <div className="content-area">
-                                <h1>Links</h1>
+                                <Links />
                             </div>
                         </main>
                     </Route>

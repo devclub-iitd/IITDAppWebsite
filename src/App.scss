@@ -611,7 +611,27 @@ h6 {
       top: 2rem;
       right: 40px;
     }
+
+    .top-left-2 {
+      display: inline-block;
+      font-family: 'Cereal';
+      background-color:$indigo1;
+      border-radius: 10px;
+      font-size:1.5vw;
+      color: $indigo2;
+      padding-left:1rem;
+      padding-right: 1rem;
+      padding-top:0.5rem;
+      padding-bottom:0.5rem;
+      font-weight:600;
+      position: absolute;
+      top: 6.5rem;
+      right: 40px;
+      width: 20%;
+    }
   }
+
+  
 
 }
 
@@ -1016,6 +1036,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin:1rem;
   }
 }
+
+.linkGrid{
+  margin-top: 0;
+  margin: 10px;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  background-color: $indigo-content;
+  // padding: 1rem;
+  .link-card{
+    h1{
+      font-family: 'Cereal';
+      font-size:2rem;
+      color: $indigo1;
+      font-weight:900;
+    }
+      a {
+        font-family: 'Cereal';
+        font-weight:600;
+        font-size:1.2rem;
+        text-decoration: none;
+        position: relative;
+        color: $indigo1;
+        
+        &:after {
+          content: '';
+          height: 3px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          background: $indigo2;
+          transition: 0.2s;
+        }
+      
+        &:hover:after {
+          width: 100%;
+        }
+        
+        &.block {
+          display: block;
+          padding: 0.5em;
+          
+          &:hover {
+            background: #eee;
+          }
+        }
+      }
+    }
+
+    a:visited {
+      font-family: 'Cereal';
+      font-weight:600;
+      font-size:1.2rem;
+      text-decoration: none;
+      position: relative;
+      color: #5160bc;
+      
+      &:after {
+        content: '';
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        background: $indigo2;
+        transition: 0.2s;
+      }
+    
+      &:hover:after {
+        width: 100%;
+      }
+      
+      &.block {
+        display: block;
+        padding: 0.5em;
+        
+        &:hover {
+          background: #eee;
+        }
+      }
+    }
+  }
+  
 
 
 

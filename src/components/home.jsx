@@ -14,6 +14,11 @@ class Home extends React.Component {
                     </span>{' '}
                     Hauz Khas, New Delhi
                 </div>
+                <div className="top-left-2">
+                    IIT Delhi is one of the 15 IITs created to be Centres of
+                    Excellence for training, research and development in
+                    science, engineering and technology In India.
+                </div>
             </div>
         );
     }
