@@ -12,6 +12,7 @@ import HostelGrid from './components/gridHostel';
 import News from './components/gridNews';
 import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
+import Home from './components/home';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
@@ -83,9 +84,7 @@ function App() {
                         <Navbar pages={pages} name="Home" />
                         <main>
                             <Appbar name="Home" />
-                            <div className="content-area">
-                                <h1>Home</h1>
-                            </div>
+                            <Home />
                         </main>
                     </Route>
                     <Route path="/explore">

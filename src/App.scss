@@ -356,6 +356,18 @@ h6 {
     }
   }
 
+   // HOME BANNER FOR MOBILE
+   .home-banner{
+    text-align: center;
+    margin-top:3rem;
+    .home-img{
+      display: inline-block;
+      width:90%;
+      height:auto;
+      border-radius: 10px;
+    }
+  }
+
   
 
 
@@ -398,6 +410,8 @@ h6 {
     }
   }
 
+ 
+
 }
 
 @media (min-width: 651px){
@@ -432,6 +446,8 @@ h6 {
       }
     }
   }
+
+  
 
 }
 
@@ -556,13 +572,46 @@ h6 {
   }
 
   .content-area{
-    margin-left: 8rem;
+    margin-left: 120px;
     margin-top: 6rem;
     margin-right: 3rem;
     margin-bottom: 10rem;
   }
 
-  
+  //HERE FOR DESKTOP
+  .home-banner{
+    position:relative;
+    text-align: left;
+    margin-top:40px;
+    margin-left: 140px;
+    .home-img{
+      display: inline-block;
+      width:90%;
+      height:auto;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: pointer; 
+        animation:bounceOut .4s linear;
+      }
+    }
+    .top-left-1 {
+      display: inline-block;
+      font-family: 'Cereal';
+      background-color:$indigo1;
+      border-radius: 10px;
+      font-size:2vw;
+      color: $indigo2;
+      padding-left:2rem;
+      padding-right: 2rem;
+      padding-top:0.5rem;
+      padding-bottom:0.5rem;
+      font-weight:900;
+      position: absolute;
+      top: 2rem;
+      right: 40px;
+    }
+  }
 
 }
 
@@ -967,6 +1016,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin:1rem;
   }
 }
+
+
 
 
 
