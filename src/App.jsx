@@ -18,6 +18,11 @@ import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
 
+const styles = {
+    contentAreaLinks: {
+        marginTop: 30,
+    },
+};
 function App() {
     const pages = [
         {
@@ -137,7 +142,10 @@ function App() {
                         <Navbar pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
-                            <div className="content-area">
+                            <div
+                                className="content-area"
+                                style={styles.contentAreaLinks}
+                            >
                                 <Links />
                             </div>
                         </main>
