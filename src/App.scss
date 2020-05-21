@@ -733,17 +733,17 @@ h6 {
     .top-left-1 {
       display: inline-block;
       font-family: 'Cereal';
-      background-color:$indigo1;
+      background:rgba(220,222,240,0.77);
       border-radius: 10px;
       font-size:2vw;
       text-align: center;
-      color: $indigo2;
+      color: $indigo1;
       padding-top:0.5rem;
       padding-bottom:0.5rem;
       font-weight:900;
       position: absolute;
       width:30%;
-      right:-10px;
+      right:10px;
       top:1vw;
     }
 
@@ -754,18 +754,18 @@ h6 {
       display: inline-block;
       text-align: center;
       font-family: 'Cereal';
-      background-color:$indigo1;
+      background:rgba(220,222,240,0.77);
       border-radius: 10px;
-      color: $indigo2;
+      color: $indigo1;
       padding-left:1rem;
       padding-right: 1rem;
       padding-top:1rem;
       padding-bottom:1rem;
       font-weight:600;
       position: absolute;
-      right:-10px;
+      right:10px;
       top: 10.5vw;
-      width:35%;
+      width:30%;
     }
   }
 
@@ -773,12 +773,12 @@ h6 {
   
 
   .links{
-    width:28%;
+    width:auto;
     position:absolute;
-    right:-10px;
+    right:10px;
     top: 20vw;
     a{
-      color:$indigo2;
+      color:$indigo1;
       text-decoration:none;
     }
     a:hover{
@@ -786,13 +786,13 @@ h6 {
       transition:0.2s;
     }
     a:visited{
-      color:$indigo-content;
+      color:$indigo1;
       text-decoration: none;
     }
   .link{
-    font-size:1vw;
+    font-size:1.4vw;
     font-family: 'Cereal';
-    background-color:$indigo1;
+    background: rgba(220,222,240,0.77);
     color:$indigo2;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
