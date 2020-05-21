@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import * as Icon from 'react-feather';
 import covid from './images/news/covid.png';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -29,9 +30,14 @@ class CampusCard extends React.Component {
                         PCR-based diagnostic assay.
                     </p>
                     <p className="news-link">
-                        Read complete story :{' '}
+                        <span>
+                            <Icon.Calendar /> 24/04/2020{' '}
+                        </span>
+                        <span>
+                            <Icon.Bookmark />
+                        </span>
                         <a href="https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0">
-                            Click Here
+                            Read Complete Article
                         </a>
                     </p>
                 </div>

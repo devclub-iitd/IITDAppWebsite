@@ -25,7 +25,7 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages }) {
+function Navbar({ pages, name }) {
     const [expand, setExpand] = useState(false);
     // eslint-disable-next-line
     const [isThemeSet, setIsThemeSet] = useLocalStorage('isThemeSet', false);
@@ -43,7 +43,10 @@ function Navbar({ pages }) {
                         setExpand(false);
                     }}
                 >
-                    <h1>IITD</h1>
+                    <h1>
+                        IITD
+                        {windowSize.width < 769 && <span>{`${name}`}</span>}
+                    </h1>
                 </Link>
             </div>
 
@@ -104,7 +107,7 @@ function Navbar({ pages }) {
                                 <Icon.Home
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/')}
+                                    {...activeNavIcon('/home')}
                                 />
                             </Link>
                         </span>
@@ -233,6 +236,7 @@ function Expand({ expand, pages, setExpand }) {
 Navbar.propTypes = {
     // eslint-disable-next-line react/require-default-props
     pages: PropTypes.instanceOf(Array),
+    name: PropTypes.string.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,
