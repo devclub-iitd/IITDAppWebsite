@@ -283,7 +283,7 @@ h6 {
     display: inline-block;
     width:90%;
     margin:1rem;
-    margin-top: 6rem;;
+    margin-top: 6rem;
   }
 
   .Navbar{
@@ -1320,6 +1320,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
   
 
-.map-leaf{
-  height: 800px;
-}
+  .map-leaf{
+    height: 90vh;
+    z-index: 1;
+    border-radius: 10px;
+    .marker{
+      z-index: 4;
+    }
+  }
