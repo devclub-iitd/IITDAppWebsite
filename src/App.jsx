@@ -14,6 +14,7 @@ import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
 import Home from './components/home';
 import Links from './components/gridLinks';
+import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
@@ -68,7 +69,7 @@ function App() {
         {
             id: 5,
             pageLink: '/map',
-            view: <div />,
+            view: <MapLeaf />,
             displayName: 'Map',
             animationDelayForNavbar: 0.1,
             showInNavbar: true,
@@ -134,7 +135,7 @@ function App() {
                         <main>
                             <Appbar name="Institute Map" />
                             <div className="content-area">
-                                <h1>Map</h1>
+                                <MapLeaf />
                             </div>
                         </main>
                     </Route>

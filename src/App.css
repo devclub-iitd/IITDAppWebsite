@@ -560,6 +560,9 @@ h6 {
     margin-bottom: 0;
     top: 52vw; } }
 
+.map {
+  height: 100%; }
+
 .fadeInUp {
   animation-duration: .45s;
   animation-fill-mode: both;
@@ -921,3 +924,6 @@ h6 {
       padding: 0.5em; }
       .linkGrid a:visited.block:hover {
         background: #eee; }
+
+.map-leaf {
+  height: 800px; }
