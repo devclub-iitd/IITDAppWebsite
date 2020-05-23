@@ -1,21 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import L from 'leaflet';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import '../App.css';
+import * as Icon from 'react-feather';
 import loc from './locations';
-
-// const pointerIcon = new L.Icon({
-//     iconUrl: './images/map/pointerIcon.svg',
-//     iconRetinaUrl: './images/map/pointerIcon.svg',
-//     iconAnchor: [5, 55],
-//     popupAnchor: [10, -44],
-//     iconSize: [40, 55],
-//     shadowUrl: './images/map/marker-shadow.png',
-//     shadowSize: [68, 95],
-//     shadowAnchor: [20, 92],
-// });
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MapLeaf extends React.Component {
@@ -43,14 +33,41 @@ class MapLeaf extends React.Component {
         const menu = loc.map((locObj) => {
             return (
                 <Marker position={locObj.cd} className="marker">
-                    <Popup>{locObj.name}</Popup>
+                    <Popup className="pup">
+                        <h1>{locObj.name}</h1>
+                        {locObj.img}
+                        <p>{locObj.desc}</p>
+                        <div className="c-btn-group">
+                            <a className="c-btn fd">
+                                <span>
+                                    <Icon.BookOpen />
+                                </span>
+                            </a>
+                            <a className="c-btn learn-e">
+                                <span>
+                                    <Icon.Info />
+                                </span>
+                            </a>
+                            <a className="c-btn map">
+                                <span>
+                                    <Icon.MapPin />
+                                </span>
+                            </a>
+                            <a className="c-btn ph">
+                                <Icon.Phone />
+                            </a>
+                            <a className="c-btn web">
+                                <Icon.Globe />
+                            </a>
+                        </div>
+                    </Popup>
                 </Marker>
             );
         });
         return (
             <Map
                 className="map-leaf"
-                zoom={20}
+                zoom={18}
                 minZoom={16}
                 animate={this.state.animate}
                 center={this.state.latlng}

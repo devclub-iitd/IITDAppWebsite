@@ -235,6 +235,41 @@ h6 {
         padding: 0rem;
         width: 20%;
     }
+    .map-leaf {
+        height: 90vh;
+        border-radius: 10px;
+    }
+    .map-leaf .pup {
+        z-index: 20;
+        width: 240px;
+    }
+    .map-leaf .pup a {
+        z-index: inherit;
+    }
+    .map-leaf .pup img {
+        height: auto;
+        width: 100px;
+        margin-left: 50px;
+    }
+    .map-leaf .pup h1 {
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Cereal';
+        font-weight: 900;
+        color: #4051b5;
+        font-size: 20px;
+    }
+    .map-leaf .pup p {
+        text-align: center;
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-family: 'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
     .home-banner {
         position: relative;
         padding: 10px;
@@ -527,6 +562,52 @@ h6 {
         margin-right: 3rem;
         margin-bottom: 10rem;
     }
+    .map-leaf {
+        height: 90vh;
+        margin-left: -30px;
+        margin-top: -10px;
+        margin-bottom: 0px;
+        margin-right: -45px;
+        border-radius: 0;
+        z-index: 1;
+    }
+    .map-leaf .pup {
+        text-align: center;
+        z-index: 20;
+        width: 220px;
+        font-family: 'Cereal';
+        font-weight: 600;
+        height: auto;
+    }
+    .map-leaf .pup a {
+        display: inline-block;
+        z-index: inherit;
+    }
+    .map-leaf .pup img {
+        margin-left: 40px;
+        display: inline-block;
+        height: auto;
+        width: 100px;
+    }
+    .map-leaf .pup h1 {
+        margin-right: 10px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Cereal';
+        font-weight: 900;
+        color: #4051b5;
+        font-size: 20px;
+    }
+    .map-leaf .pup p {
+        text-align: center;
+        width: 180px;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-family: 'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
     .home-banner {
         position: relative;
         margin-left: 160px;
@@ -657,10 +738,6 @@ h6 {
         margin-bottom: 0;
         top: 52vw;
     }
-}
-
-.map {
-    height: 100%;
 }
 
 .fadeInUp {
@@ -1113,13 +1190,4 @@ h6 {
 }
 .linkGrid a:visited.block:hover {
     background: #eee;
-}
-
-.map-leaf {
-    height: 90vh;
-    z-index: 1;
-    border-radius: 10px;
-}
-.map-leaf .marker {
-    z-index: 4;
 }

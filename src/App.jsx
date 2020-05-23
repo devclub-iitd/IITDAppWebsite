@@ -24,6 +24,8 @@ import Links from './components/gridLinks';
 import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet/dist/leaflet';
 import './App.css';
 
 Leaflet.Icon.Default.imagePath =
@@ -42,6 +44,7 @@ const styles = {
     },
     contentAreaMapLg: {
         marginTop: 10,
+        marginBottom: 0,
     },
 };
 function App() {

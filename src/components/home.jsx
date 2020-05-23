@@ -74,7 +74,7 @@ function Home() {
                     </Link>
                 </div>
                 <div className="link">
-                    <Link to="/campus">
+                    <Link to="/map">
                         View the Campus Map{' '}
                         <span>
                             <Icon.ChevronsRight className="linkIcon" />

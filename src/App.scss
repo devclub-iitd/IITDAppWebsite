@@ -356,9 +356,47 @@ h6 {
     }
   }
 
+  //MAP LEAF FOR MOBILE
+
+  .map-leaf{
+    height:90vh;
+    border-radius: 10px;
+    .pup{
+      z-index: 20;
+      width:240px;
+      a{
+        z-index: inherit;
+      }
+      img{
+        height: auto;
+        width: 100px;
+        margin-left: 50px;
+      }
+      h1{
+        text-align: center;
+        margin-right: 10px;
+        margin-top:10px;
+        margin-bottom:10px;
+        font-family:'Cereal';
+        font-weight: 900;
+        color:$indigo1;
+        font-size: 20px;
+      }
+      p{
+        text-align: center;
+        width:200px;
+        margin-top:10px;
+        margin-bottom:2rem;
+        font-family:'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+  }}
+
    
   // HOME BANNER FOR MOBILE
 
+  
   .home-banner{
     position:relative;
     padding: 10px;
@@ -685,6 +723,57 @@ h6 {
     margin-bottom: 10rem;
   }
 
+
+
+  //MAP LEAF FOR DESKTOP 
+
+  .map-leaf{
+    height:90vh;
+    margin-left: -30px;
+    margin-top: -10px;
+    margin-bottom:0px;
+    margin-right:-45px;
+    border-radius: 0;
+    z-index: 1;
+    .pup{
+      text-align: center;
+      z-index: 20;
+      width: 220px;
+      a{
+        display: inline-block;
+        z-index: inherit;
+      }
+      img{
+        margin-left: 40px;
+        display: inline-block;
+        height: auto;
+        width: 100px;
+      }
+      h1{
+        margin-right: 10px;
+        text-align: center;
+        margin-top:10px;
+        margin-bottom:10px;
+        font-family:'Cereal';
+        font-weight: 900;
+        color:$indigo1;
+        font-size: 20px;
+      }
+      p{
+        text-align: center;
+        width: 180px;
+        margin-top:10px;
+        margin-bottom:2rem;
+        font-family:'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
+      }
+      font-family: 'Cereal';
+      font-weight: 600;
+      height:auto;
+    }
+
+  }
   //HERE FOR DESKTOP
   .home-banner{
     position:relative;
@@ -830,9 +919,6 @@ h6 {
 
 }
 
-.map{
-  height:100%;
-}
 
 
 
@@ -1319,12 +1405,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     }
   }
   
-
-  .map-leaf{
-    height: 90vh;
-    z-index: 1;
-    border-radius: 10px;
-    .marker{
-      z-index: 4;
-    }
-  }
