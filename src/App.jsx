@@ -6,6 +6,13 @@ import {
     Redirect,
     Switch,
 } from 'react-router-dom';
+import {
+    useEffectOnce,
+    useLockBodyScroll,
+    useWindowSize,
+    useLocalStorage,
+} from 'react-use';
+import Leaflet from 'leaflet';
 import Navbar from './components/navbar';
 import Appbar from './components/appbar';
 import HostelGrid from './components/gridHostel';
@@ -14,16 +21,32 @@ import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
 import Home from './components/home';
 import Links from './components/gridLinks';
+import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 import './App.css';
+
+Leaflet.Icon.Default.imagePath =
+    '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
 
 const styles = {
     contentAreaLinks: {
         marginTop: 30,
     },
+    contentAreaMap: {
+        marginTop: 10,
+        marginLeft: 10,
+        marginRight: 10,
+        marginBottom: 10,
+        width: '96%',
+    },
+    contentAreaMapLg: {
+        marginTop: 10,
+    },
 };
 function App() {
+    const windowSize = useWindowSize();
+
     const pages = [
         {
             id: 0,
@@ -68,7 +91,7 @@ function App() {
         {
             id: 5,
             pageLink: '/map',
-            view: <div />,
+            view: <MapLeaf />,
             displayName: 'Map',
             animationDelayForNavbar: 0.1,
             showInNavbar: true,
@@ -133,9 +156,22 @@ function App() {
                         <Navbar pages={pages} name="Map" />
                         <main>
                             <Appbar name="Institute Map" />
-                            <div className="content-area">
-                                <h1>Map</h1>
-                            </div>
+                            {windowSize.width < 769 && (
+                                <div
+                                    className="content-area"
+                                    style={styles.contentAreaMap}
+                                >
+                                    <MapLeaf />
+                                </div>
+                            )}
+                            {windowSize.width >= 769 && (
+                                <div
+                                    className="content-area"
+                                    style={styles.contentAreaMapLg}
+                                >
+                                    <MapLeaf />
+                                </div>
+                            )}
                         </main>
                     </Route>
                     <Route path="/links">

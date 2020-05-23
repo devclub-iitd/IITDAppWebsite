@@ -574,17 +574,17 @@ h6 {
     .home-banner .top-left-1 {
         display: inline-block;
         font-family: 'Cereal';
-        background-color: #4051b5;
+        background: rgba(220, 222, 240, 0.77);
         border-radius: 10px;
         font-size: 2vw;
         text-align: center;
-        color: #9ea9ec;
+        color: #4051b5;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         font-weight: 900;
         position: absolute;
         width: 30%;
-        right: -10px;
+        right: 10px;
         top: 1vw;
     }
     .home-banner .top-left-2 {
@@ -594,27 +594,27 @@ h6 {
         display: inline-block;
         text-align: center;
         font-family: 'Cereal';
-        background-color: #4051b5;
+        background: rgba(220, 222, 240, 0.77);
         border-radius: 10px;
-        color: #9ea9ec;
+        color: #4051b5;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         font-weight: 600;
         position: absolute;
-        right: -10px;
+        right: 10px;
         top: 10.5vw;
-        width: 35%;
+        width: 30%;
     }
     .links {
-        width: 28%;
+        width: auto;
         position: absolute;
-        right: -10px;
+        right: 10px;
         top: 20vw;
     }
     .links a {
-        color: #9ea9ec;
+        color: #4051b5;
         text-decoration: none;
     }
     .links a:hover {
@@ -622,13 +622,13 @@ h6 {
         transition: 0.2s;
     }
     .links a:visited {
-        color: #c5cae9;
+        color: #4051b5;
         text-decoration: none;
     }
     .links .link {
-        font-size: 1vw;
+        font-size: 1.4vw;
         font-family: 'Cereal';
-        background-color: #4051b5;
+        background: rgba(220, 222, 240, 0.77);
         color: #9ea9ec;
         padding-top: 0.3rem;
         padding-bottom: 0.3rem;
@@ -657,6 +657,10 @@ h6 {
         margin-bottom: 0;
         top: 52vw;
     }
+}
+
+.map {
+    height: 100%;
 }
 
 .fadeInUp {
@@ -1109,4 +1113,13 @@ h6 {
 }
 .linkGrid a:visited.block:hover {
     background: #eee;
+}
+
+.map-leaf {
+    height: 90vh;
+    z-index: 1;
+    border-radius: 10px;
+}
+.map-leaf .marker {
+    z-index: 4;
 }
