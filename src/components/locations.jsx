@@ -9,7 +9,7 @@ const locations = [
         img: <img src={dogra} alt="Dogra Hall" />,
         category: 'academic',
         desc:
-            "IIT Delhi's main multipurpose auditorium hall with the iconic hyperbolic paraboloid roof and a seating capacityof  over 1200.",
+            "IIT Delhi's main multipurpose auditorium hall with the iconic hyperbolic paraboloid roof and a seating capacity of  over 1200.",
     },
     {
         id: 1,
