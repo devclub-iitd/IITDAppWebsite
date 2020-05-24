@@ -8,7 +8,7 @@ const locations = [
         name: 'Dogra Hall',
         img: <img src={dogra} alt="Dogra Hall" />,
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            "IIT Delhi's main multipurpose auditorium hall with the iconic hyperbolic paraboloid roof and a seating capacityof  over 1200.",
     },
     {
         id: 1,
@@ -16,7 +16,7 @@ const locations = [
         name: 'Cafe Coffee Day',
         img: <img src={dogra} alt="Dogra Hall" />,
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'The famous Café cum restaurant, serving coffee, cakes and sandwiches at subsidized rates.',
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const locations = [
         name: 'SCOOPS',
         img: <img src={dogra} alt="Dogra Hall" />,
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'SCOOPS or Student Co-Operative Society is the one stop for all your stationery and in-campus needs, at affordable rates. SCOOPS is a store run by BSW.',
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const locations = [
         name: 'Dept. Of Electrical Engineering',
         img: <img src={dogra} alt="Dogra Hall" />,
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'The Department of Electrical Engineering, IIT Delhi is situated here.',
     },
     {
         id: 4,
@@ -40,7 +40,7 @@ const locations = [
         name: 'Red Square',
         img: <img src={dogra} alt="Dogra Hall" />,
         desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'A popular hangout spot, Red Square is so named because of the colour of its flooring. ',
     },
     {
         id: 5,
