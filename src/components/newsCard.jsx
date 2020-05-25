@@ -28,17 +28,18 @@ class CampusCard extends React.Component {
                         specificity of 100%. This makes IITD the first academic
                         institute to have obtained ICMR approval for a real-time
                         PCR-based diagnostic assay.
-                    </p>
-                    <p className="news-link">
-                        <span>
-                            <Icon.Calendar /> 24/04/2020{' '}
-                        </span>
-                        <span>
-                            <Icon.Bookmark />
-                        </span>
-                        <a href="https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0">
-                            Read Complete Article
-                        </a>
+                        <p className="news-link">
+                            <span className="news-icon">
+                                <Icon.Calendar height="15" strokeWidth="2" />{' '}
+                                24/04/2020{' '}
+                            </span>
+                            <span className="news-icon">
+                                <Icon.Bookmark height="15" strokeWidth="2" />
+                            </span>
+                            <a href="https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0">
+                                Read Complete Article
+                            </a>
+                        </p>
                     </p>
                 </div>
             </div>

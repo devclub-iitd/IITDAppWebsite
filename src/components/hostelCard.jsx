@@ -1,6 +1,6 @@
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import * as Icon from 'react-feather';
 import jwala from './images/hostels/jwala.png';
 
 const HostelCard = () => (
@@ -20,12 +20,20 @@ const HostelCard = () => (
                 </p>
             </div>
             <div key="c" autoSize="true" className="left2">
-                <Button fluid className="learn">
-                    Learn More
-                </Button>
-                <Button fluid className="map-link">
-                    Find On Google Maps
-                </Button>
+                <div className="c-btn-group">
+                    <a className="c-btn fd">
+                        <span className="hostel-link">
+                            <Icon.MapPin height="15" strokeWidth="3" /> Find on
+                            Map{'  '}
+                        </span>
+                    </a>
+                    <a className="c-btn learn-e">
+                        <span className="hostel-link">
+                            <Icon.Info height="15" strokeWidth="3" /> Learn More
+                            {'  '}
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </>

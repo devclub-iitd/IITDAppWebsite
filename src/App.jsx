@@ -24,10 +24,14 @@ import Links from './components/gridLinks';
 import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet/dist/leaflet';
 import './App.css';
 
-Leaflet.Icon.Default.imagePath =
-    '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
+// Leaflet.Icon.Default.imagePath =
+//     '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
+
+Leaflet.Icon.Default.imagePath = './components/shared/marker-icon-red.png';
 
 const styles = {
     contentAreaLinks: {
@@ -41,7 +45,9 @@ const styles = {
         width: '96%',
     },
     contentAreaMapLg: {
+        marginLeft: 0,
         marginTop: 10,
+        marginBottom: 0,
     },
 };
 function App() {

@@ -235,6 +235,52 @@ h6 {
         padding: 0rem;
         width: 20%;
     }
+    .map-leaf {
+        height: 90vh;
+        border-radius: 10px;
+    }
+    .map-leaf h6 {
+        font-size: 16px !important;
+        padding: 0;
+        margin: 0;
+        color: #4051b5;
+        display: inline;
+    }
+    .map-leaf .layer-control {
+        background-color: #4051b5;
+        font-family: 'Cereal' !important;
+    }
+    .map-leaf .pup {
+        z-index: 20;
+        width: 240px;
+    }
+    .map-leaf .pup a {
+        z-index: inherit;
+    }
+    .map-leaf .pup img {
+        height: auto;
+        width: 100px;
+        margin-left: 50px;
+    }
+    .map-leaf .pup h1 {
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Cereal';
+        font-weight: 900;
+        color: #4051b5;
+        font-size: 20px;
+    }
+    .map-leaf .pup p {
+        text-align: center;
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-family: 'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
+    }
     .home-banner {
         position: relative;
         padding: 10px;
@@ -349,6 +395,8 @@ h6 {
 
 @media (max-width: 650px) {
     .news-card {
+        background-color: #c5cae9;
+        border-radius: 10px;
         align-items: center;
         align-content: center;
         padding: 1rem;
@@ -374,34 +422,91 @@ h6 {
     }
     .news-card .news-card-heading h3 {
         font-weight: 900;
+        margin-bottom: 0;
     }
     .news-card .news-card-heading .news-desc {
+        margin-top: 0;
         font-size: 0.8rem;
     }
     .news-card .news-card-heading .news-link {
         font-size: 0.7rem;
         color: #4074c6;
+        margin-bottom: 0;
     }
 }
 
-@media (min-width: 651px) {
+@media (min-width: 1050px) and (max-width: 1300px) {
     .news-card {
+        background-color: #c5cae9;
+        font-size: 2rem;
+        border-radius: 10px;
+        align-items: center;
+        align-content: center;
         padding: 1rem;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
     }
     .news-card .news-img {
         border-radius: 10px;
+        display: inline-block;
         order: 1;
-        width: 40%;
+        height: 40%;
         max-width: 240px;
         max-height: 240px;
         height: auto;
     }
     .news-card .news-card-heading {
-        width: 60%;
+        height: 60%;
         order: 2;
+        font-weight: 600;
+        font-family: 'Cereal';
+        color: #4051b5;
+    }
+    .news-card .news-card-heading h3 {
+        font-weight: 900;
+        font-size: 60px;
+    }
+    .news-card .news-card-heading .news-desc {
+        font-size: 1.5rem;
+    }
+    .news-card .news-card-heading .news-link {
+        font-size: 1rem;
+        color: #4074c6;
+    }
+}
+
+@media (min-width: 651px) {
+    .newsGrid {
+        border-radius: 15px;
+    }
+    .news-card {
+        background-color: #c5cae9;
+        text-align: center;
+        justify-content: center;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .news-card .news-img {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        display: inline-block;
+        position: relative;
+        width: 38%;
+        left: -1rem;
+        border-radius: 10px;
+        order: 1;
+        max-width: 240px;
+        height: auto;
+        max-height: 200px;
+    }
+    .news-card .news-card-heading {
+        margin-top: 1rem;
+        border-radius: 10px;
+        order: 2;
+        width: 58%;
         font-weight: 600;
         font-family: 'Cereal';
         color: #4051b5;
@@ -411,8 +516,25 @@ h6 {
     }
     .news-card .news-card-heading .news-desc {
         font-size: 0.8rem;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 150px;
+        white-space: pre-wrap;
+        /* CSS3 */
+        white-space: -moz-pre-wrap;
+        /* Firefox */
+        white-space: -pre-wrap;
+        /* Opera <7 */
+        white-space: -o-pre-wrap;
+        /* Opera 7 */
+        word-wrap: break-word;
+        margin-bottom: 1rem;
+        /* IE */
     }
     .news-card .news-card-heading .news-link {
+        max-height: 20px;
         font-size: 0.7rem;
         color: #4074c6;
     }
@@ -526,6 +648,62 @@ h6 {
         margin-top: 6rem;
         margin-right: 3rem;
         margin-bottom: 10rem;
+    }
+    .map-leaf {
+        height: 90vh;
+        margin-left: -30px;
+        margin-top: -10px;
+        margin-bottom: 0px;
+        margin-right: -45px;
+        border-radius: 0;
+        z-index: 1;
+    }
+    .map-leaf h6 {
+        font-size: 16px !important;
+        padding: 0;
+        margin: 0;
+        color: #4051b5;
+        display: inline;
+    }
+    .map-leaf .layer-control {
+        background-color: #4051b5;
+    }
+    .map-leaf .pup {
+        text-align: center;
+        z-index: 20;
+        width: 220px;
+        font-family: 'Cereal';
+        font-weight: 600;
+        height: auto;
+    }
+    .map-leaf .pup a {
+        display: inline-block;
+        z-index: inherit;
+    }
+    .map-leaf .pup img {
+        margin-left: 40px;
+        display: inline-block;
+        height: auto;
+        width: 100px;
+    }
+    .map-leaf .pup h1 {
+        margin-right: 10px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: 'Cereal';
+        font-weight: 900;
+        color: #4051b5;
+        font-size: 20px;
+    }
+    .map-leaf .pup p {
+        text-align: center;
+        width: 180px;
+        margin-top: 10px;
+        margin-bottom: 2rem;
+        font-family: 'Cereal';
+        font-weight: 400;
+        font-size: 0.75rem;
     }
     .home-banner {
         position: relative;
@@ -657,10 +835,6 @@ h6 {
         margin-bottom: 0;
         top: 52vw;
     }
-}
-
-.map {
-    height: 100%;
 }
 
 .fadeInUp {
@@ -800,6 +974,7 @@ h6 {
     font-family: 'Cereal';
 }
 .hostel-card-bg .left2 {
+    margin-top: 5rem;
     grid-column-start: 1;
     grid-column-end: span 2;
     grid-row-start: 2;
@@ -989,8 +1164,29 @@ h6 {
     padding: 0.25rem;
     padding-bottom: 0;
 }
+.c-btn-group .acad {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.c-btn-group .eat {
+    background-color: #fd7e14;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
 .c-btn-group .fd {
     background-color: #dc3545;
+    color: white;
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.c-btn-group .hs {
+    background-color: #007bff;
     color: white;
     padding: 0.25rem;
     padding-left: 0.5rem;
@@ -1115,11 +1311,95 @@ h6 {
     background: #eee;
 }
 
-.map-leaf {
-    height: 90vh;
-    z-index: 1;
-    border-radius: 10px;
+.hostel-link {
+    justify-content: center !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.2rem !important;
 }
-.map-leaf .marker {
-    z-index: 4;
+
+@media (max-width: 400px) {
+    .hostel-card-bg {
+        margin: 3rem 1rem 2rem 1rem;
+        background-color: #c5cae9;
+        width: 95%;
+        height: 80%;
+        border-radius: 10px;
+        z-index: 3;
+        text-align: center;
+    }
+    .hostel-card-bg .card-subtitle {
+        position: absolute;
+        margin-top: 2rem;
+        color: #4051b5;
+        z-index: 3;
+        margin-left: 40%;
+        font-weight: 900;
+        font-size: 1rem;
+    }
+    .hostel-card-bg p {
+        color: #4051b5;
+        font-family: 'Cereal';
+        margin-top: 3rem;
+        padding: 0.5rem;
+        z-index: 3;
+        width: 80%;
+        height: 50%;
+    }
+    .hostel-card-title {
+        position: absolute;
+        z-index: 4;
+        background-color: #4c75f2;
+        color: #c5cae9;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-left: 20%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .hostel-card-title h1 {
+        color: #e8eaf6;
+        font-size: 1rem;
+        font-weight: 900;
+        font-family: 'Cereal';
+    }
+    .hostel-card-bg {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 0px 20px;
+    }
+    .hostel-card-bg .left1 {
+        margin-top: 3rem;
+        padding: 0.8rem;
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .hostel-card-bg .left1 img {
+        display: flex;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .hostel-card-bg .right {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        text-align: center;
+        font-family: 'Cereal';
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+    .hostel-card-bg .left2 {
+        margin-top: 5rem;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 2;
+    }
+    .hostel-link {
+        justify-content: center !important;
+        font-size: 0.7rem !important;
+        margin-bottom: 0.2rem !important;
+        margin-right: 0px;
+    }
 }

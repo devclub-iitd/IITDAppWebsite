@@ -17,6 +17,7 @@
         "clsx": "^1.1.0",
         "feather-icons": "^4.28.0",
         "leaflet": "^1.6.0",
+        "leaflet.markercluster": "^1.4.1",
         "mdbreact": "^4.26.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
@@ -27,6 +28,7 @@
         "react-helmet": "^6.0.0",
         "react-i18next": "^11.4.0",
         "react-leaflet": "^2.7.0",
+        "react-leaflet-markercluster": "^2.0.0",
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
@@ -35,7 +37,8 @@
         "react-use": "^14.2.0",
         "rsuite": "^4.6.0",
         "semantic-ui-css": "^2.4.1",
-        "semantic-ui-react": "^0.88.2"
+        "semantic-ui-react": "^0.88.2",
+        "wrld.js": "^0.1.2196"
     },
     "scripts": {
         "start": "react-scripts start",

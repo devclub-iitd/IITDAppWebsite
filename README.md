@@ -13,16 +13,16 @@ Tasks v1.0.0
 - [x] Campus Cards
 - [x] Campus Cards Styling
 - [x] News Cards
-- [ ] News cards Styling
+- [x] News cards Styling
 - [x] Maps https://react-leaflet.js.org/
-- [ ] Maps Card Styling
+- [x] Maps Card Styling
 - [ ] Hostels Data
 - [ ] Explore Data
 - [ ] Campus/Maps Data (Partially Complete)
 - [ ] News Data Model
 - [x] Routing
 - [x] Dynamic App Bar (both Mobile and Desktop screens)
-- [ ] Home Page (Layout Ready)
+- [x] Home Page (Layout Ready, Minor changes as reqd)
 - [x] Links Page
 - [ ] Search
 - [x] Small Screen Support
