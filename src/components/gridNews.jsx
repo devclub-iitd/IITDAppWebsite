@@ -17,6 +17,8 @@ class News extends React.Component {
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'b',
@@ -25,7 +27,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'c',
@@ -34,7 +39,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'd',
@@ -43,7 +51,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'e',
@@ -52,7 +63,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'f',
@@ -61,7 +75,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'g',
@@ -70,7 +87,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'h',
@@ -79,7 +99,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'i',
@@ -88,7 +111,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'j',
@@ -97,7 +123,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'k',
@@ -106,7 +135,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'l',
@@ -115,7 +147,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'm',
@@ -124,7 +159,10 @@ class News extends React.Component {
                 w: 1,
                 h: 1.75,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
         ];
         const layoutXs = [
@@ -133,7 +171,7 @@ class News extends React.Component {
                 x: 0,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -143,108 +181,144 @@ class News extends React.Component {
                 x: 0,
                 y: 1,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'c',
                 x: 0,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'd',
                 x: 6,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'e',
                 x: 8,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'f',
                 x: 10,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'g',
                 x: 0,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'h',
                 x: 0,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'i',
                 x: 2,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'j',
                 x: 4,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'k',
                 x: 6,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'l',
                 x: 8,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'm',
                 x: 10,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
         ];
         const layoutXxs = [
@@ -253,7 +327,7 @@ class News extends React.Component {
                 x: 0,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -263,108 +337,144 @@ class News extends React.Component {
                 x: 0,
                 y: 1,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'c',
                 x: 0,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'd',
                 x: 6,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'e',
                 x: 8,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'f',
                 x: 10,
                 y: 0,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'g',
                 x: 0,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'h',
                 x: 0,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'i',
                 x: 2,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'j',
                 x: 4,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'k',
                 x: 6,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'l',
                 x: 8,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
             {
                 i: 'm',
                 x: 10,
                 y: 3,
                 w: 1,
-                h: 3,
+                h: 2.8,
                 isResizable: false,
+                useCSSTransforms: true,
                 autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
             },
         ];
         const layouts = { lg: layoutLg, xxs: layoutXxs, xs: layoutXs };
@@ -380,52 +490,52 @@ class News extends React.Component {
                     xs: 396,
                     xxs: 0,
                 }}
-                cols={{ lg: 2, md: 2, md2: 2, sm: 1, xs: 1, xxs: 1 }}
+                cols={{ lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1 }}
                 horizontalCompact
                 autoSize
             >
                 <div
                     key="a"
-                    className="exploreGrid"
+                    className="newsGrid"
                     isResizable="true"
                     autoSize="true"
                 >
                     <NewsCard />
                 </div>
-                <div key="b" className="exploreGrid" autoSize="true">
+                <div key="b" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="c" className="exploreGrid" autoSize="true">
+                <div key="c" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="d" className="exploreGrid" autoSize="true">
+                <div key="d" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="e" className="exploreGrid" autoSize="true">
+                <div key="e" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="f" className="exploreGrid" autoSize="true">
+                <div key="f" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="g" className="exploreGrid" autoSize="true">
+                <div key="g" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="h" className="exploreGrid" autoSize="true">
+                <div key="h" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="i" className="exploreGrid" autoSize="true">
+                <div key="i" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="j" className="exploreGrid" autoSize="true">
+                <div key="j" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="k" className="exploreGrid" autoSize="true">
+                <div key="k" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="l" className="exploreGrid" autoSize="true">
+                <div key="l" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
-                <div key="m" className="exploreGrid" autoSize="true">
+                <div key="m" className="newsGrid" autoSize="true">
                     <NewsCard />
                 </div>
             </ResponsiveGridLayout>

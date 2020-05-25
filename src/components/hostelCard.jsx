@@ -22,13 +22,15 @@ const HostelCard = () => (
             <div key="c" autoSize="true" className="left2">
                 <div className="c-btn-group">
                     <a className="c-btn fd">
-                        <span>
-                            <Icon.MapPin /> Find on Map
+                        <span className="hostel-link">
+                            <Icon.MapPin height="15" strokeWidth="3" /> Find on
+                            Map{'  '}
                         </span>
                     </a>
                     <a className="c-btn learn-e">
-                        <span>
-                            <Icon.Info /> Learn More
+                        <span className="hostel-link">
+                            <Icon.Info height="15" strokeWidth="3" /> Learn More
+                            {'  '}
                         </span>
                     </a>
                 </div>
