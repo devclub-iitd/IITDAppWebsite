@@ -28,8 +28,10 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet/dist/leaflet';
 import './App.css';
 
-Leaflet.Icon.Default.imagePath =
-    '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
+// Leaflet.Icon.Default.imagePath =
+//     '//cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/images/';
+
+Leaflet.Icon.Default.imagePath = './components/shared/marker-icon-red.png';
 
 const styles = {
     contentAreaLinks: {
@@ -43,6 +45,7 @@ const styles = {
         width: '96%',
     },
     contentAreaMapLg: {
+        marginLeft: 0,
         marginTop: 10,
         marginBottom: 0,
     },

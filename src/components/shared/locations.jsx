@@ -1,5 +1,7 @@
 import React from 'react';
-import dogra from './images/campus/dogra.jpg';
+import dogra from '../images/campus/dogra.jpg';
+// eslint-disable-next-line spaced-comment
+//categories: acad,hostel,eat,util,med
 
 const locations = [
     {
@@ -16,7 +18,7 @@ const locations = [
         cd: [28.545379, 77.192362],
         name: 'Cafe Coffee Day',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'eat',
         desc:
             'The famous Café cum restaurant, serving coffee, cakes and sandwiches at subsidized rates.',
     },
@@ -25,7 +27,7 @@ const locations = [
         cd: [28.545423, 77.191826],
         name: 'SCOOPS',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'util',
         desc:
             'SCOOPS or Student Co-Operative Society is the one stop for all your stationery and in-campus needs, at affordable rates. SCOOPS is a store run by BSW.',
     },
@@ -52,7 +54,7 @@ const locations = [
         cd: [28.544848, 77.191558],
         name: 'Amul Cafe',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'eat',
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
@@ -61,7 +63,7 @@ const locations = [
         cd: [28.544719, 77.19118],
         name: 'Shiru Cafe',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'eat',
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
@@ -70,7 +72,7 @@ const locations = [
         cd: [28.544717, 77.191666],
         name: 'HPMC Store',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'eat',
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
@@ -79,7 +81,7 @@ const locations = [
         cd: [28.544595, 77.191713],
         name: 'Nescafé',
         img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
+        category: 'eat',
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
