@@ -9,8 +9,11 @@ import {
     FeatureGroup,
     Marker,
     Popup,
+    ZoomControl,
 } from 'react-leaflet';
 import '../App.css';
+import L from 'leaflet';
+import Control from 'react-leaflet-control';
 import { acad, hostel, eat, sport } from './shared/mapFilters';
 
 const { BaseLayer, Overlay } = LayersControl;
@@ -43,12 +46,14 @@ class MapLeaf extends React.Component {
                 className="map-leaf"
                 zoom={18}
                 minZoom={16}
-                maxZoom={20}
+                maxZoom={19}
                 animate={this.state.animate}
                 center={this.state.latlng}
                 onClick={this.handleClick}
                 closePopupOnClick={false}
+                zoomControl={false}
             >
+                <ZoomControl position="bottomright" />
                 <LayersControl position="topright" className="layer-control">
                     <BaseLayer checked name="<h6>Detailed</h6>">
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

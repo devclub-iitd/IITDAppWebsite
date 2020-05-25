@@ -45,7 +45,7 @@ const styles = {
         width: '96%',
     },
     contentAreaMapLg: {
-        marginLeft: 0,
+        marginLeft: 120,
         marginTop: 10,
         marginBottom: 0,
     },
