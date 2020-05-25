@@ -1316,3 +1316,90 @@ h6 {
     font-size: 1rem !important;
     margin-bottom: 0.2rem !important;
 }
+
+@media (max-width: 400px) {
+    .hostel-card-bg {
+        margin: 3rem 1rem 2rem 1rem;
+        background-color: #c5cae9;
+        width: 95%;
+        height: 80%;
+        border-radius: 10px;
+        z-index: 3;
+        text-align: center;
+    }
+    .hostel-card-bg .card-subtitle {
+        position: absolute;
+        margin-top: 2rem;
+        color: #4051b5;
+        z-index: 3;
+        margin-left: 40%;
+        font-weight: 900;
+        font-size: 1rem;
+    }
+    .hostel-card-bg p {
+        color: #4051b5;
+        font-family: 'Cereal';
+        margin-top: 3rem;
+        padding: 0.5rem;
+        z-index: 3;
+        width: 80%;
+        height: 50%;
+    }
+    .hostel-card-title {
+        position: absolute;
+        z-index: 4;
+        background-color: #4c75f2;
+        color: #c5cae9;
+        border-radius: 10px;
+        margin-top: 1rem;
+        margin-left: 20%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .hostel-card-title h1 {
+        color: #e8eaf6;
+        font-size: 1rem;
+        font-weight: 900;
+        font-family: 'Cereal';
+    }
+    .hostel-card-bg {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 0px 20px;
+    }
+    .hostel-card-bg .left1 {
+        margin-top: 3rem;
+        padding: 0.8rem;
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .hostel-card-bg .left1 img {
+        display: flex;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .hostel-card-bg .right {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        text-align: center;
+        font-family: 'Cereal';
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+    .hostel-card-bg .left2 {
+        margin-top: 5rem;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 2;
+    }
+    .hostel-link {
+        justify-content: center !important;
+        font-size: 0.7rem !important;
+        margin-bottom: 0.2rem !important;
+        margin-right: 0px;
+    }
+}
