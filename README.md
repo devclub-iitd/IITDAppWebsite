@@ -7,13 +7,13 @@ Tasks v1.0.0
 - [x] Appbar Structure
 - [x] Grid 
 - [x] Hostel Cards outline
-- [ ] Hostel Cards Styling
+- [x] Hostel Cards Styling
 - [x] Explore Cards
 - [x] Explore Cards Styling
 - [x] Campus Cards
 - [x] Campus Cards Styling
 - [x] News Cards
-- [ ] News cards Styling
+- [x] News cards Styling
 - [x] Maps https://react-leaflet.js.org/
 - [x] Maps Card Styling
 - [ ] Hostels Data
