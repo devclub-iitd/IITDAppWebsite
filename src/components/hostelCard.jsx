@@ -21,6 +21,11 @@ const HostelCard = () => (
             </div>
             <div key="c" autoSize="true" className="left2">
                 <div className="c-btn-group">
+                    <a className="c-btn fb">
+                        <span className="hostel-link">
+                            <Icon.User height="15" strokeWidth="3" /> Boys
+                        </span>
+                    </a>
                     <a className="c-btn fd">
                         <span className="hostel-link">
                             <Icon.MapPin height="15" strokeWidth="3" /> Find on

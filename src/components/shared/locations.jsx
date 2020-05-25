@@ -220,6 +220,114 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
+    {
+        id: 23,
+        cd: [28.5428665, 77.1931332],
+        name: 'Lecture Hall Complex',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'academic',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 24,
+        cd: [28.54343789812074, 77.19127982854845],
+        name: 'Staff Canteen',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'eat',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 25,
+        cd: [28.54571905400154, 77.19358921051027],
+        name: 'Dept. of Biochemical Engineering and Biotechnology',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'academic',
+        desc:
+            'The Department of Biochemical Engineering and Biotechnology, IIT Delhi is situated here.',
+    },
+    {
+        id: 24,
+        cd: [28.548201298663667, 77.18435704708101],
+        name: 'Rajdhani Chatkare Foods',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'eat',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 25,
+        cd: [28.54370308948772, 77.19027936458589],
+        name: 'Hockey/Athletics Field',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 26,
+        cd: [28.544343680524918, 77.1889114379883],
+        name: 'Cricket Ground',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 27,
+        cd: [28.544941875990535, 77.18845009803773],
+        name: 'Basketball Courts',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 28,
+        cd: [28.544833541630556, 77.18754887580873],
+        name: 'Football Ground',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 29,
+        cd: [28.545126, 77.193483],
+        name: 'BioTech Lawns',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 30,
+        cd: [28.545940430931072, 77.18602001667024],
+        name: 'Swimming Pool',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 32,
+        cd: [28.548183537902325, 77.18495249748231],
+        name: 'Volleyball Courts',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+        id: 25,
+        cd: [28.54758896789944, 77.18481838703157],
+        name: 'Lawn Tennis Courts',
+        img: <img src={dogra} alt="Dogra Hall" />,
+        category: 'sport',
+        desc:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
 ];
 
 export default locations;

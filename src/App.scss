@@ -375,6 +375,9 @@ h6 {
     .pup{
       z-index: 20;
       width:240px;
+      .c-btn-group{
+        margin-left:2rem;
+      }
       a{
         z-index: inherit;
       }
@@ -1182,6 +1185,9 @@ h6 {
     grid-column-start: 1;
     grid-column-end: span 2;
     grid-row-start:2;
+    .c-btn-group{
+      margin-left:-2rem;
+    }
     
   }
 }
@@ -1197,6 +1203,9 @@ h6 {
   padding-left: 1rem;
   padding-bottom: 1rem;
   font-family: 'Cereal';
+  .c-btn-group{
+    margin-left:-2rem;
+  }
   .learn{
     font-family: 'Cereal';
     min-width:60%;
@@ -1317,7 +1326,7 @@ h6 {
 .c-btn-group {
   line-height:1rem;
   white-space: nowrap;
-  margin:0.25rem;
+  margin:0rem;
   font-family: 'Cereal';
   margin-top:-4rem;
   display: inline-flex;
@@ -1354,6 +1363,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
   .web{
     background-color: $teal;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }
+  .sp{
+    background-color: #000;
     color: white;
     padding: 0.25rem;
     padding-bottom: 0;
@@ -1618,6 +1633,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
       grid-column-start: 1;
       grid-column-end: span 2;
       grid-row-start:2;
+      .c-btn-group{
+        margin-left:-2rem;
+      }
       
     }
   }
