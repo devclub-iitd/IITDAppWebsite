@@ -2,16 +2,18 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from './campusCard';
+import loc from './shared/locations';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Campus extends React.Component {
     render() {
-        const layoutLg = [
-            {
-                i: 'a',
-                x: 0,
-                y: 0,
+        const layoutLg = [];
+        for (let j = 0; j < loc.length; j += 1) {
+            layoutLg.push({
+                i: `${j}`,
+                x: (j % 6) * 2,
+                y: Math.floor((j / 6) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
@@ -19,309 +21,177 @@ class Campus extends React.Component {
                 autoSize: true,
                 verticalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'b',
-                x: 2,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'c',
-                x: 4,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'd',
-                x: 6,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'e',
-                x: 8,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'f',
-                x: 10,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'g',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'h',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'i',
-                x: 2,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'j',
-                x: 4,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'k',
-                x: 6,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'l',
-                x: 8,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'm',
-                x: 10,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-        ];
-        const layoutXxs = [
-            {
-                i: 'a',
-                x: 0,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-            },
-            {
-                i: 'b',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'c',
-                x: 0,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'd',
-                x: 6,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'e',
-                x: 8,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'f',
-                x: 10,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'g',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'h',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'i',
-                x: 2,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'j',
-                x: 4,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'k',
-                x: 6,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'l',
-                x: 8,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'm',
-                x: 10,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-        ];
-        const layouts = { lg: layoutLg, xxs: layoutXxs };
+            });
+        }
+        // const layoutXxs = [
+        //     {
+        //         i: '0',
+        //         x: 0,
+        //         y: 0,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //     },
+        //     {
+        //         i: '1',
+        //         x: 0,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '2',
+        //         x: 0,
+        //         y: 0,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '3',
+        //         x: 6,
+        //         y: 0,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '4',
+        //         x: 8,
+        //         y: 0,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '5',
+        //         x: 10,
+        //         y: 0,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '6',
+        //         x: 0,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '7',
+        //         x: 0,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '8',
+        //         x: 2,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '9',
+        //         x: 4,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '10',
+        //         x: 6,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '11',
+        //         x: 8,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        //     {
+        //         i: '12',
+        //         x: 10,
+        //         y: 3,
+        //         w: 2,
+        //         h: 3,
+        //         isResizable: false,
+        //         useCSSTransforms: true,
+        //         autoSize: true,
+        //         verticalCompact: true,
+        //         isDraggable: false,
+        //     },
+        // ];
+        const layouts = { lg: layoutLg };
+        const campusRoll = loc.map((locObj) => {
+            return (
+                <div
+                    key={locObj.id}
+                    className="exploreGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
+                    <CampusCard locObj={locObj} />
+                </div>
+            );
+        });
         return (
             <ResponsiveGridLayout
                 className="layout"
@@ -338,50 +208,7 @@ class Campus extends React.Component {
                 horizontalCompact
                 autoSize
             >
-                <div
-                    key="a"
-                    className="exploreGrid"
-                    isResizable="true"
-                    autoSize="true"
-                >
-                    <CampusCard />
-                </div>
-                <div key="b" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="c" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="d" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="e" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="f" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="g" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="h" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="i" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="j" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="k" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="l" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="m" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
+                {campusRoll}
             </ResponsiveGridLayout>
         );
     }
