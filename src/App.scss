@@ -1170,6 +1170,7 @@ h6 {
     grid-row-start:2;
     .c-btn-group{
       margin-left:-2rem;
+      text-decoration: none;
     }
     
   }
@@ -1188,6 +1189,7 @@ h6 {
   font-family: 'Cereal';
   .c-btn-group{
     margin-left:-2rem;
+    text-decoration: none;
   }
   .learn{
     font-family: 'Cereal';
@@ -1315,6 +1317,7 @@ h6 {
   display: inline-flex;
   overflow: hidden;
   border-radius: 10px;
+  text-decoration: none;
   .learn-e{
     span{
       display:inline;
@@ -1330,6 +1333,12 @@ h6 {
   }
   .fb{
     background-color:$blue;
+    color: white;
+    padding: 0.25rem;
+    padding-bottom: 0;
+  }  
+  .girls{
+    background-color:$pink;
     color: white;
     padding: 0.25rem;
     padding-bottom: 0;
@@ -1396,6 +1405,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     color: white;
     padding: 0.25rem;
     padding-bottom: 0;
+    text-decoration: none;
   }
   .ph{
     background-color: $orange;

@@ -1,83 +1,224 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+import * as Icon from 'react-feather';
+import jwala from '../images/hostels/jwala.png';
+
 const hostels = [
     {
         id: 0,
-        clicks: 0,
-        _id: '5ec2e828d3e63d114d9335a3',
-        title:
-            'ICMR approves the Probe-free COVID-19 detection assay developed at IIT Delhi',
+        name: 'Aravali Hostel',
+        est: 1965,
         description:
-            'Researchers at IIT Delhi Kusuma School of Biological Sciences (KSBS) have developed a detection assay for COVID-19 which has now been approved by ICMR. The assay has been validated at ICMR with a sensitivity and specificity of 100%. This makes IITD the first academic institute to have obtained ICMR approval for a real-time PCR-based diagnostic assay.',
-        sourceName: 'IITD',
-        author: '',
-        createdAt: '2020-05-18T19:55:20.879Z',
-        url:
-            'https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0',
-        imgUrl: 'https://home.iitd.ac.in/images/news/probe-in.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
     {
         id: 1,
-        clicks: 0,
-        _id: '5ec2e809d3e63d114d9335a2',
-        title: 'IIT Delhi startup launches ‘Reusable Antimicrobial Mask’',
+        name: 'Girnar Hostel',
+        est: 1965,
         description:
-            'The COVID-19 pandemic has triggered acute shortage of face masks, which is an important tool to contain transmission from one person to another. Since every individual has been mandated to use a face mask regularly, single use masks are not a cost effective solution for everyone. \n An IIT Delhi startup "Nanosafe Solutions" has launched an antimicrobial and washable face mask "NSafe", which is reusable up to 50 launderings, thus greatly cutting down the cost of use.',
-        sourceName: 'Aaj-tak',
-        author: 'Aranya',
-        createdAt: '2020-05-06T19:54:49.620Z',
-        url: 'https://home.iitd.ac.in/news-nanosafe.php',
-        imgUrl: 'https://home.iitd.ac.in/images/news/nanosafe.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
     {
         id: 2,
-        clicks: 0,
-        _id: '5ec2e7d9d3e63d114d9335a1',
-        title: 'General update on measures due to Covid-19 for IITD community',
+        name: 'Himadri Hostel',
+        est: 1965,
         description:
-            'The committee setup by the director for looking at various aspects pertaining to post lock down functioning of the Institute as well as the campus life has met few times and has made some recommendations. Faculty members may use their office as deemed appropriate keeping in mind the norms of hygiene and social distancing and, most importantly, taking care of their own safety and that of others.',
-        sourceName: 'ABP',
-        author: 'Jaskeerat',
-        createdAt: '2020-05-17T19:54:01.633Z',
-        url: 'https://home.iitd.ac.in/images/news-covid-general.php',
-        imgUrl: 'https://home.iitd.ac.in/images/news/covid-general.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn girls">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Girls
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
     {
         id: 3,
-        clicks: 0,
-        _id: '5ec2e7d9d3e63d114d9335a1',
-        title: 'Video - Unnat Bharat Abhiyan fights against COVID-19',
+        name: 'Jwalamukhi Hostel',
+        est: 1965,
         description:
-            'The entire world is coping with the global crisis of COVID-19. Social distancing and home confinement have emerged as the key to fight this pandemic. Evolution of a new culture is being experienced across the world. Agencies across the country are scuttling to limit the fatalities from COVID-19. The role of IITs and particularly centres related to rural technologies have increased in the new global paradigm.',
-        sourceName: 'ABP',
-        author: 'Jaskeerat',
-        createdAt: '2020-05-11T19:54:01.633Z',
-        url: 'https://home.iitd.ac.in/news-ubavideo.php',
-        imgUrl: 'https://home.iitd.ac.in/images/news/uba.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
     {
         id: 4,
-        clicks: 0,
-        _id: '5ec2e7d9d3e63d114d9335a1',
-        title: 'SPIC MACAY: ANUBHAV SERIES',
+        name: 'Kailash Hostel',
+        est: 1965,
         description:
-            'For the past 43 years, SPIC MACAY has been striving tirelessly to enrich the quality of formal education among adolescents and youth by raising awareness about various aspects of Indian heritage and motivating young minds to imbibe the values contained therein. During the current COVID-19 crisis, SPIC MACAY is making an effort to connect teenagers and youth online with the best of classical music, dance, and other art forms plus provide them a special creative experience.',
-        sourceName: 'ABP',
-        author: 'Jaskeerat',
-        createdAt: '2020-05-18T19:54:01.633Z',
-        url: 'https://home.iitd.ac.in/spic-macay.php',
-        imgUrl: 'https://home.iitd.ac.in/images/news/spic-macay-in2.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn girls">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Girls
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
     {
         id: 5,
-        clicks: 0,
-        _id: '5ec2e7d9d3e63d114d9335a1',
-        title: 'Important Announcement Regarding PG Admissions 2020',
+        name: 'Karakoram Hostel',
+        est: 1965,
         description:
-            'Last date of submission of online applications (Extended) : May 10, 2020 (4 pm) \n Range of dates for Test / Interview (Revised) : May 18, 2020 - June 17, 2020 \n SELECTION PROCEDURE \n M. Tech./ M.Des. selections for Academic Year 2020-21 to be done completely on basis of GATE/ CEED score, with shortlisting criteria set at Institute minimum for all categories. Interviews (via videoconferencing) to be conducted only for candidates who are valid applicants but do not have a GATE/CEED score (IIT graduates with CGPA more than or equal to 8.00, part-time, sponsored and international candidates)',
-        sourceName: 'ABP',
-        author: 'Jaskeerat',
-        createdAt: '2020-05-18T19:54:01.633Z',
-        url: 'https://home.iitd.ac.in/pg2020.php',
-        imgUrl: 'https://home.iitd.ac.in/images/news/pg2020-in.jpg',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 6,
+        name: 'Kumaon Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 7,
+        name: 'Nilgiri Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 8,
+        name: 'Shivalik Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 9,
+        name: 'Satpura Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 10,
+        name: 'Udaigiri Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 11,
+        name: 'Vindhyachal Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
     },
 ];
 
