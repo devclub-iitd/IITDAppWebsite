@@ -1,4 +1,4 @@
-const news = [
+const explore = [
     {
         id: 0,
         clicks: 0,
@@ -81,4 +81,4 @@ const news = [
     },
 ];
 
-export default news;
+export default explore;

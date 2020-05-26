@@ -132,20 +132,6 @@ h6 {
   width: 100%;
 }
 
-.arrow-up {
-  border-bottom: 5px solid $indigo1;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  margin-left: .25rem;
-}
-
-.arrow-down {
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid $indigo2;
-  margin-left: .25rem;
-}
-
 .Navbar {
   display: flex;
   flex-direction: row;
@@ -623,9 +609,6 @@ h6 {
 }
 
 @media (min-width: 651px){
-  .newsGrid{
-    border-radius: 15px;
-  }
   .news-card{
     background-color:$indigo-content;
     text-align: center;
@@ -1647,4 +1630,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin-right:0px;
   }
   
+}
+
+.newsGrid{
+  border-radius: 10px;
+  background-color: $indigo-content;
 }
