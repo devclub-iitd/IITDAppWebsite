@@ -17,8 +17,8 @@ Tasks v1.0.0
 - [x] Maps https://react-leaflet.js.org/
 - [x] Maps Card Styling
 - [x] Hostels Data Model
-- [ ] Explore Data Model
-- [ ] Campus/Maps Data Model (Partially Complete)
+- [x] Explore Data Model
+- [x] Campus/Maps Data Model (Partially Complete)
 - [x] News Data Model
 - [x] Routing
 - [x] Dynamic App Bar (both Mobile and Desktop screens)
