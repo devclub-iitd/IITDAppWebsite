@@ -485,7 +485,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 23,
+        id: 24,
         cd: [28.5428665, 77.1931332],
         name: 'Lecture Hall Complex',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -505,7 +505,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 24,
+        id: 25,
         cd: [28.54343789812074, 77.19127982854845],
         name: 'Staff Canteen',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -525,7 +525,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 25,
+        id: 26,
         cd: [28.54571905400154, 77.19358921051027],
         name: 'Dept. of Biotechnology',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -545,7 +545,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 26,
+        id: 27,
         cd: [28.548201298663667, 77.18435704708101],
         name: 'Rajdhani Chatkare Foods',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -565,7 +565,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 27,
+        id: 28,
         cd: [28.54370308948772, 77.19027936458589],
         name: 'Hockey/Athletics Field',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -584,7 +584,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 28,
+        id: 29,
         cd: [28.544343680524918, 77.1889114379883],
         name: 'Cricket Ground',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -604,7 +604,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 29,
+        id: 30,
         cd: [28.544941875990535, 77.18845009803773],
         name: 'Basketball Courts',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -624,7 +624,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 30,
+        id: 31,
         cd: [28.544833541630556, 77.18754887580873],
         name: 'Football Ground',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -644,7 +644,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 31,
+        id: 32,
         cd: [28.545126, 77.193483],
         name: 'BioTech Lawns',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -664,7 +664,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 32,
+        id: 33,
         cd: [28.545940430931072, 77.18602001667024],
         name: 'Swimming Pool',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -684,7 +684,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 33,
+        id: 34,
         cd: [28.548183537902325, 77.18495249748231],
         name: 'Volleyball Courts',
         img: <img src={dogra} alt="Dogra Hall" />,
@@ -704,7 +704,7 @@ const locations = [
         webUrl: '',
     },
     {
-        id: 34,
+        id: 35,
         cd: [28.54758896789944, 77.18481838703157],
         name: 'Lawn Tennis Courts',
         img: <img src={dogra} alt="Dogra Hall" />,
