@@ -107,7 +107,7 @@ function App() {
             pageLink: '/links',
             view: <Links />,
             displayName: 'Links',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0.0,
             showInNavbar: true,
         },
     ];

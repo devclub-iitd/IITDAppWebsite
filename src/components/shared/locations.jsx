@@ -2,8 +2,6 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 import dogra from '../images/campus/dogra.jpg';
-// eslint-disable-next-line spaced-comment
-//categories: acad,hostel,eat,util,med
 
 const locations = [
     {
