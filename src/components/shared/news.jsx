@@ -72,7 +72,7 @@ const news = [
         _id: '5ec2e7d9d3e63d114d9335a1',
         title: 'Important Announcement Regarding PG Admissions 2020',
         description:
-            'Last date of submission of online applications (Extended) : May 10, 2020 (4 pm) \n Range of dates for Test / Interview (Revised) : May 18, 2020 - June 17, 2020 \n SELECTION PROCEDURE \n M. Tech./ M.Des. selections for Academic Year 2020-21 to be done completely on basis of GATE/ CEED score, with shortlisting criteria set at Institute minimum for all categories.',
+            'Last date of submission of online applications (Extended) : May 10, 2020 (4 pm) \n Range of dates for Test / Interview (Revised) : May 18, 2020 - June 17, 2020 \n M. Tech./ M.Des. selections for Academic Year 2020-21 to be done completely on basis of GATE/ CEED score, with shortlisting criteria set at Institute minimum for all categories.',
         sourceName: 'ABP',
         author: 'Jaskeerat',
         createdAt: '2020-05-18T19:54:01.633Z',

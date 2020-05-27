@@ -1,4 +1,4 @@
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import * as Icon from 'react-feather';
@@ -10,182 +10,65 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 class HostelGrid extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '' };
+        this.state = { searchQuery: '', filtered: hostels };
 
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
+
+        let currentList = [];
+        // Variable to hold the filtered list before putting into state
+        let newList = [];
+
+        // If the search bar isn't empty
+        if (event.target.value !== '') {
+            // Assign the original list to currentList
+            currentList = hostels;
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = event.target.value.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            // If the search bar is empty, set newList to original task list
+            newList = hostels;
+        }
+        // Set the filtered state based on what our rules added to newList
+        this.setState({
+            filtered: newList,
+        });
     }
 
     render() {
-        const layoutLg = [
-            {
-                i: '0',
-                x: 0,
-                y: 0,
+        const layoutLg = [];
+        const hostelRoll = [];
+        for (let j = 0; j < this.state.filtered.length; j += 1) {
+            layoutLg.push({
+                i: j.toString(),
+                x: (j % 4) * 3,
+                y: (j % 4) * 2,
                 w: 3,
                 h: 2,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: '1',
-                x: 3,
-                y: 0,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '2',
-                x: 6,
-                y: 0,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '3',
-                x: 9,
-                y: 0,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '4',
-                x: 0,
-                y: 2,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '5',
-                x: 3,
-                y: 2,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '6',
-                x: 6,
-                y: 2,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '7',
-                x: 9,
-                y: 2,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '8',
-                x: 0,
-                y: 4,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '9',
-                x: 3,
-                y: 4,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '10',
-                x: 6,
-                y: 4,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '11',
-                x: 9,
-                y: 4,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: '12',
-                x: 0,
-                y: 6,
-                w: 3,
-                h: 2,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-        ];
-        const layouts = { lg: layoutLg };
-        const hostelRoll = hostels.map((hostelObj) => {
-            return (
-                <div key={hostelObj.id} className="hostelGrid">
-                    <HostelCard hostelObj={hostelObj} />
+            });
+            const value = this.state.filtered[j];
+            hostelRoll.push(
+                <div key={j} className="hostelGrid">
+                    <HostelCard hostelObj={value} />
                 </div>
             );
-        });
+        }
+        const layouts = { lg: layoutLg };
 
         return (
             <>
@@ -213,6 +96,7 @@ class HostelGrid extends React.Component {
                     }}
                     cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
                     horizontalCompact
+                    verticalCompact
                     autoSize
                 >
                     {hostelRoll}

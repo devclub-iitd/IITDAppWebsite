@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const HostelCard = ({ hostelObj }) => (
     <>
         <div className="hostel-card-title">
-            <h1>{hostelObj.name} Hostel</h1>
+            <h1>{hostelObj.name}</h1>
         </div>
         <div className="hostel-card-bg">
             <h1 className="card-subtitle">Est. {hostelObj.est}</h1>

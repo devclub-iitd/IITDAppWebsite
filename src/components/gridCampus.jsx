@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-alert */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
@@ -11,20 +12,47 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 class Campus extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '' };
+        this.state = { searchQuery: '', filtered: loc };
 
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
+
+        let currentList = [];
+        // Variable to hold the filtered list before putting into state
+        let newList = [];
+
+        // If the search bar isn't empty
+        if (event.target.value !== '') {
+            // Assign the original list to currentList
+            currentList = loc;
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = event.target.value.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            // If the search bar is empty, set newList to original task list
+            newList = loc;
+        }
+        // Set the filtered state based on what our rules added to newList
+        this.setState({
+            filtered: newList,
+        });
     }
 
     render() {
         const layoutLg = [];
-        for (let j = 0; j < loc.length; j += 1) {
+        const layoutSm = [];
+        const campusRoll = [];
+        for (let j = 0; j < this.state.filtered.length; j += 1) {
             layoutLg.push({
-                i: `${j}`,
+                i: j.toString(),
                 x: (j % 6) * 2,
                 y: Math.floor((j / 6) * 3),
                 w: 2,
@@ -33,13 +61,11 @@ class Campus extends React.Component {
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
             });
-        }
-        const layoutSm = [];
-        for (let j = 0; j < loc.length; j += 1) {
             layoutSm.push({
-                i: `${j}`,
+                i: j.toString(),
                 x: (j % 6) * 2,
                 y: Math.floor((j / 6) * 3.15),
                 w: 2,
@@ -48,22 +74,24 @@ class Campus extends React.Component {
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
             });
-        }
-        const layouts = { lg: layoutLg, sm: layoutSm };
-        const campusRoll = loc.map((locObj) => {
-            return (
+            const value = this.state.filtered[j];
+            campusRoll.push(
                 <div
-                    key={locObj.id}
+                    key={j}
                     className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <CampusCard locObj={locObj} />
+                    <CampusCard locObj={value} />
                 </div>
             );
-        });
+        }
+
+        const layouts = { lg: layoutLg, sm: layoutSm };
+
         return (
             <>
                 <div className="search">

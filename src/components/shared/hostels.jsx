@@ -6,7 +6,7 @@ import jwala from '../images/hostels/jwala.png';
 const hostels = [
     {
         id: 0,
-        name: 'Aravali',
+        name: 'Aravali Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -24,7 +24,7 @@ const hostels = [
     },
     {
         id: 1,
-        name: 'Girnar',
+        name: 'Girnar Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -42,7 +42,7 @@ const hostels = [
     },
     {
         id: 2,
-        name: 'Himadri',
+        name: 'Himadri Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -60,7 +60,7 @@ const hostels = [
     },
     {
         id: 3,
-        name: 'Jwalamukhi',
+        name: 'Jwalamukhi Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -78,7 +78,7 @@ const hostels = [
     },
     {
         id: 4,
-        name: 'Kailash',
+        name: 'Kailash Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -96,7 +96,7 @@ const hostels = [
     },
     {
         id: 5,
-        name: 'Karakoram',
+        name: 'Karakoram Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -114,7 +114,7 @@ const hostels = [
     },
     {
         id: 6,
-        name: 'Kumaon',
+        name: 'Kumaon Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -132,7 +132,7 @@ const hostels = [
     },
     {
         id: 7,
-        name: 'Nilgiri',
+        name: 'Nilgiri Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -150,7 +150,7 @@ const hostels = [
     },
     {
         id: 8,
-        name: 'Shivalik',
+        name: 'Shivalik Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -168,7 +168,7 @@ const hostels = [
     },
     {
         id: 9,
-        name: 'Satpura',
+        name: 'Satpura Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -186,7 +186,7 @@ const hostels = [
     },
     {
         id: 10,
-        name: 'Udaigiri',
+        name: 'Udaigiri Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
@@ -204,7 +204,25 @@ const hostels = [
     },
     {
         id: 11,
-        name: 'Vindhyachal',
+        name: 'Vindhyachal Hostel',
+        est: 1965,
+        description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+        category: (
+            <a className="c-btn fb">
+                <span className="hostel-link">
+                    <Icon.User height="15" strokeWidth="3" />
+                    Boys
+                </span>
+            </a>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    },
+    {
+        id: 12,
+        name: 'Zanskar Hostel',
         est: 1965,
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
