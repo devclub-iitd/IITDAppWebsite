@@ -1,7 +1,20 @@
 # iitd-app-website
 A website to provide various services related to IIT Delhi
 
-Tasks v1.0.0 
+# Using the Website
+-Clone the repository on your machine.
+-Navigate to the repository
+-Install the dependencies
+```bash
+$ npm install
+```
+-Start the local server
+```bash
+$ npm start
+```
+-Navigate to the localhost link using your browser to access the web app.
+
+# Tasks v1.0.0 
 
 - [x] Navbar Structure
 - [x] Appbar Structure
