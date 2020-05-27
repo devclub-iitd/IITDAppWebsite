@@ -1,12 +1,24 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
+import * as Icon from 'react-feather';
 import HostelCard from './hostelCard';
 import hostels from './shared/hostels';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class HostelGrid extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { searchQuery: '' };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({ searchQuery: event.target.value });
+    }
+
     render() {
         const layoutLg = [
             {
@@ -176,16 +188,36 @@ class HostelGrid extends React.Component {
         });
 
         return (
-            <ResponsiveGridLayout
-                className="layout"
-                layouts={layouts}
-                breakpoints={{ lg: 1200, md: 996, sm: 665, xs: 480, xxs: 0 }}
-                cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
-                horizontalCompact
-                autoSize
-            >
-                {hostelRoll}
-            </ResponsiveGridLayout>
+            <>
+                <div className="search">
+                    <input
+                        type="text"
+                        placeholder="Search ..."
+                        // eslint-disable-next-line react/destructuring-assignment
+                        value={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+                    <span className="search-icon">
+                        <Icon.Search strokeWidth="3" height="31.5" />
+                    </span>
+                </div>
+                <ResponsiveGridLayout
+                    className="layout"
+                    layouts={layouts}
+                    breakpoints={{
+                        lg: 1200,
+                        md: 996,
+                        sm: 665,
+                        xs: 480,
+                        xxs: 0,
+                    }}
+                    cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
+                    horizontalCompact
+                    autoSize
+                >
+                    {hostelRoll}
+                </ResponsiveGridLayout>
+            </>
         );
     }
 }
