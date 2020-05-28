@@ -2,7 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import * as Icon from 'react-feather';
+import Search from './search';
 import NewsCard from './newsCard';
 import news from './shared/news';
 
@@ -101,18 +101,10 @@ class News extends React.Component {
         const layouts = { lg: layoutLg, xxs: layoutXxs, xs: layoutXs };
         return (
             <>
-                <div className="search">
-                    <input
-                        type="text"
-                        placeholder="Search ..."
-                        // eslint-disable-next-line react/destructuring-assignment
-                        value={this.state.searchQuery}
-                        onChange={this.handleChange}
-                    />
-                    <span className="search-icon">
-                        <Icon.Search strokeWidth="3" height="31.5" />
-                    </span>
-                </div>
+                <Search
+                    searchQuery={this.state.searchQuery}
+                    onChange={this.handleChange}
+                />
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

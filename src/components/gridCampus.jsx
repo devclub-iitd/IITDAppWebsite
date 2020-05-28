@@ -3,8 +3,8 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import * as Icon from 'react-feather';
 import CampusCard from './campusCard';
+import Search from './search';
 import loc from './shared/locations';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -94,18 +94,10 @@ class Campus extends React.Component {
 
         return (
             <>
-                <div className="search">
-                    <input
-                        type="text"
-                        placeholder="Search ..."
-                        // eslint-disable-next-line react/destructuring-assignment
-                        value={this.state.searchQuery}
-                        onChange={this.handleChange}
-                    />
-                    <span className="search-icon">
-                        <Icon.Search strokeWidth="3" height="31.5" />
-                    </span>
-                </div>
+                <Search
+                    searchQuery={this.state.searchQuery}
+                    onChange={this.handleChange}
+                />
 
                 <ResponsiveGridLayout
                     className="layout"
