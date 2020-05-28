@@ -1713,6 +1713,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     cursor: pointer;
 
   }
+  .filterCheckBoxes{
+    z-index: 1001;
+    position: absolute;
+    left: 300px;
+    top:42px;
+    background-color:$indigo1;
+    font-family: 'Cereal';
+    color: $indigo2;
+    border-radius: 15px;
+    padding:1rem;
+  }
   }
 }
 
@@ -1780,5 +1791,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     cursor: pointer;
 
   }
+  .filterCheckBoxes{
+    z-index: 1001;
+    position: absolute;
+    right: 10px;
+    top:50px;
+    background-color:$indigo1;
+    font-family: 'Cereal';
+    color: $indigo2;
+    border-radius: 10px;
+    padding:1rem;
+  }
+  h1{
+    background-color:$indigo2;
+    color: $indigo1;
+    border-radius: 10px;
+  }
+
   }
 }
+
