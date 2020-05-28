@@ -5,6 +5,9 @@ import * as Icon from 'react-feather';
 function Search({ searchQuery, onChange }) {
     return (
         <div className="search">
+            <span className="search-icon">
+                <Icon.Search strokeWidth="3" height="31.5" />
+            </span>
             <input
                 type="text"
                 placeholder="Search ..."
@@ -12,8 +15,8 @@ function Search({ searchQuery, onChange }) {
                 value={searchQuery}
                 onChange={onChange}
             />
-            <span className="search-icon">
-                <Icon.Search strokeWidth="3" height="31.5" />
+            <span role="button" className="filter-icon">
+                Filter
             </span>
         </div>
     );

@@ -49,6 +49,9 @@ class Campus extends React.Component {
     render() {
         const layoutLg = [];
         const layoutSm = [];
+        const layoutMd = [];
+        const layoutMd2 = [];
+        const layoutXs = [];
         const campusRoll = [];
         for (let j = 0; j < this.state.filtered.length; j += 1) {
             layoutLg.push({
@@ -64,12 +67,51 @@ class Campus extends React.Component {
                 horizontalCompact: true,
                 isDraggable: false,
             });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 5) * 2,
+                y: Math.floor((j / 5) * 3),
+                w: 2,
+                h: 3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd2.push({
+                i: j.toString(),
+                x: (j % 4) * 2,
+                y: Math.floor((j / 4) * 3),
+                w: 2,
+                h: 3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
             layoutSm.push({
                 i: j.toString(),
-                x: (j % 6) * 2,
-                y: Math.floor((j / 6) * 3.15),
+                x: (j % 3) * 2,
+                y: Math.floor((j / 3) * 3),
                 w: 2,
-                h: 3.15,
+                h: 3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 2,
+                y: Math.floor((j / 2) * 3),
+                w: 2,
+                h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -90,7 +132,13 @@ class Campus extends React.Component {
             );
         }
 
-        const layouts = { lg: layoutLg, sm: layoutSm };
+        const layouts = {
+            lg: layoutLg,
+            sm: layoutSm,
+            md: layoutMd,
+            md2: layoutMd2,
+            xs: layoutXs,
+        };
 
         return (
             <>
@@ -103,16 +151,17 @@ class Campus extends React.Component {
                     className="layout"
                     layouts={layouts}
                     breakpoints={{
-                        lg: 1200,
-                        md: 996,
-                        md2: 768,
-                        sm: 600,
+                        lg: 1368,
+                        md: 1144,
+                        md2: 938,
+                        sm: 670,
                         xs: 396,
                         xxs: 0,
                     }}
                     cols={{ lg: 12, md: 10, md2: 8, sm: 6, xs: 4, xxs: 2 }}
                     horizontalCompact
                     autoSize
+                    verticalCompact
                 >
                     {campusRoll}
                 </ResponsiveGridLayout>

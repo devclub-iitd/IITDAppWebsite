@@ -184,10 +184,7 @@ function App() {
                         <Navbar pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
-                            <div
-                                className="content-area"
-                                style={styles.contentAreaLinks}
-                            >
+                            <div className="content-area">
                                 <Links />
                             </div>
                         </main>

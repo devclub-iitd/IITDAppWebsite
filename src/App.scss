@@ -267,7 +267,6 @@ h6 {
     display: inline-block;
     width:90%;
     margin:1rem;
-    margin-top: 6rem;
   }
 
   .Navbar{
@@ -1649,6 +1648,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   background-color: $indigo-content;
 }
 
+@media (max-width:769px){
+  .newsGrid{
+    border-radius: 10px;
+    background-color: $indigo-content;
+    margin-top:10px;
+    margin-left: 2vw;
+  }
+}
+
+
 @media (min-width:769px){
   .search{
   width:1000px;
@@ -1688,36 +1697,55 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     border-bottom-right-radius: 0px;
     z-index: 1001;
   }
+  .filter-icon{
+    display: inline-block;
+    height: 39px;
+    line-height:36px;
+    color: $indigo2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size:20px;
+    background-color: $indigo1;
+    border-radius: 15px;
+    z-index: 1001;
+    position: absolute;
+    left: 300px;
+    cursor: pointer;
+
+  }
   }
 }
 
 @media (max-width:769px){
   .search{
-    z-index: 10000;
-  background-color:red;
-  width:1000px;
-  position:fixed;
-  top:80px;
-  left:10px;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  background: rgba(158,169,236,0.9);
+  width:100%;
+  height: 55px;
+  border-radius: 20px;
+  margin-left: 2vw;
   input[type=text]{
-    position:absolute;
     border: 1px solid $indigo3;
     border-radius: 10px;
     padding-left: 2rem;
     padding-right: 1rem;
     padding-top:7px;
     padding-bottom: 7px;
-    width: 200px;
+    width: 30vw;
+    max-width: 200px;
     background-color: $indigo3;
     font-size:17px;
     font-family: 'Cereal';
     font-weight:600;
     color:$indigo1;
-    left:30px;
+    left:-10px;
     z-index: 1000;
+    position: relative;
+    top:1px;
   }
   .search-icon{
-    position:absolute;
     display: inline-block;
     color: $indigo2;
     padding-left: 1rem;
@@ -1726,10 +1754,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     padding-bottom: 1px;
     font-size:17px;
     background-color: $indigo1;
-    border-radius: 10px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     z-index: 1001;
+    top:8px;
+    left:10px;
+    position:relative;
+  }
+  .filter-icon{
+    display: inline-block;
+    height: 39px;
+    line-height:36px;
+    color: $indigo2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size:20px;
+    background-color: $indigo1;
+    border-radius: 15px;
+    z-index: 1001;
+    position: absolute;
+    right: 10px;
+    top:8px;
+    cursor: pointer;
+
   }
   }
 }
