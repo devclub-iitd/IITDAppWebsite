@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-access-state-in-setstate */
@@ -24,13 +25,6 @@ class Search extends React.Component {
                     value={this.props.searchQuery}
                     onChange={this.props.onChange}
                 />
-                <div
-                    role="button"
-                    className="filter-icon"
-                    onClick={this.handleClick}
-                >
-                    Filter
-                </div>
             </div>
         );
     }

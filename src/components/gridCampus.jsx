@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-param-reassign */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -25,9 +27,9 @@ class Campus extends React.Component {
                 { id: 3, value: 'Sports & Rec.', isChecked: true },
                 { id: 4, value: 'Hostels', isChecked: true },
             ],
-            showFilters: true,
+            showFilters: false,
         };
-        this.handleClick = this.handleClick.bind(this);
+        this.handleClickFilter = this.handleClickFilter.bind(this);
         this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
             this
         );
@@ -50,7 +52,7 @@ class Campus extends React.Component {
         this.setState({ options });
     };
 
-    handleClick = () => {
+    handleClickFilter = () => {
         this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
     };
 
@@ -183,7 +185,15 @@ class Campus extends React.Component {
                     <Search
                         searchQuery={this.state.searchQuery}
                         onChange={this.handleChange}
+                        handleClickFilter={this.state.handleClickFilter}
                     />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                    >
+                        Filter
+                    </div>
 
                     {this.state.showFilters && (
                         <div className="filterCheckBoxes">

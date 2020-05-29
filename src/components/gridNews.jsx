@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
@@ -108,6 +110,13 @@ class News extends React.Component {
                         searchQuery={this.state.searchQuery}
                         onChange={this.handleChange}
                     />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                    >
+                        Filter
+                    </div>
 
                     {this.state.showFilters && (
                         <div className="filterCheckBoxes">
