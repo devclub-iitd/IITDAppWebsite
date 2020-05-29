@@ -64,14 +64,12 @@ class Campus extends React.Component {
         });
         this.setState({ options });
 
-        const chosenOptions = this.state.options.filter(
+        const chosenOptions = options.filter(
             (option) => option.isChecked === true
         );
         const chosenCats = chosenOptions.map((a) => a.category);
 
-        // Variable to hold the filtered list before putting into state
         let newList = [];
-
         // If the search bar isn't empty
         if (this.state.searchQuery !== '') {
             // Assign the original list to currentList
@@ -84,7 +82,6 @@ class Campus extends React.Component {
                 chosenCats.includes(item.category)
             );
         }
-        // Set the filtered state based on what our rules added to newList
         this.setState({
             filtered: newList,
         });
