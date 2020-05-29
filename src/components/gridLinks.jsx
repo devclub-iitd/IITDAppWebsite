@@ -47,7 +47,7 @@ class Links extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 2.75,
+                h: 3.2,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -58,19 +58,199 @@ class Links extends React.Component {
                 x: 3,
                 y: 1.75,
                 w: 3,
-                h: 1.25,
+                h: 1.5,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
                 isDraggable: false,
             },
         ];
-        const layouts = { lg: layoutLg };
+        const layoutMd = [
+            {
+                i: 'a',
+                x: 0,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'b',
+                x: 0,
+                y: 2.2,
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'c',
+                x: 3,
+                y: 0,
+                w: 3,
+                h: 2.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'd',
+                x: 9,
+                y: 0,
+                w: 3,
+                h: 3.2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'e',
+                x: 3,
+                y: 1.75,
+                w: 3,
+                h: 1.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+        ];
+        const layoutSm = [
+            {
+                i: 'a',
+                x: 0,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'b',
+                x: 0,
+                y: 2.2,
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'c',
+                x: 3,
+                y: 3.4,
+                w: 3,
+                h: 2.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'd',
+                x: 9,
+                y: 0,
+                w: 3,
+                h: 3.3,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'e',
+                x: 0,
+                y: 4.9,
+                w: 3,
+                h: 1.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+        ];
+        const layoutXxs = [
+            {
+                i: 'a',
+                x: 0,
+                y: 0,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'b',
+                x: 3,
+                y: 0,
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'c',
+                x: 6,
+                y: 0,
+                w: 3,
+                h: 2.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'd',
+                x: 9,
+                y: 0,
+                w: 3,
+                h: 3.2,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+            {
+                i: 'e',
+                x: 3,
+                y: 1.75,
+                w: 3,
+                h: 1.5,
+                isResizable: false,
+                autoSize: true,
+                verticalCompact: true,
+                isDraggable: false,
+            },
+        ];
+        const layouts = {
+            lg: layoutLg,
+            md: layoutMd,
+            sm: layoutSm,
+            xs: layoutSm,
+            xxs: layoutXxs,
+        };
         return (
             <ResponsiveGridLayout
                 className="layout"
                 layouts={layouts}
-                breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 550, xxs: 0 }}
+                breakpoints={{ lg: 1400, md: 1162, sm: 768, xs: 550, xxs: 0 }}
                 cols={{ lg: 12, md: 9, sm: 6, xs: 6, xxs: 3 }}
                 horizontalCompact
                 autoSize
@@ -265,7 +445,7 @@ class Links extends React.Component {
                             <span>
                                 <Icon.Link />
                             </span>{' '}
-                            Boards And Councils
+                            Boards And <br /> Councils
                         </h1>
                         <a href="http://sac.iitd.ac.in/" className="link">
                             Student Affairs Council (SAC)
@@ -325,7 +505,7 @@ class Links extends React.Component {
                             <span>
                                 <Icon.Link />
                             </span>{' '}
-                            Health and Wellness
+                            Health and <br /> Wellness
                         </h1>
                         <a href="http://hospital.iitd.ac.in/" className="link">
                             IITD Hospital

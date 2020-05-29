@@ -1496,12 +1496,6 @@ h6 {
         border-radius: 15px;
         padding: 1rem;
     }
-    .search .filterCheckBoxes {
-        display: hide;
-    }
-    .search .filter-icon:hover + .filterCheckBoxes {
-        display: inline-block;
-    }
 }
 
 @media (max-width: 769px) {

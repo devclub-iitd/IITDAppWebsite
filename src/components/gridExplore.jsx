@@ -15,7 +15,10 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 class Explore extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '', filtered: explore };
+        this.state = {
+            searchQuery: '',
+            filtered: explore,
+        };
 
         this.handleChange = this.handleChange.bind(this);
     }
