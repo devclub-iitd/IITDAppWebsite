@@ -1717,7 +1717,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     z-index: 1001;
     position: absolute;
     left: 300px;
-    top:42px;
+    top:44px;
     background-color:$indigo1;
     font-family: 'Cereal';
     color: $indigo2;
@@ -1794,13 +1794,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   .filterCheckBoxes{
     z-index: 1001;
     position: absolute;
-    right: 10px;
-    top:50px;
+    right: 0px;
+    top:56px;
     background-color:$indigo1;
     font-family: 'Cereal';
     color: $indigo2;
-    border-radius: 10px;
+    border-radius: 15px;
     padding:1rem;
+    padding-top: 1rem;
   }
   h1{
     background-color:$indigo2;
