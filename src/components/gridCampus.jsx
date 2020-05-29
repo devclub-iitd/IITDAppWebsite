@@ -22,10 +22,30 @@ class Campus extends React.Component {
             searchQuery: '',
             filtered: loc,
             options: [
-                { id: 1, value: 'Academic', isChecked: true },
-                { id: 2, value: 'Food & Drinks', isChecked: true },
-                { id: 3, value: 'Sports & Rec.', isChecked: true },
-                { id: 4, value: 'Hostels', isChecked: true },
+                {
+                    id: 1,
+                    value: 'Academic',
+                    isChecked: true,
+                    category: 'academic',
+                },
+                {
+                    id: 2,
+                    value: 'Food & Drinks',
+                    isChecked: true,
+                    category: 'eat',
+                },
+                {
+                    id: 3,
+                    value: 'Sports & Rec.',
+                    isChecked: true,
+                    category: 'sport',
+                },
+                {
+                    id: 4,
+                    value: 'Hostels',
+                    isChecked: true,
+                    category: 'hostel',
+                },
             ],
             showFilters: false,
         };
@@ -33,15 +53,8 @@ class Campus extends React.Component {
         this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
             this
         );
-        this.handleAllChecked = this.handleAllChecked.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-
-    handleAllChecked = (event) => {
-        const { options } = this.state;
-        options.forEach((option) => (option.isChecked = event.target.checked));
-        this.setState({ options });
-    };
 
     handleCheckChieldElement = (event) => {
         const { options } = this.state;
@@ -50,6 +63,31 @@ class Campus extends React.Component {
                 option.isChecked = event.target.checked;
         });
         this.setState({ options });
+
+        const chosenOptions = this.state.options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
+
+        // Variable to hold the filtered list before putting into state
+        let newList = [];
+
+        // If the search bar isn't empty
+        if (this.state.searchQuery !== '') {
+            // Assign the original list to currentList
+            newList = this.state.filtered.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+        } else {
+            // If the search bar is empty, set newList to original task list
+            newList = this.state.filtered.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+        }
+        // Set the filtered state based on what our rules added to newList
+        this.setState({
+            filtered: newList,
+        });
     };
 
     handleClickFilter = () => {
@@ -59,6 +97,11 @@ class Campus extends React.Component {
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
 
+        const chosenOptions = this.state.options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
+
         let currentList = [];
         // Variable to hold the filtered list before putting into state
         let newList = [];
@@ -66,7 +109,9 @@ class Campus extends React.Component {
         // If the search bar isn't empty
         if (event.target.value !== '') {
             // Assign the original list to currentList
-            currentList = loc;
+            currentList = loc.filter((item) =>
+                chosenCats.includes(item.category)
+            );
 
             newList = currentList.filter((item) => {
                 const lc = item.name.toLowerCase();
@@ -77,7 +122,7 @@ class Campus extends React.Component {
             });
         } else {
             // If the search bar is empty, set newList to original task list
-            newList = loc;
+            newList = loc.filter((item) => chosenCats.includes(item.category));
         }
         // Set the filtered state based on what our rules added to newList
         this.setState({
@@ -86,6 +131,7 @@ class Campus extends React.Component {
     }
 
     render() {
+        console.log(this.state.options);
         const layoutLg = [];
         const layoutSm = [];
         const layoutMd = [];
@@ -197,12 +243,6 @@ class Campus extends React.Component {
 
                     {this.state.showFilters && (
                         <div className="filterCheckBoxes">
-                            <input
-                                type="checkbox"
-                                onClick={this.handleAllChecked}
-                                value="checkedall"
-                            />{' '}
-                            Toggle All
                             {this.state.options.map((option) => {
                                 return (
                                     <>
@@ -210,6 +250,7 @@ class Campus extends React.Component {
                                             handleCheckChieldElement={
                                                 this.handleCheckChieldElement
                                             }
+                                            option={option}
                                             {...option}
                                         />
                                     </>
