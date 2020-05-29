@@ -68,19 +68,24 @@ class Campus extends React.Component {
             (option) => option.isChecked === true
         );
         const chosenCats = chosenOptions.map((a) => a.category);
-
         let newList = [];
-        // If the search bar isn't empty
+        let currentList = [];
         if (this.state.searchQuery !== '') {
-            // Assign the original list to currentList
-            newList = this.state.filtered.filter((item) =>
+            currentList = loc;
+
+            currentList = loc.filter((item) =>
                 chosenCats.includes(item.category)
             );
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = this.state.searchQuery.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
         } else {
-            // If the search bar is empty, set newList to original task list
-            newList = this.state.filtered.filter((item) =>
-                chosenCats.includes(item.category)
-            );
+            newList = loc.filter((item) => chosenCats.includes(item.category));
         }
         this.setState({
             filtered: newList,
@@ -128,7 +133,6 @@ class Campus extends React.Component {
     }
 
     render() {
-        console.log(this.state.options);
         const layoutLg = [];
         const layoutSm = [];
         const layoutMd = [];
