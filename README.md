@@ -38,5 +38,7 @@ $ npm start
 - [x] Home Page (Layout Ready, Minor changes as reqd)
 - [ ] Clean/Add Data+Images
 - [x] Links Page
-- [ ] Search
+- [x] Search
+- [ ] Filters On News, Explore
+- [ ] React Leaflet Search (?)
 - [x] Small Screen Support
