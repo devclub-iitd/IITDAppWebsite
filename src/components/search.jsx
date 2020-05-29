@@ -9,47 +9,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
-import CheckBox from './shared/checkBox';
 
 class Search extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            options: [
-                { id: 1, value: 'Academic', isChecked: true },
-                { id: 2, value: 'Food & Drinks', isChecked: true },
-                { id: 3, value: 'Sports & Rec.', isChecked: true },
-                { id: 4, value: 'Hostels', isChecked: true },
-            ],
-            showFilters: false,
-        };
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleAllChecked = (event) => {
-        const { options } = this.state;
-        options.forEach((option) => (option.isChecked = event.target.checked));
-        this.setState({ options });
-    };
-
-    handleCheckChieldElement = (event) => {
-        const { options } = this.state;
-        options.forEach((option) => {
-            if (option.value === event.target.value)
-                option.isChecked = event.target.checked;
-        });
-        this.setState({ options });
-    };
-
-    handleClick = () => {
-        this.setState({
-            showFilters: !this.state.showFilters,
-        });
-    };
-
     render() {
         return (
-            <div className="search">
+            <div>
                 <span className="search-icon">
                     <Icon.Search strokeWidth="3" height="31.5" />
                 </span>
@@ -67,28 +31,6 @@ class Search extends React.Component {
                 >
                     Filter
                 </div>
-                {this.state.showFilters && (
-                    <div className="filterCheckBoxes">
-                        <input
-                            type="checkbox"
-                            onClick={this.handleAllChecked}
-                            value="checkedall"
-                        />{' '}
-                        Toggle All
-                        {this.state.options.map((option) => {
-                            return (
-                                <>
-                                    <CheckBox
-                                        handleCheckChieldElement={
-                                            this.handleCheckChieldElement
-                                        }
-                                        {...option}
-                                    />
-                                </>
-                            );
-                        })}
-                    </div>
-                )}
             </div>
         );
     }

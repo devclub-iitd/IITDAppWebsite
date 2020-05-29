@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
@@ -5,6 +6,7 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
 import ExploreCard from './exploreCard';
 import explore from './shared/explore';
+import CheckBox from './shared/checkBox';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -79,10 +81,35 @@ class Explore extends React.Component {
 
         return (
             <>
-                <Search
-                    searchQuery={this.state.searchQuery}
-                    onChange={this.handleChange}
-                />
+                <div className="search">
+                    <Search
+                        searchQuery={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+
+                    {this.state.showFilters && (
+                        <div className="filterCheckBoxes">
+                            <input
+                                type="checkbox"
+                                onClick={this.handleAllChecked}
+                                value="checkedall"
+                            />{' '}
+                            Toggle All
+                            {this.state.options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            {...option}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

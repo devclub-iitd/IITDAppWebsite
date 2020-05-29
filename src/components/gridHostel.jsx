@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
 import HostelCard from './hostelCard';
 import hostels from './shared/hostels';
+import CheckBox from './shared/checkBox';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -72,10 +74,35 @@ class HostelGrid extends React.Component {
 
         return (
             <>
-                <Search
-                    searchQuery={this.state.searchQuery}
-                    onChange={this.handleChange}
-                />
+                <div className="search">
+                    <Search
+                        searchQuery={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+
+                    {this.state.showFilters && (
+                        <div className="filterCheckBoxes">
+                            <input
+                                type="checkbox"
+                                onClick={this.handleAllChecked}
+                                value="checkedall"
+                            />{' '}
+                            Toggle All
+                            {this.state.options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            {...option}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

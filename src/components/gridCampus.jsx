@@ -1,3 +1,6 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable no-param-reassign */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-alert */
 /* eslint-disable react/prefer-stateless-function */
@@ -6,16 +9,50 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from './campusCard';
 import Search from './search';
 import loc from './shared/locations';
+import CheckBox from './shared/checkBox';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Campus extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '', filtered: loc };
-
+        this.state = {
+            searchQuery: '',
+            filtered: loc,
+            options: [
+                { id: 1, value: 'Academic', isChecked: true },
+                { id: 2, value: 'Food & Drinks', isChecked: true },
+                { id: 3, value: 'Sports & Rec.', isChecked: true },
+                { id: 4, value: 'Hostels', isChecked: true },
+            ],
+            showFilters: true,
+        };
+        this.handleClick = this.handleClick.bind(this);
+        this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
+            this
+        );
+        this.handleAllChecked = this.handleAllChecked.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
+
+    handleAllChecked = (event) => {
+        const { options } = this.state;
+        options.forEach((option) => (option.isChecked = event.target.checked));
+        this.setState({ options });
+    };
+
+    handleCheckChieldElement = (event) => {
+        const { options } = this.state;
+        options.forEach((option) => {
+            if (option.value === event.target.value)
+                option.isChecked = event.target.checked;
+        });
+        this.setState({ options });
+    };
+
+    handleClick = () => {
+        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+    };
 
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
@@ -141,11 +178,36 @@ class Campus extends React.Component {
         };
 
         return (
-            <>
-                <Search
-                    searchQuery={this.state.searchQuery}
-                    onChange={this.handleChange}
-                />
+            <div>
+                <div className="search">
+                    <Search
+                        searchQuery={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+
+                    {this.state.showFilters && (
+                        <div className="filterCheckBoxes">
+                            <input
+                                type="checkbox"
+                                onClick={this.handleAllChecked}
+                                value="checkedall"
+                            />{' '}
+                            Toggle All
+                            {this.state.options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            {...option}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
 
                 <ResponsiveGridLayout
                     className="layout"
@@ -165,7 +227,7 @@ class Campus extends React.Component {
                 >
                     {campusRoll}
                 </ResponsiveGridLayout>
-            </>
+            </div>
         );
     }
 }
