@@ -54,12 +54,68 @@ class Explore extends React.Component {
 
     render() {
         const layoutLg = [];
+        const layoutMd = [];
+        const layoutSm = [];
+        const layoutXs = [];
+        const layoutXxs = [];
         const exploreRoll = [];
         for (let j = 0; j < this.state.filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 4) * 3,
                 y: Math.floor((j / 4) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 3) * 3,
+                y: Math.floor((j / 3) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: Math.floor((j / 2) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: Math.floor((j / 2) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXxs.push({
+                i: j.toString(),
+                x: (j % 1) * 3,
+                y: Math.floor((j / 1) * 1.75),
                 w: 3,
                 h: 1.75,
                 isResizable: false,
@@ -82,7 +138,13 @@ class Explore extends React.Component {
             );
         }
 
-        const layouts = { lg: layoutLg };
+        const layouts = {
+            lg: layoutLg,
+            md: layoutMd,
+            sm: layoutSm,
+            xs: layoutXs,
+            xxs: layoutXxs,
+        };
 
         return (
             <>
@@ -126,10 +188,10 @@ class Explore extends React.Component {
                     className="layout"
                     layouts={layouts}
                     breakpoints={{
-                        lg: 1200,
-                        md: 996,
-                        sm: 768,
-                        xs: 550,
+                        lg: 1470,
+                        md: 1000,
+                        sm: 860,
+                        xs: 620,
                         xxs: 0,
                     }}
                     cols={{ lg: 12, md: 9, sm: 6, xs: 6, xxs: 3 }}

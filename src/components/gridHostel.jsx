@@ -113,12 +113,68 @@ class HostelGrid extends React.Component {
 
     render() {
         const layoutLg = [];
+        const layoutMd = [];
+        const layoutSm = [];
+        const layoutXs = [];
+        const layoutXxs = [];
         const hostelRoll = [];
         for (let j = 0; j < this.state.filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 4) * 3,
                 y: (j % 4) * 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 3) * 3,
+                y: (j % 3) * 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: (j % 2) * 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: (j % 2) * 2,
+                w: 3,
+                h: 2,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXxs.push({
+                i: j.toString(),
+                x: (j % 1) * 3,
+                y: (j % 1) * 2,
                 w: 3,
                 h: 2,
                 isResizable: false,
@@ -135,7 +191,13 @@ class HostelGrid extends React.Component {
                 </div>
             );
         }
-        const layouts = { lg: layoutLg };
+        const layouts = {
+            lg: layoutLg,
+            md: layoutMd,
+            sm: layoutSm,
+            xs: layoutXs,
+            xxs: layoutXxs,
+        };
 
         return (
             <>
@@ -173,10 +235,10 @@ class HostelGrid extends React.Component {
                     className="layout"
                     layouts={layouts}
                     breakpoints={{
-                        lg: 1200,
-                        md: 996,
-                        sm: 665,
-                        xs: 480,
+                        lg: 1400,
+                        md: 1200,
+                        sm: 800,
+                        xs: 600,
                         xxs: 0,
                     }}
                     cols={{ lg: 12, md: 9, sm: 6, xs: 3, xxs: 3 }}
