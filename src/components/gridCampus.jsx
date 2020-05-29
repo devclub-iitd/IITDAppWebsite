@@ -1,388 +1,171 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-alert */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from './campusCard';
+import Search from './search';
+import loc from './shared/locations';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Campus extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { searchQuery: '', filtered: loc };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({ searchQuery: event.target.value });
+
+        let currentList = [];
+        // Variable to hold the filtered list before putting into state
+        let newList = [];
+
+        // If the search bar isn't empty
+        if (event.target.value !== '') {
+            // Assign the original list to currentList
+            currentList = loc;
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = event.target.value.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            // If the search bar is empty, set newList to original task list
+            newList = loc;
+        }
+        // Set the filtered state based on what our rules added to newList
+        this.setState({
+            filtered: newList,
+        });
+    }
+
     render() {
-        const layoutLg = [
-            {
-                i: 'a',
-                x: 0,
-                y: 0,
+        const layoutLg = [];
+        const layoutSm = [];
+        const layoutMd = [];
+        const layoutMd2 = [];
+        const layoutXs = [];
+        const campusRoll = [];
+        for (let j = 0; j < this.state.filtered.length; j += 1) {
+            layoutLg.push({
+                i: j.toString(),
+                x: (j % 6) * 2,
+                y: Math.floor((j / 6) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'b',
-                x: 2,
-                y: 0,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 5) * 2,
+                y: Math.floor((j / 5) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'c',
-                x: 4,
-                y: 0,
+            });
+            layoutMd2.push({
+                i: j.toString(),
+                x: (j % 4) * 2,
+                y: Math.floor((j / 4) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'd',
-                x: 6,
-                y: 0,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: (j % 3) * 2,
+                y: Math.floor((j / 3) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'e',
-                x: 8,
-                y: 0,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 2,
+                y: Math.floor((j / 2) * 3),
                 w: 2,
                 h: 3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
                 verticalCompact: true,
+                horizontalCompact: true,
                 isDraggable: false,
-            },
-            {
-                i: 'f',
-                x: 10,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'g',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'h',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'i',
-                x: 2,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'j',
-                x: 4,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'k',
-                x: 6,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'l',
-                x: 8,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'm',
-                x: 10,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-        ];
-        const layoutXxs = [
-            {
-                i: 'a',
-                x: 0,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-            },
-            {
-                i: 'b',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'c',
-                x: 0,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'd',
-                x: 6,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'e',
-                x: 8,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'f',
-                x: 10,
-                y: 0,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'g',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'h',
-                x: 0,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'i',
-                x: 2,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'j',
-                x: 4,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'k',
-                x: 6,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'l',
-                x: 8,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-            {
-                i: 'm',
-                x: 10,
-                y: 3,
-                w: 2,
-                h: 3,
-                isResizable: false,
-                useCSSTransforms: true,
-                autoSize: true,
-                verticalCompact: true,
-                isDraggable: false,
-            },
-        ];
-        const layouts = { lg: layoutLg, xxs: layoutXxs };
-        return (
-            <ResponsiveGridLayout
-                className="layout"
-                layouts={layouts}
-                breakpoints={{
-                    lg: 1200,
-                    md: 996,
-                    md2: 768,
-                    sm: 600,
-                    xs: 396,
-                    xxs: 0,
-                }}
-                cols={{ lg: 12, md: 10, md2: 8, sm: 6, xs: 4, xxs: 2 }}
-                horizontalCompact
-                autoSize
-            >
+            });
+            const value = this.state.filtered[j];
+            campusRoll.push(
                 <div
-                    key="a"
+                    key={j}
                     className="exploreGrid"
                     isResizable="true"
                     autoSize="true"
                 >
-                    <CampusCard />
+                    <CampusCard locObj={value} />
                 </div>
-                <div key="b" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="c" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="d" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="e" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="f" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="g" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="h" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="i" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="j" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="k" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="l" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-                <div key="m" className="exploreGrid" autoSize="true">
-                    <CampusCard />
-                </div>
-            </ResponsiveGridLayout>
+            );
+        }
+
+        const layouts = {
+            lg: layoutLg,
+            sm: layoutSm,
+            md: layoutMd,
+            md2: layoutMd2,
+            xs: layoutXs,
+        };
+
+        return (
+            <>
+                <Search
+                    searchQuery={this.state.searchQuery}
+                    onChange={this.handleChange}
+                />
+
+                <ResponsiveGridLayout
+                    className="layout"
+                    layouts={layouts}
+                    breakpoints={{
+                        lg: 1368,
+                        md: 1144,
+                        md2: 938,
+                        sm: 670,
+                        xs: 396,
+                        xxs: 0,
+                    }}
+                    cols={{ lg: 12, md: 10, md2: 8, sm: 6, xs: 4, xxs: 2 }}
+                    horizontalCompact
+                    autoSize
+                    verticalCompact
+                >
+                    {campusRoll}
+                </ResponsiveGridLayout>
+            </>
         );
     }
 }

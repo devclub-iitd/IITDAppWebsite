@@ -45,7 +45,7 @@ const styles = {
         width: '96%',
     },
     contentAreaMapLg: {
-        marginLeft: 0,
+        marginLeft: 120,
         marginTop: 10,
         marginBottom: 0,
     },
@@ -107,7 +107,7 @@ function App() {
             pageLink: '/links',
             view: <Links />,
             displayName: 'Links',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0.0,
             showInNavbar: true,
         },
     ];
@@ -184,10 +184,7 @@ function App() {
                         <Navbar pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
-                            <div
-                                className="content-area"
-                                style={styles.contentAreaLinks}
-                            >
+                            <div className="content-area">
                                 <Links />
                             </div>
                         </main>

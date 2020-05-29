@@ -1,50 +1,46 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
-import covid from './images/news/covid.png';
+import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class CampusCard extends React.Component {
-    render() {
-        return (
-            <div className="news-card">
-                <img
-                    src={covid}
-                    height="200"
-                    alt="ICMR approves IIT Delhi's COVID19 Probe Test"
-                    className="news-img"
-                    borderRadius="10px"
-                />
-                <div className="news-card-heading">
-                    <h3>
-                        ICMR approves the Probe-free COVID-19 detection assay
-                        developed at IIT Delhi
-                    </h3>
-                    <p className="news-desc">
-                        Researchers at IIT Delhi Kusuma School of Biological
-                        Sciences (KSBS) have developed a detection assay for
-                        COVID-19 which has now been approved by ICMR. The assay
-                        has been validated at ICMR with a sensitivity and
-                        specificity of 100%. This makes IITD the first academic
-                        institute to have obtained ICMR approval for a real-time
-                        PCR-based diagnostic assay.
-                        <p className="news-link">
-                            <span className="news-icon">
-                                <Icon.Calendar height="15" strokeWidth="2" />{' '}
-                                24/04/2020{' '}
-                            </span>
-                            <span className="news-icon">
-                                <Icon.Bookmark height="15" strokeWidth="2" />
-                            </span>
-                            <a href="https://old.iitd.ac.in/content/icmr-approves-probe-free-covid-19-detection-assay-developed-iit-delhi-0">
-                                Read Complete Article
-                            </a>
-                        </p>
+function newsCard({ newsObj }) {
+    return (
+        <div className="news-card">
+            <img
+                src={newsObj.imgUrl}
+                height="200"
+                alt="ICMR approves IIT Delhi's COVID19 Probe Test"
+                className="news-img"
+                borderRadius="10px"
+            />
+            <div className="news-card-heading">
+                <h3>{newsObj.title}</h3>
+                <p className="news-desc">
+                    {newsObj.description}
+                    <p className="news-link">
+                        <span className="news-icon">
+                            <Icon.Calendar height="15" strokeWidth="2" />{' '}
+                            {new Intl.DateTimeFormat('en-US', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: '2-digit',
+                            }).format(
+                                new Date(Date.parse(newsObj.createdAt))
+                            )}{' '}
+                        </span>
+                        <span className="news-icon">
+                            <Icon.Bookmark height="15" strokeWidth="2" />
+                        </span>
+                        <a href={newsObj.url}>Read Complete Article</a>
                     </p>
-                </div>
+                </p>
             </div>
-        );
-    }
+        </div>
+    );
 }
+newsCard.propTypes = {
+    newsObj: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
+};
 
-export default CampusCard;
+export default newsCard;

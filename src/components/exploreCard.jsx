@@ -4,52 +4,45 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import Link from 'react-router';
 import * as Icon from 'react-feather';
-import devclub from './images/explore/devclub.jpg';
+import PropTypes from 'prop-types';
 
-class ExploreCard extends React.Component {
-    render() {
-        return (
-            <div className="box">
-                <div key="a" className="left-e">
-                    <img
-                        src={devclub}
-                        alt="DevClub IITD"
-                        className="card-img"
-                    />
-                </div>
-                <div key="b" className="right-e">
-                    <h1>DevClub</h1>
-                    <p>
-                        Dev Club is a community of tech-minded people in IIT
-                        Delhi.
-                    </p>
-                </div>
-                <div key="c" className="links-e">
-                    <div className="c-btn-group">
-                        <a className="c-btn learn-e">
-                            <span>
-                                <Icon.Info />
-                            </span>
-                        </a>
-                        <a className="c-btn fb">
-                            <span>
-                                <Icon.Facebook />
-                            </span>
-                        </a>
-                        <a className="c-btn insta">
-                            <Icon.Instagram />
-                        </a>
-                        <a className="c-btn web">
-                            <Icon.Globe />
-                        </a>
-                        <a className="c-btn git">
-                            <Icon.GitHub />
-                        </a>
-                    </div>
+function ExploreCard({ exploreObj }) {
+    return (
+        <div className="box">
+            <div key="a" className="left-e">
+                {exploreObj.img}
+            </div>
+            <div key="b" className="right-e">
+                <h1>{exploreObj.name}</h1>
+                <p>{exploreObj.desc}</p>
+            </div>
+            <div key="c" className="links-e">
+                <div className="c-btn-group">
+                    <a className="c-btn learn-e" href={exploreObj.learnUrl}>
+                        <span>
+                            <Icon.Info />
+                        </span>
+                    </a>
+                    <a className="c-btn fb" href={exploreObj.fbUrl}>
+                        <span>
+                            <Icon.Facebook />
+                        </span>
+                    </a>
+                    <a className="c-btn insta" href={exploreObj.instaUrl}>
+                        <Icon.Instagram />
+                    </a>
+                    <a className="c-btn web" href={exploreObj.webUrl}>
+                        <Icon.Globe />
+                    </a>
+                    {exploreObj.extraIcon}
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
+ExploreCard.propTypes = {
+    exploreObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
+        .isRequired,
+};
 
 export default ExploreCard;

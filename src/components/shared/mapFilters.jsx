@@ -34,11 +34,24 @@ const blueIcon = new Leaflet.Icon({
     shadowAnchor: [5, 46],
 });
 
-const goldIcon = new Leaflet.Icon({
+const orangeIcon = new Leaflet.Icon({
     iconUrl:
         'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
     iconRetinaUrl:
         'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+    iconAnchor: [2.5, 27.5],
+    popupAnchor: [5, -22],
+    iconSize: [17.5, 27.5],
+    shadowUrl: require('../images/map/marker-shadow.png'),
+    shadowSize: [34, 47.5],
+    shadowAnchor: [5, 46],
+});
+
+const blackIcon = new Leaflet.Icon({
+    iconUrl:
+        'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
+    iconRetinaUrl:
+        'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
     iconAnchor: [2.5, 27.5],
     popupAnchor: [5, -22],
     iconSize: [17.5, 27.5],
@@ -86,7 +99,7 @@ const acad = loc.map((locObj) => {
 const eat = loc.map((locObj) => {
     if (locObj.category === 'eat')
         return (
-            <Marker position={locObj.cd} className="marker" icon={goldIcon}>
+            <Marker position={locObj.cd} className="marker" icon={orangeIcon}>
                 <Popup className="pup">
                     <h1>{locObj.name}</h1>
                     {locObj.img}
@@ -156,4 +169,41 @@ const hostel = loc.map((locObj) => {
     return <div />;
 });
 
-export { acad, hostel, eat };
+const sport = loc.map((locObj) => {
+    if (locObj.category === 'sport')
+        return (
+            <Marker position={locObj.cd} className="marker" icon={blackIcon}>
+                <Popup className="pup">
+                    <h1>{locObj.name}</h1>
+                    {locObj.img}
+                    <p>{locObj.desc}</p>
+                    <div className="c-btn-group">
+                        <a className="c-btn sp">
+                            <span>
+                                <Icon.Target />
+                            </span>
+                        </a>
+                        <a className="c-btn learn-e">
+                            <span>
+                                <Icon.Info />
+                            </span>
+                        </a>
+                        <a className="c-btn map">
+                            <span>
+                                <Icon.MapPin />
+                            </span>
+                        </a>
+                        <a className="c-btn ph">
+                            <Icon.Phone />
+                        </a>
+                        <a className="c-btn web">
+                            <Icon.Globe />
+                        </a>
+                    </div>
+                </Popup>
+            </Marker>
+        );
+    return <div />;
+});
+
+export { acad, hostel, eat, sport };
