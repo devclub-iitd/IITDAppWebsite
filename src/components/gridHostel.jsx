@@ -9,6 +9,7 @@ import Search from './search';
 import HostelCard from './hostelCard';
 import hostels from './shared/hostels';
 import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -248,6 +249,7 @@ class HostelGrid extends React.Component {
                 >
                     {hostelRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </>
         );
     }

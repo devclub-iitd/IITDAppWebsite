@@ -9,6 +9,7 @@ import Search from './search';
 import ExploreCard from './exploreCard';
 import explore from './shared/explore';
 import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -200,6 +201,7 @@ class Explore extends React.Component {
                 >
                     {exploreRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </>
         );
     }

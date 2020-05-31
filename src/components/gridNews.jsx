@@ -9,6 +9,7 @@ import Search from './search';
 import NewsCard from './newsCard';
 import news from './shared/news';
 import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -157,6 +158,7 @@ class News extends React.Component {
                 >
                     {newsRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </>
         );
     }

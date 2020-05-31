@@ -12,6 +12,7 @@ import CampusCard from './campusCard';
 import Search from './search';
 import loc from './shared/locations';
 import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -279,6 +280,7 @@ class Campus extends React.Component {
                 >
                     {campusRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </div>
         );
     }
