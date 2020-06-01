@@ -33,25 +33,27 @@ import './App.css';
 
 Leaflet.Icon.Default.imagePath = './components/shared/marker-icon-red.png';
 
-const styles = {
-    contentAreaLinks: {
-        marginTop: 30,
-    },
-    contentAreaMap: {
-        marginTop: 10,
-        marginLeft: 10,
-        marginRight: 10,
-        marginBottom: 10,
-        width: '96%',
-    },
-    contentAreaMapLg: {
-        marginLeft: 120,
-        marginTop: 10,
-        marginBottom: 0,
-    },
-};
 function App() {
     const windowSize = useWindowSize();
+
+    const styles = {
+        contentAreaLinks: {
+            marginTop: 30,
+        },
+        contentAreaMap: {
+            marginTop: 10,
+            marginLeft: 10,
+            marginRight: 10,
+            marginBottom: 10,
+            width: '96%',
+        },
+        contentAreaMapLg: {
+            marginLeft: 120,
+            marginTop: -80,
+            marginBottom: 0,
+            height: windowSize.height,
+        },
+    };
 
     const pages = [
         {

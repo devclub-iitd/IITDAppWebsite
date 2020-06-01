@@ -103,7 +103,7 @@ function Navbar({ pages, name }) {
                 {windowSize.width > 769 && (
                     <>
                         <span>
-                            <Link to="/">
+                            <Link to="/home">
                                 <Icon.Home
                                     strokeWidth="3"
                                     height="40"

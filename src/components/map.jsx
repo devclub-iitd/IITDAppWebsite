@@ -50,11 +50,11 @@ class MapLeaf extends React.Component {
                 animate={this.state.animate}
                 center={this.state.latlng}
                 onClick={this.handleClick}
-                closePopupOnClick={false}
+                closePopupOnClick
                 zoomControl={false}
             >
                 <ZoomControl position="bottomright" />
-                <LayersControl position="topright" className="layer-control">
+                <LayersControl position="bottomright" className="layer-control">
                     <BaseLayer checked name="<h6>Detailed</h6>">
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                     </BaseLayer>

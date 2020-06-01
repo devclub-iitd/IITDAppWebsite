@@ -41,12 +41,6 @@ class Campus extends React.Component {
                     isChecked: true,
                     category: 'sport',
                 },
-                {
-                    id: 4,
-                    value: 'Hostels',
-                    isChecked: true,
-                    category: 'hostel',
-                },
             ],
             showFilters: false,
         };
