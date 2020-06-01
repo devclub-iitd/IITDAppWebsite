@@ -10,7 +10,7 @@ import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from './campusCard';
 import Search from './search';
-import loc from './shared/locations';
+import loc from './shared/locationsCampus';
 import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
 
@@ -164,9 +164,9 @@ class Campus extends React.Component {
             layoutMd2.push({
                 i: j.toString(),
                 x: (j % 4) * 2,
-                y: Math.floor((j / 4) * 3),
+                y: Math.floor((j / 4) * 3.1),
                 w: 2,
-                h: 3,
+                h: 3.1,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -177,9 +177,9 @@ class Campus extends React.Component {
             layoutSm.push({
                 i: j.toString(),
                 x: (j % 3) * 2,
-                y: Math.floor((j / 3) * 3),
+                y: Math.floor((j / 3) * 3.1),
                 w: 2,
-                h: 3,
+                h: 3.1,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -190,9 +190,9 @@ class Campus extends React.Component {
             layoutXs.push({
                 i: j.toString(),
                 x: (j % 2) * 2,
-                y: Math.floor((j / 2) * 3),
+                y: Math.floor((j / 2) * 3.1),
                 w: 2,
-                h: 3,
+                h: 3.1,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
