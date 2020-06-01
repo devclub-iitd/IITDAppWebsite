@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable react/jsx-props-no-spreading */
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
@@ -21,7 +22,7 @@ const navLinkProps = (path, animationDelay) => ({
 
 const activeNavIcon = (path) => ({
     style: {
-        stroke: window.location.pathname === path ? '#4c75f2' : '',
+        stroke: window.location.pathname === path ? 'rgb(212,216,246)' : '',
     },
 });
 
@@ -60,34 +61,30 @@ function Navbar({ pages, name }) {
                 onMouseEnter={() => {
                     if (window.innerWidth > 769) {
                         setExpand(true);
-                        anime({
-                            targets: '.navbar-right path',
-                            strokeDashoffset: [anime.setDashoffset, 0],
-                            easing: 'easeInOutSine',
-                            duration: 250,
-                            delay(el, i) {
-                                return i * 250;
-                            },
-                            direction: 'alternate',
-                            loop: false,
-                        });
+                        // anime({
+                        //     targets: '.navbar-right path',
+                        //     strokeDashoffset: [anime.setDashoffset, 0],
+                        //     easing: 'easeInOutSine',
+                        //     duration: 250,
+                        //     direction: 'alternate',
+                        //     loop: 0,
+                        // });
                     }
                 }}
-                // On Key Down does not work yet, accessible features to be added to the site gradually
                 onKeyDown={() => {
                     if (window.innerWidth > 769) {
                         setExpand(true);
-                        anime({
-                            targets: '.navbar-right path',
-                            strokeDashoffset: [anime.setDashoffset, 0],
-                            easing: 'easeInOutSine',
-                            duration: 250,
-                            delay(el, i) {
-                                return i * 250;
-                            },
-                            direction: 'alternate',
-                            loop: false,
-                        });
+                        // anime({
+                        //     targets: '.navbar-right path',
+                        //     strokeDashoffset: [anime.setDashoffset, 0],
+                        //     easing: 'easeInOutSine',
+                        //     duration: 250,
+                        //     delay(el, i) {
+                        //         return i * 10;
+                        //     },
+                        //     direction: 'alternate',
+                        //     loop: false,
+                        // });
                     }
                 }}
             >
@@ -112,11 +109,11 @@ function Navbar({ pages, name }) {
                             </Link>
                         </span>
                         <span>
-                            <Link to="/explore">
+                            <Link to="/clubs">
                                 <Icon.Search
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/explore')}
+                                    {...activeNavIcon('/clubs')}
                                 />
                             </Link>
                         </span>
@@ -223,13 +220,12 @@ function Expand({ expand, pages, setExpand }) {
                 }
                 return null;
             })}
-
-            <div
-                className="expand-bottom fadeInUp"
-                style={{ animationDelay: '1s' }}
-            >
-                <h5>{t('Made by DevClub with ❤️')}</h5>
-            </div>
+            <h5 className="love">
+                Made by DevClub with{' '}
+                <span role="img" alt="Love">
+                    ❤️
+                </span>
+            </h5>
         </div>
     );
 }

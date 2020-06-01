@@ -61,15 +61,15 @@ function App() {
             pageLink: '/home',
             view: <div />,
             displayName: 'Home',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
             id: 1,
-            pageLink: '/explore',
+            pageLink: '/clubs',
             view: <div />,
-            displayName: 'Explore',
-            animationDelayForNavbar: 0.1,
+            displayName: 'Clubs',
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
@@ -77,7 +77,7 @@ function App() {
             pageLink: '/news',
             view: <div />,
             displayName: 'News',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
@@ -85,7 +85,7 @@ function App() {
             pageLink: '/campus',
             view: <div />,
             displayName: 'Campus',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
@@ -93,7 +93,7 @@ function App() {
             pageLink: '/hostels',
             view: <div />,
             displayName: 'Hostels',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
@@ -101,7 +101,7 @@ function App() {
             pageLink: '/map',
             view: <MapLeaf />,
             displayName: 'Map',
-            animationDelayForNavbar: 0.1,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
         {
@@ -109,7 +109,7 @@ function App() {
             pageLink: '/links',
             view: <Links />,
             displayName: 'Links',
-            animationDelayForNavbar: 0.0,
+            animationDelayForNavbar: 0,
             showInNavbar: true,
         },
     ];
@@ -124,10 +124,10 @@ function App() {
                             <Home />
                         </main>
                     </Route>
-                    <Route path="/explore">
-                        <Navbar pages={pages} name="Explore" />
+                    <Route path="/clubs">
+                        <Navbar pages={pages} name="Clubs" />
                         <main>
-                            <Appbar name="Explore" />
+                            <Appbar name="Clubs" />
                             <div className="content-area">
                                 <Explore />
                             </div>
