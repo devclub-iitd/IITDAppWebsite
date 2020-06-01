@@ -125,7 +125,7 @@ function App() {
                     <Route path="/explore">
                         <Navbar pages={pages} name="Explore" />
                         <main>
-                            <Appbar name="Explore Clubs and Activities" />
+                            <Appbar name="Explore" />
                             <div className="content-area">
                                 <Explore />
                             </div>

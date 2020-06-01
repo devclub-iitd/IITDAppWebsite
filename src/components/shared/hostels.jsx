@@ -21,6 +21,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 1,
@@ -39,6 +40,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 2,
@@ -57,6 +59,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'girls',
     },
     {
         id: 3,
@@ -75,6 +78,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 4,
@@ -93,6 +97,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'girls',
     },
     {
         id: 5,
@@ -111,6 +116,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 6,
@@ -129,6 +135,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 7,
@@ -147,6 +154,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 8,
@@ -165,6 +173,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 9,
@@ -183,6 +192,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 10,
@@ -201,6 +211,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 11,
@@ -219,6 +230,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
     {
         id: 12,
@@ -237,6 +249,7 @@ const hostels = [
         mapUrl: '',
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+        for: 'boys',
     },
 ];
 

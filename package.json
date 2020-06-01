@@ -27,6 +27,7 @@
         "react": "^16.13.1",
         "react-bootstrap": "^1.0.1",
         "react-dom": "^16.13.1",
+        "react-easy-back-to-top": "^1.0.2",
         "react-feather": "^2.0.8",
         "react-grid-layout": "^0.18.3",
         "react-helmet": "^6.0.0",

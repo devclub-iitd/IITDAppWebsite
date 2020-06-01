@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
@@ -5,13 +8,18 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
 import ExploreCard from './exploreCard';
 import explore from './shared/explore';
+import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Explore extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '', filtered: explore };
+        this.state = {
+            searchQuery: '',
+            filtered: explore,
+        };
 
         this.handleChange = this.handleChange.bind(this);
     }
@@ -47,12 +55,68 @@ class Explore extends React.Component {
 
     render() {
         const layoutLg = [];
+        const layoutMd = [];
+        const layoutSm = [];
+        const layoutXs = [];
+        const layoutXxs = [];
         const exploreRoll = [];
         for (let j = 0; j < this.state.filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 4) * 3,
                 y: Math.floor((j / 4) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 3) * 3,
+                y: Math.floor((j / 3) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: Math.floor((j / 2) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 3,
+                y: Math.floor((j / 2) * 1.75),
+                w: 3,
+                h: 1.75,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXxs.push({
+                i: j.toString(),
+                x: (j % 1) * 3,
+                y: Math.floor((j / 1) * 1.75),
                 w: 3,
                 h: 1.75,
                 isResizable: false,
@@ -75,22 +139,60 @@ class Explore extends React.Component {
             );
         }
 
-        const layouts = { lg: layoutLg };
+        const layouts = {
+            lg: layoutLg,
+            md: layoutMd,
+            sm: layoutSm,
+            xs: layoutXs,
+            xxs: layoutXxs,
+        };
 
         return (
             <>
-                <Search
-                    searchQuery={this.state.searchQuery}
-                    onChange={this.handleChange}
-                />
+                <div className="search">
+                    <Search
+                        searchQuery={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                    >
+                        Filter
+                    </div>
+
+                    {this.state.showFilters && (
+                        <div className="filterCheckBoxes">
+                            <input
+                                type="checkbox"
+                                onClick={this.handleAllChecked}
+                                value="checkedall"
+                            />{' '}
+                            Toggle All
+                            {this.state.options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            {...option}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}
                     breakpoints={{
-                        lg: 1200,
-                        md: 996,
-                        sm: 768,
-                        xs: 550,
+                        lg: 1470,
+                        md: 1000,
+                        sm: 860,
+                        xs: 620,
                         xxs: 0,
                     }}
                     cols={{ lg: 12, md: 9, sm: 6, xs: 6, xxs: 3 }}
@@ -99,6 +201,7 @@ class Explore extends React.Component {
                 >
                     {exploreRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </>
         );
     }

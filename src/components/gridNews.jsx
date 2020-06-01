@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
@@ -5,6 +8,8 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
 import NewsCard from './newsCard';
 import news from './shared/news';
+import CheckBox from './shared/checkBox';
+import ToTop from './goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -101,10 +106,42 @@ class News extends React.Component {
         const layouts = { lg: layoutLg, xxs: layoutXxs, xs: layoutXs };
         return (
             <>
-                <Search
-                    searchQuery={this.state.searchQuery}
-                    onChange={this.handleChange}
-                />
+                <div className="search">
+                    <Search
+                        searchQuery={this.state.searchQuery}
+                        onChange={this.handleChange}
+                    />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                    >
+                        Filter
+                    </div>
+
+                    {this.state.showFilters && (
+                        <div className="filterCheckBoxes">
+                            <input
+                                type="checkbox"
+                                onClick={this.handleAllChecked}
+                                value="checkedall"
+                            />{' '}
+                            Toggle All
+                            {this.state.options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            {...option}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}
@@ -121,6 +158,7 @@ class News extends React.Component {
                 >
                     {newsRoll}
                 </ResponsiveGridLayout>
+                <ToTop />
             </>
         );
     }

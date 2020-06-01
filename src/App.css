@@ -1489,18 +1489,12 @@ h6 {
         z-index: 1001;
         position: absolute;
         left: 300px;
-        top: 42px;
+        top: 44px;
         background-color: #4051b5;
         font-family: 'Cereal';
         color: #9ea9ec;
         border-radius: 15px;
         padding: 1rem;
-    }
-    .search .filterCheckBoxes {
-        display: hide;
-    }
-    .search .filter-icon:hover + .filterCheckBoxes {
-        display: inline-block;
     }
 }
 
@@ -1571,13 +1565,14 @@ h6 {
     .search .filterCheckBoxes {
         z-index: 1001;
         position: absolute;
-        right: 10px;
-        top: 50px;
+        right: 0px;
+        top: 56px;
         background-color: #4051b5;
         font-family: 'Cereal';
         color: #9ea9ec;
-        border-radius: 10px;
+        border-radius: 15px;
         padding: 1rem;
+        padding-top: 1rem;
     }
     .search h1 {
         background-color: #9ea9ec;
