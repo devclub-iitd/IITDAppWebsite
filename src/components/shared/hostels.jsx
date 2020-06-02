@@ -9,7 +9,7 @@ const hostels = [
         name: 'Aravali Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -28,7 +28,7 @@ const hostels = [
         name: 'Girnar Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -47,7 +47,7 @@ const hostels = [
         name: 'Himadri Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn girls">
                 <span className="hostel-link">
@@ -66,7 +66,7 @@ const hostels = [
         name: 'Jwalamukhi Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -85,7 +85,7 @@ const hostels = [
         name: 'Kailash Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn girls">
                 <span className="hostel-link">
@@ -104,7 +104,7 @@ const hostels = [
         name: 'Karakoram Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -123,7 +123,7 @@ const hostels = [
         name: 'Kumaon Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -142,7 +142,7 @@ const hostels = [
         name: 'Nilgiri Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -161,7 +161,7 @@ const hostels = [
         name: 'Shivalik Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -180,7 +180,7 @@ const hostels = [
         name: 'Satpura Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -199,7 +199,7 @@ const hostels = [
         name: 'Udaigiri Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -218,7 +218,7 @@ const hostels = [
         name: 'Vindhyachal Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">
@@ -237,7 +237,7 @@ const hostels = [
         name: 'Zanskar Hostel',
         est: 1965,
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <a className="c-btn fb">
                 <span className="hostel-link">

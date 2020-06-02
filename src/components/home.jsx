@@ -102,6 +102,15 @@ function Home() {
                     <img src={graffiti} alt="IITD" className="home-img-3" />
                 )}
             </div>
+            {windowSize.width < 769 && (
+                <img src={dogra} alt="IITD Dogra Hall" className="home-img-4" />
+            )}
+            {windowSize.width >= 769 && (
+                <img src={graffiti} alt="IITD" className="home-img-3" />
+            )}
+            {windowSize.width >= 769 && (
+                <img src={lhc} alt="IITD LHC" className="home-img-5" />
+            )}
             <p className="disc">
                 {' '}
                 This is not the official site of IIT Delhi.{' '}
@@ -118,14 +127,8 @@ function Home() {
                 )}{' '}
                 Credit of the images used goes to their respective owners.
             </p>
-            {windowSize.width < 769 && (
-                <img src={dogra} alt="IITD Dogra Hall" className="home-img-4" />
-            )}
             {windowSize.width >= 769 && (
-                <img src={graffiti} alt="IITD" className="home-img-3" />
-            )}
-            {windowSize.width >= 769 && (
-                <img src={lhc} alt="IITD LHC" className="home-img-5" />
+                <div className="dummy">DevClub IIT Delhi</div>
             )}
         </div>
     );

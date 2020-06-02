@@ -48,9 +48,16 @@ function App() {
             width: '96%',
         },
         contentAreaMapLg: {
-            marginLeft: 120,
+            marginRight: 40,
+            marginLeft: 80,
             marginTop: -80,
             marginBottom: 0,
+            height: windowSize.height,
+        },
+        contentAreaHome: {
+            marginLeft: 120,
+            marginTop: -80,
+            marginBottom: 200,
             height: windowSize.height,
         },
     };
