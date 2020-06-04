@@ -511,6 +511,8 @@ h6 {
   
 }
 
+
+
 .disc{
   font-size:1rem;
   font-family: 'Cereal';
@@ -1058,30 +1060,47 @@ h6 {
     position:absolute;
     right:10px;
     top: 20vw;
-    a{
-      color:$indigo1;
-      text-decoration:none;
-    }
-    a:hover{
-      text-decoration:underline;
-      transition:0.2s;
-    }
-    a:visited{
-      color:$indigo1;
-      text-decoration: none;
-    }
+  
   .link{
     font-size:1.4vw;
     font-family: 'Cereal';
     background: rgba(220,222,240,0.77);
-    color:$indigo2;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
     border-radius: 10px;
     margin-top:0.4rem;
+        a{
+        color:$indigo1;
+        text-decoration: none;
+        background-image: linear-gradient($indigo2,currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+        }
+    }
+    .link:hover, .link:focus, .link:active{
+      font-size:1.4vw;
+      font-family: 'Cereal';
+      background-color: $indigo1;
+      color:$indigo2;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      border-radius: 10px;
+      margin-top:0.4rem;
+      transform: translateX(-10px);
+      transition:0.3s;
+      a{
+        color:$indigo2;
+        text-decoration:none;
+        background-size: 100% 2px;
+        }
   }
+
   
   .linkIcon{
     position: relative;
@@ -2296,3 +2315,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   background-color:$indigo3;
   bottom:-200px;
 }
+
