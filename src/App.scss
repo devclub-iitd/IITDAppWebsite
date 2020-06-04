@@ -296,13 +296,13 @@ h6 {
       margin-right:0;
       color: $indigo2;
       background-color: $indigo1;
-      height:1.75rem;
+      height:40px;
   
       z-index: 99999;
     }
     .navbar-middle{
-      background-color: $indigo1;
-      z-index: 9999999;
+      background-color: none;
+      z-index: 999999;
       h1{
         margin-top:2rem;
         margin-left: 30%;
@@ -327,7 +327,7 @@ h6 {
     background: $indigo1;
     flex-direction: column;
     padding-left: 0;
-    padding-top: 0rem;
+    padding-top: 1rem;
     top: 0;
     width: 100vw;
     z-index: 9998 ;
@@ -487,15 +487,14 @@ h6 {
     a{
       color:$indigo2;
       text-decoration:none;
-      background-image: linear-gradient($indigo1,currentColor);
+      background-image: linear-gradient(currentColor,$indigo1);
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
         transition: background-size .3s;
     }
     a:hover{
-      transition:0.2s;
-      background-size: 100% 4px;
+      background-size: 100% 2px;
     }
     a:visited{
       color:$indigo-content;
