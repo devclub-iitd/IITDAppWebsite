@@ -161,25 +161,14 @@ h6 {
   .navbar-middle {
     span{
       font-weight:600;
-      Link:active{
-        color: #ffffff;
-      }
     }
-    
     color: $indigo2;
     font-family: 'Cereal';
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
-    
-
     span {
       color: $indigo2;
-    }
-    .love{
-      &:hover{
-        background-color:$indigo1;
-      }
     }
   }
 
@@ -193,7 +182,6 @@ h6 {
     transition: all 0s ease-in-out;
     width: 2.5rem;
     margin-right: -2px;
-
     &:hover {
       background: $indigo2;
       color: #fff;
@@ -212,14 +200,31 @@ h6 {
     transform: none;
     z-index: 9999;
 
-    
+    .love{
+      a{
+        font-weight: 900;
+        color: $white;
+        background-image: linear-gradient($indigo1,currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
+      }
+      a:hover{
+        background-size: 100% 2px;
 
-    
+      }
+    }
+    .love:hover{
+      background-color:$indigo1;
+      margin-left: 0;
+      width: 60%;
+  }
+
 
     & > * {
       padding:1.5rem;
       transition: all .15s ease-in-out;
-
       &:hover {
         background: #5160BC;
         border-radius: 15px;
@@ -482,10 +487,15 @@ h6 {
     a{
       color:$indigo2;
       text-decoration:none;
+      background-image: linear-gradient($indigo1,currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s;
     }
     a:hover{
-      text-decoration:underline;
       transition:0.2s;
+      background-size: 100% 4px;
     }
     a:visited{
       color:$indigo-content;

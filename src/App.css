@@ -74,12 +74,8 @@ h6 {
     text-transform: uppercase; }
     .Navbar .navbar-middle span {
       font-weight: 600; }
-      .Navbar .navbar-middle span Link:active {
-        color: #ffffff; }
     .Navbar .navbar-middle span {
       color: #9EA9EC; }
-    .Navbar .navbar-middle .love:hover {
-      background-color: #4051B5; }
   .Navbar .navbar-right {
     color: #9EA9EC;
     cursor: pointer;
@@ -104,6 +100,20 @@ h6 {
     position: absolute;
     transform: none;
     z-index: 9999; }
+    .Navbar .expand .love a {
+      font-weight: 900;
+      color: #fff;
+      background-image: linear-gradient(#4051B5, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .3s; }
+    .Navbar .expand .love a:hover {
+      background-size: 100% 2px; }
+    .Navbar .expand .love:hover {
+      background-color: #4051B5;
+      margin-left: 0;
+      width: 60%; }
     .Navbar .expand > * {
       padding: 1.5rem;
       transition: all .15s ease-in-out; }
@@ -285,10 +295,15 @@ h6 {
     width: 100%; }
     .links a {
       color: #9EA9EC;
-      text-decoration: none; }
+      text-decoration: none;
+      background-image: linear-gradient(#4051B5, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .3s; }
     .links a:hover {
-      text-decoration: underline;
-      transition: 0.2s; }
+      transition: 0.2s;
+      background-size: 100% 4px; }
     .links a:visited {
       color: #C5CAE9;
       text-decoration: none; }

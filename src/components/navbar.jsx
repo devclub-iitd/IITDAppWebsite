@@ -5,12 +5,7 @@ import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import {
-    useEffectOnce,
-    useLockBodyScroll,
-    useWindowSize,
-    useLocalStorage,
-} from 'react-use';
+import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
 import PropTypes from 'prop-types';
 
 const navLinkProps = (path, animationDelay) => ({
@@ -28,8 +23,6 @@ const activeNavIcon = (path) => ({
 
 function Navbar({ pages, name }) {
     const [expand, setExpand] = useState(false);
-    // eslint-disable-next-line
-    const [isThemeSet, setIsThemeSet] = useLocalStorage('isThemeSet', false);
 
     useLockBodyScroll(expand);
     const windowSize = useWindowSize();
@@ -61,30 +54,11 @@ function Navbar({ pages, name }) {
                 onMouseEnter={() => {
                     if (window.innerWidth > 769) {
                         setExpand(true);
-                        // anime({
-                        //     targets: '.navbar-right path',
-                        //     strokeDashoffset: [anime.setDashoffset, 0],
-                        //     easing: 'easeInOutSine',
-                        //     duration: 250,
-                        //     direction: 'alternate',
-                        //     loop: 0,
-                        // });
                     }
                 }}
                 onKeyDown={() => {
                     if (window.innerWidth > 769) {
                         setExpand(true);
-                        // anime({
-                        //     targets: '.navbar-right path',
-                        //     strokeDashoffset: [anime.setDashoffset, 0],
-                        //     easing: 'easeInOutSine',
-                        //     duration: 250,
-                        //     delay(el, i) {
-                        //         return i * 10;
-                        //     },
-                        //     direction: 'alternate',
-                        //     loop: false,
-                        // });
                     }
                 }}
             >
@@ -221,7 +195,7 @@ function Expand({ expand, pages, setExpand }) {
                 return null;
             })}
             <h5 className="love">
-                Made by DevClub with{' '}
+                Made by <a href="https://devclub.in/#/">DevClub</a> with{' '}
                 <span role="img" alt="Love">
                     ❤️
                 </span>
@@ -230,14 +204,12 @@ function Expand({ expand, pages, setExpand }) {
     );
 }
 Navbar.propTypes = {
-    // eslint-disable-next-line react/require-default-props
-    pages: PropTypes.instanceOf(Array),
+    pages: PropTypes.instanceOf(Array).isRequired,
     name: PropTypes.string.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,
-    // eslint-disable-next-line react/require-default-props
-    pages: PropTypes.instanceOf(Array),
+    pages: PropTypes.instanceOf(Array).isRequired,
     setExpand: PropTypes.bool.isRequired,
 };
 
