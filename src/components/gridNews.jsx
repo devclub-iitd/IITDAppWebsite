@@ -66,11 +66,12 @@ class News extends React.Component {
             );
 
             newList = currentList.filter((item) => {
-                const lc = item.name.toLowerCase();
+                const lc = item.title.toLowerCase();
+                const lc2 = item.description.toLowerCase();
 
                 const filterWord = this.state.searchQuery.toLowerCase();
 
-                return lc.includes(filterWord);
+                return lc.includes(filterWord) || lc2.includes(filterWord);
             });
         } else {
             newList = news.filter((item) =>
