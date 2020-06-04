@@ -100,13 +100,8 @@ h6 {
     font-size: 40px;
     font-weight: 600;
     padding: 1rem;
-    transition: all 0s ease-in-out;
+    transition: all 1s ease-in-out;
     width: 2.5rem;
-    margin-right: -2px;
-}
-.Navbar .navbar-right:hover {
-    background: #9ea9ec;
-    color: #fff;
     margin-right: -2px;
 }
 .Navbar .expand {
@@ -139,13 +134,14 @@ h6 {
 }
 .Navbar .expand > * {
     padding: 1.5rem;
+    padding-right: 1rem;
     transition: all 0.15s ease-in-out;
 }
 .Navbar .expand > *:hover {
-    background: #5160bc;
-    border-radius: 15px;
-    width: 50%;
-    margin-left: 1vw;
+    background-color: #5160bc;
+    border-radius: 20px;
+    transition: 0.2s;
+    padding-right: 1rem;
 }
 .Navbar .expand > * span.focused,
 .Navbar .expand > * span.hover {
@@ -153,6 +149,7 @@ h6 {
     border-radius: 10px;
     color: #fff;
     padding: 0.75rem;
+    transition: background-color 0.2s;
 }
 .Navbar .expand .expand-bottom {
     align-self: flex-start;
@@ -223,12 +220,6 @@ h6 {
     .expand > * {
         padding: 0rem;
         transition: all 0.15s ease-in-out;
-    }
-    .expand > *:hover {
-        background: #5160bc;
-        border-radius: 5px;
-        width: 20%;
-        margin-left: 0;
     }
     .expand > * span.focused {
         background: #9ea9ec;
