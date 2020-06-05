@@ -11,31 +11,29 @@ function ExploreCard({ exploreObj }) {
         <div className="box">
             <div key="a" className="left-e">
                 {exploreObj.img}
-            </div>
-            <div key="b" className="right-e">
-                <h1>{exploreObj.name}</h1>
-                <p>{exploreObj.desc}</p>
-            </div>
-            <div key="c" className="links-e">
                 <div className="c-btn-group">
                     <a className="c-btn learn-e" href={exploreObj.learnUrl}>
                         <span>
-                            <Icon.Info />
+                            <Icon.Info height="30" strokeWidth="2" />
                         </span>
                     </a>
                     <a className="c-btn fb" href={exploreObj.fbUrl}>
                         <span>
-                            <Icon.Facebook />
+                            <Icon.Facebook height="30" strokeWidth="2" />
                         </span>
                     </a>
                     <a className="c-btn insta" href={exploreObj.instaUrl}>
-                        <Icon.Instagram />
+                        <Icon.Instagram height="30" strokeWidth="2" />
                     </a>
                     <a className="c-btn web" href={exploreObj.webUrl}>
-                        <Icon.Globe />
+                        <Icon.Globe height="30" strokeWidth="2" />
                     </a>
                     {exploreObj.extraIcon}
                 </div>
+            </div>
+            <div key="b" className="right-e">
+                <h1>{exploreObj.name}</h1>
+                <p>{exploreObj.desc}</p>
             </div>
         </div>
     );

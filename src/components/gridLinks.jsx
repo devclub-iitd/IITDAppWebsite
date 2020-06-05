@@ -48,7 +48,7 @@ class Links extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 3.2,
+                h: 3.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -106,7 +106,7 @@ class Links extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 3.2,
+                h: 3.75,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -164,7 +164,7 @@ class Links extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 3.3,
+                h: 3.9,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -222,7 +222,7 @@ class Links extends React.Component {
                 x: 9,
                 y: 0,
                 w: 3,
-                h: 3.2,
+                h: 3.7,
                 isResizable: false,
                 autoSize: true,
                 verticalCompact: true,
@@ -468,7 +468,7 @@ class Links extends React.Component {
                                 Boards And <br /> Councils
                             </h1>
                             <a href="http://sac.iitd.ac.in/" className="link">
-                                Student Affairs Council (SAC)
+                                Student Affairs Council <br /> (SAC)
                             </a>
                             <span>
                                 <p />
@@ -480,20 +480,30 @@ class Links extends React.Component {
                                 <p />
                             </span>
                             <a href="http://bsa-iitd.in/home/" className="link">
-                                Board for Sports Activities (BSA)
+                                Board for Sports Activities <br /> (BSA)
                             </a>
                             <span>
                                 <p />
                             </span>
                             <a href="http://brca.iitd.ac.in/" className="link">
-                                Board for Recreational and Creative Activities
-                                (BRCA)
+                                <a
+                                    href="http://brca.iitd.ac.in/"
+                                    className="link"
+                                >
+                                    Board for Recreational & <br />
+                                </a>
+                                <a
+                                    href="http://brca.iitd.ac.in/"
+                                    className="link"
+                                >
+                                    Creative Activities (BRCA){' '}
+                                </a>
                             </a>
                             <span>
                                 <p />
                             </span>
                             <a href="http://bsp.iitd.ac.in/" className="link">
-                                Board of Student Publications (BSP)
+                                Board of Student Publications <br /> (BSP)
                             </a>
                             <span>
                                 <p />
@@ -502,13 +512,13 @@ class Links extends React.Component {
                                 href="https://home.iitd.ac.in/bhm.php"
                                 className="link"
                             >
-                                Board of Hostel Management (BHM)
+                                Board of Hostel Management <br /> (BHM)
                             </a>
                             <span>
                                 <p />
                             </span>
                             <a href="http://bsw.iitd.ac.in/" className="link">
-                                Board of Student Welfare (BSW)
+                                Board of Student Welfare <br /> (BSW)
                             </a>
                             <p />
                         </div>

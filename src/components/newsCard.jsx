@@ -29,10 +29,14 @@ function newsCard({ newsObj }) {
                                 new Date(Date.parse(newsObj.createdAt))
                             )}{' '}
                         </span>
-                        <span className="news-icon">
-                            <Icon.Bookmark height="15" strokeWidth="2" />
-                        </span>
-                        <a href={newsObj.url}>Read Complete Article</a>
+
+                        <a href={newsObj.url}>
+                            {' '}
+                            <span>
+                                <Icon.Bookmark height="15" strokeWidth="2" />
+                            </span>
+                            READ COMPLETE ARTICLE
+                        </a>
                     </p>
                 </p>
             </div>

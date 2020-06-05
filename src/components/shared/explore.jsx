@@ -10,10 +10,11 @@ const explore = [
         id: 0,
         name: 'DevClub',
         img: <img src={devclub} alt="DevClub IITD" className="card-img" />,
-        desc: 'Dev Club is a community of tech-minded people in IIT Delhi.',
+        desc:
+            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a className="c-btn git">
-                <Icon.GitHub />
+                <Icon.GitHub height="30" strokeWidth="2" />
             </a>
         ),
         infoUrl: '',
@@ -25,10 +26,11 @@ const explore = [
         id: 1,
         name: 'DevClub',
         img: <img src={devclub} alt="DevClub IITD" className="card-img" />,
-        desc: 'Dev Club is a community of tech-minded people in IIT Delhi.',
+        desc:
+            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a className="c-btn git">
-                <Icon.GitHub />
+                <Icon.GitHub height="30" strokeWidth="2" />
             </a>
         ),
         infoUrl: '',
@@ -40,10 +42,11 @@ const explore = [
         id: 2,
         name: 'DevClub',
         img: <img src={devclub} alt="DevClub IITD" className="card-img" />,
-        desc: 'Dev Club is a community of tech-minded people in IIT Delhi.',
+        desc:
+            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a className="c-btn git">
-                <Icon.GitHub />
+                <Icon.GitHub height="30" strokeWidth="2" />
             </a>
         ),
         infoUrl: '',
@@ -55,10 +58,11 @@ const explore = [
         id: 3,
         name: 'DevClub',
         img: <img src={devclub} alt="DevClub IITD" className="card-img" />,
-        desc: 'Dev Club is a community of tech-minded people in IIT Delhi.',
+        desc:
+            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a className="c-btn git">
-                <Icon.GitHub />
+                <Icon.GitHub height="30" strokeWidth="2" />
             </a>
         ),
         infoUrl: '',
@@ -70,10 +74,11 @@ const explore = [
         id: 4,
         name: 'DevClub',
         img: <img src={devclub} alt="DevClub IITD" className="card-img" />,
-        desc: 'Dev Club is a community of tech-minded people in IIT Delhi.',
+        desc:
+            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a className="c-btn git">
-                <Icon.GitHub />
+                <Icon.GitHub height="30" strokeWidth="2" />
             </a>
         ),
         infoUrl: '',

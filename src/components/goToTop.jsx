@@ -14,6 +14,7 @@ export default function ToTop() {
             transition="all 0.5s"
             showOnDistance={200}
             borderRadius={40}
+            scrollBehavior="smooth"
             padding={16}
             opacity="0.4"
             color="white"

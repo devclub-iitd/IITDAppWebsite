@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -16,10 +17,75 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 class News extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchQuery: '', filtered: news };
+        this.state = {
+            searchQuery: '',
+            filtered: news,
+            options: [
+                {
+                    id: 1,
+                    value: 'May 2020',
+                    isChecked: true,
+                    month: '2020-05',
+                },
+                {
+                    id: 2,
+                    value: 'June 2020',
+                    isChecked: true,
+                    month: '2020-06',
+                },
+            ],
+            showFilters: false,
+        };
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleClickFilter = this.handleClickFilter.bind(this);
+        this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
+            this
+        );
     }
+
+    handleCheckChieldElement = (event) => {
+        const { options } = this.state;
+        options.forEach((option) => {
+            if (option.value === event.target.value)
+                option.isChecked = event.target.checked;
+        });
+        this.setState({ options });
+
+        const chosenOptions = options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.month);
+        let newList = [];
+        let currentList = [];
+        if (this.state.searchQuery !== '') {
+            currentList = news;
+
+            currentList = news.filter((item) =>
+                chosenCats.includes(item.createdAt.slice(0, 7))
+            );
+
+            newList = currentList.filter((item) => {
+                const lc = item.title.toLowerCase();
+                const lc2 = item.description.toLowerCase();
+
+                const filterWord = this.state.searchQuery.toLowerCase();
+
+                return lc.includes(filterWord) || lc2.includes(filterWord);
+            });
+        } else {
+            newList = news.filter((item) =>
+                chosenCats.includes(item.createdAt.slice(0, 7))
+            );
+        }
+        this.setState({
+            filtered: newList,
+        });
+    };
+
+    handleClickFilter = () => {
+        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+    };
 
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
@@ -53,6 +119,8 @@ class News extends React.Component {
 
     render() {
         const layoutLg = [];
+        const layoutMd = [];
+        const layoutSm = [];
         const layoutXs = [];
         const layoutXxs = [];
         const newsRoll = [];
@@ -61,6 +129,32 @@ class News extends React.Component {
                 i: j.toString(),
                 x: j % 2,
                 y: (j % 3) * 1.8,
+                w: 1,
+                h: 1.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: j % 2,
+                y: (j % 3) * 1.8,
+                w: 1,
+                h: 1.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: j % 2,
+                y: (j % 3) * 2.2,
                 w: 1,
                 h: 1.8,
                 isResizable: false,
@@ -86,9 +180,9 @@ class News extends React.Component {
             layoutXxs.push({
                 i: j.toString(),
                 x: 0,
-                y: j * 3,
+                y: j * 3.4,
                 w: 1,
-                h: 2.8,
+                h: 3.3,
                 isResizable: false,
                 useCSSTransforms: true,
                 autoSize: true,
@@ -103,7 +197,13 @@ class News extends React.Component {
                 </div>
             );
         }
-        const layouts = { lg: layoutLg, xxs: layoutXxs, xs: layoutXs };
+        const layouts = {
+            lg: layoutLg,
+            xxs: layoutXxs,
+            xs: layoutXs,
+            md: layoutMd,
+            sm: layoutSm,
+        };
         return (
             <>
                 <div className="search">
@@ -121,12 +221,6 @@ class News extends React.Component {
 
                     {this.state.showFilters && (
                         <div className="filterCheckBoxes">
-                            <input
-                                type="checkbox"
-                                onClick={this.handleAllChecked}
-                                value="checkedall"
-                            />{' '}
-                            Toggle All
                             {this.state.options.map((option) => {
                                 return (
                                     <>
@@ -149,9 +243,9 @@ class News extends React.Component {
                         lg: 1200,
                         md: 996,
                         md2: 768,
-                        sm: 580,
+                        sm: 620,
                         xs: 396,
-                        xxs: 0,
+                        xxs: 340,
                     }}
                     cols={{ lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1 }}
                     horizontalCompact

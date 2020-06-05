@@ -39,6 +39,6 @@ $ npm start
 - [ ] Clean/Add Data+Images
 - [x] Links Page
 - [x] Search
-- [ ] Filters On News, Explore
+- [x] Filters On News, Explore
 - [ ] React Leaflet Search (?)
 - [x] Small Screen Support
