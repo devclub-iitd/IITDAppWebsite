@@ -1080,11 +1080,6 @@ h6 {
         a{
         color:$indigo1;
         text-decoration: none;
-        background-image: linear-gradient($indigo2,currentColor);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size .3s;
         }
     }
     .link:hover, .link:focus, .link:active{
@@ -1099,11 +1094,10 @@ h6 {
       border-radius: 10px;
       margin-top:0.4rem;
       transform: translateX(-10px);
-      transition:0.3s;
+      transition: 0.3s;
       a{
         color:$indigo2;
         text-decoration:none;
-        background-size: 100% 2px;
         }
   }
 
@@ -1869,8 +1863,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 }
 .c-btn-group {
   position: fixed;
-  bottom:10px;
-  left:14%;
+  bottom:14px;
+  left:17%;
   @media (max-width:1448px){left:17%;}
   @media (max-width:1448px){left:14%;}
   @media (max-width:1371px){left:17%;}
