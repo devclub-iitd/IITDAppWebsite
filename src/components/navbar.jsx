@@ -84,7 +84,7 @@ function Navbar({ pages, name }) {
                         </span>
                         <span>
                             <Link to="/clubs">
-                                <Icon.Search
+                                <Icon.Users
                                     strokeWidth="3"
                                     height="40"
                                     {...activeNavIcon('/clubs')}
