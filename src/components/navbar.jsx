@@ -92,6 +92,15 @@ function Navbar({ pages, name }) {
                             </Link>
                         </span>
                         <span>
+                            <Link to="/events">
+                                <Icon.Calendar
+                                    strokeWidth="3"
+                                    height="40"
+                                    {...activeNavIcon('/links')}
+                                />
+                            </Link>
+                        </span>
+                        <span>
                             <Link to="/news">
                                 <Icon.Rss
                                     strokeWidth="3"

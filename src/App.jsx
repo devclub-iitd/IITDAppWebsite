@@ -21,6 +21,7 @@ import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
 import Home from './components/home';
 import Links from './components/gridLinks';
+import Events from './components/gridEvents';
 import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
@@ -81,6 +82,14 @@ function App() {
         },
         {
             id: 2,
+            pageLink: '/events',
+            view: <Links />,
+            displayName: 'Events',
+            animationDelayForNavbar: 0,
+            showInNavbar: true,
+        },
+        {
+            id: 3,
             pageLink: '/news',
             view: <div />,
             displayName: 'News',
@@ -88,7 +97,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 3,
+            id: 4,
             pageLink: '/campus',
             view: <div />,
             displayName: 'Campus',
@@ -96,7 +105,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 4,
+            id: 5,
             pageLink: '/hostels',
             view: <div />,
             displayName: 'Hostels',
@@ -104,7 +113,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 5,
+            id: 6,
             pageLink: '/map',
             view: <MapLeaf />,
             displayName: 'Map',
@@ -112,7 +121,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 6,
+            id: 7,
             pageLink: '/links',
             view: <Links />,
             displayName: 'Links',
@@ -195,6 +204,15 @@ function App() {
                             <Appbar name="Quick Links" />
                             <div className="content-area">
                                 <Links />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route path="/events">
+                        <Navbar pages={pages} name="events" />
+                        <main>
+                            <Appbar name="Events" />
+                            <div className="content-area">
+                                <Events />
                             </div>
                         </main>
                     </Route>
