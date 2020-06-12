@@ -82,9 +82,8 @@ h6 {
     font-family: 'Cereal';
     font-size: 40px;
     font-weight: 600;
-    padding: 1rem;
     transition: all 1s ease-in-out;
-    width: 2.5rem;
+    width: 2rem;
     margin-right: -2px; }
   .Navbar .expand {
     background: #4051B5;
@@ -584,7 +583,7 @@ h6 {
         height: 2.2rem;
         justify-content: center;
         margin-bottom: 1.5rem;
-        margin-top: 1.5rem; }
+        margin-top: 1.4rem; }
         .Navbar .navbar-right > span svg {
           stroke: #9EA9EC; }
     .Navbar .expand {
