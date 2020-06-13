@@ -128,6 +128,14 @@ function App() {
             animationDelayForNavbar: 0,
             showInNavbar: true,
         },
+        {
+            id: 8,
+            pageLink: '/hostels/:hostelId',
+            view: <div />,
+            displayName: 'Hostel Info',
+            animationDelayForNavbar: 0,
+            showInNavbar: false,
+        },
     ];
     return (
         <div className="App">
@@ -167,13 +175,20 @@ function App() {
                             </div>
                         </main>
                     </Route>
-                    <Route path="/hostels">
+                    <Route exact path="/hostels">
                         <Navbar pages={pages} name="Hostels" />
                         <main>
                             <Appbar name="Hostels" />
                             <div className="content-area">
                                 <HostelGrid />
                             </div>
+                        </main>
+                    </Route>
+                    <Route path="/hostels/:hostelId">
+                        <Navbar pages={pages} name="Hostels" />
+                        <main>
+                            <Appbar name="Sample Hostel Name" />
+                            <div className="content-area" />
                         </main>
                     </Route>
                     <Route path="/map">

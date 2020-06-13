@@ -1,6 +1,7 @@
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const HostelCard = ({ hostelObj }) => (
@@ -25,13 +26,17 @@ const HostelCard = ({ hostelObj }) => (
                             Map{'  '}
                         </span>
                     </a>
-                    <a className="c-btn learn-e" href={hostelObj.learnUrl}>
+                    <Link
+                        to={`/hostels/${hostelObj.id}`}
+                        className="c-btn learn-e"
+                        href={hostelObj.learnUrl}
+                    >
                         <span className="hostel-link">
                             <Icon.Info height="15" strokeWidth="3" />
                             More Info
                             {'  '}
                         </span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
