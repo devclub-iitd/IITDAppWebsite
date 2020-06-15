@@ -1805,7 +1805,7 @@ h6 {
   position: absolute;
   max-width: 100%;
   max-height: 500px;
-  width: 100%;
+  width: 90%;
   height: 100%;
   cursor: pointer;
   will-change: transform, opacity;
@@ -1820,5 +1820,26 @@ h6 {
   background-color: #C5CAE9; }
 
 .front {
-  background: rgba(36, 58, 188, 0.8);
-  border-radius: 28px; }
+  background: rgba(36, 58, 188, 0.8); }
+
+@media (max-width: 769px) {
+  .eventsGrid {
+    width: 97%; }
+  .c {
+    position: absolute;
+    max-width: 100%;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    will-change: transform, opacity;
+    border-radius: 30px;
+    margin: 20px; } }
+
+@media (min-width: 769px) {
+  .eventsGrid {
+    width: 98.5%; } }
+
+.eventsGridCell {
+  display: flex;
+  flex-direction: row; }

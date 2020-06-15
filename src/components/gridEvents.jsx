@@ -24,9 +24,9 @@ function Events() {
     const layoutXs = [];
     const layoutXxs = [];
     const newsRoll = [];
-    for (let j = 1; j <= 5; j += 1) {
+    for (let j = 0; j <= 5; j += 1) {
         layoutLg.push({
-            i: j.toString(),
+            i: (j + 1).toString(),
             x: j % 2,
             y: (j % 3) * 1.8,
             w: 1,
@@ -39,7 +39,7 @@ function Events() {
             isDraggable: false,
         });
         layoutMd.push({
-            i: j.toString(),
+            i: (j + 1).toString(),
             x: j % 2,
             y: (j % 3) * 1.8,
             w: 1,
@@ -52,7 +52,7 @@ function Events() {
             isDraggable: false,
         });
         layoutSm.push({
-            i: j.toString(),
+            i: (j + 1).toString(),
             x: j % 2,
             y: (j % 3) * 2.2,
             w: 1,
@@ -65,7 +65,7 @@ function Events() {
             isDraggable: false,
         });
         layoutXs.push({
-            i: j.toString(),
+            i: (j + 1).toString(),
             x: 0,
             y: j * 3,
             w: 1,
@@ -78,7 +78,7 @@ function Events() {
             isDraggable: false,
         });
         layoutXxs.push({
-            i: j.toString(),
+            i: (j + 1).toString(),
             x: 0,
             y: j * 3.4,
             w: 1,
@@ -101,7 +101,7 @@ function Events() {
     return (
         <>
             <ResponsiveGridLayout
-                className="layout"
+                className="eventsGrid"
                 layouts={layouts}
                 breakpoints={{
                     lg: 1200,
@@ -114,19 +114,19 @@ function Events() {
                 cols={{ lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1 }}
                 horizontalCompact
             >
-                <div key="1">
+                <div key="1" className="eventsGridCell">
                     <EventsCard />
                 </div>
-                <div key="2">
+                <div key="2" className="eventsGridCell">
                     <EventsCard />
                 </div>
-                <div key="3">
+                <div key="3" className="eventsGridCell">
                     <EventsCard />
                 </div>
-                <div key="4">
+                <div key="4" className="eventsGridCell">
                     <EventsCard />
                 </div>
-                <div key="5">
+                <div key="5" className="eventsGridCell">
                     <EventsCard />
                 </div>
             </ResponsiveGridLayout>
