@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
+import rdv from './images/events/rdv.svg';
 
 function EventsCard() {
     const [flipped, set] = useState(true);
@@ -18,7 +19,28 @@ function EventsCard() {
                     opacity: opacity.interpolate((o) => 1 - o),
                     transform,
                 }}
-            />
+            >
+                <img src={rdv} alt="RDV'19 Logo" />
+                <h1>
+                    Rendezvous&apos;19 <span>Oct 3-5 2019</span>
+                    {'\n'}
+                    <div className="description">
+                        Rendezvous, famously known as RDV is the annual Cultural
+                        Festival of the IIT Delhi. It is a four-day-long event
+                        held in October every year. Rendezvous&apos;19 hosted
+                        280+ events and had a footfall of over 163,000, 15,000+
+                        participants and 200+ artists from more than 25
+                        countries.
+                        <h3>
+                            <span className="nestedh3">
+                                Major Attractions :
+                            </span>{' '}
+                            Shankar-Ehsaan-Loy, Ritviz, Naezy , Amit Trivedi
+                        </h3>
+                    </div>
+                </h1>
+            </a.div>
+
             <a.div
                 class="c back"
                 style={{

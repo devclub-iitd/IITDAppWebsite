@@ -1826,8 +1826,42 @@ h6 {
     background-image: url("./components/images/events/rdv19.jpg");
     background-position: 50% 6%; } }
 
-.front {
-  background: rgba(36, 58, 188, 0.8); }
+.c.front {
+  background: rgba(36, 58, 188, 0.8);
+  white-space: pre-wrap; }
+  .c.front img {
+    height: 32px;
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-top: 15px; }
+  .c.front h1 {
+    color: #fff;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-size: 20px; }
+    .c.front h1 span {
+      font-size: 0.75em;
+      background-color: #C5CAE9;
+      color: #4051B5;
+      padding: 0px 5px 0px 5px;
+      border-radius: 5px;
+      line-height: 1em; }
+  .c.front .description {
+    width: 80%;
+    display: relative;
+    font-weight: 400;
+    margin-top: 10px;
+    white-space: pre-wrap; }
+    .c.front .description h3 {
+      font-size: 1em; }
+      .c.front .description h3 .nestedh3 {
+        font-weight: 900;
+        background: none;
+        font-size: 1em;
+        color: #fff; }
+    @media (min-width: 1000px) {
+      .c.front .description {
+        font-size: 0.8em; } }
 
 @media (max-width: 769px) {
   .eventsGrid {

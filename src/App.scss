@@ -2348,9 +2348,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
 
 
-.front {
+.c.front {
   background: rgba(36,58,188,0.8);
+  white-space: pre-wrap;
+  img{
+    height: 32px;
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-top: 15px;
+  }
+  h1{
+    color: #fff;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+    
+    span{
+      font-size: 0.75em;
+      background-color:$indigo-content;
+      color: $indigo1;
+      padding: 0px 5px 0px 5px;
+      border-radius: 5px;
+      line-height:1em;
+    }
+  }
+  .description{
+    h3{
+      font-size:1em;
+      .nestedh3{
+        font-weight:900;
+        background:none;
+        font-size:1em;
+        color:#fff;
+      }
+    }
+    width: 80%;
+    display:relative;
+    @media(min-width:1000px){font-size:0.8em;}
+    font-weight: 400;
+    margin-top: 10px;
+    white-space: pre-wrap;
+  }
 }
+
 
 @media (max-width: 769px){
 .eventsGrid{
