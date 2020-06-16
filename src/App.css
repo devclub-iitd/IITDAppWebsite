@@ -1839,8 +1839,8 @@ h6 {
     margin-left: 5px;
     margin-top: 15px;
     font-size: 20px; }
-    .c.front h1 span {
-      font-size: 0.75em;
+    .c.front h1 .dates {
+      font-size: 0.8em;
       background-color: #C5CAE9;
       color: #4051B5;
       padding: 0px 5px 0px 5px;
@@ -1853,11 +1853,13 @@ h6 {
     margin-top: 10px;
     white-space: pre-wrap; }
     .c.front .description h3 {
-      font-size: 1em; }
+      margin-left: 0;
+      font-size: 16px !important;
+      font-weight: 600; }
       .c.front .description h3 .nestedh3 {
         font-weight: 900;
         background: none;
-        font-size: 1em;
+        font-size: 16px;
         color: #fff; }
     @media (min-width: 1000px) {
       .c.front .description {

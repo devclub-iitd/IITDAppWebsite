@@ -2363,8 +2363,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     margin-top: 15px;
     font-size: 20px;
     
-    span{
-      font-size: 0.75em;
+    .dates{
+      font-size: 0.8em;
       background-color:$indigo-content;
       color: $indigo1;
       padding: 0px 5px 0px 5px;
@@ -2374,11 +2374,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
   .description{
     h3{
-      font-size:1em;
+      margin-left: 0;
+      font-size:16px !important;
+      font-weight: 600;
       .nestedh3{
         font-weight:900;
         background:none;
-        font-size:1em;
+        font-size:16px;
         color:#fff;
       }
     }

@@ -22,7 +22,8 @@ function EventsCard() {
             >
                 <img src={rdv} alt="RDV'19 Logo" />
                 <h1>
-                    Rendezvous&apos;19 <span>Oct 3-5 2019</span>
+                    Rendezvous&apos;19{' '}
+                    <span className="dates">Oct 3-5 2019</span>
                     {'\n'}
                     <div className="description">
                         Rendezvous, famously known as RDV is the annual Cultural
