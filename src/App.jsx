@@ -83,7 +83,7 @@ function App() {
         {
             id: 2,
             pageLink: '/events',
-            view: <Links />,
+            view: <div />,
             displayName: 'Events',
             animationDelayForNavbar: 0,
             showInNavbar: true,
@@ -213,7 +213,16 @@ function App() {
                             )}
                         </main>
                     </Route>
-                    <Route path="/links">
+                    <Route exact path="/events">
+                        <Navbar pages={pages} name="Events" />
+                        <main>
+                            <Appbar name="Events" />
+                            <div className="content-area">
+                                <Events />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route exact path="/links">
                         <Navbar pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
@@ -222,15 +231,7 @@ function App() {
                             </div>
                         </main>
                     </Route>
-                    <Route path="/events">
-                        <Navbar pages={pages} name="events" />
-                        <main>
-                            <Appbar name="Events" />
-                            <div className="content-area">
-                                <Events />
-                            </div>
-                        </main>
-                    </Route>
+
                     <Redirect to="/home" />
                 </Switch>
             </Router>

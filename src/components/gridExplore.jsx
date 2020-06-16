@@ -10,6 +10,7 @@ import ExploreCard from './exploreCard';
 import explore from './shared/explore';
 import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
+import Empty from './emptyResults';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -185,6 +186,7 @@ class Explore extends React.Component {
                         </div>
                     )}
                 </div>
+                {this.state.filtered.length < 1 && <Empty />}
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

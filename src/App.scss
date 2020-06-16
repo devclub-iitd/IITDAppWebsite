@@ -2416,3 +2416,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
   }
 
+  .empty{
+    margin-top:20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .emptyImg{
+    display:inline-block;
+    width:80vw;
+    max-width: 550px;
+    height: auto;
+  }

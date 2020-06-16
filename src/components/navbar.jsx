@@ -96,7 +96,7 @@ function Navbar({ pages, name }) {
                                 <Icon.Calendar
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/links')}
+                                    {...activeNavIcon('/events')}
                                 />
                             </Link>
                         </span>
