@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
+import { useWindowSize } from 'react-use';
 import * as Icon from 'react-feather';
 import rdv from './images/events/rdv.svg';
 
@@ -12,6 +13,7 @@ function EventsCard() {
         transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
         config: { mass: 5, tension: 500, friction: 80 },
     });
+    const windowSize = useWindowSize();
     return (
         <div role="button" onClick={() => set((state) => !state)}>
             <a.div
@@ -22,18 +24,21 @@ function EventsCard() {
                 }}
             >
                 <div className="linksEvent">
-                    <a href="www.facebook.com">
+                    <a href="www.facebook.com" role="button">
                         <div className="siteEvent">
                             <Icon.Globe strokeWidth="2" height="40" />
                         </div>
                     </a>
-
-                    <div className="fbEvent">
-                        <Icon.Facebook strokeWidth="2" height="40" />
-                    </div>
-                    <div className="instaEvent">
-                        <Icon.Instagram strokeWidth="2" height="40" />
-                    </div>
+                    <a href="www.facebook.com" role="button">
+                        <div className="fbEvent">
+                            <Icon.Facebook strokeWidth="2" height="40" />
+                        </div>
+                    </a>
+                    <a href="www.facebook.com" role="button">
+                        <div className="instaEvent">
+                            <Icon.Instagram strokeWidth="2" height="40" />
+                        </div>
+                    </a>
                 </div>
                 <img src={rdv} alt="RDV'19 Logo" />
                 <h1>
@@ -63,7 +68,15 @@ function EventsCard() {
                         (t) => `${t} rotateX(180deg)`
                     ),
                 }}
-            />
+            >
+                <h1>
+                    <img src={rdv} alt="RDV'19 Logo" />
+                    Rendezvous&apos;19{' '}
+                    {windowSize.width > 360 && (
+                        <span className="dates">Oct 3-5 2019</span>
+                    )}
+                </h1>
+            </a.div>
         </div>
     );
 }
