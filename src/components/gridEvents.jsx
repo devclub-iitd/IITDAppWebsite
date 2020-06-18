@@ -56,7 +56,7 @@ function Events() {
             x: j % 2,
             y: (j % 3) * 2.2,
             w: 1,
-            h: 1.8,
+            h: 1.2,
             isResizable: false,
             useCSSTransforms: true,
             autoSize: true,
@@ -69,7 +69,7 @@ function Events() {
             x: j % 2,
             y: j * 3,
             w: 1,
-            h: 1,
+            h: 1.2,
             isResizable: false,
             useCSSTransforms: true,
             autoSize: true,
@@ -82,7 +82,7 @@ function Events() {
             x: 0,
             y: j * 3.4,
             w: 1,
-            h: 1,
+            h: 1.2,
             isResizable: false,
             useCSSTransforms: true,
             autoSize: true,
@@ -111,7 +111,7 @@ function Events() {
                     xs: 396,
                     xxs: 340,
                 }}
-                cols={{ lg: 2, md: 2, md2: 2, sm: 1, xs: 1, xxs: 1 }}
+                cols={{ lg: 2, md: 2, md2: 1, sm: 1, xs: 1, xxs: 1 }}
                 horizontalCompact
             >
                 <div key="1" className="eventsGridCell">
