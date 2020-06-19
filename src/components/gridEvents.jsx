@@ -10,7 +10,7 @@ import { useSpring, animated as a } from 'react-spring';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
 import NewsCard from './newsCard';
-import news from './shared/events';
+import events from './shared/events';
 import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
 import EventsCard from './eventsCard';
@@ -115,34 +115,7 @@ function Events() {
                 horizontalCompact
             >
                 <div key="1" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="2" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="3" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="4" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="5" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="6" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="7" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="8" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="9" className="eventsGridCell">
-                    <EventsCard />
-                </div>
-                <div key="10" className="eventsGridCell">
-                    <EventsCard />
+                    <EventsCard eventsObj={events[0]} />
                 </div>
             </ResponsiveGridLayout>
             <ToTop />

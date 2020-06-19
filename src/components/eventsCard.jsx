@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import { useWindowSize } from 'react-use';
+import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
-import rdv from './images/events/rdv.svg';
 
-function EventsCard() {
+function EventsCard({ eventsObj }) {
     const [flipped, set] = useState(true);
     const { transform, opacity } = useSpring({
         opacity: flipped ? 1 : 0,
@@ -24,38 +24,34 @@ function EventsCard() {
                 }}
             >
                 <div className="linksEvent">
-                    <a href="www.facebook.com" role="button">
+                    <a href={eventsObj.webLink} role="button">
                         <div className="siteEvent">
                             <Icon.Globe strokeWidth="2" height="40" />
                         </div>
                     </a>
-                    <a href="www.facebook.com" role="button">
+                    <a href={eventsObj.fbLink} role="button">
                         <div className="fbEvent">
                             <Icon.Facebook strokeWidth="2" height="40" />
                         </div>
                     </a>
-                    <a href="www.facebook.com" role="button">
+                    <a href={eventsObj.instaLink} role="button">
                         <div className="instaEvent">
                             <Icon.Instagram strokeWidth="2" height="40" />
                         </div>
                     </a>
                 </div>
-                <img src={rdv} alt="RDV'19 Logo" />
+                {eventsObj.vectorLogo}
                 <h1>
-                    Rendezvous&apos;19{' '}
-                    <span className="dates">Oct 3-5 2019</span>
+                    {eventsObj.name}{' '}
+                    <span className="dates">{eventsObj.date}</span>
                     {'\n'}
                     <div className="description">
-                        Rendezvous (RDV), is the annual Cultural Festival of the
-                        IIT Delhi. It is a four-day-long event held in October
-                        every year. RDV&apos;19 hosted 280+ events and had a
-                        footfall of over 163,000, 15,000+ participants and 200+
-                        artists from more than 25 countries.
+                        {eventsObj.summary}
                         <br />
                         <span className="nestedh3">
                             Major Attractions :
                         </span>{' '}
-                        Shankar-Ehsaan-Loy, Ritviz, Naezy , Amit Trivedi
+                        {eventsObj.attractions}
                     </div>
                 </h1>
             </a.div>
@@ -70,15 +66,19 @@ function EventsCard() {
                 }}
             >
                 <h1>
-                    <img src={rdv} alt="RDV'19 Logo" />
-                    Rendezvous&apos;19{' '}
+                    {eventsObj.vectorLogo}
+                    {eventsObj.name}{' '}
                     {windowSize.width > 360 && (
-                        <span className="dates">Oct 3-5 2019</span>
+                        <span className="dates">{eventsObj.date}</span>
                     )}
                 </h1>
             </a.div>
         </div>
     );
 }
+EventsCard.propTypes = {
+    eventsObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
+        .isRequired,
+};
 
 export default EventsCard;
