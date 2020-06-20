@@ -99,9 +99,8 @@ h6 {
     font-family: 'Cereal';
     font-size: 40px;
     font-weight: 600;
-    padding: 1rem;
     transition: all 1s ease-in-out;
-    width: 2.5rem;
+    width: 2rem;
     margin-right: -2px;
 }
 .Navbar .expand {
@@ -186,10 +185,11 @@ h6 {
         background-color: #4051b5;
     }
     .Navbar .navbar-right {
-        margin-right: 0;
+        margin-left: 20px;
         color: #9ea9ec;
         background-color: #4051b5;
-        height: 40px;
+        height: 30px;
+        padding-right: 15px;
         z-index: 99999;
     }
     .Navbar .navbar-middle {
@@ -688,7 +688,7 @@ h6 {
         height: 2.2rem;
         justify-content: center;
         margin-bottom: 1.5rem;
-        margin-top: 1.5rem;
+        margin-top: 1.4rem;
     }
     .Navbar .navbar-right > span svg {
         stroke: #9ea9ec;
@@ -901,11 +901,6 @@ h6 {
     .links .link a {
         color: #4051b5;
         text-decoration: none;
-        background-image: linear-gradient(#9ea9ec, currentColor);
-        background-position: 0% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size 0.3s;
     }
     .links .link:hover,
     .links .link:focus,
@@ -928,7 +923,6 @@ h6 {
     .links .link:active a {
         color: #9ea9ec;
         text-decoration: none;
-        background-size: 100% 2px;
     }
     .links .linkIcon {
         position: relative;
@@ -1695,8 +1689,8 @@ h6 {
 }
 .campus-card .c-btn-group {
     position: fixed;
-    bottom: 10px;
-    left: 14%;
+    bottom: 14px;
+    left: 17%;
     line-height: 1.2rem;
     white-space: nowrap;
     font-family: 'Cereal';
@@ -2165,4 +2159,312 @@ h6 {
     color: #e8eaf6;
     background-color: #e8eaf6;
     bottom: -200px;
+}
+
+.c {
+    margin: 20px;
+    margin-left: 2.5%;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    cursor: pointer;
+    will-change: transform, opacity;
+    border-radius: 30px;
+}
+
+.front,
+.back {
+    background-size: cover;
+}
+
+@media (min-width: 672px) {
+    .back {
+        background-position: 50% 0%;
+        background-image: linear-gradient(
+                180deg,
+                rgba(116, 137, 219, 0) 0%,
+                rgba(2, 17, 104, 0.77) 100%
+            ),
+            url('./components/images/events/rdv19.jpg');
+    }
+}
+
+@media (max-width: 672px) {
+    .back {
+        background-image: url('./components/images/events/rdv19.jpg');
+        background-position: 50% 6%;
+        background-image: linear-gradient(
+                180deg,
+                rgba(116, 137, 219, 0) 0%,
+                rgba(2, 17, 104, 0.77) 100%
+            ),
+            url('./components/images/events/rdv19.jpg');
+    }
+}
+
+.c.front {
+    background: rgba(36, 58, 188, 0.8);
+    white-space: pre-wrap;
+    z-index: 100 !important;
+}
+.c.front img {
+    height: 32px;
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-top: 15px;
+}
+.c.front h1 {
+    color: #fff;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.c.front h1 .dates {
+    font-size: 0.8em;
+    background-color: #c5cae9;
+    color: #4051b5;
+    padding: 0px 5px 0px 5px;
+    border-radius: 5px;
+    line-height: 1em;
+}
+.c.front .description {
+    width: 88%;
+    display: relative;
+    font-weight: 400;
+    margin-top: 10px;
+    white-space: pre-wrap;
+}
+.c.front .description .nestedh3 {
+    font-weight: 900;
+    background: none;
+    font-size: 16px;
+    color: #fff;
+}
+@media (min-width: 1100px) {
+    .c.front .description {
+        font-size: 0.8em;
+    }
+}
+.c.front .linksEvent {
+    right: 20px;
+    width: 6%;
+}
+
+@media (max-width: 769px) {
+    .eventsGrid {
+        width: 98%;
+        margin-bottom: 50px;
+    }
+    .c {
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        will-change: transform, opacity;
+        border-radius: 20px;
+        margin-left: 15px;
+    }
+}
+
+@media (min-width: 769px) {
+    .eventsGrid {
+        width: 98.5%;
+        margin-bottom: 50px;
+    }
+}
+
+.empty {
+    margin-top: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.emptyImg {
+    display: inline-block;
+    width: 80vw;
+    max-width: 550px;
+    height: auto;
+}
+
+@media (max-width: 694px) {
+    .c.front {
+        background: rgba(36, 58, 188, 0.8);
+        white-space: pre-wrap;
+        z-index: 100 !important;
+    }
+    .c.front img {
+        height: 26px;
+        margin-left: 20px;
+        margin-right: 0px;
+        margin-top: 7px;
+    }
+    .c.front h1 {
+        color: #fff;
+        margin-left: 5px;
+        margin-top: 7px;
+        font-size: 20px;
+    }
+    .c.front h1 .dates {
+        font-size: 0.8em;
+        background-color: #c5cae9;
+        color: #4051b5;
+        padding: 0px 5px 0px 5px;
+        border-radius: 5px;
+        line-height: 1em;
+    }
+    .c.front .description {
+        width: 91%;
+        display: relative;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 5px;
+        white-space: pre-wrap;
+        margin-left: -20px !important;
+    }
+    .c.front .description .nestedh3 {
+        font-weight: 900;
+        background: none;
+        font-size: 13px;
+        color: #fff;
+    }
+}
+@media (max-width: 694px) and (min-width: 1100px) {
+    .c.front .description {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 694px) {
+    .c.back h1 {
+        position: fixed;
+        display: absolute;
+        color: #fff;
+        bottom: -15px;
+        left: 40px;
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+    .c.back h1 img {
+        position: fixed;
+        height: 40px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .c.back .dates {
+        font-size: 10px;
+        background-color: #c5cae9;
+        color: #4051b5;
+        padding: 0px 5px 0px 5px;
+        border-radius: 10px;
+        line-height: 20px;
+        position: fixed;
+        bottom: 12px;
+        margin-left: 5px;
+    }
+}
+
+.linksEvent {
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 20px;
+    width: 8%;
+    height: 100%;
+}
+.linksEvent .fbEvent {
+    width: 100%;
+    background-color: #1778f2;
+    color: white;
+    padding: 5px;
+    padding-top: 2px;
+    text-align: center;
+    padding-bottom: 2px;
+    justify-content: center;
+    z-index: 10000000000;
+    pointer-events: auto !important;
+}
+.linksEvent .fbEvent:hover {
+    -webkit-filter: saturate(1.5);
+    filter: saturate(1.5);
+}
+.linksEvent .instaEvent {
+    width: 100%;
+    background: #f09433;
+    background: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+    );
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 5px;
+    padding-top: 2px;
+    text-align: center;
+    padding-bottom: 2px;
+    justify-content: center;
+    pointer-events: auto !important;
+    z-index: 10000000000;
+}
+.linksEvent .instaEvent:hover {
+    -webkit-filter: saturate(1.5);
+    filter: saturate(1.5);
+}
+.linksEvent .siteEvent {
+    width: 100%;
+    color: white;
+    padding: 5px;
+    padding-top: 2px;
+    text-align: center;
+    padding-bottom: 2px;
+    justify-content: center;
+    background-color: #20c997;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 10000000000;
+    pointer-events: auto !important;
+}
+.linksEvent .siteEvent:hover {
+    -webkit-filter: saturate(1.5);
+    filter: saturate(1.5);
+}
+
+@media (min-width: 694px) {
+    .c.back h1 {
+        position: fixed;
+        display: absolute;
+        color: #fff;
+        bottom: -20px;
+        left: 60px;
+        font-size: 40px;
+        font-weight: 600 !important;
+    }
+    .c.back h1 img {
+        position: fixed;
+        height: 64px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .c.back .dates {
+        font-size: 16px;
+        background-color: #c5cae9;
+        color: #4051b5;
+        padding: 0px 5px 0px 5px;
+        border-radius: 10px;
+        line-height: 26px;
+        position: fixed;
+        bottom: 15px;
+        margin-left: 10px;
+    }
 }

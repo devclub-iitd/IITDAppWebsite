@@ -21,6 +21,7 @@ import Campus from './components/gridCampus';
 import Explore from './components/gridExplore';
 import Home from './components/home';
 import Links from './components/gridLinks';
+import Events from './components/gridEvents';
 import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
@@ -81,6 +82,14 @@ function App() {
         },
         {
             id: 2,
+            pageLink: '/events',
+            view: <div />,
+            displayName: 'Events',
+            animationDelayForNavbar: 0,
+            showInNavbar: true,
+        },
+        {
+            id: 3,
             pageLink: '/news',
             view: <div />,
             displayName: 'News',
@@ -88,7 +97,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 3,
+            id: 4,
             pageLink: '/campus',
             view: <div />,
             displayName: 'Campus',
@@ -96,7 +105,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 4,
+            id: 5,
             pageLink: '/hostels',
             view: <div />,
             displayName: 'Hostels',
@@ -104,7 +113,7 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 5,
+            id: 6,
             pageLink: '/map',
             view: <MapLeaf />,
             displayName: 'Map',
@@ -112,12 +121,20 @@ function App() {
             showInNavbar: true,
         },
         {
-            id: 6,
+            id: 7,
             pageLink: '/links',
             view: <Links />,
             displayName: 'Links',
             animationDelayForNavbar: 0,
             showInNavbar: true,
+        },
+        {
+            id: 8,
+            pageLink: '/hostels/:hostelId',
+            view: <div />,
+            displayName: 'Hostel Info',
+            animationDelayForNavbar: 0,
+            showInNavbar: false,
         },
     ];
     return (
@@ -158,13 +175,20 @@ function App() {
                             </div>
                         </main>
                     </Route>
-                    <Route path="/hostels">
+                    <Route exact path="/hostels">
                         <Navbar pages={pages} name="Hostels" />
                         <main>
                             <Appbar name="Hostels" />
                             <div className="content-area">
                                 <HostelGrid />
                             </div>
+                        </main>
+                    </Route>
+                    <Route path="/hostels/:hostelId">
+                        <Navbar pages={pages} name="Hostels" />
+                        <main>
+                            <Appbar name="Sample Hostel Name" />
+                            <div className="content-area" />
                         </main>
                     </Route>
                     <Route path="/map">
@@ -189,7 +213,16 @@ function App() {
                             )}
                         </main>
                     </Route>
-                    <Route path="/links">
+                    <Route exact path="/events">
+                        <Navbar pages={pages} name="Events" />
+                        <main>
+                            <Appbar name="Events" />
+                            <div className="content-area">
+                                <Events />
+                            </div>
+                        </main>
+                    </Route>
+                    <Route exact path="/links">
                         <Navbar pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
@@ -198,6 +231,7 @@ function App() {
                             </div>
                         </main>
                     </Route>
+
                     <Redirect to="/home" />
                 </Switch>
             </Router>
