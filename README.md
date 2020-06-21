@@ -1,6 +1,10 @@
 # iitd-app-website
 A website to provide various services related to IIT Delhi
 
+## Live preview
+
+<https://iitdwebapp.netlify.com>
+
 # Using the Website
 -Clone the repository on your machine.
 -Navigate to the repository
