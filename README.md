@@ -8,11 +8,11 @@ A website to provide various services related to IIT Delhi
 # Using the Website
 -Clone the repository on your machine.\
 -Navigate to the repository\
--Install the dependencies\
+-Install the dependencies
 ```bash
 $ npm install
 ```
--Start the local server\
+-Start the local server
 ```bash
 $ npm start
 ```
