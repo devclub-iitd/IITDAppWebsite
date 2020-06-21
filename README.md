@@ -1,4 +1,4 @@
-# iitd-app-website
+# IITDAppWebsite
 A website to provide various services related to IIT Delhi
 
 ## Live preview
@@ -6,17 +6,17 @@ A website to provide various services related to IIT Delhi
 <https://iitdwebapp.netlify.com>
 
 # Using the Website
--Clone the repository on your machine.
--Navigate to the repository
--Install the dependencies
+-Clone the repository on your machine.\
+-Navigate to the repository\
+-Install the dependencies\
 ```bash
 $ npm install
 ```
--Start the local server
+-Start the local server\
 ```bash
 $ npm start
 ```
--Navigate to the localhost link using your browser to access the web app.
+-Navigate to the localhost link using your browser to access the web app.\
 
 # Tasks v1.0.0 
 
