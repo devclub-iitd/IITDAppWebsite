@@ -2,7 +2,7 @@
 A website to provide various services related to IIT Delhi
 
 ## Live preview
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b76d0eaa-960a-48b9-91fa-db744d51ebb5/deploy-status)](https://app.netlify.com/sites/iitdwebapp/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b76d0eaa-960a-48b9-91fa-db744d51ebb5/deploy-status)](https://app.netlify.com/sites/iitdwebapp/deploys)\
 <https://iitdwebapp.netlify.com>
 
 # Using the Website
