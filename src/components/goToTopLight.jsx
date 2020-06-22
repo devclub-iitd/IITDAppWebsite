@@ -4,15 +4,15 @@ import BackToTop from 'react-easy-back-to-top';
 export default function ToTop() {
     return (
         <BackToTop
-            backgroundColor="#000000"
+            backgroundColor="#4051B5"
             position={{ right: '0%', bottom: '0%' }}
             hover={{
-                backgroundColor: '#000000',
+                backgroundColor: '#4051B5',
                 color: 'white',
                 opacity: '0.8',
-                WebkitBoxShadow: 'inset 0px 0px 0px 5px #fff',
-                MozBoxShadow: 'inset 0px 0px 0px 5px #fff',
-                BoxShadow: 'inset 0px 0px 0px 5px #fff',
+                WebkitBoxShadow: 'inset 0px 0px 0px 5px #4051B5',
+                MozBoxShadow: 'inset 0px 0px 0px 5px #4051B5',
+                BoxShadow: 'inset 0px 0px 0px 5px #4051B5',
             }}
             transition="all 0.5s"
             showOnDistance={200}
