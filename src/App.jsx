@@ -142,14 +142,14 @@ function App() {
             <Router>
                 <Switch>
                     <Route path="/home">
-                        <Navbar pages={pages} name="Home" />
+                        <Navbar dark={false} pages={pages} name="Home" />
                         <main>
                             <Appbar name="Home" />
                             <Home />
                         </main>
                     </Route>
                     <Route path="/clubs">
-                        <Navbar pages={pages} name="Clubs" />
+                        <Navbar dark={false} pages={pages} name="Clubs" />
                         <main>
                             <Appbar name="Clubs" />
                             <div className="content-area">
@@ -158,7 +158,7 @@ function App() {
                         </main>
                     </Route>
                     <Route path="/news">
-                        <Navbar pages={pages} name="News" />
+                        <Navbar dark={false} pages={pages} name="News" />
                         <main>
                             <Appbar name="News" />
                             <div className="content-area">
@@ -167,7 +167,7 @@ function App() {
                         </main>
                     </Route>
                     <Route path="/campus">
-                        <Navbar pages={pages} name="Campus" />
+                        <Navbar dark={false} pages={pages} name="Campus" />
                         <main>
                             <Appbar name="Campus" />
                             <div className="content-area">
@@ -176,7 +176,7 @@ function App() {
                         </main>
                     </Route>
                     <Route exact path="/hostels">
-                        <Navbar pages={pages} name="Hostels" />
+                        <Navbar dark={false} pages={pages} name="Hostels" />
                         <main>
                             <Appbar name="Hostels" />
                             <div className="content-area">
@@ -185,14 +185,14 @@ function App() {
                         </main>
                     </Route>
                     <Route path="/hostels/:hostelId">
-                        <Navbar pages={pages} name="Hostels" />
+                        <Navbar dark={false} pages={pages} name="Hostels" />
                         <main>
                             <Appbar name="Sample Hostel Name" />
                             <div className="content-area" />
                         </main>
                     </Route>
                     <Route path="/map">
-                        <Navbar pages={pages} name="Map" />
+                        <Navbar dark={false} pages={pages} name="Map" />
                         <main>
                             <Appbar name="Institute Map" />
                             {windowSize.width < 769 && (
@@ -214,7 +214,7 @@ function App() {
                         </main>
                     </Route>
                     <Route exact path="/events">
-                        <Navbar pages={pages} name="Events" />
+                        <Navbar dark={false} pages={pages} name="Events" />
                         <main>
                             <Appbar name="Events" />
                             <div className="content-area">
@@ -223,7 +223,7 @@ function App() {
                         </main>
                     </Route>
                     <Route exact path="/links">
-                        <Navbar pages={pages} name="Links" />
+                        <Navbar dark={false} pages={pages} name="Links" />
                         <main>
                             <Appbar name="Quick Links" />
                             <div className="content-area">

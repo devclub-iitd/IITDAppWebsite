@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable react/jsx-props-no-spreading */
 import anime from 'animejs';
@@ -21,7 +23,7 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages, name }) {
+function Navbar({ pages, name, dark }) {
     const [expand, setExpand] = useState(false);
 
     useLockBodyScroll(expand);
@@ -29,7 +31,10 @@ function Navbar({ pages, name }) {
 
     return (
         <div className="Navbar">
-            <div className="navbar-left" />
+            <div className="navbar-left" role="button">
+                {dark && <Icon.Moon className="darkIcon" />}
+                {!dark && <Icon.Sun className="darkIcon" />}
+            </div>
             <div className="navbar-middle">
                 <Link
                     to="/"
@@ -215,6 +220,7 @@ function Expand({ expand, pages, setExpand }) {
 Navbar.propTypes = {
     pages: PropTypes.instanceOf(Array).isRequired,
     name: PropTypes.string.isRequired,
+    dark: PropTypes.bool.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,

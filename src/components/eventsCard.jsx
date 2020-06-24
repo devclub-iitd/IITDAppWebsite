@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
-import { useWindowSize } from 'react-use';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 
@@ -13,7 +12,6 @@ function EventsCard({ eventsObj }) {
         transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
         config: { mass: 5, tension: 500, friction: 80 },
     });
-    const windowSize = useWindowSize();
     return (
         <div role="button" onClick={() => set((state) => !state)}>
             <a.div
@@ -68,9 +66,6 @@ function EventsCard({ eventsObj }) {
                 <h1>
                     {eventsObj.vectorLogo}
                     {eventsObj.name}{' '}
-                    {windowSize.width > 360 && (
-                        <span className="dates">{eventsObj.date}</span>
-                    )}
                 </h1>
             </a.div>
         </div>

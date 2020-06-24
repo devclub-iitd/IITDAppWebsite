@@ -21,6 +21,7 @@ const explore = [
         facebookUrl: '',
         instaUrl: '',
         webUrl: '',
+        category: 'technical',
     },
     {
         id: 1,
@@ -37,6 +38,7 @@ const explore = [
         facebookUrl: '',
         instaUrl: '',
         webUrl: '',
+        category: 'technical',
     },
     {
         id: 2,
@@ -53,6 +55,7 @@ const explore = [
         facebookUrl: '',
         instaUrl: '',
         webUrl: '',
+        category: 'technical',
     },
     {
         id: 3,
@@ -69,6 +72,7 @@ const explore = [
         facebookUrl: '',
         instaUrl: '',
         webUrl: '',
+        category: 'technical',
     },
     {
         id: 4,
@@ -85,6 +89,7 @@ const explore = [
         facebookUrl: '',
         instaUrl: '',
         webUrl: '',
+        category: 'technical',
     },
 ];
 

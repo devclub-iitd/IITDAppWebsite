@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -20,13 +21,81 @@ class Explore extends React.Component {
         this.state = {
             searchQuery: '',
             filtered: explore,
+            options: [
+                {
+                    id: 1,
+                    value: 'BRCA',
+                    isChecked: true,
+                    category: 'brca',
+                },
+                {
+                    id: 2,
+                    value: 'Technical',
+                    isChecked: true,
+                    category: 'technical',
+                },
+                {
+                    id: 3,
+                    value: 'Others',
+                    isChecked: true,
+                    category: 'others',
+                },
+            ],
+            showFilters: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
     }
 
+    handleCheckChieldElement = (event) => {
+        const { options } = this.state;
+        options.forEach((option) => {
+            if (option.value === event.target.value)
+                option.isChecked = event.target.checked;
+        });
+        this.setState({ options });
+
+        const chosenOptions = options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
+        let newList = [];
+        let currentList = [];
+        if (this.state.searchQuery !== '') {
+            currentList = explore;
+
+            currentList = explore.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = this.state.searchQuery.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            newList = explore.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+        }
+        this.setState({
+            filtered: newList,
+        });
+    };
+
+    handleClickFilter = () => {
+        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+    };
+
     handleChange(event) {
         this.setState({ searchQuery: event.target.value });
+
+        const chosenOptions = this.state.options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
 
         let currentList = [];
         // Variable to hold the filtered list before putting into state
@@ -35,7 +104,9 @@ class Explore extends React.Component {
         // If the search bar isn't empty
         if (event.target.value !== '') {
             // Assign the original list to currentList
-            currentList = explore;
+            currentList = explore.filter((item) =>
+                chosenCats.includes(item.category)
+            );
 
             newList = currentList.filter((item) => {
                 const lc = item.name.toLowerCase();
@@ -46,7 +117,9 @@ class Explore extends React.Component {
             });
         } else {
             // If the search bar is empty, set newList to original task list
-            newList = explore;
+            newList = explore.filter((item) =>
+                chosenCats.includes(item.category)
+            );
         }
         // Set the filtered state based on what our rules added to newList
         this.setState({
@@ -165,12 +238,6 @@ class Explore extends React.Component {
 
                     {this.state.showFilters && (
                         <div className="filterCheckBoxes">
-                            <input
-                                type="checkbox"
-                                onClick={this.handleAllChecked}
-                                value="checkedall"
-                            />{' '}
-                            Toggle All
                             {this.state.options.map((option) => {
                                 return (
                                     <>

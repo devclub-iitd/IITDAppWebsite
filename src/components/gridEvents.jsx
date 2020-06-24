@@ -5,13 +5,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
-import React, { useState } from 'react';
-import { useSpring, animated as a } from 'react-spring';
+import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import Search from './search';
-import NewsCard from './newsCard';
 import events from './shared/events';
-import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
 import EventsCard from './eventsCard';
 
@@ -23,10 +19,10 @@ function Events() {
     const layoutSm = [];
     const layoutXs = [];
     const layoutXxs = [];
-    const newsRoll = [];
-    for (let j = 0; j <= 10; j += 1) {
+    const eventsRoll = [];
+    for (let j = 0; j < events.length; j += 1) {
         layoutLg.push({
-            i: (j + 1).toString(),
+            i: j.toString(),
             x: j % 2,
             y: (j % 3) * 1.8,
             w: 1,
@@ -39,7 +35,7 @@ function Events() {
             isDraggable: false,
         });
         layoutMd.push({
-            i: (j + 1).toString(),
+            i: j.toString(),
             x: j % 2,
             y: (j % 3) * 1.8,
             w: 1,
@@ -52,7 +48,7 @@ function Events() {
             isDraggable: false,
         });
         layoutSm.push({
-            i: (j + 1).toString(),
+            i: j.toString(),
             x: j % 2,
             y: (j % 3) * 2.2,
             w: 1,
@@ -65,7 +61,7 @@ function Events() {
             isDraggable: false,
         });
         layoutXs.push({
-            i: (j + 1).toString(),
+            i: j.toString(),
             x: j % 2,
             y: j * 3,
             w: 1,
@@ -78,7 +74,7 @@ function Events() {
             isDraggable: false,
         });
         layoutXxs.push({
-            i: (j + 1).toString(),
+            i: j.toString(),
             x: 0,
             y: j * 3.4,
             w: 1,
@@ -90,6 +86,12 @@ function Events() {
             horizontalCompact: true,
             isDraggable: false,
         });
+        const value = events[j];
+        eventsRoll.push(
+            <div key={j} className="eventsGridCell">
+                <EventsCard eventsObj={value} />
+            </div>
+        );
     }
     const layouts = {
         lg: layoutLg,
@@ -114,9 +116,7 @@ function Events() {
                 cols={{ lg: 2, md: 2, md2: 1, sm: 1, xs: 1, xxs: 1 }}
                 horizontalCompact
             >
-                <div key="1" className="eventsGridCell">
-                    <EventsCard eventsObj={events[0]} />
-                </div>
+                {eventsRoll}
             </ResponsiveGridLayout>
             <ToTop />
         </>
