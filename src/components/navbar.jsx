@@ -23,7 +23,7 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages, name, dark }) {
+function Navbar({ pages, name, dark, toggleDark }) {
     const [expand, setExpand] = useState(false);
 
     useLockBodyScroll(expand);
@@ -32,8 +32,18 @@ function Navbar({ pages, name, dark }) {
     return (
         <div className="Navbar">
             <div className="navbar-left" role="button">
-                {dark && <Icon.Moon className="darkIcon" />}
-                {!dark && <Icon.Sun className="darkIcon" />}
+                {dark && (
+                    <Icon.Sun
+                        className="darkIcon"
+                        onClick={() => toggleDark(dark)}
+                    />
+                )}
+                {!dark && (
+                    <Icon.Moon
+                        className="darkIcon"
+                        onClick={() => toggleDark(dark)}
+                    />
+                )}
             </div>
             <div className="navbar-middle">
                 <Link
@@ -221,6 +231,7 @@ Navbar.propTypes = {
     pages: PropTypes.instanceOf(Array).isRequired,
     name: PropTypes.string.isRequired,
     dark: PropTypes.bool.isRequired,
+    toggleDark: PropTypes.func.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,

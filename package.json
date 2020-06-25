@@ -35,7 +35,7 @@
         "react-easy-back-to-top": "^1.0.2",
         "react-feather": "^2.0.8",
         "react-grid-layout": "^0.18.3",
-        "react-helmet": "^6.0.0",
+        "react-helmet": "^6.1.0",
         "react-i18next": "^11.4.0",
         "react-leaflet": "^2.7.0",
         "react-leaflet-control": "^2.1.2",
@@ -51,6 +51,7 @@
         "rsuite": "^4.6.0",
         "semantic-ui-css": "^2.4.1",
         "semantic-ui-react": "^0.88.2",
+        "use-dark-mode": "^2.3.1",
         "wrld.js": "^0.1.2196"
     },
     "scripts": {
@@ -95,6 +96,8 @@
         "material-ui": "^0.20.2",
         "node-sass": "^4.14.1",
         "prettier": "^2.0.5",
-        "react-social-icons": "^4.1.0"
+        "react-social-icons": "^4.1.0",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.5"
     }
 }
