@@ -1,5 +1,3 @@
-// Color Pallete
-
 $blue: #007bff;
 $blue-light: #007bff10;
 $blue-hover: #007bff30;
@@ -29,9 +27,6 @@ $yellow-hover: #ffc10730;
 $yellow-mid: #ffc10799;
 $yellow-light-opaque: #fff7e0;
 $green: #28a745;
-$green-light: #28a74520;
-$green-hover: #28a74530;
-$green-mid: #28a74599;
 $teal: #20c997;
 $cyan: #17a2b8;
 $white: #fff;
@@ -58,14 +53,6 @@ $brown-light: #b6854d10;
 $brown-hover: #b6854d30;
 $brown-mid: #b6854d99;
 $brick: #e23028;
-
-// Dark mode variables
-$dark-m-gray: #161625;
-$dark-mid-subtext: #bdb8ae;
-$dark-m-white: #e1e1e1;
-$dark-m-purple: #7ba1ea;
-$dark-m-blue: #3391ff;
-
 
 $indigo1: #4051B5;
 $indigo2: #9EA9EC;
@@ -5161,7 +5148,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 
 .rodal-imp{
-  margin: auto;
   backdrop-filter: blur(0.8);
   background: rgba(67,84,182,0.16);
   overflow-y: scroll;
