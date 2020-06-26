@@ -6,12 +6,14 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
+import Rodal from 'rodal';
 import Search from './search';
 import ExploreCard from './exploreCard';
 import explore from './shared/explore';
 import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
 import Empty from './emptyResults';
+import 'rodal/lib/rodal.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -42,9 +44,12 @@ class Explore extends React.Component {
                 },
             ],
             showFilters: false,
+            visible: false,
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
     }
 
     handleCheckChieldElement = (event) => {
@@ -124,6 +129,18 @@ class Explore extends React.Component {
         // Set the filtered state based on what our rules added to newList
         this.setState({
             filtered: newList,
+        });
+    }
+
+    show() {
+        this.setState({
+            visible: true,
+        });
+    }
+
+    hide() {
+        this.setState({
+            visible: false,
         });
     }
 
@@ -208,7 +225,7 @@ class Explore extends React.Component {
                     isResizable="true"
                     autoSize="true"
                 >
-                    <ExploreCard exploreObj={value} />
+                    <ExploreCard exploreObj={value} show={this.show} />
                 </div>
             );
         }
@@ -271,6 +288,21 @@ class Explore extends React.Component {
                     {exploreRoll}
                 </ResponsiveGridLayout>
                 <ToTop />
+                <Rodal
+                    visible={this.state.visible}
+                    onClose={this.hide}
+                    className="rodal-imp"
+                    customStyles={{
+                        borderRadius: 20,
+                        width: '90%',
+                        height: '1000px',
+                        maxWidth: 400,
+                        marginTop: 100,
+                    }}
+                    animation="slideUp"
+                >
+                    <div>Content</div>
+                </Rodal>
             </>
         );
     }

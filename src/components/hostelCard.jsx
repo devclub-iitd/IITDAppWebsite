@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const HostelCard = ({ hostelObj }) => (
+const HostelCard = ({ hostelObj, show }) => (
     <>
         <div className="hostel-card-title">
             <h1>{hostelObj.name}</h1>
@@ -26,17 +27,13 @@ const HostelCard = ({ hostelObj }) => (
                             Map{'  '}
                         </span>
                     </a>
-                    <Link
-                        to={`/hostels/${hostelObj.id}`}
-                        className="c-btn learn-e"
-                        href={hostelObj.learnUrl}
-                    >
+                    <a className="c-btn learn-e" role="button" onClick={show}>
                         <span className="hostel-link">
                             <Icon.Info height="15" strokeWidth="3" />
                             More Info
                             {'  '}
                         </span>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
@@ -45,6 +42,7 @@ const HostelCard = ({ hostelObj }) => (
 HostelCard.propTypes = {
     hostelObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
         .isRequired,
+    show: PropTypes.func.isRequired,
 };
 
 export default HostelCard;
