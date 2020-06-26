@@ -149,7 +149,7 @@ body.light-mode {
         z-index: 999999; }
         body.light-mode .Navbar .navbar-middle h1 {
           margin-top: 2rem;
-          margin-left: 30%;
+          margin-left: auto;
           color: #9EA9EC; }
       body.light-mode .Navbar .filters .fadeInUp {
         height: 0; }
@@ -2050,8 +2050,6 @@ body.dark-mode {
       text-transform: uppercase; }
       body.dark-mode .Navbar .navbar-middle span {
         font-weight: 600; }
-      body.dark-mode .Navbar .navbar-middle h1 {
-        background-color: #000000 !important; }
       body.dark-mode .Navbar .navbar-middle span {
         color: white; }
     body.dark-mode .Navbar .navbar-right {
@@ -2137,9 +2135,8 @@ body.dark-mode {
         z-index: 999999; }
         body.dark-mode .Navbar .navbar-middle h1 {
           margin-top: 2rem;
-          margin-left: 30%;
-          color: white;
-          background-color: white; }
+          margin-left: auto;
+          color: white; }
       body.dark-mode .Navbar .filters .fadeInUp {
         height: 0; }
         body.dark-mode .Navbar .filters .fadeInUp .legend {

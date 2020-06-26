@@ -34,12 +34,16 @@ function Navbar({ pages, name, dark, toggleDark }) {
             <div className="navbar-left" role="button">
                 {dark && (
                     <Icon.Sun
+                        height="30"
+                        strokeWidth="3"
                         className="darkIcon"
                         onClick={() => toggleDark(dark)}
                     />
                 )}
                 {!dark && (
                     <Icon.Moon
+                        height="30"
+                        strokeWidth="3"
                         className="darkIcon"
                         onClick={() => toggleDark(dark)}
                     />
