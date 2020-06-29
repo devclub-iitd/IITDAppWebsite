@@ -1988,6 +1988,12 @@ body.light-mode {
   body.light-mode .darkIcon {
     padding-top: 20px;
     margin-left: 10px; }
+  body.light-mode .rodal-h1 {
+    color: #4051B5 !important; }
+  body.light-mode .rodal-imp {
+    backdrop-filter: blur(10px);
+    background: rgba(67, 84, 182, 0.16);
+    overflow-y: scroll !important; }
 
 body.dark-mode {
   -webkit-tap-highlight-color: transparent;
@@ -3974,12 +3980,18 @@ body.dark-mode {
       line-height: 26px;
       position: fixed;
       bottom: 15px;
-      margin-left: 10px; } }
+      margin-left: 10px; }
+    body.dark-mode .rodal-h1 {
+      color: #fff !important; }
+    body.dark-mode .rodal-imp {
+      backdrop-filter: blur(10px);
+      background: rgba(67, 84, 182, 0.16);
+      overflow-y: scroll; } }
   body.dark-mode .darkIcon {
     padding-top: 20px;
     margin-left: 10px; }
 
 .rodal-imp {
-  backdrop-filter: blur(0.8);
+  backdrop-filter: blur(10px);
   background: rgba(67, 84, 182, 0.16);
-  overflow-y: scroll; }
+  overflow-y: scroll !important; }

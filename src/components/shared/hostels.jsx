@@ -22,6 +22,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 1,
@@ -41,6 +53,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 2,
@@ -60,6 +84,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'girls',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 3,
@@ -79,6 +115,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 4,
@@ -98,6 +146,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'girls',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 5,
@@ -117,6 +177,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 6,
@@ -136,6 +208,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 7,
@@ -155,6 +239,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 8,
@@ -174,6 +270,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 9,
@@ -193,6 +301,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 10,
@@ -212,6 +332,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 11,
@@ -231,6 +363,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
     {
         id: 12,
@@ -250,6 +394,18 @@ const hostels = [
         learnUrl: '',
         image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
         for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: ['Co-founder, Flipkart', 'Co-founder, Flipkart'],
+        notableAlumniLinks: [
+            'https://devclub.in/#/projects',
+            'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
     },
 ];
 

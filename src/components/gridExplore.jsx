@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -7,8 +9,10 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Rodal from 'rodal';
+import PropTypes from 'prop-types';
+import * as Icon from 'react-feather';
 import Search from './search';
-import ExploreCard from './exploreCard';
+import { ExploreCard, RodalContent } from './exploreCard';
 import explore from './shared/explore';
 import CheckBox from './shared/checkBox';
 import ToTop from './goToTop';
@@ -45,6 +49,23 @@ class Explore extends React.Component {
             ],
             showFilters: false,
             visible: false,
+            rodalObj: {
+                id: 0,
+                name: 'DevClub',
+                img: <img src="" alt="DevClub IITD" className="card-img" />,
+                desc:
+                    'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
+                extraIcon: (
+                    <a className="c-btn git">
+                        <Icon.GitHub height="30" strokeWidth="2" />
+                    </a>
+                ),
+                infoUrl: '',
+                facebookUrl: '',
+                instaUrl: '',
+                webUrl: '',
+                category: 'technical',
+            },
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -132,9 +153,10 @@ class Explore extends React.Component {
         });
     }
 
-    show() {
+    show(exploreObj) {
         this.setState({
             visible: true,
+            rodalObj: exploreObj,
         });
     }
 
@@ -145,6 +167,35 @@ class Explore extends React.Component {
     }
 
     render() {
+        const lightRodal = {
+            borderRadius: 20,
+            width: '80%',
+            maxWidth: '400px',
+            height: '90%',
+            marginTop: 90,
+            marginBottom: 10,
+            backgroundColor: '#C5CAE9',
+            boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+            color: '#4051B5',
+            overflowY: 'scroll',
+            zIndex: 100000000,
+        };
+        const darkRodal = {
+            borderRadius: 20,
+            width: '80%',
+            maxWidth: '400px',
+            height: '90%',
+            margin: 'auto',
+            marginTop: 90,
+            marginBottom: 10,
+            backgroundColor: '#1E1E20',
+            boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+            color: '#fff',
+            overflowY: 'scroll',
+            zIndex: 100000000,
+        };
+        let rodalStyle = {};
+        this.props.dark ? (rodalStyle = darkRodal) : (rodalStyle = lightRodal);
         const layoutLg = [];
         const layoutMd = [];
         const layoutSm = [];
@@ -225,7 +276,11 @@ class Explore extends React.Component {
                     isResizable="true"
                     autoSize="true"
                 >
-                    <ExploreCard exploreObj={value} show={this.show} />
+                    <ExploreCard
+                        exploreObj={value}
+                        show={this.show}
+                        rodalObj={this.state.rodalObj}
+                    />
                 </div>
             );
         }
@@ -292,20 +347,18 @@ class Explore extends React.Component {
                     visible={this.state.visible}
                     onClose={this.hide}
                     className="rodal-imp"
-                    customStyles={{
-                        borderRadius: 20,
-                        width: '90%',
-                        height: '1000px',
-                        maxWidth: 400,
-                        marginTop: 100,
-                    }}
+                    customStyles={rodalStyle}
                     animation="slideUp"
                 >
-                    <div>Content</div>
+                    <RodalContent rodalObj={this.state.rodalObj} />
                 </Rodal>
             </>
         );
     }
 }
+
+Explore.propTypes = {
+    dark: PropTypes.bool.isRequired,
+};
 
 export default Explore;

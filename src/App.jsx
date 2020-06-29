@@ -165,7 +165,7 @@ function App() {
                             <main>
                                 <Appbar name="Clubs" />
                                 <div className="content-area">
-                                    <Explore />
+                                    <Explore dark={darkMode.value} />
                                 </div>
                             </main>
                         </Route>
@@ -207,7 +207,7 @@ function App() {
                             <main>
                                 <Appbar name="Hostels" />
                                 <div className="content-area">
-                                    <HostelGrid />
+                                    <HostelGrid dark={darkMode.value} />
                                 </div>
                             </main>
                         </Route>

@@ -2599,6 +2599,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   padding-top:20px;
   margin-left:10px;
 }
+.rodal-h1{
+  color: #4051B5 !important;
+}
+.rodal-imp{
+  backdrop-filter: blur(10px);
+  background: rgba(67,84,182,0.16);
+}
 
 }
 
@@ -5139,6 +5146,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
         margin-left:10px;
       }
   }
+  .rodal-h1{
+    color: #fff !important;
+  }
+  .rodal-imp{
+    backdrop-filter: blur(10px);
+    background: rgba(67,84,182,0.16);
+    overflow-y: scroll;
+  }
 }
 
 .darkIcon{
@@ -5150,8 +5165,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
 
 .rodal-imp{
-  backdrop-filter: blur(0.8);
+  backdrop-filter: blur(10px);
   background: rgba(67,84,182,0.16);
-  overflow-y: scroll;
 }
+
 
