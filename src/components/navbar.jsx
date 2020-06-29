@@ -77,7 +77,11 @@ function Navbar({ pages, name, dark, toggleDark }) {
                     </div>
                 )}
                 <h1>
-                    {windowSize.width < 769 && <span>IITD</span>}
+                    {windowSize.width < 769 && (
+                        <span style={{ fontWeight: '900' }}>
+                            <a href="/">IITD</a>
+                        </span>
+                    )}
                     {windowSize.width < 769 && <span>{`${name}`}</span>}
                 </h1>
             </div>
