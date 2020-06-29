@@ -211,18 +211,6 @@ function App() {
                                 </div>
                             </main>
                         </Route>
-                        <Route path="/hostels/:hostelId">
-                            <Navbar
-                                dark={darkMode.value}
-                                toggleDark={darkMode.toggle}
-                                pages={pages}
-                                name="Hostels"
-                            />
-                            <main>
-                                <Appbar name="Sample Hostel Name" />
-                                <div className="content-area" />
-                            </main>
-                        </Route>
                         <Route path="/map">
                             <Navbar
                                 dark={darkMode.value}
@@ -278,7 +266,6 @@ function App() {
                                 </div>
                             </main>
                         </Route>
-
                         <Redirect to="/home" />
                     </Switch>
                 </Router>

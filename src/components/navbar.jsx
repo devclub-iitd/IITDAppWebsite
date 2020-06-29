@@ -31,36 +31,55 @@ function Navbar({ pages, name, dark, toggleDark }) {
 
     return (
         <div className="Navbar">
-            <div className="navbar-left" role="button">
-                {dark && (
-                    <Icon.Sun
-                        height="30"
-                        strokeWidth="3"
-                        className="darkIcon"
-                        onClick={() => toggleDark(dark)}
-                    />
-                )}
-                {!dark && (
-                    <Icon.Moon
-                        height="30"
-                        strokeWidth="3"
-                        className="darkIcon"
-                        onClick={() => toggleDark(dark)}
-                    />
-                )}
-            </div>
+            {windowSize.width < 769 && (
+                <div className="navbar-left" role="button">
+                    {dark && (
+                        <Icon.Sun
+                            height="30"
+                            strokeWidth="3"
+                            className="darkIcon"
+                            onClick={() => toggleDark(dark)}
+                        />
+                    )}
+                    {!dark && (
+                        <Icon.Moon
+                            height="30"
+                            strokeWidth="3"
+                            className="darkIcon"
+                            onClick={() => toggleDark(dark)}
+                        />
+                    )}
+                </div>
+            )}
             <div className="navbar-middle">
-                <Link
-                    to="/"
-                    onClick={() => {
-                        setExpand(false);
-                    }}
-                >
-                    <h1>
-                        IITD
-                        {windowSize.width < 769 && <span>{`${name}`}</span>}
-                    </h1>
-                </Link>
+                {windowSize.width >= 769 && (
+                    <div role="button">
+                        {dark && (
+                            <Icon.Sun
+                                height="30"
+                                strokeWidth="3"
+                                className="darkIcon"
+                                role="button"
+                                onClick={() => toggleDark(dark)}
+                                style={{ marginLeft: 0, paddingTop: 12 }}
+                            />
+                        )}
+                        {!dark && (
+                            <Icon.Moon
+                                height="30"
+                                strokeWidth="3"
+                                className="darkIcon"
+                                role="button"
+                                onClick={() => toggleDark(dark)}
+                                style={{ marginLeft: 0, paddingTop: 12 }}
+                            />
+                        )}
+                    </div>
+                )}
+                <h1>
+                    {windowSize.width < 769 && <span>IITD</span>}
+                    {windowSize.width < 769 && <span>{`${name}`}</span>}
+                </h1>
             </div>
 
             <div
