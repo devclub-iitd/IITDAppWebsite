@@ -45,13 +45,13 @@ function Navbar({ pages, name, dark, toggleDark }) {
                             initial="rest"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            onClick={() => toggleDark(dark)}
+                            onClick={toggleDark}
                         >
                             <Icon.Sun
                                 height="30"
                                 strokeWidth="3"
                                 className="darkIcon"
-                                onClick={() => toggleDark(dark)}
+                                onClick={toggleDark}
                             />
                         </motion.svg>
                     )}
@@ -62,13 +62,13 @@ function Navbar({ pages, name, dark, toggleDark }) {
                             initial="rest"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            onClick={() => toggleDark(dark)}
+                            onClick={toggleDark}
                         >
                             <Icon.Moon
                                 height="30"
                                 strokeWidth="3"
                                 className="darkIcon"
-                                onClick={() => toggleDark(dark)}
+                                onClick={toggleDark}
                             />
                         </motion.svg>
                     )}
@@ -84,13 +84,13 @@ function Navbar({ pages, name, dark, toggleDark }) {
                                 initial="rest"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                onClick={() => toggleDark(dark)}
+                                onClick={toggleDark}
                             >
                                 <Icon.Sun
                                     height="30"
                                     strokeWidth="3"
                                     className="darkIcon"
-                                    onClick={() => toggleDark(dark)}
+                                    onClick={toggleDark}
                                 />
                             </motion.svg>
                         )}
@@ -101,13 +101,13 @@ function Navbar({ pages, name, dark, toggleDark }) {
                                 initial="rest"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                onClick={() => toggleDark(dark)}
+                                onClick={toggleDark}
                             >
                                 <Icon.Moon
                                     height="30"
                                     strokeWidth="3"
                                     className="darkIcon"
-                                    onClick={() => toggleDark(dark)}
+                                    onClick={toggleDark}
                                 />
                             </motion.svg>
                         )}
