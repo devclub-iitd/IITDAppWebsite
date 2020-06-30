@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
 const navLinkProps = (path, animationDelay) => ({
     className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
@@ -32,60 +33,97 @@ function Navbar({ pages, name, dark, toggleDark }) {
     return (
         <div className="Navbar">
             {windowSize.width < 769 && (
-                <div className="navbar-left" role="button">
+                <div
+                    className="navbar-left"
+                    role="button"
+                    style={{ paddingTop: 40 }}
+                >
                     {dark && (
-                        <Icon.Sun
-                            height="30"
-                            strokeWidth="3"
+                        <motion.svg
+                            style={{ height: 60, width: 24 }}
                             className="darkIcon"
+                            initial="rest"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
                             onClick={() => toggleDark(dark)}
-                        />
-                    )}
-                    {!dark && (
-                        <Icon.Moon
-                            height="30"
-                            strokeWidth="3"
-                            className="darkIcon"
-                            onClick={() => toggleDark(dark)}
-                        />
-                    )}
-                </div>
-            )}
-            <div className="navbar-middle">
-                {windowSize.width >= 769 && (
-                    <div role="button">
-                        {dark && (
+                        >
                             <Icon.Sun
                                 height="30"
                                 strokeWidth="3"
                                 className="darkIcon"
-                                role="button"
                                 onClick={() => toggleDark(dark)}
-                                style={{ marginLeft: 0, paddingTop: 12 }}
                             />
-                        )}
-                        {!dark && (
+                        </motion.svg>
+                    )}
+                    {!dark && (
+                        <motion.svg
+                            style={{ height: 60, width: 24 }}
+                            className="darkIcon"
+                            initial="rest"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => toggleDark(dark)}
+                        >
                             <Icon.Moon
                                 height="30"
                                 strokeWidth="3"
                                 className="darkIcon"
-                                role="button"
                                 onClick={() => toggleDark(dark)}
-                                style={{ marginLeft: 0, paddingTop: 12 }}
                             />
+                        </motion.svg>
+                    )}
+                </div>
+            )}
+            {windowSize.width >= 769 && (
+                <div className="navbar-middle" style={{ height: 60 }}>
+                    <div>
+                        {dark && (
+                            <motion.svg
+                                style={{ height: 60, width: 60 }}
+                                className="darkIcon"
+                                initial="rest"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => toggleDark(dark)}
+                            >
+                                <Icon.Sun
+                                    height="30"
+                                    strokeWidth="3"
+                                    className="darkIcon"
+                                    onClick={() => toggleDark(dark)}
+                                />
+                            </motion.svg>
+                        )}
+                        {!dark && (
+                            <motion.svg
+                                style={{ height: 60, width: 60 }}
+                                className="darkIcon"
+                                initial="rest"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => toggleDark(dark)}
+                            >
+                                <Icon.Moon
+                                    height="30"
+                                    strokeWidth="3"
+                                    className="darkIcon"
+                                    onClick={() => toggleDark(dark)}
+                                />
+                            </motion.svg>
                         )}
                     </div>
-                )}
-                <h1>
-                    {windowSize.width < 769 && (
+                </div>
+            )}
+            {windowSize.width < 769 && (
+                <div className="navbar-middle">
+                    <h1>
                         <span style={{ fontWeight: '900' }}>
                             <a href="/">IITD</a>
-                        </span>
-                    )}
-                    {windowSize.width < 769 && <span>{`${name}`}</span>}
-                </h1>
-            </div>
-
+                        </span>{' '}
+                        <span>{`${name}`}</span>
+                    </h1>
+                </div>
+            )}
             <div
                 role="button"
                 tabIndex="0"

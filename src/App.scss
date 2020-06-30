@@ -2595,16 +2595,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   }
 }
 
-.darkIcon{
-  padding-top:20px;
-  margin-left:10px;
-}
+
 .rodal-h1{
   color: #4051B5 !important;
 }
 .rodal-imp{
   backdrop-filter: blur(10px);
   background: rgba(67,84,182,0.16);
+}
+.darkIcon{
+  padding-top:20px;
+  padding-left:10px;
 }
 
 }
@@ -5154,11 +5155,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     background: rgba(67,84,182,0.16);
     overflow-y: scroll;
   }
+  .darkIcon{
+    padding-top:20px;
+    padding-left:10px;
+  }
 }
+
 
 .darkIcon{
   padding-top:20px;
-  margin-left:10px;
+  padding-left:10px;
 }
 
 }
