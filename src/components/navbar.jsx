@@ -45,7 +45,7 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                 >
                     {dark && (
                         <motion.svg
-                            style={{ height: 60, width: 24 }}
+                            style={{ height: 60, width: 60 }}
                             className="darkIcon"
                             initial="rest"
                             whileHover={{ scale: 1.1 }}
@@ -62,7 +62,7 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                     )}
                     {!dark && (
                         <motion.svg
-                            style={{ height: 60, width: 24 }}
+                            style={{ height: 60, width: 60 }}
                             className="darkIcon"
                             initial="rest"
                             whileHover={{ scale: 1.1 }}
@@ -101,7 +101,7 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                         )}
                         {!dark && (
                             <motion.svg
-                                style={{ height: 60, width: 60 }}
+                                style={{ height: 60, width: 40 }}
                                 className="darkIcon"
                                 initial="rest"
                                 whileHover={{ scale: 1.1 }}
@@ -122,7 +122,7 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
             {windowSize.width < 769 && (
                 <div className="navbar-middle">
                     <h1>
-                        <span style={{ fontWeight: '900' }}>
+                        <span style={{ fontWeight: '900', marginLeft: -36 }}>
                             <a href="/">IITD</a>
                         </span>
                         <span>{`${name}`}</span>
