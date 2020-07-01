@@ -8,7 +8,7 @@ import * as Icon from 'react-feather';
 import { Link } from 'react-router-dom';
 import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
 import PropTypes from 'prop-types';
-import { motion, useCycle } from 'framer-motion';
+import { motion } from 'framer-motion';
 import MenuToggle from './minis/menuToggle';
 
 const navLinkProps = (path, animationDelay) => ({
@@ -24,9 +24,13 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages, name, dark, toggleDark }) {
+function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
     const [expand, setExpand] = useState(false);
-    const [isOpen, toggleOpen] = useCycle(false, true);
+    const [isOpen, setOpen] = useState(isOpenInit);
+
+    const toggleOpen = () => {
+        setOpen(!isOpen);
+    };
 
     useLockBodyScroll(expand);
     const windowSize = useWindowSize();
@@ -235,13 +239,19 @@ function Navbar({ pages, name, dark, toggleDark }) {
             </div>
 
             {expand && (
-                <Expand expand={expand} pages={pages} setExpand={setExpand} />
+                <Expand
+                    expand={expand}
+                    pages={pages}
+                    setExpand={setExpand}
+                    isOpen={isOpen}
+                    toggleOpen={toggleOpen}
+                />
             )}
         </div>
     );
 }
 
-function Expand({ pages, setExpand }) {
+function Expand({ pages, setExpand, toggleOpen }) {
     const expandElement = useRef(null);
 
     useEffectOnce(() => {
@@ -271,6 +281,7 @@ function Expand({ pages, setExpand }) {
                             key={page.id}
                             onClick={() => {
                                 setExpand(false);
+                                toggleOpen();
                             }}
                         >
                             <span
@@ -300,11 +311,13 @@ Navbar.propTypes = {
     name: PropTypes.string.isRequired,
     dark: PropTypes.bool.isRequired,
     toggleDark: PropTypes.func.isRequired,
+    isOpenInit: PropTypes.bool.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,
     pages: PropTypes.instanceOf(Array).isRequired,
     setExpand: PropTypes.bool.isRequired,
+    toggleOpen: PropTypes.func.isRequired,
 };
 
 export default Navbar;

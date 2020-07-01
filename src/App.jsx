@@ -149,6 +149,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Home"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Home" />
@@ -161,6 +162,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Clubs"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Clubs" />
@@ -175,6 +177,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="News"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="News" />
@@ -189,6 +192,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Campus"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Campus" />
@@ -203,6 +207,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Hostels"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Hostels" />
@@ -217,6 +222,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Map"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Institute Map" />
@@ -244,6 +250,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Events"
+                                isOpenInit={false}
                             />
                             <main>
                                 <Appbar name="Events" />
@@ -258,6 +265,7 @@ function App() {
                                 toggleDark={darkMode.toggle}
                                 pages={pages}
                                 name="Links"
+                                isOpenInit="false"
                             />
                             <main>
                                 <Appbar name="Quick Links" />
