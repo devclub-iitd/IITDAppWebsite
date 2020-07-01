@@ -5,11 +5,11 @@
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
+import { motion, useCycle } from 'framer-motion';
+import MenuToggle from './minis/menuToggle';
 
 const navLinkProps = (path, animationDelay) => ({
     className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
@@ -26,6 +26,7 @@ const activeNavIcon = (path) => ({
 
 function Navbar({ pages, name, dark, toggleDark }) {
     const [expand, setExpand] = useState(false);
+    const [isOpen, toggleOpen] = useCycle(false, true);
 
     useLockBodyScroll(expand);
     const windowSize = useWindowSize();
@@ -119,7 +120,7 @@ function Navbar({ pages, name, dark, toggleDark }) {
                     <h1>
                         <span style={{ fontWeight: '900' }}>
                             <a href="/">IITD</a>
-                        </span>{' '}
+                        </span>
                         <span>{`${name}`}</span>
                     </h1>
                 </div>
@@ -144,11 +145,15 @@ function Navbar({ pages, name, dark, toggleDark }) {
             >
                 {windowSize.width < 769 && (
                     <span>
-                        {expand ? (
-                            <Icon.X height="30" strokeWidth="3" />
-                        ) : (
-                            <Icon.Menu height="30" strokeWidth="3" />
-                        )}
+                        <motion.div
+                            initial={false}
+                            animate={isOpen ? 'open' : 'closed'}
+                        >
+                            <MenuToggle
+                                toggle={() => toggleOpen()}
+                                dark={dark}
+                            />
+                        </motion.div>
                     </span>
                 )}
                 {windowSize.width > 769 && (
@@ -236,10 +241,8 @@ function Navbar({ pages, name, dark, toggleDark }) {
     );
 }
 
-// eslint-disable-next-line no-unused-vars
-function Expand({ expand, pages, setExpand }) {
+function Expand({ pages, setExpand }) {
     const expandElement = useRef(null);
-    const { t } = useTranslation();
 
     useEffectOnce(() => {
         anime({
@@ -276,7 +279,7 @@ function Expand({ expand, pages, setExpand }) {
                                     page.animationDelayForNavbar
                                 )}
                             >
-                                {t(page.displayName)}
+                                {page.displayName}
                             </span>
                         </Link>
                     );
