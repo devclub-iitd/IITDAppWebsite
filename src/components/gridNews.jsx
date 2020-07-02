@@ -10,7 +10,7 @@ import Search from './search';
 import NewsCard from './newsCard';
 import news from './shared/news';
 import CheckBox from './shared/checkBox';
-import ToTop from './goToTop';
+import ToTop from './minis/goToTop';
 import Empty from './emptyResults';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);

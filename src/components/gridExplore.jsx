@@ -15,7 +15,7 @@ import Search from './search';
 import { ExploreCard, RodalContent } from './exploreCard';
 import explore from './shared/explore';
 import CheckBox from './shared/checkBox';
-import ToTop from './goToTop';
+import ToTop from './minis/goToTop';
 import Empty from './emptyResults';
 import 'rodal/lib/rodal.css';
 

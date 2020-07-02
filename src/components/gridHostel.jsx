@@ -14,7 +14,7 @@ import Search from './search';
 import { RodalContent, HostelCard } from './hostelCard';
 import hostels from './shared/hostels';
 import CheckBox from './shared/checkBox';
-import ToTop from './goToTop';
+import ToTop from './minis/goToTop';
 import Empty from './emptyResults';
 import 'rodal/lib/rodal.css';
 

@@ -6,7 +6,7 @@ import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
 import { Link } from 'react-router-dom';
-import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
+import { useLockBodyScroll, useWindowSize, useMount } from 'react-use';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import MenuToggle from './minis/menuToggle';
@@ -254,7 +254,16 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
 function Expand({ pages, setExpand, toggleOpen }) {
     const expandElement = useRef(null);
 
-    useEffectOnce(() => {
+    function collapse() {
+        setExpand(false);
+    }
+    useMount(() => {
+        anime({
+            targets: expandElement.current,
+            translateX: '10rem',
+            easing: 'easeOutExpo',
+            duration: 250,
+        });
         anime({
             targets: expandElement.current,
             translateX: '10rem',
@@ -268,7 +277,18 @@ function Expand({ pages, setExpand, toggleOpen }) {
             className="expand"
             ref={expandElement}
             onMouseLeave={() => {
-                setExpand(false);
+                anime({
+                    targets: expandElement.current,
+                    translateX: '-10rem',
+                    easing: 'easeInExpo',
+                    duration: 250,
+                });
+                anime({
+                    targets: '.expand-font',
+                    duration: 250,
+                    opacity: 0,
+                });
+                setTimeout(collapse, 250);
             }}
         >
             <div className="expand-top" />
@@ -285,6 +305,7 @@ function Expand({ pages, setExpand, toggleOpen }) {
                             }}
                         >
                             <span
+                                className="expand-font"
                                 {...navLinkProps(
                                     page.pageLink,
                                     page.animationDelayForNavbar
