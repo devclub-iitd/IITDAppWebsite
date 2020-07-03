@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -5,12 +7,16 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
+import Rodal from 'rodal';
+import PropTypes from 'prop-types';
+import * as Icon from 'react-feather';
 import Search from './search';
-import HostelCard from './hostelCard';
+import { RodalContent, HostelCard } from './hostelCard';
 import hostels from './shared/hostels';
 import CheckBox from './shared/checkBox';
-import ToTop from './goToTop';
+import ToTop from './minis/goToTop';
 import Empty from './emptyResults';
+import 'rodal/lib/rodal.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -35,6 +41,43 @@ class HostelGrid extends React.Component {
                 },
             ],
             showFilters: false,
+            visible: false,
+            rodalObj: {
+                id: 0,
+                name: 'Aravali Hostel',
+                est: 1965,
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
+                category: (
+                    <a className="c-btn fb">
+                        <span className="hostel-link">
+                            <Icon.User height="15" strokeWidth="3" />
+                            Boys
+                        </span>
+                    </a>
+                ),
+                mapUrl: '',
+                learnUrl: '',
+                image: (
+                    <img src="" alt="Jwalamukhi Hostel" className="card-img" />
+                ),
+                for: 'boys',
+                warden: 'Sample Warden',
+                wardenLink: '',
+                notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+                notableAlumniDesc: [
+                    'Co-founder, Flipkart',
+                    'Co-founder, Flipkart',
+                ],
+                notableAlumniLinks: [
+                    'https://devclub.in/#/projects',
+                    'https://devclub.in/#/projects',
+                ],
+                notableAlumniImages: [
+                    'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+                    'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+                ],
+            },
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -42,6 +85,8 @@ class HostelGrid extends React.Component {
         this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
             this
         );
+        this.show = this.show.bind(this);
+        this.hide = this.hide.bind(this);
     }
 
     handleCheckChieldElement = (event) => {
@@ -113,7 +158,50 @@ class HostelGrid extends React.Component {
         });
     }
 
+    show(hostelObj) {
+        this.setState({
+            visible: true,
+            rodalObj: hostelObj,
+        });
+    }
+
+    hide() {
+        this.setState({
+            visible: false,
+        });
+    }
+
     render() {
+        const lightRodal = {
+            borderRadius: 20,
+            width: '80%',
+            maxWidth: '400px',
+            height: '90%',
+            margin: 'auto',
+            marginTop: 90,
+            marginBottom: 10,
+            backgroundColor: '#C5CAE9',
+            boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+            color: '#4051B5',
+            overflowY: 'scroll',
+            zIndex: 100000000,
+        };
+        const darkRodal = {
+            borderRadius: 20,
+            width: '80%',
+            maxWidth: '400px',
+            height: '90%',
+            margin: 'auto',
+            marginTop: 90,
+            marginBottom: 10,
+            backgroundColor: '#1E1E20',
+            boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+            color: '#fff',
+            overflowY: 'scroll',
+            zIndex: 100000000,
+        };
+        let rodalStyle = {};
+        this.props.dark ? (rodalStyle = darkRodal) : (rodalStyle = lightRodal);
         const layoutLg = [];
         const layoutMd = [];
         const layoutSm = [];
@@ -189,7 +277,11 @@ class HostelGrid extends React.Component {
             const value = this.state.filtered[j];
             hostelRoll.push(
                 <div key={j} className="hostelGrid">
-                    <HostelCard hostelObj={value} />
+                    <HostelCard
+                        hostelObj={value}
+                        show={this.show}
+                        rodalObj={this.state.rodalObj}
+                    />
                 </div>
             );
         }
@@ -252,9 +344,22 @@ class HostelGrid extends React.Component {
                     {hostelRoll}
                 </ResponsiveGridLayout>
                 <ToTop />
+                <Rodal
+                    visible={this.state.visible}
+                    onClose={this.hide}
+                    className="rodal-imp"
+                    customStyles={rodalStyle}
+                    animation="slideUp"
+                >
+                    <RodalContent rodalObj={this.state.rodalObj} />
+                </Rodal>
             </>
         );
     }
 }
+
+HostelGrid.propTypes = {
+    dark: PropTypes.bool.isRequired,
+};
 
 export default HostelGrid;

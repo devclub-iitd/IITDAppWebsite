@@ -10,6 +10,9 @@ export default function ToTop() {
                 backgroundColor: '#4051B5',
                 color: 'white',
                 opacity: '0.8',
+                WebkitBoxShadow: 'inset 0px 0px 0px 5px #4051B5',
+                MozBoxShadow: 'inset 0px 0px 0px 5px #4051B5',
+                BoxShadow: 'inset 0px 0px 0px 5px #4051B5',
             }}
             transition="all 0.5s"
             showOnDistance={200}

@@ -12,7 +12,7 @@ import CampusCard from './campusCard';
 import Search from './search';
 import loc from './shared/locationsCampus';
 import CheckBox from './shared/checkBox';
-import ToTop from './goToTop';
+import ToTop from './minis/goToTop';
 import Empty from './emptyResults';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);

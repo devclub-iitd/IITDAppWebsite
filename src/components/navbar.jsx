@@ -1,12 +1,15 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable react/jsx-props-no-spreading */
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { useEffectOnce, useLockBodyScroll, useWindowSize } from 'react-use';
+import { useLockBodyScroll, useWindowSize, useMount } from 'react-use';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import MenuToggle from './minis/menuToggle';
 
 const navLinkProps = (path, animationDelay) => ({
     className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
@@ -21,29 +24,111 @@ const activeNavIcon = (path) => ({
     },
 });
 
-function Navbar({ pages, name }) {
+function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
     const [expand, setExpand] = useState(false);
+    const [isOpen, setOpen] = useState(isOpenInit);
+
+    const toggleOpen = () => {
+        setOpen(!isOpen);
+    };
 
     useLockBodyScroll(expand);
     const windowSize = useWindowSize();
 
     return (
         <div className="Navbar">
-            <div className="navbar-left" />
-            <div className="navbar-middle">
-                <Link
-                    to="/"
-                    onClick={() => {
-                        setExpand(false);
-                    }}
+            {windowSize.width < 769 && (
+                <div
+                    className="navbar-left"
+                    role="button"
+                    style={{ paddingTop: 40 }}
                 >
+                    {dark && (
+                        <motion.svg
+                            style={{ height: 60, width: 60 }}
+                            className="darkIcon"
+                            initial="rest"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={toggleDark}
+                        >
+                            <Icon.Sun
+                                height="30"
+                                strokeWidth="3"
+                                className="darkIcon"
+                                onClick={toggleDark}
+                            />
+                        </motion.svg>
+                    )}
+                    {!dark && (
+                        <motion.svg
+                            style={{ height: 60, width: 60 }}
+                            className="darkIcon"
+                            initial="rest"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={toggleDark}
+                        >
+                            <Icon.Moon
+                                height="30"
+                                strokeWidth="3"
+                                className="darkIcon"
+                                onClick={toggleDark}
+                            />
+                        </motion.svg>
+                    )}
+                </div>
+            )}
+            {windowSize.width >= 769 && (
+                <div className="navbar-middle" style={{ height: 60 }}>
+                    <div>
+                        {dark && (
+                            <motion.svg
+                                style={{ height: 60, width: 60 }}
+                                className="darkIcon"
+                                initial="rest"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={toggleDark}
+                            >
+                                <Icon.Sun
+                                    height="30"
+                                    strokeWidth="3"
+                                    className="darkIcon"
+                                    onClick={toggleDark}
+                                />
+                            </motion.svg>
+                        )}
+                        {!dark && (
+                            <motion.svg
+                                style={{ height: 60, width: 40 }}
+                                className="darkIcon"
+                                initial="rest"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={toggleDark}
+                            >
+                                <Icon.Moon
+                                    height="30"
+                                    strokeWidth="3"
+                                    className="darkIcon"
+                                    onClick={toggleDark}
+                                />
+                            </motion.svg>
+                        )}
+                    </div>
+                </div>
+            )}
+            {windowSize.width < 769 && (
+                <div className="navbar-middle">
                     <h1>
-                        IITD
-                        {windowSize.width < 769 && <span>{`${name}`}</span>}
+                        <span style={{ fontWeight: '900', marginLeft: -36 }}>
+                            <a href="/">IITD</a>
+                        </span>
+                        <span>{`${name}`}</span>
                     </h1>
-                </Link>
-            </div>
-
+                </div>
+            )}
             <div
                 role="button"
                 tabIndex="0"
@@ -64,11 +149,15 @@ function Navbar({ pages, name }) {
             >
                 {windowSize.width < 769 && (
                     <span>
-                        {expand ? (
-                            <Icon.X height="30" strokeWidth="3" />
-                        ) : (
-                            <Icon.Menu height="30" strokeWidth="3" />
-                        )}
+                        <motion.div
+                            initial={false}
+                            animate={isOpen ? 'open' : 'closed'}
+                        >
+                            <MenuToggle
+                                toggle={() => toggleOpen()}
+                                dark={dark}
+                            />
+                        </motion.div>
                     </span>
                 )}
                 {windowSize.width > 769 && (
@@ -150,18 +239,31 @@ function Navbar({ pages, name }) {
             </div>
 
             {expand && (
-                <Expand expand={expand} pages={pages} setExpand={setExpand} />
+                <Expand
+                    expand={expand}
+                    pages={pages}
+                    setExpand={setExpand}
+                    isOpen={isOpen}
+                    toggleOpen={toggleOpen}
+                />
             )}
         </div>
     );
 }
 
-// eslint-disable-next-line no-unused-vars
-function Expand({ expand, pages, setExpand }) {
+function Expand({ pages, setExpand, toggleOpen }) {
     const expandElement = useRef(null);
-    const { t } = useTranslation();
 
-    useEffectOnce(() => {
+    function collapse() {
+        setExpand(false);
+    }
+    useMount(() => {
+        anime({
+            targets: expandElement.current,
+            translateX: '10rem',
+            easing: 'easeOutExpo',
+            duration: 250,
+        });
         anime({
             targets: expandElement.current,
             translateX: '10rem',
@@ -175,7 +277,18 @@ function Expand({ expand, pages, setExpand }) {
             className="expand"
             ref={expandElement}
             onMouseLeave={() => {
-                setExpand(false);
+                anime({
+                    targets: expandElement.current,
+                    translateX: '-10rem',
+                    easing: 'easeInExpo',
+                    duration: 250,
+                });
+                anime({
+                    targets: '.expand-font',
+                    duration: 250,
+                    opacity: 0,
+                });
+                setTimeout(collapse, 250);
             }}
         >
             <div className="expand-top" />
@@ -188,15 +301,17 @@ function Expand({ expand, pages, setExpand }) {
                             key={page.id}
                             onClick={() => {
                                 setExpand(false);
+                                toggleOpen();
                             }}
                         >
                             <span
+                                className="expand-font"
                                 {...navLinkProps(
                                     page.pageLink,
                                     page.animationDelayForNavbar
                                 )}
                             >
-                                {t(page.displayName)}
+                                {page.displayName}
                             </span>
                         </Link>
                     );
@@ -215,11 +330,15 @@ function Expand({ expand, pages, setExpand }) {
 Navbar.propTypes = {
     pages: PropTypes.instanceOf(Array).isRequired,
     name: PropTypes.string.isRequired,
+    dark: PropTypes.bool.isRequired,
+    toggleDark: PropTypes.func.isRequired,
+    isOpenInit: PropTypes.bool.isRequired,
 };
 Expand.propTypes = {
     expand: PropTypes.bool.isRequired,
     pages: PropTypes.instanceOf(Array).isRequired,
     setExpand: PropTypes.bool.isRequired,
+    toggleOpen: PropTypes.func.isRequired,
 };
 
 export default Navbar;
