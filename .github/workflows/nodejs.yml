@@ -1,26 +1,61 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Node.js CI
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  super-lint:
+    name: Run Github Super Linter on Full code base
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Lint Code base
+        uses: docker://github/super-linter:v3
+        env:
+          VALIDATE_JAVASCRIPT_ES: false
+          VALIDATE_JAVASCRIPT_STANDARD: false
+          VALIDATE_YAML: true
+          VALIDATE_JSON: true
+          VALIDATE_MD: true
+          VALIDATE_DOCKER: true
+          VALIDATE_CSS: true
+          VALIDATE_ENV: true
 
+  lint:
+    needs: super-lint
+    name: Run eslint and stylelint on code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Install packages
+        run: npm ci
+      - name: Run Eslint
+        run: npm run eslint-test
+      - name: Run stylelint
+        run: npm run stylelint-test
+
+  build:
+    needs: lint
+    name: Build Code base and run tests
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
-
+        node-version: [10.x, 12.x, 14.x]
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code base
+        uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run eslint-test
-      - run: npm run prettier-test
-      - run: npm run build --if-present
-      - run: npm test
+      - name: Install packages
+        run: npm ci
+      - name: Run build command
+        run: npm run build
+      - name: Run tests
+        run: npm test a
