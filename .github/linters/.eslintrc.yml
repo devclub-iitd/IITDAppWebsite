@@ -1,0 +1,54 @@
+#############################
+#############################
+## JavaScript Linter rules ##
+#############################
+#############################
+
+############
+# Env Vars #
+############
+env:
+    browser: true
+    es6: true
+
+extends:
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'airbnb',
+    'prettier',
+    'prettier/react'
+  
+  ###############
+  # Global Vars #
+  ###############
+  globals:
+    Atomics: readonly
+    SharedArrayBuffer: readonly
+  
+  ###############
+  # Parser vars #
+  ###############
+  parser: 'babel-eslint'
+  parserOptions:
+    ecmaFeatures: {
+        'jsx': true
+    }
+    ecmaVersion: 2018
+    sourceType: module
+  
+  ###########
+  # Plugins #
+  ###########
+  plugins:
+    - 'react'
+    - 'react-hooks'
+    - 'prettier'
+  
+  #########
+  # Rules #
+  #########
+  rules: {
+    'react-hooks/rules-of-hooks': 'error', 
+    'react-hooks/exhaustive-deps': 'warn'
+  }
