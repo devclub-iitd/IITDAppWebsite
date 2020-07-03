@@ -12,25 +12,25 @@ import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 
 class Search extends React.Component {
-    render() {
-        return (
-            <div>
-                <span className="search-icon">
-                    <Icon.Search strokeWidth="3" height="31.5" />
-                </span>
-                <input
-                    type="text"
-                    placeholder="Search ..."
+  render() {
+    return (
+      <div>
+        <span className="search-icon">
+          <Icon.Search strokeWidth="3" height="31.5" />
+        </span>
+        <input
+          type="text"
+          placeholder="Search ..."
                     // eslint-disable-next-line react/destructuring-assignment
-                    value={this.props.searchQuery}
-                    onChange={this.props.onChange}
-                />
-            </div>
-        );
-    }
+          value={this.props.searchQuery}
+          onChange={this.props.onChange}
+        />
+      </div>
+    );
+  }
 }
 Search.propTypes = {
-    searchQuery: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+  searchQuery: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 export default Search;

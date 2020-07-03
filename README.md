@@ -1,28 +1,35 @@
 # IITDAppWebsite
+
 A website to provide various services related to IIT Delhi
 
 ## Live preview
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b76d0eaa-960a-48b9-91fa-db744d51ebb5/deploy-status)](https://app.netlify.com/sites/iitdwebapp/deploys)\
 <https://iitdwebapp.netlify.com>
 
-# Using the Website
+## Using the Website
+
 -Clone the repository on your machine.\
 -Navigate to the repository\
 -Install the dependencies
+
 ```bash
-$ npm install
+npm install
 ```
+
 -Start the local server
+
 ```bash
-$ npm start
+npm start
 ```
+
 -Navigate to the localhost link using your browser to access the web app.\
 
-# Tasks v1.0.0 
+## Tasks v1.0.0
 
 - [x] Navbar Structure
 - [x] Appbar Structure
-- [x] Grid 
+- [x] Grid
 - [x] Hostel Cards outline
 - [x] Hostel Cards Styling
 - [x] Explore Cards
@@ -31,7 +38,7 @@ $ npm start
 - [x] Campus Cards Styling
 - [x] News Cards
 - [x] News cards Styling
-- [x] Maps https://react-leaflet.js.org/
+- [x] Maps [https://react-leaflet.js.org/]
 - [x] Maps Card Styling
 - [x] Hostels Data Model
 - [x] Explore Data Model
