@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
@@ -28,17 +24,19 @@ const HostelCard = ({ hostelObj, show }) => (
                             Map{'  '}
                         </span>
                     </a>
-                    <a
+                    <div
                         className="c-btn learn-e"
-                        role="button"
                         onClick={() => show(hostelObj)}
+                        onKeyDown={() => show(hostelObj)}
+                        role="button"
+                        tabIndex={0}
                     >
                         <span className="hostel-link">
                             <Icon.Info height="15" strokeWidth="3" />
                             More Info
                             {'  '}
                         </span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,7 +49,11 @@ function RodalContent({ rodalObj }) {
     notableAlumni = temp.notableAlumni;
     const notableAlumniRoll = [];
     let len = '';
-    notableAlumni ? (len = notableAlumni.length) : (len = 0);
+    if (notableAlumni) {
+        len = notableAlumni.length;
+    } else {
+        len = 0;
+    }
     let j = 0;
     for (j = 0; j < len; j += 1) {
         notableAlumniRoll.push(
@@ -89,7 +91,11 @@ function RodalContent({ rodalObj }) {
         );
     }
 
-    notableAlumni ? (len = notableAlumni.length) : (len = 0);
+    if (notableAlumni) {
+        len = notableAlumni.length;
+    } else {
+        len = 0;
+    }
     return (
         <div style={{ textAlign: 'center' }}>
             <h1 className="rodal-h1" style={{ fontWeight: '900' }}>

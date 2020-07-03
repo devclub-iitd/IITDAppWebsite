@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import PropTypes from 'prop-types';
@@ -13,7 +11,13 @@ function EventsCard({ eventsObj }) {
         config: { mass: 5, tension: 500, friction: 80 },
     });
     return (
-        <div role="button" onClick={() => set((state) => !state)}>
+        <div
+            type="button"
+            role="button"
+            onClick={() => set((state) => !state)}
+            onKeyDown={() => set((state) => !state)}
+            tabIndex="0"
+        >
             <a.div
                 class="c front"
                 style={{

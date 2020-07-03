@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/accessible-emoji */
-/* eslint-disable react/jsx-props-no-spreading */
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
@@ -10,19 +6,6 @@ import { useLockBodyScroll, useWindowSize, useMount } from 'react-use';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import MenuToggle from './minis/menuToggle';
-
-const navLinkProps = (path, animationDelay) => ({
-    className: `fadeInUp ${window.location.pathname === path ? 'focused' : ''}`,
-    style: {
-        animationDelay: `${animationDelay}s`,
-    },
-});
-
-const activeNavIcon = (path) => ({
-    style: {
-        stroke: window.location.pathname === path ? 'rgb(212,216,246)' : '',
-    },
-});
 
 function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
     const [expand, setExpand] = useState(false);
@@ -167,7 +150,12 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Home
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/home')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname === '/home'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -176,7 +164,13 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Users
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/clubs')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname ===
+                                            '/clubs'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -185,7 +179,13 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Calendar
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/events')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname ===
+                                            '/events'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -194,7 +194,12 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Rss
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/news')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname === '/news'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -203,7 +208,13 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.MapPin
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/campus')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname ===
+                                            '/campus'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -212,7 +223,13 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Briefcase
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/hostels')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname ===
+                                            '/hostels'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -221,7 +238,12 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Map
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/map')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname === '/map'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -230,7 +252,13 @@ function Navbar({ pages, name, dark, toggleDark, isOpenInit }) {
                                 <Icon.Link
                                     strokeWidth="3"
                                     height="40"
-                                    {...activeNavIcon('/links')}
+                                    style={{
+                                        stroke:
+                                            window.location.pathname ===
+                                            '/links'
+                                                ? 'rgb(212,216,246)'
+                                                : '',
+                                    }}
                                 />
                             </Link>
                         </span>
@@ -305,11 +333,11 @@ function Expand({ pages, setExpand, toggleOpen }) {
                             }}
                         >
                             <span
-                                className="expand-font"
-                                {...navLinkProps(
-                                    page.pageLink,
-                                    page.animationDelayForNavbar
-                                )}
+                                className={
+                                    window.location.pathname === page.pageLink
+                                        ? 'expand-front focused fadeInUp'
+                                        : 'expand-front fadeInUp'
+                                }
                             >
                                 {page.displayName}
                             </span>
@@ -320,7 +348,7 @@ function Expand({ pages, setExpand, toggleOpen }) {
             })}
             <h5 className="love">
                 Made by <a href="https://devclub.in/#/">DevClub</a> with{' '}
-                <span role="img" alt="Love">
+                <span role="img" aria-label="Love" alt="Love">
                     ❤️
                 </span>
             </h5>
@@ -335,7 +363,6 @@ Navbar.propTypes = {
     isOpenInit: PropTypes.bool.isRequired,
 };
 Expand.propTypes = {
-    expand: PropTypes.bool.isRequired,
     pages: PropTypes.instanceOf(Array).isRequired,
     setExpand: PropTypes.bool.isRequired,
     toggleOpen: PropTypes.func.isRequired,

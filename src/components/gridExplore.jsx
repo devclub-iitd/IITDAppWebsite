@@ -1,11 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-param-reassign */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Rodal from 'rodal';
@@ -56,7 +48,10 @@ class Explore extends React.Component {
                 desc:
                     'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
                 extraIcon: (
-                    <a className="c-btn git">
+                    <a
+                        className="c-btn git"
+                        href="https://github.com/devclub-iitd"
+                    >
                         <Icon.GitHub height="30" strokeWidth="2" />
                     </a>
                 ),
@@ -74,10 +69,12 @@ class Explore extends React.Component {
     }
 
     handleCheckChieldElement = (event) => {
-        const { options } = this.state;
+        const { searchQuery, options } = this.state;
         options.forEach((option) => {
-            if (option.value === event.target.value)
-                option.isChecked = event.target.checked;
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
         });
         this.setState({ options });
 
@@ -87,7 +84,7 @@ class Explore extends React.Component {
         const chosenCats = chosenOptions.map((a) => a.category);
         let newList = [];
         let currentList = [];
-        if (this.state.searchQuery !== '') {
+        if (searchQuery !== '') {
             currentList = explore;
 
             currentList = explore.filter((item) =>
@@ -97,7 +94,7 @@ class Explore extends React.Component {
             newList = currentList.filter((item) => {
                 const lc = item.name.toLowerCase();
 
-                const filterWord = this.state.searchQuery.toLowerCase();
+                const filterWord = searchQuery.toLowerCase();
 
                 return lc.includes(filterWord);
             });
@@ -116,9 +113,10 @@ class Explore extends React.Component {
     };
 
     handleChange(event) {
+        const { options } = this.state;
         this.setState({ searchQuery: event.target.value });
 
-        const chosenOptions = this.state.options.filter(
+        const chosenOptions = options.filter(
             (option) => option.isChecked === true
         );
         const chosenCats = chosenOptions.map((a) => a.category);
@@ -167,6 +165,15 @@ class Explore extends React.Component {
     }
 
     render() {
+        const { dark } = this.props;
+        const {
+            searchQuery,
+            options,
+            filtered,
+            showFilters,
+            visible,
+            rodalObj,
+        } = this.state;
         const lightRodal = {
             borderRadius: 20,
             width: '80%',
@@ -195,14 +202,18 @@ class Explore extends React.Component {
             zIndex: 100000000,
         };
         let rodalStyle = {};
-        this.props.dark ? (rodalStyle = darkRodal) : (rodalStyle = lightRodal);
+        if (dark) {
+            rodalStyle = darkRodal;
+        } else {
+            rodalStyle = lightRodal;
+        }
         const layoutLg = [];
         const layoutMd = [];
         const layoutSm = [];
         const layoutXs = [];
         const layoutXxs = [];
         const exploreRoll = [];
-        for (let j = 0; j < this.state.filtered.length; j += 1) {
+        for (let j = 0; j < filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 4) * 3,
@@ -268,7 +279,7 @@ class Explore extends React.Component {
                 horizontalCompact: true,
                 isDraggable: false,
             });
-            const value = this.state.filtered[j];
+            const value = filtered[j];
             exploreRoll.push(
                 <div
                     key={j}
@@ -279,7 +290,7 @@ class Explore extends React.Component {
                     <ExploreCard
                         exploreObj={value}
                         show={this.show}
-                        rodalObj={this.state.rodalObj}
+                        rodalObj={rodalObj}
                     />
                 </div>
             );
@@ -297,27 +308,31 @@ class Explore extends React.Component {
             <>
                 <div className="search">
                     <Search
-                        searchQuery={this.state.searchQuery}
+                        searchQuery={searchQuery}
                         onChange={this.handleChange}
                     />
                     <div
                         role="button"
                         className="filter-icon"
                         onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
                     >
                         Filter
                     </div>
 
-                    {this.state.showFilters && (
+                    {showFilters && (
                         <div className="filterCheckBoxes">
-                            {this.state.options.map((option) => {
+                            {options.map((option) => {
                                 return (
                                     <>
                                         <CheckBox
                                             handleCheckChieldElement={
                                                 this.handleCheckChieldElement
                                             }
-                                            {...option}
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
                                         />
                                     </>
                                 );
@@ -325,7 +340,7 @@ class Explore extends React.Component {
                         </div>
                     )}
                 </div>
-                {this.state.filtered.length < 1 && <Empty />}
+                {filtered.length < 1 && <Empty />}
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}
@@ -344,13 +359,13 @@ class Explore extends React.Component {
                 </ResponsiveGridLayout>
                 <ToTop />
                 <Rodal
-                    visible={this.state.visible}
+                    visible={visible}
                     onClose={this.hide}
                     className="rodal-imp"
                     customStyles={rodalStyle}
                     animation="slideUp"
                 >
-                    <RodalContent rodalObj={this.state.rodalObj} />
+                    <RodalContent rodalObj={rodalObj} />
                 </Rodal>
             </>
         );

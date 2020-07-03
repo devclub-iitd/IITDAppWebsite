@@ -1,22 +1,20 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-const Path = (props) => (
+const Path = ({ dark, variants, transition, d }) => (
     <motion.path
         strokeWidth="3"
-        stroke={props.dark ? 'hsl(0, 100%, 100%)' : 'hsl(232, 67%, 77%)'}
+        stroke={dark ? 'hsl(0, 100%, 100%)' : 'hsl(232, 67%, 77%)'}
         strokeLinecap="round"
-        {...props}
+        variants={variants}
+        d={d}
+        transition={transition}
     />
 );
 
 const MenuToggle = ({ toggle, dark }) => (
-    <div onClick={toggle} role="button">
+    <div onClick={toggle} role="button" onKeyDown={toggle} tabIndex={0}>
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
                 variants={{
@@ -50,6 +48,16 @@ MenuToggle.propTypes = {
 };
 Path.propTypes = {
     dark: PropTypes.bool.isRequired,
+    variants: PropTypes.objectOf(PropTypes.number),
+    transition: PropTypes.objectOf(PropTypes.number),
+    d: PropTypes.string,
 };
-
+Path.defaultProps = {
+    d: 'M 2 9.423 L 20 9.423',
+    transition: { duration: 0.1 },
+    variants: {
+        closed: { opacity: 1 },
+        open: { opacity: 0 },
+    },
+};
 export default MenuToggle;

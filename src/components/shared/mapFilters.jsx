@@ -1,12 +1,10 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable global-require */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import * as Icon from 'react-feather';
 import Leaflet from 'leaflet';
 import loc from './locations';
+
+const shadow = require('../images/map/marker-shadow.png');
 
 const redIcon = new Leaflet.Icon({
     iconUrl:
@@ -16,7 +14,7 @@ const redIcon = new Leaflet.Icon({
     iconAnchor: [2.5, 27.5],
     popupAnchor: [5, -22],
     iconSize: [17.5, 27.5],
-    shadowUrl: require('../images/map/marker-shadow.png'),
+    shadowUrl: shadow,
     shadowSize: [34, 47.5],
     shadowAnchor: [5, 46],
 });
@@ -29,7 +27,7 @@ const blueIcon = new Leaflet.Icon({
     iconAnchor: [2.5, 27.5],
     popupAnchor: [5, -22],
     iconSize: [17.5, 27.5],
-    shadowUrl: require('../images/map/marker-shadow.png'),
+    shadowUrl: shadow,
     shadowSize: [34, 47.5],
     shadowAnchor: [5, 46],
 });
@@ -42,7 +40,7 @@ const orangeIcon = new Leaflet.Icon({
     iconAnchor: [2.5, 27.5],
     popupAnchor: [5, -22],
     iconSize: [17.5, 27.5],
-    shadowUrl: require('../images/map/marker-shadow.png'),
+    shadowUrl: shadow,
     shadowSize: [34, 47.5],
     shadowAnchor: [5, 46],
 });
@@ -55,7 +53,7 @@ const blackIcon = new Leaflet.Icon({
     iconAnchor: [2.5, 27.5],
     popupAnchor: [5, -22],
     iconSize: [17.5, 27.5],
-    shadowUrl: require('../images/map/marker-shadow.png'),
+    shadowUrl: shadow,
     shadowSize: [34, 47.5],
     shadowAnchor: [5, 46],
 });
@@ -69,25 +67,25 @@ const acad = loc.map((locObj) => {
                     {locObj.img}
                     <p>{locObj.desc}</p>
                     <div className="c-btn-group">
-                        <a className="c-btn acad">
+                        <a href="https://" className="c-btn acad">
                             <span>
                                 <Icon.BookOpen />
                             </span>
                         </a>
-                        <a className="c-btn learn-e">
+                        <a href="https://" className="c-btn learn-e">
                             <span>
                                 <Icon.Info />
                             </span>
                         </a>
-                        <a className="c-btn map">
+                        <a href="https://" className="c-btn map">
                             <span>
                                 <Icon.MapPin />
                             </span>
                         </a>
-                        <a className="c-btn ph">
+                        <a href="https://" className="c-btn ph">
                             <Icon.Phone />
                         </a>
-                        <a className="c-btn web">
+                        <a href="https://" className="c-btn web">
                             <Icon.Globe />
                         </a>
                     </div>
@@ -105,25 +103,25 @@ const eat = loc.map((locObj) => {
                     {locObj.img}
                     <p>{locObj.desc}</p>
                     <div className="c-btn-group">
-                        <a className="c-btn eat">
+                        <a href="https://" className="c-btn eat">
                             <span>
                                 <Icon.Coffee />
                             </span>
                         </a>
-                        <a className="c-btn learn-e">
+                        <a href="https://" className="c-btn learn-e">
                             <span>
                                 <Icon.Info />
                             </span>
                         </a>
-                        <a className="c-btn map">
+                        <a href="https://" className="c-btn map">
                             <span>
                                 <Icon.MapPin />
                             </span>
                         </a>
-                        <a className="c-btn ph">
+                        <a href="https://" className="c-btn ph">
                             <Icon.Phone />
                         </a>
-                        <a className="c-btn web">
+                        <a href="https://" className="c-btn web">
                             <Icon.Globe />
                         </a>
                     </div>
@@ -141,25 +139,25 @@ const hostel = loc.map((locObj) => {
                     {locObj.img}
                     <p>{locObj.desc}</p>
                     <div className="c-btn-group">
-                        <a className="c-btn hs">
+                        <a href="https://" className="c-btn hs">
                             <span>
                                 <Icon.Briefcase />
                             </span>
                         </a>
-                        <a className="c-btn learn-e">
+                        <a href="https://" className="c-btn learn-e">
                             <span>
                                 <Icon.Info />
                             </span>
                         </a>
-                        <a className="c-btn map">
+                        <a href="https://" className="c-btn map">
                             <span>
                                 <Icon.MapPin />
                             </span>
                         </a>
-                        <a className="c-btn ph">
+                        <a href="https://" className="c-btn ph">
                             <Icon.Phone />
                         </a>
-                        <a className="c-btn web">
+                        <a href="https://" className="c-btn web">
                             <Icon.Globe />
                         </a>
                     </div>
@@ -178,25 +176,25 @@ const sport = loc.map((locObj) => {
                     {locObj.img}
                     <p>{locObj.desc}</p>
                     <div className="c-btn-group">
-                        <a className="c-btn sp">
+                        <a href="https://" className="c-btn sp">
                             <span>
                                 <Icon.Target />
                             </span>
                         </a>
-                        <a className="c-btn learn-e">
+                        <a href="https://" className="c-btn learn-e">
                             <span>
                                 <Icon.Info />
                             </span>
                         </a>
-                        <a className="c-btn map">
+                        <a href="https://" className="c-btn map">
                             <span>
                                 <Icon.MapPin />
                             </span>
                         </a>
-                        <a className="c-btn ph">
+                        <a href="https://" className="c-btn ph">
                             <Icon.Phone />
                         </a>
-                        <a className="c-btn web">
+                        <a href="https://" className="c-btn web">
                             <Icon.Globe />
                         </a>
                     </div>

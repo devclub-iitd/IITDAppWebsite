@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
 import dogra from '../images/campus/dogra.jpg';
@@ -13,7 +12,7 @@ const locations = [
         desc:
             "IIT Delhi's main multipurpose auditorium hall with the iconic hyperbolic paraboloid roof.",
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -33,7 +32,7 @@ const locations = [
         desc:
             'The famous Café cum restaurant, serving coffee, cakes and sandwiches at subsidized rates.',
         categoryIcon: (
-            <a className="c-btn eat">
+            <a href="https://" className="c-btn eat">
                 <span>
                     <Icon.Coffee />
                 </span>
@@ -53,7 +52,7 @@ const locations = [
         desc:
             'SCOOPS or Student Co-Operative Society is the one stop for all your stationery needs, at affordable rates.',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -73,7 +72,7 @@ const locations = [
         desc:
             'The Department of Electrical Engineering, IIT Delhi is situated here.',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -93,7 +92,7 @@ const locations = [
         desc:
             'A popular hangout spot, Red Square is so named because of the colour of its flooring. ',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -113,7 +112,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -133,7 +132,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -153,7 +152,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -173,7 +172,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -193,7 +192,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -213,7 +212,7 @@ const locations = [
         desc:
             'The Department of Civil Engineering, IIT Delhi is situated here.',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -233,7 +232,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -253,7 +252,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -273,7 +272,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -293,7 +292,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -313,7 +312,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -333,7 +332,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -353,7 +352,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -373,7 +372,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -393,7 +392,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -413,7 +412,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -433,7 +432,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -453,7 +452,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -473,7 +472,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -493,7 +492,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -513,7 +512,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -533,7 +532,7 @@ const locations = [
         desc:
             'The Department of Biochemical Engineering and Biotechnology, IIT Delhi is situated here.',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -553,7 +552,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -572,7 +571,7 @@ const locations = [
         category: 'sport',
         desc: 'The Institute hockey and athletics field.',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -592,7 +591,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -612,7 +611,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -632,7 +631,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -652,7 +651,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -672,7 +671,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -692,7 +691,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>
@@ -712,7 +711,7 @@ const locations = [
         desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         categoryIcon: (
-            <a className="c-btn fd">
+            <a href="https://" className="c-btn fd">
                 <span>
                     <Icon.BookOpen />
                 </span>

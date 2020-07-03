@@ -1,12 +1,4 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import Link from 'react-router';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
 
@@ -18,17 +10,19 @@ function ExploreCard({ exploreObj, show }) {
                     {exploreObj.img}
 
                     <div className="c-btn-group">
-                        <a
+                        <button
                             className="c-btn learn-e"
-                            role="button"
                             onClick={() => {
                                 show(exploreObj);
                             }}
+                            onKeyDown={() => {}}
+                            tabIndex="0"
+                            type="button"
                         >
                             <span>
                                 <Icon.Info height="30" strokeWidth="2" />
                             </span>
-                        </a>
+                        </button>
                         <a className="c-btn fb" href={exploreObj.fbUrl}>
                             <span>
                                 <Icon.Facebook height="30" strokeWidth="2" />
@@ -59,14 +53,22 @@ function RodalContent({ rodalObj }) {
     const showcaseRoll = [];
     let len = '';
 
-    showcase ? (len = showcase.length) : (len = 0);
+    if (showcase) {
+        len = showcase.length;
+    } else {
+        len = 0;
+    }
 
     let eventsShowcase = [];
     eventsShowcase = temp.eventsShowcase;
     const eventsShowcaseRoll = [];
     let lenEvents = '';
 
-    showcase ? (lenEvents = eventsShowcase.length) : (lenEvents = 0);
+    if (showcase) {
+        lenEvents = eventsShowcase.length;
+    } else {
+        lenEvents = 0;
+    }
 
     let i = 0;
     for (i = 0; i < len; i += 1) {

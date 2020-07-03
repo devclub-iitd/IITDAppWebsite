@@ -1,11 +1,3 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable no-return-assign */
-/* eslint-disable no-param-reassign */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-alert */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from './campusCard';
@@ -53,10 +45,12 @@ class Campus extends React.Component {
     }
 
     handleCheckChieldElement = (event) => {
-        const { options } = this.state;
+        const { options, searchQuery } = this.state;
         options.forEach((option) => {
-            if (option.value === event.target.value)
-                option.isChecked = event.target.checked;
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
         });
         this.setState({ options });
 
@@ -66,7 +60,7 @@ class Campus extends React.Component {
         const chosenCats = chosenOptions.map((a) => a.category);
         let newList = [];
         let currentList = [];
-        if (this.state.searchQuery !== '') {
+        if (searchQuery !== '') {
             currentList = loc;
 
             currentList = loc.filter((item) =>
@@ -76,7 +70,7 @@ class Campus extends React.Component {
             newList = currentList.filter((item) => {
                 const lc = item.name.toLowerCase();
 
-                const filterWord = this.state.searchQuery.toLowerCase();
+                const filterWord = searchQuery.toLowerCase();
 
                 return lc.includes(filterWord);
             });
@@ -93,9 +87,10 @@ class Campus extends React.Component {
     };
 
     handleChange(event) {
+        const { options } = this.state;
         this.setState({ searchQuery: event.target.value });
 
-        const chosenOptions = this.state.options.filter(
+        const chosenOptions = options.filter(
             (option) => option.isChecked === true
         );
         const chosenCats = chosenOptions.map((a) => a.category);
@@ -129,13 +124,14 @@ class Campus extends React.Component {
     }
 
     render() {
+        const { searchQuery, options, filtered, showFilters } = this.state;
         const layoutLg = [];
         const layoutSm = [];
         const layoutMd = [];
         const layoutMd2 = [];
         const layoutXs = [];
         const campusRoll = [];
-        for (let j = 0; j < this.state.filtered.length; j += 1) {
+        for (let j = 0; j < filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 6) * 2,
@@ -201,7 +197,7 @@ class Campus extends React.Component {
                 horizontalCompact: true,
                 isDraggable: false,
             });
-            const value = this.state.filtered[j];
+            const value = filtered[j];
             campusRoll.push(
                 <div
                     key={j}
@@ -226,21 +222,23 @@ class Campus extends React.Component {
             <div>
                 <div className="search">
                     <Search
-                        searchQuery={this.state.searchQuery}
+                        searchQuery={searchQuery}
                         onChange={this.handleChange}
-                        handleClickFilter={this.state.handleClickFilter}
+                        handleClickFilter={this.handleClickFilter}
                     />
                     <div
                         role="button"
                         className="filter-icon"
                         onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
                     >
                         Filter
                     </div>
 
-                    {this.state.showFilters && (
+                    {showFilters && (
                         <div className="filterCheckBoxes">
-                            {this.state.options.map((option) => {
+                            {options.map((option) => {
                                 return (
                                     <>
                                         <CheckBox
@@ -248,7 +246,9 @@ class Campus extends React.Component {
                                                 this.handleCheckChieldElement
                                             }
                                             option={option}
-                                            {...option}
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
                                         />
                                     </>
                                 );
@@ -256,7 +256,7 @@ class Campus extends React.Component {
                         </div>
                     )}
                 </div>
-                {this.state.filtered.length < 1 && <Empty />}
+                {filtered.length < 1 && <Empty />}
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

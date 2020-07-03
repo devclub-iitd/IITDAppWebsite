@@ -1,19 +1,22 @@
-/* eslint-disable react/no-this-in-sfc */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const checkBox = (props) => {
+export const checkBox = ({
+    id,
+    handleCheckChieldElement,
+    isChecked,
+    value,
+}) => {
     return (
         <div>
             <input
-                key={props.id}
-                onClick={props.handleCheckChieldElement}
+                key={id}
+                onClick={handleCheckChieldElement}
                 type="checkbox"
-                checked={props.isChecked}
-                value={props.value}
+                checked={isChecked}
+                value={value}
             />{' '}
-            {props.value}
+            {value}
         </div>
     );
 };

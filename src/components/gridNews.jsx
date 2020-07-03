@@ -1,9 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
@@ -46,10 +40,12 @@ class News extends React.Component {
     }
 
     handleCheckChieldElement = (event) => {
-        const { options } = this.state;
+        const { searchQuery, options } = this.state;
         options.forEach((option) => {
-            if (option.value === event.target.value)
-                option.isChecked = event.target.checked;
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
         });
         this.setState({ options });
 
@@ -59,7 +55,7 @@ class News extends React.Component {
         const chosenCats = chosenOptions.map((a) => a.month);
         let newList = [];
         let currentList = [];
-        if (this.state.searchQuery !== '') {
+        if (searchQuery !== '') {
             currentList = news;
 
             currentList = news.filter((item) =>
@@ -70,7 +66,7 @@ class News extends React.Component {
                 const lc = item.title.toLowerCase();
                 const lc2 = item.description.toLowerCase();
 
-                const filterWord = this.state.searchQuery.toLowerCase();
+                const filterWord = searchQuery.toLowerCase();
 
                 return lc.includes(filterWord) || lc2.includes(filterWord);
             });
@@ -119,13 +115,14 @@ class News extends React.Component {
     }
 
     render() {
+        const { searchQuery, options, filtered, showFilters } = this.state;
         const layoutLg = [];
         const layoutMd = [];
         const layoutSm = [];
         const layoutXs = [];
         const layoutXxs = [];
         const newsRoll = [];
-        for (let j = 0; j < this.state.filtered.length; j += 1) {
+        for (let j = 0; j < filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: j % 2,
@@ -191,7 +188,7 @@ class News extends React.Component {
                 horizontalCompact: true,
                 isDraggable: false,
             });
-            const value = this.state.filtered[j];
+            const value = filtered[j];
             newsRoll.push(
                 <div key={j} className="newsGrid">
                     <NewsCard newsObj={value} />
@@ -209,27 +206,31 @@ class News extends React.Component {
             <>
                 <div className="search">
                     <Search
-                        searchQuery={this.state.searchQuery}
+                        searchQuery={searchQuery}
                         onChange={this.handleChange}
                     />
                     <div
                         role="button"
                         className="filter-icon"
                         onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
                     >
                         Filter
                     </div>
 
-                    {this.state.showFilters && (
+                    {showFilters && (
                         <div className="filterCheckBoxes">
-                            {this.state.options.map((option) => {
+                            {options.map((option) => {
                                 return (
                                     <>
                                         <CheckBox
                                             handleCheckChieldElement={
                                                 this.handleCheckChieldElement
                                             }
-                                            {...option}
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
                                         />
                                     </>
                                 );
@@ -237,7 +238,7 @@ class News extends React.Component {
                         </div>
                     )}
                 </div>
-                {this.state.filtered.length < 1 && <Empty />}
+                {filtered.length < 1 && <Empty />}
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}

@@ -1,10 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-param-reassign */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Rodal from 'rodal';
@@ -49,12 +42,12 @@ class HostelGrid extends React.Component {
                 description:
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
                 category: (
-                    <a className="c-btn fb">
+                    <div className="c-btn fb">
                         <span className="hostel-link">
                             <Icon.User height="15" strokeWidth="3" />
                             Boys
                         </span>
-                    </a>
+                    </div>
                 ),
                 mapUrl: '',
                 learnUrl: '',
@@ -90,10 +83,12 @@ class HostelGrid extends React.Component {
     }
 
     handleCheckChieldElement = (event) => {
-        const { options } = this.state;
+        const { searchQuery, options } = this.state;
         options.forEach((option) => {
-            if (option.value === event.target.value)
-                option.isChecked = event.target.checked;
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
         });
         this.setState({ options });
 
@@ -103,7 +98,7 @@ class HostelGrid extends React.Component {
         const chosenCats = chosenOptions.map((a) => a.for);
         let newList = [];
         let currentList = [];
-        if (this.state.searchQuery !== '') {
+        if (searchQuery !== '') {
             currentList = hostels;
 
             currentList = hostels.filter((item) =>
@@ -113,7 +108,7 @@ class HostelGrid extends React.Component {
             newList = currentList.filter((item) => {
                 const lc = item.name.toLowerCase();
 
-                const filterWord = this.state.searchQuery.toLowerCase();
+                const filterWord = searchQuery.toLowerCase();
 
                 return lc.includes(filterWord);
             });
@@ -172,6 +167,15 @@ class HostelGrid extends React.Component {
     }
 
     render() {
+        const { dark } = this.props;
+        const {
+            searchQuery,
+            options,
+            filtered,
+            showFilters,
+            visible,
+            rodalObj,
+        } = this.state;
         const lightRodal = {
             borderRadius: 20,
             width: '80%',
@@ -201,14 +205,18 @@ class HostelGrid extends React.Component {
             zIndex: 100000000,
         };
         let rodalStyle = {};
-        this.props.dark ? (rodalStyle = darkRodal) : (rodalStyle = lightRodal);
+        if (dark) {
+            rodalStyle = darkRodal;
+        } else {
+            rodalStyle = lightRodal;
+        }
         const layoutLg = [];
         const layoutMd = [];
         const layoutSm = [];
         const layoutXs = [];
         const layoutXxs = [];
         const hostelRoll = [];
-        for (let j = 0; j < this.state.filtered.length; j += 1) {
+        for (let j = 0; j < filtered.length; j += 1) {
             layoutLg.push({
                 i: j.toString(),
                 x: (j % 4) * 3,
@@ -274,13 +282,13 @@ class HostelGrid extends React.Component {
                 horizontalCompact: true,
                 isDraggable: false,
             });
-            const value = this.state.filtered[j];
+            const value = filtered[j];
             hostelRoll.push(
                 <div key={j} className="hostelGrid">
                     <HostelCard
                         hostelObj={value}
                         show={this.show}
-                        rodalObj={this.state.rodalObj}
+                        rodalObj={rodalObj}
                     />
                 </div>
             );
@@ -297,27 +305,31 @@ class HostelGrid extends React.Component {
             <>
                 <div className="search">
                     <Search
-                        searchQuery={this.state.searchQuery}
+                        searchQuery={searchQuery}
                         onChange={this.handleChange}
                     />
                     <div
                         role="button"
                         className="filter-icon"
                         onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
                     >
                         Filter
                     </div>
 
-                    {this.state.showFilters && (
+                    {showFilters && (
                         <div className="filterCheckBoxes">
-                            {this.state.options.map((option) => {
+                            {options.map((option) => {
                                 return (
                                     <>
                                         <CheckBox
                                             handleCheckChieldElement={
                                                 this.handleCheckChieldElement
                                             }
-                                            {...option}
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
                                         />
                                     </>
                                 );
@@ -325,7 +337,7 @@ class HostelGrid extends React.Component {
                         </div>
                     )}
                 </div>
-                {this.state.filtered.length < 1 && <Empty />}
+                {filtered.length < 1 && <Empty />}
                 <ResponsiveGridLayout
                     className="layout"
                     layouts={layouts}
@@ -345,13 +357,13 @@ class HostelGrid extends React.Component {
                 </ResponsiveGridLayout>
                 <ToTop />
                 <Rodal
-                    visible={this.state.visible}
+                    visible={visible}
                     onClose={this.hide}
                     className="rodal-imp"
                     customStyles={rodalStyle}
                     animation="slideUp"
                 >
-                    <RodalContent rodalObj={this.state.rodalObj} />
+                    <RodalContent rodalObj={rodalObj} />
                 </Rodal>
             </>
         );

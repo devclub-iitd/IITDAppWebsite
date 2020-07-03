@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import * as Icon from 'react-feather';
 import jwala from '../images/hostels/jwala.png';
@@ -11,12 +10,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -31,7 +30,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -42,12 +41,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -62,7 +61,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -73,12 +72,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn girls">
+            <div type="div" className="c-btn girls">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Girls
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -93,7 +92,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -104,12 +103,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -124,7 +123,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -135,12 +134,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn girls">
+            <div type="div" className="c-btn girls">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Girls
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -155,7 +154,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -166,12 +165,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -186,7 +185,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -197,12 +196,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -217,7 +216,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -228,12 +227,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -248,7 +247,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -259,12 +258,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -279,7 +278,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -290,12 +289,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -310,7 +309,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -321,12 +320,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -341,7 +340,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -352,12 +351,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -372,7 +371,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
@@ -383,12 +382,12 @@ const hostels = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
-            <a className="c-btn fb">
+            <div type="div" className="c-btn fb">
                 <span className="hostel-link">
                     <Icon.User height="15" strokeWidth="3" />
                     Boys
                 </span>
-            </a>
+            </div>
         ),
         mapUrl: '',
         learnUrl: '',
@@ -403,7 +402,7 @@ const hostels = [
             'https://devclub.in/#/projects',
         ],
         notableAlumniImages: [
-            'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+            'https://img.huffingtonpost.com/divsset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
             'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
         ],
     },
