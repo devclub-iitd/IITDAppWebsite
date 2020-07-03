@@ -152,8 +152,8 @@ body.light-mode {
       text-transform: uppercase;
 
       span {
-        font-weight: 600;
         color: $indigo2;
+        font-weight: 600;
       }
     }
 
@@ -1342,7 +1342,7 @@ body.light-mode {
 
       .c-btn:hover,
       .c-btn:focus {
-        background-color: #ff0000;
+        background-color: #f00;
         color: #fff;
         cursor: pointer;
       }
@@ -1519,7 +1519,7 @@ body.light-mode {
     // background-color: $green;
     .c-btn:hover,
     .c-btn:focus {
-      background-color: #ff0000;
+      background-color: #f00;
       color: #fff;
       cursor: pointer;
     }
@@ -1609,7 +1609,8 @@ body.light-mode {
       .insta {
         background: #f09433;
         background:
-          linear-gradient(45deg,
+          linear-gradient
+          (45deg,
           #f09433 0%,
           #e6683c 25%,
           #dc2743 50%,
@@ -1682,8 +1683,6 @@ body.light-mode {
     .c-btn-group > .c-btn {
       border-radius: 0;
     }
-
-
 
     .card-img {
       border-radius: 10px;
@@ -1758,7 +1757,7 @@ body.light-mode {
 
   .c-btn:hover,
   .c-btn:focus {
-    background-color: #ff0000;
+    background-color: #f00;
     color: #fff;
     cursor: pointer;
   }
@@ -1806,7 +1805,8 @@ body.light-mode {
     .insta {
       background: #f09433;
       background:
-        linear-gradient(45deg,
+        linear-gradient
+        (45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -1924,7 +1924,7 @@ body.light-mode {
 
     .c-btn:hover,
     .c-btn:focus {
-      background-color: #ff0000;
+      background-color: #f00;
       color: #fff;
       cursor: pointer;
     }
@@ -2148,6 +2148,10 @@ body.light-mode {
     .hostel-card-bg {
       background-color: $indigo-content;
       border-radius: 10px;
+      display: grid;
+      gap: 0 20px;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
       height: 80%;
       margin: 3rem 1rem 2rem;
       text-align: center;
@@ -2155,6 +2159,7 @@ body.light-mode {
       z-index: 3;
 
       .card-subtitle {
+        box-sizing: border-box;
         color: $indigo1;
         font-size: 1rem;
         font-weight: 900;
@@ -2176,12 +2181,6 @@ body.light-mode {
         z-index: 3;
       }
 
-      box-sizing: border-box;
-      display: grid;
-      gap: 0 20px;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
-
       .left1 {
         grid-column-start: 1;
         grid-row-start: 1;
@@ -2195,27 +2194,27 @@ body.light-mode {
           max-width: 200px;
           width: 100%;
         }
-    }
-
-    .hostel-card-title {
-      background-color: $pblue;
-      border-radius: 10px;
-      color: $indigo-content;
-      margin-left: 20%;
-      margin-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      // display: inline-block;
-      position: absolute;
-      z-index: 4;
-
-      h1 {
-        color: $indigo3;
-        font-family: 'Cereal', sans-serif;
-        font-size: 1rem;
-        font-weight: 900;
       }
-    }
+
+      .hostel-card-title {
+        background-color: $pblue;
+        border-radius: 10px;
+        color: $indigo-content;
+        margin-left: 20%;
+        margin-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        // display: inline-block;
+        position: absolute;
+        z-index: 4;
+
+        h1 {
+          color: $indigo3;
+          font-family: 'Cereal', sans-serif;
+          font-size: 1rem;
+          font-weight: 900;
+        }
+      }
 
       .right {
         font-family: 'Cereal', sans-serif;
@@ -2450,7 +2449,8 @@ body.light-mode {
   @media (min-width: 672px) {
     .back {
       background-image:
-        linear-gradient(180deg,
+        linear-gradient
+        (180deg,
         rgba(116, 137, 219, 0) 0%,
         rgba(2, 17, 104, 0.77) 100%),
         url('./components/images/events/rdv19.jpg');
@@ -2462,7 +2462,8 @@ body.light-mode {
     .back {
       background-image: url('./components/images/events/rdv19.jpg');
       background-image:
-        linear-gradient(180deg,
+        linear-gradient
+        (180deg,
         rgba(116, 137, 219, 0) 0%,
         rgba(2, 17, 104, 0.77) 100%),
         url('./components/images/events/rdv19.jpg');
@@ -2680,7 +2681,8 @@ body.light-mode {
     .instaEvent {
       background: #f09433;
       background:
-        linear-gradient(45deg,
+        linear-gradient
+        (45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -2870,8 +2872,8 @@ body.dark-mode {
       text-transform: uppercase;
 
       span {
-        font-weight: 600;
         color: #fff;
+        font-weight: 600;
       }
     }
 
@@ -4058,7 +4060,7 @@ body.dark-mode {
 
       .c-btn:hover,
       .c-btn:focus {
-        background-color: #ff0000;
+        background-color: #f00;
         color: #fff;
         cursor: pointer;
       }
@@ -4235,7 +4237,7 @@ body.dark-mode {
     // background-color: $green;
     .c-btn:hover,
     .c-btn:focus {
-      background-color: #ff0000;
+      background-color: #f00;
       color: #fff;
       cursor: pointer;
     }
@@ -4325,7 +4327,8 @@ body.dark-mode {
       .insta {
         background: #f09433;
         background:
-          linear-gradient(45deg,
+          linear-gradient
+          (45deg,
           #f09433 0%,
           #e6683c 25%,
           #dc2743 50%,
@@ -4398,8 +4401,6 @@ body.dark-mode {
     .c-btn-group > .c-btn {
       border-radius: 0;
     }
-
-
 
     .card-img {
       border-radius: 10px;
@@ -4474,7 +4475,7 @@ body.dark-mode {
 
   .c-btn:hover,
   .c-btn:focus {
-    background-color: #ff0000;
+    background-color: #f00;
     color: #fff;
     cursor: pointer;
   }
@@ -4522,7 +4523,8 @@ body.dark-mode {
     .insta {
       background: #f09433;
       background:
-        linear-gradient(45deg,
+        linear-gradient
+        (45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -4640,7 +4642,7 @@ body.dark-mode {
 
     .c-btn:hover,
     .c-btn:focus {
-      background-color: #ff0000;
+      background-color: #f00;
       color: #fff;
       cursor: pointer;
     }
@@ -4864,6 +4866,11 @@ body.dark-mode {
     .hostel-card-bg {
       background-color: $indigo2;
       border-radius: 10px;
+      box-sizing: border-box;
+      display: grid;
+      gap: 0 20px;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
       height: 80%;
       margin: 3rem 1rem 2rem;
       text-align: center;
@@ -4892,12 +4899,6 @@ body.dark-mode {
         z-index: 3;
       }
 
-      box-sizing: border-box;
-      display: grid;
-      gap: 0 20px;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
-
       .left1 {
         grid-column-start: 1;
         grid-row-start: 1;
@@ -4911,28 +4912,27 @@ body.dark-mode {
           max-width: 200px;
           width: 100%;
         }
-    }
-
-    .hostel-card-title {
-      background-color: #2b2b2e;
-      border-radius: 10px;
-      color: #fff;
-      margin-left: 20%;
-      margin-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      // display: inline-block;
-      position: absolute;
-      z-index: 4;
-
-      h1 {
-        color: #fff;
-        font-family: 'Cereal', sans-serif;
-        font-size: 1rem;
-        font-weight: 900;
       }
-    }
 
+      .hostel-card-title {
+        background-color: #2b2b2e;
+        border-radius: 10px;
+        color: #fff;
+        margin-left: 20%;
+        margin-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        // display: inline-block;
+        position: absolute;
+        z-index: 4;
+
+        h1 {
+          color: #fff;
+          font-family: 'Cereal', sans-serif;
+          font-size: 1rem;
+          font-weight: 900;
+        }
+      }
 
       .right {
         font-family: 'Cereal', sans-serif;
@@ -5167,7 +5167,8 @@ body.dark-mode {
   @media (min-width: 672px) {
     .back {
       background-image:
-        linear-gradient(180deg,
+        linear-gradient
+        (180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
         url('./components/images/events/rdv19.jpg');
@@ -5179,7 +5180,8 @@ body.dark-mode {
     .back {
       background-image: url('./components/images/events/rdv19.jpg');
       background-image:
-        linear-gradient(180deg,
+        linear-gradient
+        (180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
         url('./components/images/events/rdv19.jpg');
@@ -5397,7 +5399,8 @@ body.dark-mode {
     .instaEvent {
       background: #f09433;
       background:
-        linear-gradient(45deg,
+        linear-gradient
+        (45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
