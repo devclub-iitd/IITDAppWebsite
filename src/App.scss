@@ -69,37 +69,37 @@ body.light-mode {
 
   h1 {
     color: $indigo2;
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 22px;
     font-weight: 900;
   }
 
   h2 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 18px !important;
     font-weight: 400;
   }
 
   h3 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 14px !important;
     font-weight: 400;
   }
 
   h4 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 13px !important;
     font-weight: 900;
   }
 
   h5 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 12px !important;
     font-weight: 900;
   }
 
   h6 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 11px !important;
     font-weight: 600;
   }
@@ -137,7 +137,7 @@ body.light-mode {
     .navbar-left {
       color: $indigo2;
       cursor: pointer;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 15px;
       font-weight: 600;
       padding: 0.5rem;
@@ -146,16 +146,13 @@ body.light-mode {
 
     .navbar-middle {
       color: $indigo2;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 20px;
       font-weight: 900;
       text-transform: uppercase;
 
       span {
         font-weight: 600;
-      }
-
-      span {
         color: $indigo2;
       }
     }
@@ -163,7 +160,7 @@ body.light-mode {
     .navbar-right {
       color: $indigo2;
       cursor: pointer;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 40px;
       font-weight: 600;
       margin-right: -2px;
@@ -184,7 +181,7 @@ body.light-mode {
       color: $indigo2;
       display: flex;
       flex-direction: column;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       height: 100vh;
       position: absolute;
       transform: none;
@@ -356,7 +353,7 @@ body.light-mode {
 
       .layer-control {
         background-color: $indigo1;
-        font-family: 'Cereal' !important;
+        font-family: 'Cereal', sans-serif !important;
       }
 
       .pup {
@@ -379,7 +376,7 @@ body.light-mode {
 
         h1 {
           color: $indigo1;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 20px;
           font-weight: 900;
           margin-bottom: 10px;
@@ -389,7 +386,7 @@ body.light-mode {
         }
 
         p {
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 0.75rem;
           font-weight: 400;
           margin-bottom: 2rem;
@@ -445,7 +442,7 @@ body.light-mode {
         border-radius: 10px;
         color: $indigo2;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 5vw;
         font-weight: 900;
         padding-bottom: 0.5rem;
@@ -460,7 +457,7 @@ body.light-mode {
         border-radius: 10px;
         color: $indigo2;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 4vw;
         font-weight: 600;
         margin-bottom: 0.4rem;
@@ -500,7 +497,7 @@ body.light-mode {
         background-color: $indigo1;
         border-radius: 10px;
         color: $indigo2;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.5rem;
@@ -520,7 +517,7 @@ body.light-mode {
       background-color: $indigo1;
       border-radius: 10px;
       color: $indigo2;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       margin-top: 0;
       padding-bottom: 0.5rem;
@@ -554,7 +551,7 @@ body.light-mode {
 
       .news-card-heading {
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: 60%;
         order: 2;
@@ -579,7 +576,7 @@ body.light-mode {
             background-color: $indigo2;
             border-radius: 5px;
             color: $indigo1;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -594,7 +591,7 @@ body.light-mode {
             background-color: $indigo1;
             border-radius: 5px;
             color: $indigo2;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -635,7 +632,7 @@ body.light-mode {
 
       .news-card-heading {
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: 60%;
         order: 2;
@@ -658,7 +655,7 @@ body.light-mode {
             background-color: $indigo2;
             border-radius: 5px;
             color: $indigo1;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -673,7 +670,7 @@ body.light-mode {
             background-color: $indigo1;
             border-radius: 5px;
             color: $indigo2;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -715,7 +712,7 @@ body.light-mode {
       .news-card-heading {
         border-radius: 10px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         margin-top: 1rem;
         order: 2;
@@ -758,7 +755,7 @@ body.light-mode {
             background-color: $indigo2;
             border-radius: 5px;
             color: $indigo1;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -773,7 +770,7 @@ body.light-mode {
             background-color: $indigo1;
             border-radius: 5px;
             color: $indigo2;
-            font-family: 'Cereal';
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -887,7 +884,7 @@ body.light-mode {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      font-family: Cereal;
+      font-family: 'Cereal', sans-serif;
       height: 4rem;
       justify-content: center;
       padding-bottom: 1rem;
@@ -940,7 +937,7 @@ body.light-mode {
       }
 
       .pup {
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: auto;
         text-align: center;
@@ -961,7 +958,7 @@ body.light-mode {
 
         h1 {
           color: $indigo1;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 20px;
           font-weight: 900;
           margin-bottom: 10px;
@@ -971,7 +968,7 @@ body.light-mode {
         }
 
         p {
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 0.75rem;
           font-weight: 400;
           margin-bottom: 2rem;
@@ -1035,7 +1032,7 @@ body.light-mode {
         border-radius: 10px;
         color: $indigo1;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 2vw;
         font-weight: 900;
         padding-bottom: 0.5rem;
@@ -1052,7 +1049,7 @@ body.light-mode {
         border-radius: 10px;
         color: $indigo1;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.2vw;
         font-weight: 600;
         margin-bottom: 0.4rem;
@@ -1078,7 +1075,7 @@ body.light-mode {
       .link {
         background: rgba(220, 222, 240, 0.77);
         border-radius: 10px;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.3rem;
@@ -1098,7 +1095,7 @@ body.light-mode {
         background-color: $indigo1;
         border-radius: 10px;
         color: $indigo2;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.3rem;
@@ -1125,7 +1122,7 @@ body.light-mode {
       background-color: $indigo1;
       border-radius: 10px;
       color: $indigo2;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 20px;
       margin-bottom: 4rem;
       margin-top: 2rem;
@@ -1272,7 +1269,7 @@ body.light-mode {
 
     h1 {
       color: $indigo3;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1.2rem;
       font-weight: 900;
     }
@@ -1304,7 +1301,7 @@ body.light-mode {
 
     p {
       color: $indigo1;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       height: 50%;
       margin-left: -2rem;
       // position: absolute;
@@ -1331,7 +1328,7 @@ body.light-mode {
     }
 
     .right {
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       grid-column-start: 2;
       grid-row-start: 1;
       text-align: center;
@@ -1345,7 +1342,7 @@ body.light-mode {
 
       .c-btn:hover,
       .c-btn:focus {
-        background-color: red;
+        background-color: #ff0000;
         color: #fff;
         cursor: pointer;
       }
@@ -1353,7 +1350,7 @@ body.light-mode {
       .c-btn-group {
         border-radius: 10px;
         display: inline-flex;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         line-height: 1rem;
         margin: 0;
         margin-top: -4rem;
@@ -1366,7 +1363,7 @@ body.light-mode {
           color: $white;
           display: flex;
           flex-direction: row;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 1rem;
           justify-content: center;
           padding: 0.25rem;
@@ -1384,7 +1381,7 @@ body.light-mode {
 
         .fb {
           background-color: $blue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -1397,7 +1394,7 @@ body.light-mode {
 
         .fd {
           background-color: $red;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -1410,7 +1407,7 @@ body.light-mode {
 
         .girls {
           background-color: $pink;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -1423,7 +1420,7 @@ body.light-mode {
 
         .acad {
           background-color: $red;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -1431,7 +1428,7 @@ body.light-mode {
 
         .eat {
           background-color: $orange;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -1439,7 +1436,7 @@ body.light-mode {
 
         .hs {
           background-color: $blue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -1447,7 +1444,7 @@ body.light-mode {
 
         .map {
           background-color: $pblue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -1456,25 +1453,20 @@ body.light-mode {
 
         .ph {
           background-color: $orange;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
         }
       }
 
       .c-btn-group > .c-btn {
-        border: none;
         border-radius: 0;
-      }
-
-      .c-btn-group > .c-btn:last-child {
-        border-right: none;
       }
     }
   }
 
   .left2 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     // background-color: $blue;
     height: 100%;
     margin-top: 4rem;
@@ -1488,10 +1480,9 @@ body.light-mode {
 
     .learn {
       background-color: $green;
-      border: none;
       border-radius: 7px;
       color: $white;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       min-width: 60%;
       padding-bottom: 0.25rem;
       padding-left: 0.5rem;
@@ -1502,10 +1493,9 @@ body.light-mode {
 
     .map-link {
       background-color: $cherry;
-      border: none;
       border-radius: 7px;
       color: $white;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: auto;
       min-width: 60%;
       padding-bottom: 0.25rem;
@@ -1529,7 +1519,7 @@ body.light-mode {
     // background-color: $green;
     .c-btn:hover,
     .c-btn:focus {
-      background-color: red;
+      background-color: #ff0000;
       color: #fff;
       cursor: pointer;
     }
@@ -1538,7 +1528,7 @@ body.light-mode {
       border-radius: 10px;
       bottom: 30px;
       display: inline-flex;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       line-height: 1rem;
       margin: 0;
@@ -1605,7 +1595,7 @@ body.light-mode {
 
       .fb {
         background-color: $blue;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1625,7 +1615,7 @@ body.light-mode {
           #dc2743 50%,
           #cc2366 75%,
           #bc1888 100%);
-        color: white;
+        color: #fff;
         display: flex;
         filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
         flex-direction: row;
@@ -1639,7 +1629,7 @@ body.light-mode {
 
       .web {
         background-color: $teal;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1652,7 +1642,7 @@ body.light-mode {
 
       .git {
         background-color: #000;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1665,7 +1655,7 @@ body.light-mode {
 
       .fd {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
 
         &:hover {
@@ -1676,7 +1666,7 @@ body.light-mode {
 
       .hs {
         background-color: $blue;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1690,13 +1680,10 @@ body.light-mode {
     }
 
     .c-btn-group > .c-btn {
-      border: none;
       border-radius: 0;
     }
 
-    .c-btn-group > .c-btn:last-child {
-      border-right: none;
-    }
+
 
     .card-img {
       border-radius: 10px;
@@ -1712,14 +1699,14 @@ body.light-mode {
     // background-color: $red;
     h1 {
       color: $indigo1;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1.5rem;
       margin-right: 1rem;
     }
 
     p {
       color: $indigo1;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-weight: 400;
       margin-right: 2rem;
       padding-bottom: 1rem;
@@ -1771,7 +1758,7 @@ body.light-mode {
 
   .c-btn:hover,
   .c-btn:focus {
-    background-color: red;
+    background-color: #ff0000;
     color: #fff;
     cursor: pointer;
   }
@@ -1779,7 +1766,7 @@ body.light-mode {
   .c-btn-group {
     border-radius: 10px;
     display: inline-flex;
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     line-height: 1rem;
     margin: 0;
     margin-top: -4rem;
@@ -1792,7 +1779,7 @@ body.light-mode {
       color: $white;
       display: flex;
       flex-direction: row;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       justify-content: center;
       padding: 0.25rem;
@@ -1804,14 +1791,14 @@ body.light-mode {
 
     .fb {
       background-color: $blue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .girls {
       background-color: $pink;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
@@ -1825,7 +1812,7 @@ body.light-mode {
         #dc2743 50%,
         #cc2366 75%,
         #bc1888 100%);
-      color: white;
+      color: #fff;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
       padding: 0.25rem;
       padding-bottom: 0;
@@ -1833,28 +1820,28 @@ body.light-mode {
 
     .web {
       background-color: $teal;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .sp {
       background-color: #000;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .git {
       background-color: #000;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .acad {
       background-color: $red;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -1862,7 +1849,7 @@ body.light-mode {
 
     .eat {
       background-color: $orange;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -1870,7 +1857,7 @@ body.light-mode {
 
     .fd {
       background-color: $red;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -1878,7 +1865,7 @@ body.light-mode {
 
     .hs {
       background-color: $blue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -1886,7 +1873,7 @@ body.light-mode {
 
     .map {
       background-color: $pblue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
       text-decoration: none;
@@ -1894,26 +1881,21 @@ body.light-mode {
 
     .ph {
       background-color: $orange;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
   }
 
   .c-btn-group > .c-btn {
-    border: none;
     border-radius: 0;
-  }
-
-  .c-btn-group > .c-btn:last-child {
-    border-right: none;
   }
 
   .campus-card {
     background-color: $indigo-content;
     border-radius: 10px;
     color: $indigo1;
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     text-align: center;
     width: 100%;
 
@@ -1942,7 +1924,7 @@ body.light-mode {
 
     .c-btn:hover,
     .c-btn:focus {
-      background-color: red;
+      background-color: #ff0000;
       color: #fff;
       cursor: pointer;
     }
@@ -1951,7 +1933,7 @@ body.light-mode {
       border-radius: 10px;
       bottom: 14px;
       display: inline-flex;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       left: 17%;
       line-height: 1.2rem;
       position: fixed;
@@ -2007,7 +1989,7 @@ body.light-mode {
         color: $white;
         display: flex;
         flex-direction: row;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1rem;
         justify-content: center;
         padding: 0.25rem;
@@ -2019,35 +2001,35 @@ body.light-mode {
 
       .fb {
         background-color: $blue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .web {
         background-color: $teal;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .sp {
         background-color: #000;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .git {
         background-color: #000;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .acad {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -2055,7 +2037,7 @@ body.light-mode {
 
       .eat {
         background-color: $orange;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -2063,7 +2045,7 @@ body.light-mode {
 
       .fd {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -2071,7 +2053,7 @@ body.light-mode {
 
       .hs {
         background-color: $blue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -2079,7 +2061,7 @@ body.light-mode {
 
       .map {
         background-color: $pblue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
         text-decoration: none;
@@ -2087,19 +2069,14 @@ body.light-mode {
 
       .ph {
         background-color: $orange;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
     }
 
     .c-btn-group > .c-btn {
-      border: none;
       border-radius: 0;
-    }
-
-    .c-btn-group > .c-btn:last-child {
-      border-right: none;
     }
   }
 
@@ -2114,7 +2091,7 @@ body.light-mode {
     .link-card {
       h1 {
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 2rem;
         font-weight: 900;
       }
@@ -2125,7 +2102,7 @@ body.light-mode {
         background-repeat: no-repeat;
         background-size: 0% 2px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.2rem;
         font-weight: 600;
         position: relative;
@@ -2146,7 +2123,7 @@ body.light-mode {
       background-repeat: no-repeat;
       background-size: 0% 2px;
       color: #5160bc;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1.2rem;
       font-weight: 600;
       position: relative;
@@ -2189,7 +2166,7 @@ body.light-mode {
 
       p {
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         height: 50%;
         // position: absolute;
         margin-top: 3rem;
@@ -2198,29 +2175,7 @@ body.light-mode {
         width: 80%;
         z-index: 3;
       }
-    }
 
-    .hostel-card-title {
-      background-color: $pblue;
-      border-radius: 10px;
-      color: $indigo-content;
-      margin-left: 20%;
-      margin-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      // display: inline-block;
-      position: absolute;
-      z-index: 4;
-
-      h1 {
-        color: $indigo3;
-        font-family: 'Cereal';
-        font-size: 1rem;
-        font-weight: 900;
-      }
-    }
-
-    .hostel-card-bg {
       box-sizing: border-box;
       display: grid;
       gap: 0 20px;
@@ -2240,10 +2195,30 @@ body.light-mode {
           max-width: 200px;
           width: 100%;
         }
+    }
+
+    .hostel-card-title {
+      background-color: $pblue;
+      border-radius: 10px;
+      color: $indigo-content;
+      margin-left: 20%;
+      margin-top: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      // display: inline-block;
+      position: absolute;
+      z-index: 4;
+
+      h1 {
+        color: $indigo3;
+        font-family: 'Cereal', sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
       }
+    }
 
       .right {
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 0.9rem;
         grid-column-start: 2;
         grid-row-start: 1;
@@ -2298,7 +2273,7 @@ body.light-mode {
         border: 1px solid $indigo3;
         border-radius: 10px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 17px;
         font-weight: 600;
         left: 30px;
@@ -2347,7 +2322,7 @@ body.light-mode {
         background-color: $indigo1;
         border-radius: 15px;
         color: $indigo2;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         left: 300px;
         padding: 1rem;
         position: absolute;
@@ -2374,7 +2349,7 @@ body.light-mode {
         border: 1px solid $indigo3;
         border-radius: 10px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 17px;
         font-weight: 600;
         left: -10px;
@@ -2429,7 +2404,7 @@ body.light-mode {
         background-color: $indigo1;
         border-radius: 15px;
         color: $indigo2;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         padding: 1rem;
         padding-top: 1rem;
         position: absolute;
@@ -2686,7 +2661,7 @@ body.light-mode {
 
     .fbEvent {
       background-color: #1778f2;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -2713,7 +2688,7 @@ body.light-mode {
         #bc1888 100%);
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -2733,7 +2708,7 @@ body.light-mode {
       background-color: $teal;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -2811,38 +2786,38 @@ body.dark-mode {
   -webkit-touch-callout: none;
 
   h1 {
-    color: white;
-    font-family: 'Cereal';
+    color: #fff;
+    font-family: 'Cereal', sans-serif;
     font-size: 22px;
     font-weight: 900;
   }
 
   h2 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 18px !important;
     font-weight: 400;
   }
 
   h3 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 14px !important;
     font-weight: 400;
   }
 
   h4 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 13px !important;
     font-weight: 900;
   }
 
   h5 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 12px !important;
     font-weight: 900;
   }
 
   h6 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     font-size: 11px !important;
     font-weight: 600;
   }
@@ -2878,9 +2853,9 @@ body.dark-mode {
     }
 
     .navbar-left {
-      color: white;
+      color: #fff;
       cursor: pointer;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 15px;
       font-weight: 600;
       padding: 0.5rem;
@@ -2888,25 +2863,22 @@ body.dark-mode {
     }
 
     .navbar-middle {
-      color: white;
-      font-family: 'Cereal';
+      color: #fff;
+      font-family: 'Cereal', sans-serif;
       font-size: 20px;
       font-weight: 900;
       text-transform: uppercase;
 
       span {
         font-weight: 600;
-      }
-
-      span {
-        color: white;
+        color: #fff;
       }
     }
 
     .navbar-right {
       color: $indigo1;
       cursor: pointer;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 40px;
       font-weight: 600;
       margin-right: -2px;
@@ -2923,10 +2895,10 @@ body.dark-mode {
 
     .expand {
       background: $indigo1;
-      color: white;
+      color: #fff;
       display: flex;
       flex-direction: column;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       height: 100vh;
       position: absolute;
       transform: none;
@@ -3021,7 +2993,7 @@ body.dark-mode {
 
       .navbar-right {
         // margin-left:20px;
-        color: white;
+        color: #fff;
         // background-color: $indigo1;
         height: 30px;
         padding-right: 15px;
@@ -3033,7 +3005,7 @@ body.dark-mode {
         z-index: 999999;
 
         h1 {
-          color: white;
+          color: #fff;
           margin-left: auto;
           margin-top: 2rem;
         }
@@ -3089,7 +3061,7 @@ body.dark-mode {
       height: 90vh;
 
       h6 {
-        color: white;
+        color: #fff;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -3098,7 +3070,7 @@ body.dark-mode {
 
       .layer-control {
         background-color: $indigo1;
-        font-family: 'Cereal' !important;
+        font-family: 'Cereal', sans-serif !important;
       }
 
       .pup {
@@ -3121,7 +3093,7 @@ body.dark-mode {
 
         h1 {
           color: $indigo1;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 20px;
           font-weight: 900;
           margin-bottom: 10px;
@@ -3131,7 +3103,7 @@ body.dark-mode {
         }
 
         p {
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 0.75rem;
           font-weight: 400;
           margin-bottom: 2rem;
@@ -3185,9 +3157,9 @@ body.dark-mode {
       .top-left-1 {
         background-color: $indigo1;
         border-radius: 10px;
-        color: white;
+        color: #fff;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 5vw;
         font-weight: 900;
         padding-bottom: 0.5rem;
@@ -3200,9 +3172,9 @@ body.dark-mode {
       .top-left-2 {
         background-color: $indigo1;
         border-radius: 10px;
-        color: white;
+        color: #fff;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 4vw;
         font-weight: 600;
         margin-bottom: 0.4rem;
@@ -3220,11 +3192,11 @@ body.dark-mode {
       width: 100%;
 
       a {
-        background-image: linear-gradient(currentColor, white);
+        background-image: linear-gradient(currentColor, $white);
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
-        color: white;
+        color: #fff;
         text-decoration: none;
         transition: background-size 0.3s;
       }
@@ -3234,7 +3206,7 @@ body.dark-mode {
       }
 
       a:visited {
-        color: white;
+        color: #fff;
         text-decoration: none;
       }
 
@@ -3242,7 +3214,7 @@ body.dark-mode {
         background-color: $indigo1;
         border-radius: 10px;
         color: $white;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.5rem;
@@ -3261,8 +3233,8 @@ body.dark-mode {
     .disc {
       background-color: $indigo1;
       border-radius: 10px;
-      color: aliceblue;
-      font-family: 'Cereal';
+      color: #f0f8ff;
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       margin-top: 0;
       padding-bottom: 0.5rem;
@@ -3295,8 +3267,8 @@ body.dark-mode {
       }
 
       .news-card-heading {
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: 60%;
         order: 2;
@@ -3320,8 +3292,8 @@ body.dark-mode {
           a:focus {
             background-color: $indigo2;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3335,8 +3307,8 @@ body.dark-mode {
           a {
             background-color: $indigo1;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3376,8 +3348,8 @@ body.dark-mode {
       }
 
       .news-card-heading {
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: 60%;
         order: 2;
@@ -3399,8 +3371,8 @@ body.dark-mode {
           a:focus {
             background-color: $indigo2;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3414,8 +3386,8 @@ body.dark-mode {
           a {
             background-color: $indigo1;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3456,8 +3428,8 @@ body.dark-mode {
 
       .news-card-heading {
         border-radius: 10px;
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         margin-top: 1rem;
         order: 2;
@@ -3489,7 +3461,7 @@ body.dark-mode {
           text-decoration: none;
 
           .news-icon {
-            color: white;
+            color: #fff;
             margin-left: 1rem;
             padding: 0.3rem;
             text-decoration: none;
@@ -3499,8 +3471,8 @@ body.dark-mode {
           a:focus {
             background-color: $indigo2;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3514,8 +3486,8 @@ body.dark-mode {
           a {
             background-color: $indigo1;
             border-radius: 5px;
-            color: white;
-            font-family: 'Cereal';
+            color: #fff;
+            font-family: 'Cereal', sans-serif;
             line-height: 20px;
             margin-left: 10px;
             padding-bottom: 0.3rem;
@@ -3613,7 +3585,7 @@ body.dark-mode {
           border: 0;
           // padding: 1.59rem;
           border-left: 1px solid $indigo1;
-          color: white;
+          color: #fff;
           font-size: 1.25rem;
           font-weight: 600;
           height: 2rem;
@@ -3625,11 +3597,11 @@ body.dark-mode {
     .filters {
       align-content: right;
       background: rgba(44, 44, 46, 0.95);
-      color: white !important;
+      color: #fff !important;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      font-family: Cereal;
+      font-family: 'Cereal', sans-serif;
       height: 4rem;
       justify-content: center;
       padding-bottom: 1rem;
@@ -3641,7 +3613,7 @@ body.dark-mode {
 
       h1 {
         align-self: right;
-        color: white;
+        color: #fff;
         font-size: 2rem;
         font-weight: 400;
         padding-bottom: 0.5rem;
@@ -3670,7 +3642,7 @@ body.dark-mode {
       z-index: 1;
 
       h6 {
-        color: white;
+        color: #fff;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -3682,7 +3654,7 @@ body.dark-mode {
       }
 
       .pup {
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-weight: 600;
         height: auto;
         text-align: center;
@@ -3703,7 +3675,7 @@ body.dark-mode {
 
         h1 {
           color: $indigo1;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 20px;
           font-weight: 900;
           margin-bottom: 10px;
@@ -3713,7 +3685,7 @@ body.dark-mode {
         }
 
         p {
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 0.75rem;
           font-weight: 400;
           margin-bottom: 2rem;
@@ -3775,9 +3747,9 @@ body.dark-mode {
       .top-left-1 {
         background: rgba(40, 40, 44, 0.77);
         border-radius: 10px;
-        color: white;
+        color: #fff;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 2vw;
         font-weight: 900;
         padding-bottom: 0.5rem;
@@ -3792,9 +3764,9 @@ body.dark-mode {
       .top-left-2 {
         background: rgba(40, 40, 44, 0.77);
         border-radius: 10px;
-        color: white;
+        color: #fff;
         display: inline-block;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.2vw;
         font-weight: 600;
         margin-bottom: 0.4rem;
@@ -3820,7 +3792,7 @@ body.dark-mode {
       .link {
         background: rgba(40, 40, 44, 0.77);
         border-radius: 10px;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.3rem;
@@ -3828,7 +3800,7 @@ body.dark-mode {
         padding-right: 1.5rem;
 
         a {
-          color: white;
+          color: #fff;
           text-decoration: none;
         }
       }
@@ -3836,10 +3808,10 @@ body.dark-mode {
       .link:hover,
       .link:focus,
       .link:active {
-        background-color: white;
+        background-color: #fff;
         border-radius: 10px;
         color: $indigo2;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1.4vw;
         margin-top: 0.4rem;
         padding-bottom: 0.3rem;
@@ -3865,8 +3837,8 @@ body.dark-mode {
     .disc {
       background-color: $indigo1;
       border-radius: 10px;
-      color: aliceblue;
-      font-family: 'Cereal';
+      color: #f0f8ff;
+      font-family: 'Cereal', sans-serif;
       font-size: 20px;
       margin-bottom: 4rem;
       margin-top: 2rem;
@@ -3992,7 +3964,7 @@ body.dark-mode {
   }
 
   .hostelGrid {
-    // background-color: white;
+    // background-color: #fff;
     border-radius: 15px;
     justify-content: center;
     text-align: center;
@@ -4001,7 +3973,7 @@ body.dark-mode {
   .hostel-card-title {
     background-color: #2b2b2e;
     border-radius: 10px;
-    color: white;
+    color: #fff;
     display: block;
     margin-left: 20%;
     margin-top: 1rem;
@@ -4012,8 +3984,8 @@ body.dark-mode {
     z-index: 4;
 
     h1 {
-      color: white;
-      font-family: 'Cereal';
+      color: #fff;
+      font-family: 'Cereal', sans-serif;
       font-size: 1.2rem;
       font-weight: 900;
     }
@@ -4034,7 +4006,7 @@ body.dark-mode {
     z-index: 3;
 
     .card-subtitle {
-      color: white;
+      color: #fff;
       font-size: 1.2rem;
       font-weight: 900;
       margin-left: 40%;
@@ -4044,8 +4016,8 @@ body.dark-mode {
     }
 
     p {
-      color: white;
-      font-family: 'Cereal';
+      color: #fff;
+      font-family: 'Cereal', sans-serif;
       height: 50%;
       margin-left: -2rem;
       // position: absolute;
@@ -4072,7 +4044,7 @@ body.dark-mode {
     }
 
     .right {
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       grid-column-start: 2;
       grid-row-start: 1;
       text-align: center;
@@ -4086,7 +4058,7 @@ body.dark-mode {
 
       .c-btn:hover,
       .c-btn:focus {
-        background-color: red;
+        background-color: #ff0000;
         color: #fff;
         cursor: pointer;
       }
@@ -4094,7 +4066,7 @@ body.dark-mode {
       .c-btn-group {
         border-radius: 10px;
         display: inline-flex;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         line-height: 1rem;
         margin: 0;
         margin-top: -4rem;
@@ -4107,7 +4079,7 @@ body.dark-mode {
           color: $white;
           display: flex;
           flex-direction: row;
-          font-family: 'Cereal';
+          font-family: 'Cereal', sans-serif;
           font-size: 1rem;
           justify-content: center;
           padding: 0.25rem;
@@ -4125,7 +4097,7 @@ body.dark-mode {
 
         .fb {
           background-color: $blue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -4138,7 +4110,7 @@ body.dark-mode {
 
         .fd {
           background-color: $red;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -4151,7 +4123,7 @@ body.dark-mode {
 
         .girls {
           background-color: $pink;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -4164,7 +4136,7 @@ body.dark-mode {
 
         .acad {
           background-color: $red;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -4172,7 +4144,7 @@ body.dark-mode {
 
         .eat {
           background-color: $orange;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -4180,7 +4152,7 @@ body.dark-mode {
 
         .hs {
           background-color: $blue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
@@ -4188,7 +4160,7 @@ body.dark-mode {
 
         .map {
           background-color: $pblue;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
           padding-right: 0.5rem;
@@ -4197,25 +4169,20 @@ body.dark-mode {
 
         .ph {
           background-color: $orange;
-          color: white;
+          color: #fff;
           padding: 0.25rem;
           padding-bottom: 0;
         }
       }
 
       .c-btn-group > .c-btn {
-        border: none;
         border-radius: 0;
-      }
-
-      .c-btn-group > .c-btn:last-child {
-        border-right: none;
       }
     }
   }
 
   .left2 {
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     // background-color: $blue;
     height: 100%;
     margin-top: 4rem;
@@ -4229,10 +4196,9 @@ body.dark-mode {
 
     .learn {
       background-color: $green;
-      border: none;
       border-radius: 7px;
       color: $white;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       min-width: 60%;
       padding-bottom: 0.25rem;
       padding-left: 0.5rem;
@@ -4243,10 +4209,9 @@ body.dark-mode {
 
     .map-link {
       background-color: $cherry;
-      border: none;
       border-radius: 7px;
       color: $white;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: auto;
       min-width: 60%;
       padding-bottom: 0.25rem;
@@ -4270,7 +4235,7 @@ body.dark-mode {
     // background-color: $green;
     .c-btn:hover,
     .c-btn:focus {
-      background-color: red;
+      background-color: #ff0000;
       color: #fff;
       cursor: pointer;
     }
@@ -4279,7 +4244,7 @@ body.dark-mode {
       border-radius: 10px;
       bottom: 30px;
       display: inline-flex;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       line-height: 1rem;
       margin: 0;
@@ -4346,7 +4311,7 @@ body.dark-mode {
 
       .fb {
         background-color: $blue;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -4366,7 +4331,7 @@ body.dark-mode {
           #dc2743 50%,
           #cc2366 75%,
           #bc1888 100%);
-        color: white;
+        color: #fff;
         display: flex;
         filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
         flex-direction: row;
@@ -4380,7 +4345,7 @@ body.dark-mode {
 
       .web {
         background-color: $teal;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -4393,7 +4358,7 @@ body.dark-mode {
 
       .git {
         background-color: #000;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -4406,7 +4371,7 @@ body.dark-mode {
 
       .fd {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
 
         &:hover {
@@ -4417,7 +4382,7 @@ body.dark-mode {
 
       .hs {
         background-color: $blue;
-        color: white;
+        color: #fff;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -4431,13 +4396,10 @@ body.dark-mode {
     }
 
     .c-btn-group > .c-btn {
-      border: none;
       border-radius: 0;
     }
 
-    .c-btn-group > .c-btn:last-child {
-      border-right: none;
-    }
+
 
     .card-img {
       border-radius: 10px;
@@ -4452,15 +4414,15 @@ body.dark-mode {
     margin-right: 1rem;
     // background-color: $red;
     h1 {
-      color: white;
-      font-family: 'Cereal';
+      color: #fff;
+      font-family: 'Cereal', sans-serif;
       font-size: 1.5rem;
       margin-right: 1rem;
     }
 
     p {
-      color: white;
-      font-family: 'Cereal';
+      color: #fff;
+      font-family: 'Cereal', sans-serif;
       font-weight: 400;
       margin-right: 2rem;
       padding-bottom: 1rem;
@@ -4512,7 +4474,7 @@ body.dark-mode {
 
   .c-btn:hover,
   .c-btn:focus {
-    background-color: red;
+    background-color: #ff0000;
     color: #fff;
     cursor: pointer;
   }
@@ -4520,7 +4482,7 @@ body.dark-mode {
   .c-btn-group {
     border-radius: 10px;
     display: inline-flex;
-    font-family: 'Cereal';
+    font-family: 'Cereal', sans-serif;
     line-height: 1rem;
     margin: 0;
     margin-top: -4rem;
@@ -4533,7 +4495,7 @@ body.dark-mode {
       color: $white;
       display: flex;
       flex-direction: row;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1rem;
       justify-content: center;
       padding: 0.25rem;
@@ -4545,14 +4507,14 @@ body.dark-mode {
 
     .fb {
       background-color: $blue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .girls {
       background-color: $pink;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
@@ -4566,7 +4528,7 @@ body.dark-mode {
         #dc2743 50%,
         #cc2366 75%,
         #bc1888 100%);
-      color: white;
+      color: #fff;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
       padding: 0.25rem;
       padding-bottom: 0;
@@ -4574,28 +4536,28 @@ body.dark-mode {
 
     .web {
       background-color: $teal;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .sp {
       background-color: #000;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .git {
       background-color: #000;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
 
     .acad {
       background-color: $red;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -4603,7 +4565,7 @@ body.dark-mode {
 
     .eat {
       background-color: $orange;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -4611,7 +4573,7 @@ body.dark-mode {
 
     .fd {
       background-color: $red;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -4619,7 +4581,7 @@ body.dark-mode {
 
     .hs {
       background-color: $blue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
@@ -4627,7 +4589,7 @@ body.dark-mode {
 
     .map {
       background-color: $pblue;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
       text-decoration: none;
@@ -4635,26 +4597,21 @@ body.dark-mode {
 
     .ph {
       background-color: $orange;
-      color: white;
+      color: #fff;
       padding: 0.25rem;
       padding-bottom: 0;
     }
   }
 
   .c-btn-group > .c-btn {
-    border: none;
     border-radius: 0;
-  }
-
-  .c-btn-group > .c-btn:last-child {
-    border-right: none;
   }
 
   .campus-card {
     background-color: $indigo2;
     border-radius: 10px;
-    color: white;
-    font-family: 'Cereal';
+    color: #fff;
+    font-family: 'Cereal', sans-serif;
     text-align: center;
     width: 100%;
 
@@ -4683,7 +4640,7 @@ body.dark-mode {
 
     .c-btn:hover,
     .c-btn:focus {
-      background-color: red;
+      background-color: #ff0000;
       color: #fff;
       cursor: pointer;
     }
@@ -4692,7 +4649,7 @@ body.dark-mode {
       border-radius: 10px;
       bottom: 14px;
       display: inline-flex;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       left: 17%;
       line-height: 1.2rem;
       position: fixed;
@@ -4748,7 +4705,7 @@ body.dark-mode {
         color: $white;
         display: flex;
         flex-direction: row;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 1rem;
         justify-content: center;
         padding: 0.25rem;
@@ -4760,35 +4717,35 @@ body.dark-mode {
 
       .fb {
         background-color: $blue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .web {
         background-color: $teal;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .sp {
         background-color: #000;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .git {
         background-color: #000;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
 
       .acad {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -4796,7 +4753,7 @@ body.dark-mode {
 
       .eat {
         background-color: $orange;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -4804,7 +4761,7 @@ body.dark-mode {
 
       .fd {
         background-color: $red;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -4812,7 +4769,7 @@ body.dark-mode {
 
       .hs {
         background-color: $blue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -4820,7 +4777,7 @@ body.dark-mode {
 
       .map {
         background-color: $pblue;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
         text-decoration: none;
@@ -4828,19 +4785,14 @@ body.dark-mode {
 
       .ph {
         background-color: $orange;
-        color: white;
+        color: #fff;
         padding: 0.25rem;
         padding-bottom: 0;
       }
     }
 
     .c-btn-group > .c-btn {
-      border: none;
       border-radius: 0;
-    }
-
-    .c-btn-group > .c-btn:last-child {
-      border-right: none;
     }
   }
 
@@ -4854,8 +4806,8 @@ body.dark-mode {
     // padding: 1rem;
     .link-card {
       h1 {
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         font-size: 2rem;
         font-weight: 900;
       }
@@ -4865,8 +4817,8 @@ body.dark-mode {
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: 0% 2px;
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         font-size: 1.2rem;
         font-weight: 600;
         position: relative;
@@ -4887,7 +4839,7 @@ body.dark-mode {
       background-repeat: no-repeat;
       background-size: 0% 2px;
       color: $gray;
-      font-family: 'Cereal';
+      font-family: 'Cereal', sans-serif;
       font-size: 1.2rem;
       font-weight: 600;
       position: relative;
@@ -4930,7 +4882,7 @@ body.dark-mode {
 
       p {
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         height: 50%;
         // position: absolute;
         margin-top: 3rem;
@@ -4939,29 +4891,7 @@ body.dark-mode {
         width: 80%;
         z-index: 3;
       }
-    }
 
-    .hostel-card-title {
-      background-color: #2b2b2e;
-      border-radius: 10px;
-      color: white;
-      margin-left: 20%;
-      margin-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      // display: inline-block;
-      position: absolute;
-      z-index: 4;
-
-      h1 {
-        color: white;
-        font-family: 'Cereal';
-        font-size: 1rem;
-        font-weight: 900;
-      }
-    }
-
-    .hostel-card-bg {
       box-sizing: border-box;
       display: grid;
       gap: 0 20px;
@@ -4981,10 +4911,31 @@ body.dark-mode {
           max-width: 200px;
           width: 100%;
         }
+    }
+
+    .hostel-card-title {
+      background-color: #2b2b2e;
+      border-radius: 10px;
+      color: #fff;
+      margin-left: 20%;
+      margin-top: 1rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      // display: inline-block;
+      position: absolute;
+      z-index: 4;
+
+      h1 {
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
+        font-size: 1rem;
+        font-weight: 900;
       }
+    }
+
 
       .right {
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 0.9rem;
         grid-column-start: 2;
         grid-row-start: 1;
@@ -5039,7 +4990,7 @@ body.dark-mode {
         border: 1px solid $indigo3;
         border-radius: 10px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 17px;
         font-weight: 600;
         left: 30px;
@@ -5057,7 +5008,7 @@ body.dark-mode {
         border-radius: 10px;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
-        color: white;
+        color: #fff;
         display: inline-block;
         font-size: 17px;
         padding-bottom: 1px;
@@ -5071,7 +5022,7 @@ body.dark-mode {
       .filter-icon {
         background-color: $indigo1;
         border-radius: 15px;
-        color: white;
+        color: #fff;
         cursor: pointer;
         display: inline-block;
         font-size: 20px;
@@ -5087,8 +5038,8 @@ body.dark-mode {
       .filterCheckBoxes {
         background-color: $indigo1;
         border-radius: 15px;
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         left: 300px;
         padding: 1rem;
         position: absolute;
@@ -5111,11 +5062,11 @@ body.dark-mode {
       z-index: 100;
 
       input[type='text'] {
-        background-color: white;
+        background-color: #fff;
         border: 1px solid $indigo3;
         border-radius: 10px;
         color: $indigo1;
-        font-family: 'Cereal';
+        font-family: 'Cereal', sans-serif;
         font-size: 17px;
         font-weight: 600;
         left: -10px;
@@ -5136,7 +5087,7 @@ body.dark-mode {
         border-bottom-right-radius: 0;
         border-top-left-radius: 15px;
         border-top-right-radius: 0;
-        color: white;
+        color: #fff;
         display: inline-block;
         font-size: 17px;
         left: 10px;
@@ -5152,7 +5103,7 @@ body.dark-mode {
       .filter-icon {
         background-color: $indigo1;
         border-radius: 15px;
-        color: white;
+        color: #fff;
         cursor: pointer;
         display: inline-block;
         font-size: 20px;
@@ -5169,8 +5120,8 @@ body.dark-mode {
       .filterCheckBoxes {
         background-color: $indigo1;
         border-radius: 15px;
-        color: white;
-        font-family: 'Cereal';
+        color: #fff;
+        font-family: 'Cereal', sans-serif;
         padding: 1rem;
         padding-top: 1rem;
         position: absolute;
@@ -5182,7 +5133,7 @@ body.dark-mode {
       h1 {
         background-color: $indigo2;
         border-radius: 10px;
-        color: white;
+        color: #fff;
       }
     }
   }
@@ -5257,7 +5208,7 @@ body.dark-mode {
       .dates {
         background-color: $indigo2;
         border-radius: 5px;
-        color: white;
+        color: #fff;
         font-size: 0.8em;
         line-height: 1em;
         padding: 0 5px;
@@ -5353,7 +5304,7 @@ body.dark-mode {
         .dates {
           background-color: $indigo2;
           border-radius: 5px;
-          color: white;
+          color: #fff;
           font-size: 0.8em;
           line-height: 1em;
           padding: 0 5px;
@@ -5404,7 +5355,7 @@ body.dark-mode {
         background-color: $indigo2;
         border-radius: 10px;
         bottom: 12px;
-        color: white;
+        color: #fff;
         font-size: 10px;
         line-height: 20px;
         margin-left: 5px;
@@ -5427,7 +5378,7 @@ body.dark-mode {
 
     .fbEvent {
       background-color: #1778f2;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -5454,7 +5405,7 @@ body.dark-mode {
         #bc1888 100%);
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -5474,7 +5425,7 @@ body.dark-mode {
       background-color: $teal;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      color: white;
+      color: #fff;
       justify-content: center;
       padding: 5px;
       padding-bottom: 2px;
@@ -5514,7 +5465,7 @@ body.dark-mode {
         background-color: $indigo2;
         border-radius: 10px;
         bottom: 15px;
-        color: white;
+        color: #fff;
         font-size: 16px;
         line-height: 26px;
         margin-left: 10px;

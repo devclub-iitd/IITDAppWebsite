@@ -18,7 +18,7 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_MD: true
           VALIDATE_DOCKER: true
-          VALIDATE_CSS: true
+          VALIDATE_CSS: false
           VALIDATE_ENV: true
 
   lint:
