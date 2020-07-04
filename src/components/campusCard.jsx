@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Panel } from 'rsuite';
 import * as Icon from 'react-feather';

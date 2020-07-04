@@ -1,18 +1,11 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
 } from 'react-router-dom';
-import {
-  useEffectOnce,
-  useLockBodyScroll,
-  useWindowSize,
-  useLocalStorage,
-} from 'react-use';
+import { useWindowSize } from 'react-use';
 import Leaflet from 'leaflet';
 import useDarkMode from 'use-dark-mode';
 import Navbar from './components/navbar';

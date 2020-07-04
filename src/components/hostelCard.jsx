@@ -1,154 +1,284 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-import * as Icon from 'react-feather';
-import PropTypes from 'prop-types';
+import { Responsive, WidthProvider } from 'react-grid-layout';
+import CampusCard from './campusCard';
+import Search from './search';
+import loc from './shared/locationsCampus';
+import CheckBox from './shared/checkBox';
+import ToTop from './minis/goToTop';
+import Empty from './emptyResults';
 
-const HostelCard = ({ hostelObj, show }) => (
-  <>
-    <div className="hostel-card-title">
-      <h1>{hostelObj.name}</h1>
-    </div>
-    <div className="hostel-card-bg">
-      <h1 className="card-subtitle">
-        Est.
-        {hostelObj.est}
-      </h1>
-      <div key="a" autoSize="true" className="left1">
-        {hostelObj.image}
-      </div>
-      <div key="b" autoSize="true" className="right">
-        <p>
-          {hostelObj.description}
-          {' '}
-        </p>
-      </div>
-      <div key="c" autoSize="true" className="left2">
-        <div className="c-btn-group">
-          {hostelObj.category}
-          <a className="c-btn fd" href={hostelObj.mapUrl}>
-            <span className="hostel-link">
-              <Icon.MapPin height="15" strokeWidth="3" />
-              {' '}
-              Find on
-              Map
-              {'  '}
-            </span>
-          </a>
-          <a
-            className="c-btn learn-e"
-            role="button"
-            onClick={() => show(hostelObj)}
-          >
-            <span className="hostel-link">
-              <Icon.Info height="15" strokeWidth="3" />
-              More Info
-              {'  '}
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </>
-);
+const ResponsiveGridLayout = WidthProvider(Responsive);
 
-function RodalContent({ rodalObj }) {
-  const temp = rodalObj;
-  let notableAlumni = [];
-  notableAlumni = temp.notableAlumni;
-  const notableAlumniRoll = [];
-  let len = '';
-  notableAlumni ? (len = notableAlumni.length) : (len = 0);
-  let j = 0;
-  for (j = 0; j < len; j += 1) {
-    notableAlumniRoll.push(
-      <div>
-        <div
-          className="left-e"
-          style={{
-            maxWidth: 200,
-            display: 'block',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            objectFit: 'cover',
-          }}
-        >
-          <img
-            src={rodalObj.notableAlumniImages[j]}
-            alt={notableAlumni[j]}
-            style={{
-              position: 'relative',
-              objectFit: 'cover',
-              backgroundSize: 'cover',
-              maxWidth: 150,
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              borderRadius: 20,
-            }}
-          />
-        </div>
-        <a href={rodalObj.notableAlumniLinks[j]}>
-          <h2>{notableAlumni[j]}</h2>
-        </a>
-        <h4>{rodalObj.notableAlumniDesc[j]}</h4>
-      </div>,
-    );
-  }
+class Campus extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            searchQuery: '',
+            filtered: loc,
+            options: [
+                {
+                    id: 1,
+                    value: 'Academic',
+                    isChecked: true,
+                    category: 'academic',
+                },
+                {
+                    id: 2,
+                    value: 'Food & Drinks',
+                    isChecked: true,
+                    category: 'eat',
+                },
+                {
+                    id: 3,
+                    value: 'Sports & Rec.',
+                    isChecked: true,
+                    category: 'sport',
+                },
+            ],
+            showFilters: false,
+        };
+        this.handleClickFilter = this.handleClickFilter.bind(this);
+        this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
+            this
+        );
+        this.handleChange = this.handleChange.bind(this);
+    }
 
-  notableAlumni ? (len = notableAlumni.length) : (len = 0);
-  return (
-    <div style={{ textAlign: 'center' }}>
-      <h1 className="rodal-h1" style={{ fontWeight: '900' }}>
-        {rodalObj.name}
-      </h1>
-      <div className="c-btn-group">
-        {rodalObj.category}
-        <a
-          style={{ textDecoration: 'none' }}
-          className="c-btn fd"
-          href={rodalObj.mapUrl}
-        >
-          <span className="hostel-link">
-            <Icon.MapPin height="15" strokeWidth="3" />
-            {' '}
-            Find on Map
-            {'  '}
-          </span>
-        </a>
-      </div>
-      <div
-        className="left-e"
-        style={{
-          maxWidth: 200,
-          display: 'block',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          objectFit: 'cover',
-        }}
-      >
-        {rodalObj.image}
-      </div>
-      <h2>{rodalObj.description}</h2>
-      <h2 style={{ fontSize: 20, fontWeight: '900' }}>WARDEN</h2>
-      <h2>{rodalObj.warden}</h2>
-      <a href={rodalObj.wardenLink}>Contact Warden</a>
-      <h2 style={{ fontSize: 20, fontWeight: '900' }}>NOTABLE ALUMNI</h2>
-      <h2>{notableAlumniRoll}</h2>
-    </div>
-  );
+    handleCheckChieldElement = (event) => {
+        const { options, searchQuery } = this.state;
+        options.forEach((option) => {
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
+        });
+        this.setState({ options });
+
+        const chosenOptions = options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
+        let newList = [];
+        let currentList = [];
+        if (searchQuery !== '') {
+            currentList = loc;
+
+            currentList = loc.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = searchQuery.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            newList = loc.filter((item) => chosenCats.includes(item.category));
+        }
+        this.setState({
+            filtered: newList,
+        });
+    };
+
+    handleClickFilter = () => {
+        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+    };
+
+    handleChange(event) {
+        const { options } = this.state;
+        this.setState({ searchQuery: event.target.value });
+
+        const chosenOptions = options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.category);
+
+        let currentList = [];
+        // Variable to hold the filtered list before putting into state
+        let newList = [];
+
+        // If the search bar isn't empty
+        if (event.target.value !== '') {
+            // Assign the original list to currentList
+            currentList = loc.filter((item) =>
+                chosenCats.includes(item.category)
+            );
+
+            newList = currentList.filter((item) => {
+                const lc = item.name.toLowerCase();
+
+                const filterWord = event.target.value.toLowerCase();
+
+                return lc.includes(filterWord);
+            });
+        } else {
+            // If the search bar is empty, set newList to original task list
+            newList = loc.filter((item) => chosenCats.includes(item.category));
+        }
+        // Set the filtered state based on what our rules added to newList
+        this.setState({
+            filtered: newList,
+        });
+    }
+
+    render() {
+        const { searchQuery, options, filtered, showFilters } = this.state;
+        const layoutLg = [];
+        const layoutSm = [];
+        const layoutMd = [];
+        const layoutMd2 = [];
+        const layoutXs = [];
+        const campusRoll = [];
+        for (let j = 0; j < filtered.length; j += 1) {
+            layoutLg.push({
+                i: j.toString(),
+                x: (j % 6) * 2,
+                y: Math.floor((j / 6) * 3),
+                w: 2,
+                h: 3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: (j % 5) * 2,
+                y: Math.floor((j / 5) * 3),
+                w: 2,
+                h: 3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd2.push({
+                i: j.toString(),
+                x: (j % 4) * 2,
+                y: Math.floor((j / 4) * 3.1),
+                w: 2,
+                h: 3.1,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: (j % 3) * 2,
+                y: Math.floor((j / 3) * 3.1),
+                w: 2,
+                h: 3.1,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: (j % 2) * 2,
+                y: Math.floor((j / 2) * 3.1),
+                w: 2,
+                h: 3.1,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            const value = filtered[j];
+            campusRoll.push(
+                <div
+                    key={j}
+                    className="exploreGrid"
+                    isResizable="true"
+                    autoSize="true"
+                >
+                    <CampusCard locObj={value} />
+                </div>
+            );
+        }
+
+        const layouts = {
+            lg: layoutLg,
+            sm: layoutSm,
+            md: layoutMd,
+            md2: layoutMd2,
+            xs: layoutXs,
+        };
+
+        return (
+            <div>
+                <div className="search">
+                    <Search
+                        searchQuery={searchQuery}
+                        onChange={this.handleChange}
+                        handleClickFilter={this.handleClickFilter}
+                    />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
+                    >
+                        Filter
+                    </div>
+
+                    {showFilters && (
+                        <div className="filterCheckBoxes">
+                            {options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
+                                                this.handleCheckChieldElement
+                                            }
+                                            option={option}
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
+                {filtered.length < 1 && <Empty />}
+                <ResponsiveGridLayout
+                    className="layout"
+                    layouts={layouts}
+                    breakpoints={{
+                        lg: 1368,
+                        md: 1144,
+                        md2: 938,
+                        sm: 670,
+                        xs: 396,
+                        xxs: 0,
+                    }}
+                    cols={{ lg: 12, md: 10, md2: 8, sm: 6, xs: 4, xxs: 2 }}
+                    horizontalCompact
+                    autoSize
+                    verticalCompact
+                >
+                    {campusRoll}
+                </ResponsiveGridLayout>
+                <ToTop />
+            </div>
+        );
+    }
 }
 
-RodalContent.propTypes = {
-  rodalObj: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
-};
-
-HostelCard.propTypes = {
-  hostelObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
-    .isRequired,
-  show: PropTypes.func.isRequired,
-};
-
-export { HostelCard, RodalContent };
+export default Campus;

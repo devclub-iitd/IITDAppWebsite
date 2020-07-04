@@ -1,9 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from './search';
@@ -46,20 +40,23 @@ class News extends React.Component {
   }
 
     handleCheckChieldElement = (event) => {
-      const { options } = this.state;
-      options.forEach((option) => {
-        if (option.value === event.target.value) option.isChecked = event.target.checked;
-      });
-      this.setState({ options });
+        const { searchQuery, options } = this.state;
+        options.forEach((option) => {
+            if (option.value === event.target.value) {
+                const optionTemp = option;
+                optionTemp.isChecked = event.target.checked;
+            }
+        });
+        this.setState({ options });
 
-      const chosenOptions = options.filter(
-        (option) => option.isChecked === true,
-      );
-      const chosenCats = chosenOptions.map((a) => a.month);
-      let newList = [];
-      let currentList = [];
-      if (this.state.searchQuery !== '') {
-        currentList = news;
+        const chosenOptions = options.filter(
+            (option) => option.isChecked === true
+        );
+        const chosenCats = chosenOptions.map((a) => a.month);
+        let newList = [];
+        let currentList = [];
+        if (searchQuery !== '') {
+            currentList = news;
 
         currentList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
 
@@ -67,7 +64,7 @@ class News extends React.Component {
           const lc = item.title.toLowerCase();
           const lc2 = item.description.toLowerCase();
 
-          const filterWord = this.state.searchQuery.toLowerCase();
+                const filterWord = searchQuery.toLowerCase();
 
           return lc.includes(filterWord) || lc2.includes(filterWord);
         });
@@ -114,144 +111,149 @@ class News extends React.Component {
     }
 
     render() {
-      const layoutLg = [];
-      const layoutMd = [];
-      const layoutSm = [];
-      const layoutXs = [];
-      const layoutXxs = [];
-      const newsRoll = [];
-      for (let j = 0; j < this.state.filtered.length; j += 1) {
-        layoutLg.push({
-          i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 1.8,
-          w: 1,
-          h: 1.8,
-          isResizable: false,
-          useCSSTransforms: true,
-          autoSize: true,
-          verticalCompact: true,
-          horizontalCompact: true,
-          isDraggable: false,
-        });
-        layoutMd.push({
-          i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 1.8,
-          w: 1,
-          h: 1.8,
-          isResizable: false,
-          useCSSTransforms: true,
-          autoSize: true,
-          verticalCompact: true,
-          horizontalCompact: true,
-          isDraggable: false,
-        });
-        layoutSm.push({
-          i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 2.2,
-          w: 1,
-          h: 1.8,
-          isResizable: false,
-          useCSSTransforms: true,
-          autoSize: true,
-          verticalCompact: true,
-          horizontalCompact: true,
-          isDraggable: false,
-        });
-        layoutXs.push({
-          i: j.toString(),
-          x: 0,
-          y: j * 3,
-          w: 1,
-          h: 2.8,
-          isResizable: false,
-          useCSSTransforms: true,
-          autoSize: true,
-          verticalCompact: true,
-          horizontalCompact: true,
-          isDraggable: false,
-        });
-        layoutXxs.push({
-          i: j.toString(),
-          x: 0,
-          y: j * 3.4,
-          w: 1,
-          h: 3.3,
-          isResizable: false,
-          useCSSTransforms: true,
-          autoSize: true,
-          verticalCompact: true,
-          horizontalCompact: true,
-          isDraggable: false,
-        });
-        const value = this.state.filtered[j];
-        newsRoll.push(
-          <div key={j} className="newsGrid">
-            <NewsCard newsObj={value} />
-          </div>,
-        );
-      }
-      const layouts = {
-        lg: layoutLg,
-        xxs: layoutXxs,
-        xs: layoutXs,
-        md: layoutMd,
-        sm: layoutSm,
-      };
-      return (
-        <>
-          <div className="search">
-            <Search
-              searchQuery={this.state.searchQuery}
-              onChange={this.handleChange}
-            />
-            <div
-              role="button"
-              className="filter-icon"
-              onClick={this.handleClickFilter}
-            >
-              Filter
-            </div>
+        const { searchQuery, options, filtered, showFilters } = this.state;
+        const layoutLg = [];
+        const layoutMd = [];
+        const layoutSm = [];
+        const layoutXs = [];
+        const layoutXxs = [];
+        const newsRoll = [];
+        for (let j = 0; j < filtered.length; j += 1) {
+            layoutLg.push({
+                i: j.toString(),
+                x: j % 2,
+                y: (j % 3) * 1.8,
+                w: 1,
+                h: 1.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutMd.push({
+                i: j.toString(),
+                x: j % 2,
+                y: (j % 3) * 1.8,
+                w: 1,
+                h: 1.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutSm.push({
+                i: j.toString(),
+                x: j % 2,
+                y: (j % 3) * 2.2,
+                w: 1,
+                h: 1.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXs.push({
+                i: j.toString(),
+                x: 0,
+                y: j * 3,
+                w: 1,
+                h: 2.8,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            layoutXxs.push({
+                i: j.toString(),
+                x: 0,
+                y: j * 3.4,
+                w: 1,
+                h: 3.3,
+                isResizable: false,
+                useCSSTransforms: true,
+                autoSize: true,
+                verticalCompact: true,
+                horizontalCompact: true,
+                isDraggable: false,
+            });
+            const value = filtered[j];
+            newsRoll.push(
+                <div key={j} className="newsGrid">
+                    <NewsCard newsObj={value} />
+                </div>
+            );
+        }
+        const layouts = {
+            lg: layoutLg,
+            xxs: layoutXxs,
+            xs: layoutXs,
+            md: layoutMd,
+            sm: layoutSm,
+        };
+        return (
+            <>
+                <div className="search">
+                    <Search
+                        searchQuery={searchQuery}
+                        onChange={this.handleChange}
+                    />
+                    <div
+                        role="button"
+                        className="filter-icon"
+                        onClick={this.handleClickFilter}
+                        onKeyDown={this.handleKeyDown}
+                        tabIndex="0"
+                    >
+                        Filter
+                    </div>
 
-            {this.state.showFilters && (
-            <div className="filterCheckBoxes">
-              {this.state.options.map((option) => (
-                <>
-                  <CheckBox
-                    handleCheckChieldElement={
+                    {showFilters && (
+                        <div className="filterCheckBoxes">
+                            {options.map((option) => {
+                                return (
+                                    <>
+                                        <CheckBox
+                                            handleCheckChieldElement={
                                                 this.handleCheckChieldElement
                                             }
-                    {...option}
-                  />
-                </>
-              ))}
-            </div>
-            )}
-          </div>
-          {this.state.filtered.length < 1 && <Empty />}
-          <ResponsiveGridLayout
-            className="layout"
-            layouts={layouts}
-            breakpoints={{
-              lg: 1200,
-              md: 996,
-              md2: 768,
-              sm: 620,
-              xs: 396,
-              xxs: 340,
-            }}
-            cols={{
-              lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1,
-            }}
-            horizontalCompact
-          >
-            {newsRoll}
-          </ResponsiveGridLayout>
-          <ToTop />
-        </>
-      );
+                                            id={option.id}
+                                            value={option.value}
+                                            isChecked={option.isChecked}
+                                        />
+                                    </>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
+                {filtered.length < 1 && <Empty />}
+                <ResponsiveGridLayout
+                    className="layout"
+                    layouts={layouts}
+                    breakpoints={{
+                        lg: 1200,
+                        md: 996,
+                        md2: 768,
+                        sm: 620,
+                        xs: 396,
+                        xxs: 340,
+                    }}
+                    cols={{ lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1 }}
+                    horizontalCompact
+                >
+                    {newsRoll}
+                </ResponsiveGridLayout>
+                <ToTop />
+            </>
+        );
     }
 }
 

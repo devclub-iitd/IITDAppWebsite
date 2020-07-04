@@ -1,12 +1,4 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
-import Link from 'react-router';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
 
@@ -17,54 +9,63 @@ function ExploreCard({ exploreObj, show }) {
         <div key="a" className="left-e">
           {exploreObj.img}
 
-          <div className="c-btn-group">
-            <a
-              className="c-btn learn-e"
-              role="button"
-              onClick={() => {
-                show(exploreObj);
-              }}
-            >
-              <span>
-                <Icon.Info height="30" strokeWidth="2" />
-              </span>
-            </a>
-            <a className="c-btn fb" href={exploreObj.fbUrl}>
-              <span>
-                <Icon.Facebook height="30" strokeWidth="2" />
-              </span>
-            </a>
-            <a className="c-btn insta" href={exploreObj.instaUrl}>
-              <Icon.Instagram height="30" strokeWidth="2" />
-            </a>
-            <a className="c-btn web" href={exploreObj.webUrl}>
-              <Icon.Globe height="30" strokeWidth="2" />
-            </a>
-            {exploreObj.extraIcon}
-          </div>
-        </div>
-        <div key="b" className="right-e">
-          <h1>{exploreObj.name}</h1>
-          <p>{exploreObj.desc}</p>
-        </div>
-      </div>
-    </>
-  );
+                    <div className="c-btn-group">
+                        <button
+                            className="c-btn learn-e"
+                            onClick={() => {
+                                show(exploreObj);
+                            }}
+                            onKeyDown={() => {}}
+                            tabIndex="0"
+                            type="button"
+                        >
+                            <span>
+                                <Icon.Info height="30" strokeWidth="2" />
+                            </span>
+                        </button>
+                        <a className="c-btn fb" href={exploreObj.fbUrl}>
+                            <span>
+                                <Icon.Facebook height="30" strokeWidth="2" />
+                            </span>
+                        </a>
+                        <a className="c-btn insta" href={exploreObj.instaUrl}>
+                            <Icon.Instagram height="30" strokeWidth="2" />
+                        </a>
+                        <a className="c-btn web" href={exploreObj.webUrl}>
+                            <Icon.Globe height="30" strokeWidth="2" />
+                        </a>
+                        {exploreObj.extraIcon}
+                    </div>
+                </div>
+                <div key="b" className="right-e">
+                    <h1>{exploreObj.name}</h1>
+                    <p>{exploreObj.desc}</p>
+                </div>
+            </div>
+        </>
+    );
 }
 
 function RodalContent({ rodalObj }) {
-  const temp = rodalObj;
-  let showcase = [];
-  showcase = temp.showcase;
-  const showcaseRoll = [];
-  let len = '';
+    const temp = rodalObj;
+    let showcase = [];
+    showcase = temp.showcase;
+    const showcaseRoll = [];
+    let len = '';
+
+    if (showcase) {
+        len = showcase.length;
+    } else {
+        len = 0;
+    }
 
   showcase ? (len = showcase.length) : (len = 0);
 
-  let eventsShowcase = [];
-  eventsShowcase = temp.eventsShowcase;
-  const eventsShowcaseRoll = [];
-  let lenEvents = '';
+    if (showcase) {
+        lenEvents = eventsShowcase.length;
+    } else {
+        lenEvents = 0;
+    }
 
   showcase ? (lenEvents = eventsShowcase.length) : (lenEvents = 0);
 
