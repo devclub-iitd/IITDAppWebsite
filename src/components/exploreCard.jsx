@@ -9,65 +9,73 @@ function ExploreCard({ exploreObj, show }) {
         <div key="a" className="left-e">
           {exploreObj.img}
 
-                    <div className="c-btn-group">
-                        <button
-                            className="c-btn learn-e"
-                            onClick={() => {
-                                show(exploreObj);
-                            }}
-                            onKeyDown={() => {}}
-                            tabIndex="0"
-                            type="button"
-                        >
-                            <span>
-                                <Icon.Info height="30" strokeWidth="2" />
-                            </span>
-                        </button>
-                        <a className="c-btn fb" href={exploreObj.fbUrl}>
-                            <span>
-                                <Icon.Facebook height="30" strokeWidth="2" />
-                            </span>
-                        </a>
-                        <a className="c-btn insta" href={exploreObj.instaUrl}>
-                            <Icon.Instagram height="30" strokeWidth="2" />
-                        </a>
-                        <a className="c-btn web" href={exploreObj.webUrl}>
-                            <Icon.Globe height="30" strokeWidth="2" />
-                        </a>
-                        {exploreObj.extraIcon}
-                    </div>
-                </div>
-                <div key="b" className="right-e">
-                    <h1>{exploreObj.name}</h1>
-                    <p>{exploreObj.desc}</p>
-                </div>
-            </div>
-        </>
-    );
+          <div className="c-btn-group">
+            <button
+              className="c-btn learn-e"
+              onClick={() => {
+                show(exploreObj);
+              }}
+              onKeyDown={() => {}}
+              tabIndex="0"
+              type="button"
+            >
+              <span>
+                <Icon.Info height="30" strokeWidth="2" />
+              </span>
+            </button>
+            <a className="c-btn fb" href={exploreObj.fbUrl}>
+              <span>
+                <Icon.Facebook height="30" strokeWidth="2" />
+              </span>
+            </a>
+            <a className="c-btn insta" href={exploreObj.instaUrl}>
+              <Icon.Instagram height="30" strokeWidth="2" />
+            </a>
+            <a className="c-btn web" href={exploreObj.webUrl}>
+              <Icon.Globe height="30" strokeWidth="2" />
+            </a>
+            {exploreObj.extraIcon}
+          </div>
+        </div>
+        <div key="b" className="right-e">
+          <h1>{exploreObj.name}</h1>
+          <p>{exploreObj.desc}</p>
+        </div>
+      </div>
+    </>
+  );
 }
 
 function RodalContent({ rodalObj }) {
-    const temp = rodalObj;
-    let showcase = [];
-    showcase = temp.showcase;
-    const showcaseRoll = [];
-    let len = '';
+  const temp = rodalObj;
 
-    if (showcase) {
-        len = showcase.length;
-    } else {
-        len = 0;
-    }
+  let showcase = [];
 
-  showcase ? (len = showcase.length) : (len = 0);
+  showcase = temp.showcase;
 
-    if (showcase) {
-        lenEvents = eventsShowcase.length;
-    } else {
-        lenEvents = 0;
-    }
+  const showcaseRoll = [];
 
-  showcase ? (lenEvents = eventsShowcase.length) : (lenEvents = 0);
+  let len = '';
+
+  if (showcase) {
+    len = showcase.length;
+  } else {
+    len = 0;
+  }
+
+  let eventsShowcase = [];
+
+  eventsShowcase = temp.eventsShowcase;
+
+  const eventsShowcaseRoll = [];
+
+  let lenEvents = '';
+
+  if (showcase) {
+    lenEvents = eventsShowcase.length;
+  } else {
+    lenEvents = 0;
+  }
 
   let i = 0;
   for (i = 0; i < len; i += 1) {
