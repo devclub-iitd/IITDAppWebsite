@@ -10,7 +10,7 @@ function ExploreCard({ exploreObj, show }) {
           {exploreObj.img}
 
           <div className="c-btn-group">
-            <button
+            <div
               className="c-btn learn-e"
               onClick={() => {
                 show(exploreObj);
@@ -18,11 +18,12 @@ function ExploreCard({ exploreObj, show }) {
               onKeyDown={() => {}}
               tabIndex="0"
               type="button"
+              role="button"
             >
               <span>
                 <Icon.Info height="30" strokeWidth="2" />
               </span>
-            </button>
+            </div>
             <a className="c-btn fb" href={exploreObj.fbUrl}>
               <span>
                 <Icon.Facebook height="30" strokeWidth="2" />

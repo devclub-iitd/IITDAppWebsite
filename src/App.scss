@@ -2448,26 +2448,14 @@ body.light-mode {
 
   @media (min-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
-      background-image:
-        linear-gradient
-        (180deg,
-        rgba(116, 137, 219, 0) 0%,
-        rgba(2, 17, 104, 0.77) 100%),
-        url('./components/images/events/rdv19.jpg');
+      background-image:linear-gradient(180deg,rgba(116, 137, 219, 0) 0%,rgba(2, 17, 104, 0.77) 100%),url('./components/images/events/rdv19.jpg');
       background-position: 50% 0%;
     }
   }
 
   @media (max-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
-      background-image:
-        linear-gradient
-        (180deg,
-        rgba(116, 137, 219, 0) 0%,
-        rgba(2, 17, 104, 0.77) 100%),
-        url('./components/images/events/rdv19.jpg');
+      background-image:linear-gradient(180deg, rgba(116, 137, 219, 0) 0%,rgba(2, 17, 104, 0.77) 100%),url('./components/images/events/rdv19.jpg');
       background-position: 50% 6%;
     }
   }
@@ -5167,7 +5155,6 @@ body.dark-mode {
 
   @media (min-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
       background-image:linear-gradient(180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
@@ -5178,7 +5165,6 @@ body.dark-mode {
 
   @media (max-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
       background-image:linear-gradient(180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
