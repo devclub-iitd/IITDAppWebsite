@@ -18,7 +18,7 @@ function Search({ searchQuery, onChange }) {
     );
 }
 Search.propTypes = {
-    searchQuery: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+  searchQuery: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 export default Search;

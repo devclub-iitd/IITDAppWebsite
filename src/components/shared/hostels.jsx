@@ -3,11 +3,11 @@ import * as Icon from 'react-feather';
 import jwala from '../images/hostels/jwala.png';
 
 const hostels = [
-    {
-        id: 0,
-        name: 'Aravali Hostel',
-        est: 1965,
-        description:
+  {
+    id: 0,
+    name: 'Aravali Hostel',
+    est: 1965,
+    description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
         category: (
             <div type="div" className="c-btn fb">

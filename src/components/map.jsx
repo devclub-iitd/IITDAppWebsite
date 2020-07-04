@@ -12,24 +12,24 @@ import { acad, hostel, eat, sport } from './shared/mapFilters';
 const { BaseLayer, Overlay } = LayersControl;
 
 class MapLeaf extends React.Component {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            animate: true,
-            latlng: {
-                lat: 28.545126,
-                lng: 77.193483,
-            },
-        };
+    this.state = {
+      animate: true,
+      latlng: {
+        lat: 28.545126,
+        lng: 77.193483,
+      },
+    };
 
-        this.handleClick = this.handleClick.bind(this);
-    }
+    this.handleClick = this.handleClick.bind(this);
+  }
 
     handleClick = (e) => {
-        this.setState({
-            latlng: e.latlng,
-        });
+      this.setState({
+        latlng: e.latlng,
+      });
     };
 
     render() {
@@ -84,9 +84,9 @@ class MapLeaf extends React.Component {
                         //     </Marker>
                         // )}
                     }
-                </LayersControl>
-            </Map>
-        );
+          </LayersControl>
+        </Map>
+      );
     }
 }
 

@@ -3,13 +3,13 @@ import * as Icon from 'react-feather';
 import dogra from '../images/campus/dogra.jpg';
 
 const locations = [
-    {
-        id: 0,
-        cd: [28.544966, 77.192497],
-        name: 'Dogra Hall',
-        img: <img src={dogra} alt="Dogra Hall" />,
-        category: 'academic',
-        desc:
+  {
+    id: 0,
+    cd: [28.544966, 77.192497],
+    name: 'Dogra Hall',
+    img: <img src={dogra} alt="Dogra Hall" />,
+    category: 'academic',
+    desc:
             "IIT Delhi's main multipurpose auditorium hall with the iconic hyperbolic paraboloid roof.",
         categoryIcon: (
             <a href="https://" className="c-btn fd">

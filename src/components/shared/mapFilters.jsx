@@ -204,4 +204,6 @@ const sport = loc.map((locObj) => {
     return <div />;
 });
 
-export { acad, hostel, eat, sport };
+export {
+  acad, hostel, eat, sport,
+};

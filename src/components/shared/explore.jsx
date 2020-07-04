@@ -3,18 +3,18 @@ import * as Icon from 'react-feather';
 import devclub from '../images/explore/devclub.jpg';
 
 const explore = [
-    {
-        id: 0,
-        name: 'DevClub',
-        img: (
-            <img
-                src={devclub}
-                alt="DevClub IITD"
-                className="card-img"
-                style={{ display: 'inlineBlock' }}
-            />
-        ),
-        desc:
+  {
+    id: 0,
+    name: 'DevClub',
+    img: (
+      <img
+        src={devclub}
+        alt="DevClub IITD"
+        className="card-img"
+        style={{ display: 'inlineBlock' }}
+      />
+    ),
+    desc:
             'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
         extraIcon: (
             <a href="https://github.com/devclub-iitd" className="c-btn git">

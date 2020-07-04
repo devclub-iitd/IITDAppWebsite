@@ -21,10 +21,10 @@ export const checkBox = ({
     );
 };
 checkBox.propTypes = {
-    id: PropTypes.number.isRequired,
-    handleCheckChieldElement: PropTypes.func.isRequired,
-    value: PropTypes.string.isRequired,
-    isChecked: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+  handleCheckChieldElement: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  isChecked: PropTypes.bool.isRequired,
 };
 
 export default checkBox;

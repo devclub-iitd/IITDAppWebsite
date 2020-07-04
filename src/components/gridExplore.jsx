@@ -14,38 +14,38 @@ import 'rodal/lib/rodal.css';
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class Explore extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchQuery: '',
-            filtered: explore,
-            options: [
-                {
-                    id: 1,
-                    value: 'BRCA',
-                    isChecked: true,
-                    category: 'brca',
-                },
-                {
-                    id: 2,
-                    value: 'Technical',
-                    isChecked: true,
-                    category: 'technical',
-                },
-                {
-                    id: 3,
-                    value: 'Others',
-                    isChecked: true,
-                    category: 'others',
-                },
-            ],
-            showFilters: false,
-            visible: false,
-            rodalObj: {
-                id: 0,
-                name: 'DevClub',
-                img: <img src="" alt="DevClub IITD" className="card-img" />,
-                desc:
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchQuery: '',
+      filtered: explore,
+      options: [
+        {
+          id: 1,
+          value: 'BRCA',
+          isChecked: true,
+          category: 'brca',
+        },
+        {
+          id: 2,
+          value: 'Technical',
+          isChecked: true,
+          category: 'technical',
+        },
+        {
+          id: 3,
+          value: 'Others',
+          isChecked: true,
+          category: 'others',
+        },
+      ],
+      showFilters: false,
+      visible: false,
+      rodalObj: {
+        id: 0,
+        name: 'DevClub',
+        img: <img src="" alt="DevClub IITD" className="card-img" />,
+        desc:
                     'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
                 extraIcon: (
                     <a
@@ -63,10 +63,10 @@ class Explore extends React.Component {
             },
         };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.show = this.show.bind(this);
-        this.hide = this.hide.bind(this);
-    }
+    this.handleChange = this.handleChange.bind(this);
+    this.show = this.show.bind(this);
+    this.hide = this.hide.bind(this);
+  }
 
     handleCheckChieldElement = (event) => {
         const { searchQuery, options } = this.state;
@@ -87,29 +87,25 @@ class Explore extends React.Component {
         if (searchQuery !== '') {
             currentList = explore;
 
-            currentList = explore.filter((item) =>
-                chosenCats.includes(item.category)
-            );
+        currentList = explore.filter((item) => chosenCats.includes(item.category));
 
-            newList = currentList.filter((item) => {
-                const lc = item.name.toLowerCase();
+        newList = currentList.filter((item) => {
+          const lc = item.name.toLowerCase();
 
                 const filterWord = searchQuery.toLowerCase();
 
-                return lc.includes(filterWord);
-            });
-        } else {
-            newList = explore.filter((item) =>
-                chosenCats.includes(item.category)
-            );
-        }
-        this.setState({
-            filtered: newList,
+          return lc.includes(filterWord);
         });
+      } else {
+        newList = explore.filter((item) => chosenCats.includes(item.category));
+      }
+      this.setState({
+        filtered: newList,
+      });
     };
 
     handleClickFilter = () => {
-        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+      this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
     };
 
     handleChange(event) {
@@ -121,47 +117,43 @@ class Explore extends React.Component {
         );
         const chosenCats = chosenOptions.map((a) => a.category);
 
-        let currentList = [];
-        // Variable to hold the filtered list before putting into state
-        let newList = [];
+      let currentList = [];
+      // Variable to hold the filtered list before putting into state
+      let newList = [];
 
-        // If the search bar isn't empty
-        if (event.target.value !== '') {
-            // Assign the original list to currentList
-            currentList = explore.filter((item) =>
-                chosenCats.includes(item.category)
-            );
+      // If the search bar isn't empty
+      if (event.target.value !== '') {
+        // Assign the original list to currentList
+        currentList = explore.filter((item) => chosenCats.includes(item.category));
 
-            newList = currentList.filter((item) => {
-                const lc = item.name.toLowerCase();
+        newList = currentList.filter((item) => {
+          const lc = item.name.toLowerCase();
 
-                const filterWord = event.target.value.toLowerCase();
+          const filterWord = event.target.value.toLowerCase();
 
-                return lc.includes(filterWord);
-            });
-        } else {
-            // If the search bar is empty, set newList to original task list
-            newList = explore.filter((item) =>
-                chosenCats.includes(item.category)
-            );
-        }
-        // Set the filtered state based on what our rules added to newList
-        this.setState({
-            filtered: newList,
+          return lc.includes(filterWord);
         });
+      } else {
+        // If the search bar is empty, set newList to original task list
+        newList = explore.filter((item) => chosenCats.includes(item.category));
+      }
+      // Set the filtered state based on what our rules added to newList
+      this.setState({
+        filtered: newList,
+      });
     }
 
     show(exploreObj) {
-        this.setState({
-            visible: true,
-            rodalObj: exploreObj,
-        });
+      this.setState({
+        visible: true,
+        rodalObj: exploreObj,
+      });
     }
 
     hide() {
-        this.setState({
-            visible: false,
-        });
+      this.setState({
+        visible: false,
+      });
     }
 
     render() {
@@ -296,13 +288,13 @@ class Explore extends React.Component {
             );
         }
 
-        const layouts = {
-            lg: layoutLg,
-            md: layoutMd,
-            sm: layoutSm,
-            xs: layoutXs,
-            xxs: layoutXxs,
-        };
+      const layouts = {
+        lg: layoutLg,
+        md: layoutMd,
+        sm: layoutSm,
+        xs: layoutXs,
+        xxs: layoutXxs,
+      };
 
         return (
             <>
@@ -373,7 +365,7 @@ class Explore extends React.Component {
 }
 
 Explore.propTypes = {
-    dark: PropTypes.bool.isRequired,
+  dark: PropTypes.bool.isRequired,
 };
 
 export default Explore;

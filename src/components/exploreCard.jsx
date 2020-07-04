@@ -3,11 +3,11 @@ import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
 
 function ExploreCard({ exploreObj, show }) {
-    return (
-        <>
-            <div className="box">
-                <div key="a" className="left-e">
-                    {exploreObj.img}
+  return (
+    <>
+      <div className="box">
+        <div key="a" className="left-e">
+          {exploreObj.img}
 
                     <div className="c-btn-group">
                         <button
@@ -59,10 +59,7 @@ function RodalContent({ rodalObj }) {
         len = 0;
     }
 
-    let eventsShowcase = [];
-    eventsShowcase = temp.eventsShowcase;
-    const eventsShowcaseRoll = [];
-    let lenEvents = '';
+  showcase ? (len = showcase.length) : (len = 0);
 
     if (showcase) {
         lenEvents = eventsShowcase.length;
@@ -70,76 +67,78 @@ function RodalContent({ rodalObj }) {
         lenEvents = 0;
     }
 
-    let i = 0;
-    for (i = 0; i < len; i += 1) {
-        showcaseRoll.push(
-            <div>
-                <a href={rodalObj.showcaseLinks[i]}>
-                    <h2>{showcase[i]}</h2>
-                </a>
+  showcase ? (lenEvents = eventsShowcase.length) : (lenEvents = 0);
 
-                <p>{rodalObj.showcaseDesc[i]}</p>
-            </div>
-        );
-    }
+  let i = 0;
+  for (i = 0; i < len; i += 1) {
+    showcaseRoll.push(
+      <div>
+        <a href={rodalObj.showcaseLinks[i]}>
+          <h2>{showcase[i]}</h2>
+        </a>
 
-    let j = 0;
-    for (j = 0; j < lenEvents; j += 1) {
-        eventsShowcaseRoll.push(
-            <div>
-                <a href={rodalObj.eventsShowcaseLinks[i]}>
-                    <h2>{eventsShowcase[j]}</h2>
-                </a>
-            </div>
-        );
-    }
-
-    return (
-        <div style={{ textAlign: 'center' }}>
-            <h1 className="rodal-h1" style={{ fontWeight: '900' }}>
-                {rodalObj.name}
-            </h1>
-            <br />
-            <div className="c-btn-group">
-                <a className="c-btn fb" href={rodalObj.fbUrl}>
-                    <span>
-                        <Icon.Facebook height="30" strokeWidth="2" />
-                    </span>
-                </a>
-                <a className="c-btn insta" href={rodalObj.instaUrl}>
-                    <Icon.Instagram height="30" strokeWidth="2" />
-                </a>
-                <a className="c-btn web" href={rodalObj.webUrl}>
-                    <Icon.Globe height="30" strokeWidth="2" />
-                </a>
-            </div>
-            <div
-                className="left-e"
-                style={{
-                    maxWidth: 200,
-                    display: 'block',
-                    marginLeft: 'auto',
-                    marginRight: 'auto',
-                }}
-            >
-                {rodalObj.img}
-            </div>
-            <h2>{rodalObj.desc}</h2>
-            <h2 style={{ fontSize: 20, fontWeight: '900' }}>SHOWCASE</h2>
-            <h2>{showcaseRoll}</h2>
-            <h2 style={{ fontSize: 20, fontWeight: '900' }}>EVENTS</h2>
-            <h2>{eventsShowcaseRoll}</h2>
-        </div>
+        <p>{rodalObj.showcaseDesc[i]}</p>
+      </div>,
     );
+  }
+
+  let j = 0;
+  for (j = 0; j < lenEvents; j += 1) {
+    eventsShowcaseRoll.push(
+      <div>
+        <a href={rodalObj.eventsShowcaseLinks[i]}>
+          <h2>{eventsShowcase[j]}</h2>
+        </a>
+      </div>,
+    );
+  }
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <h1 className="rodal-h1" style={{ fontWeight: '900' }}>
+        {rodalObj.name}
+      </h1>
+      <br />
+      <div className="c-btn-group">
+        <a className="c-btn fb" href={rodalObj.fbUrl}>
+          <span>
+            <Icon.Facebook height="30" strokeWidth="2" />
+          </span>
+        </a>
+        <a className="c-btn insta" href={rodalObj.instaUrl}>
+          <Icon.Instagram height="30" strokeWidth="2" />
+        </a>
+        <a className="c-btn web" href={rodalObj.webUrl}>
+          <Icon.Globe height="30" strokeWidth="2" />
+        </a>
+      </div>
+      <div
+        className="left-e"
+        style={{
+          maxWidth: 200,
+          display: 'block',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+      >
+        {rodalObj.img}
+      </div>
+      <h2>{rodalObj.desc}</h2>
+      <h2 style={{ fontSize: 20, fontWeight: '900' }}>SHOWCASE</h2>
+      <h2>{showcaseRoll}</h2>
+      <h2 style={{ fontSize: 20, fontWeight: '900' }}>EVENTS</h2>
+      <h2>{eventsShowcaseRoll}</h2>
+    </div>
+  );
 }
 
 ExploreCard.propTypes = {
-    exploreObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
-        .isRequired,
-    show: PropTypes.func.isRequired,
+  exploreObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
+    .isRequired,
+  show: PropTypes.func.isRequired,
 };
 RodalContent.propTypes = {
-    rodalObj: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
+  rodalObj: PropTypes.objectOf(PropTypes.string, PropTypes.number).isRequired,
 };
 
 export { ExploreCard, RodalContent };

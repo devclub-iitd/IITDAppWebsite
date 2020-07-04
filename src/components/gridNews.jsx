@@ -10,34 +10,34 @@ import Empty from './emptyResults';
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 class News extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            searchQuery: '',
-            filtered: news,
-            options: [
-                {
-                    id: 1,
-                    value: 'May 2020',
-                    isChecked: true,
-                    month: '2020-05',
-                },
-                {
-                    id: 2,
-                    value: 'June 2020',
-                    isChecked: true,
-                    month: '2020-06',
-                },
-            ],
-            showFilters: false,
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchQuery: '',
+      filtered: news,
+      options: [
+        {
+          id: 1,
+          value: 'May 2020',
+          isChecked: true,
+          month: '2020-05',
+        },
+        {
+          id: 2,
+          value: 'June 2020',
+          isChecked: true,
+          month: '2020-06',
+        },
+      ],
+      showFilters: false,
+    };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleClickFilter = this.handleClickFilter.bind(this);
-        this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
-            this
-        );
-    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClickFilter = this.handleClickFilter.bind(this);
+    this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
+      this,
+    );
+  }
 
     handleCheckChieldElement = (event) => {
         const { searchQuery, options } = this.state;
@@ -58,60 +58,56 @@ class News extends React.Component {
         if (searchQuery !== '') {
             currentList = news;
 
-            currentList = news.filter((item) =>
-                chosenCats.includes(item.createdAt.slice(0, 7))
-            );
+        currentList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
 
-            newList = currentList.filter((item) => {
-                const lc = item.title.toLowerCase();
-                const lc2 = item.description.toLowerCase();
+        newList = currentList.filter((item) => {
+          const lc = item.title.toLowerCase();
+          const lc2 = item.description.toLowerCase();
 
                 const filterWord = searchQuery.toLowerCase();
 
-                return lc.includes(filterWord) || lc2.includes(filterWord);
-            });
-        } else {
-            newList = news.filter((item) =>
-                chosenCats.includes(item.createdAt.slice(0, 7))
-            );
-        }
-        this.setState({
-            filtered: newList,
+          return lc.includes(filterWord) || lc2.includes(filterWord);
         });
+      } else {
+        newList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
+      }
+      this.setState({
+        filtered: newList,
+      });
     };
 
     handleClickFilter = () => {
-        this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
+      this.setState((prevState) => ({ showFilters: !prevState.showFilters }));
     };
 
     handleChange(event) {
-        this.setState({ searchQuery: event.target.value });
+      this.setState({ searchQuery: event.target.value });
 
-        let currentList = [];
-        // Variable to hold the filtered list before putting into state
-        let newList = [];
+      let currentList = [];
+      // Variable to hold the filtered list before putting into state
+      let newList = [];
 
-        // If the search bar isn't empty
-        if (event.target.value !== '') {
-            // Assign the original list to currentList
-            currentList = news;
+      // If the search bar isn't empty
+      if (event.target.value !== '') {
+        // Assign the original list to currentList
+        currentList = news;
 
-            newList = currentList.filter((item) => {
-                const lc = item.title.toLowerCase();
-                const lc2 = item.description.toLowerCase();
+        newList = currentList.filter((item) => {
+          const lc = item.title.toLowerCase();
+          const lc2 = item.description.toLowerCase();
 
-                const filterWord = event.target.value.toLowerCase();
+          const filterWord = event.target.value.toLowerCase();
 
-                return lc.includes(filterWord) || lc2.includes(filterWord);
-            });
-        } else {
-            // If the search bar is empty, set newList to original task list
-            newList = news;
-        }
-        // Set the filtered state based on what our rules added to newList
-        this.setState({
-            filtered: newList,
+          return lc.includes(filterWord) || lc2.includes(filterWord);
         });
+      } else {
+        // If the search bar is empty, set newList to original task list
+        newList = news;
+      }
+      // Set the filtered state based on what our rules added to newList
+      this.setState({
+        filtered: newList,
+      });
     }
 
     render() {

@@ -43,8 +43,8 @@ const MenuToggle = ({ toggle, dark }) => (
     </div>
 );
 MenuToggle.propTypes = {
-    toggle: PropTypes.func.isRequired,
-    dark: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
+  dark: PropTypes.bool.isRequired,
 };
 Path.propTypes = {
     dark: PropTypes.bool.isRequired,

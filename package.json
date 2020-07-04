@@ -23,27 +23,29 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.1",
         "react-spring": "^8.0.27",
-        "react-use": "^14.2.0",
+        "react-use": "^14.3.0",
         "rodal": "^1.8.1",
         "rsuite": "^4.6.0",
         "use-dark-mode": "^2.3.1"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "npm run css-build && react-scripts start",
+        "build": "npm run css-build && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "eslint-test": "eslint './**/*.js' './**/*.jsx'",
         "eslint-fix": "eslint --fix './**/*.js' './**/*.jsx'",
-        "prettier-test": "prettier --check './**/*.js' './**/*.jsx' './**/*.css'",
-        "prettier-fix": "prettier --write './**/*.js' './**/*.jsx' './**/*.css'",
-        "lint-tests": "npm run eslint-test;npm run prettier-test",
-        "lint-fixes": "npm run eslint-fix;npm run prettier-fix",
-        "css-build": "node-sass --omit-source-map-url src/App.scss src/App.css",
-        "watcher": "onchange \"src/App.scss\" --npm run css-build "
+        "stylelint-test": "stylelint '**/*.{css,scss,sass}'",
+        "stylelint-fix": "stylelint --fix '**/*.{scss,sass}'",
+        "lint-tests": "npm run eslint-test && npm run stylelint-test",
+        "lint-fixes": "npm run eslint-fix;npm run stylelint-fix",
+        "css-build": "node-sass --omit-source-map-url src/App.scss src/App.css && stylelint --fix src/App.css",
+        "watcher": "onchange \"src/App.scss\" --npm run css-build"
     },
-    "eslintConfig": {
-        "extends": "react-app"
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run css-build && git add src/App.css && npm run lint-tests && npm build && npm test -- --watchAll=false"
+        }
     },
     "browserslist": {
         "production": [
@@ -59,12 +61,10 @@
     },
     "devDependencies": {
         "eslint": "^6.8.0",
-        "eslint-config-airbnb": "^18.1.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-import": "^2.20.2",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-prettier": "^3.1.3",
-        "eslint-plugin-react": "^7.19.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-react": "^7.20.3",
         "eslint-plugin-react-hooks": "^2.5.1",
         "node-sass": "^4.14.1",
         "prettier": "^2.0.5",
