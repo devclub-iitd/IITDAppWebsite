@@ -24,7 +24,7 @@ const HostelCard = ({ hostelObj, show }) => (
       <div key="c" autoSize="true" className="left2">
         <div className="c-btn-group">
           {hostelObj.category}
-          <a className="c-btn fd" href={hostelObj.mapUrl}>
+          <a className="c-btn fd" href={hostelObj.mapUrl} target="_blank" rel="noopener noreferrer">
             <span className="hostel-link">
               <Icon.MapPin height="15" strokeWidth="3" />
               {' '}

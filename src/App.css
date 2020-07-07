@@ -1140,7 +1140,7 @@ body.light-mode {
         filter: saturate(1.5); }
     body.light-mode .left-e .c-btn-group .insta {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       color: #fff;
       display: flex;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -1272,7 +1272,7 @@ body.light-mode {
       padding-bottom: 0; }
     body.light-mode .c-btn-group .insta {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       color: #fff;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
       padding: 0.25rem;
@@ -1635,7 +1635,7 @@ body.light-mode {
         padding-bottom: 1px;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 1px;
+        padding-top: 3px;
         position: absolute;
         z-index: 1001; }
       body.light-mode .search .filter-icon {
@@ -1921,7 +1921,7 @@ body.light-mode {
         filter: saturate(1.5); }
     body.light-mode .linksEvent .instaEvent {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       color: #fff;
@@ -3126,7 +3126,7 @@ body.dark-mode {
         filter: saturate(1.5); }
     body.dark-mode .left-e .c-btn-group .insta {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       color: #fff;
       display: flex;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -3258,7 +3258,7 @@ body.dark-mode {
       padding-bottom: 0; }
     body.dark-mode .c-btn-group .insta {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       color: #fff;
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
       padding: 0.25rem;
@@ -3621,7 +3621,7 @@ body.dark-mode {
         padding-bottom: 1px;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 1px;
+        padding-top: 3px;
         position: absolute;
         z-index: 1001; }
       body.dark-mode .search .filter-icon {
@@ -3907,7 +3907,7 @@ body.dark-mode {
         filter: saturate(1.5); }
     body.dark-mode .linksEvent .instaEvent {
       background: #f09433;
-      background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
       color: #fff;
