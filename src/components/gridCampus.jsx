@@ -38,11 +38,15 @@ class Campus extends React.Component {
       showFilters: false,
     };
     this.handleClickFilter = this.handleClickFilter.bind(this);
-    this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
-      this,
-    );
+    this.handleCheckChieldElement = this.handleCheckChieldElement.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
+  // componentDidMount() {
+  //   this.setState({
+  //     filtered: loc,
+  //   });
+  // }
 
     handleCheckChieldElement = (event) => {
       const { options, searchQuery } = this.state;

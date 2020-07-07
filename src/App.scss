@@ -60,6 +60,10 @@ $indigo3: #e8eaf6;
 $indigo-content: #c5cae9;
 $indigo-content-active: rgb(212, 216, 246);
 
+html{
+  scroll-behavior: smooth !important;
+}
+
 body.light-mode {
   background-color: $indigo3;
   margin: 0;

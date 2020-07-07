@@ -36,7 +36,7 @@
         "eslint-test": "eslint './**/*.js' './**/*.jsx'",
         "eslint-fix": "eslint --fix './**/*.js' './**/*.jsx'",
         "stylelint-test": "stylelint '**/*.{css,scss,sass}'",
-        "stylelint-fix": "stylelint --fix '**/*.{scss,sass}'",
+        "stylelint-fix": "stylelint --fix '**/*.{css,scss,sass}'",
         "lint-tests": "npm run eslint-test && npm run stylelint-test",
         "lint-fixes": "npm run eslint-fix;npm run stylelint-fix",
         "css-build": "node-sass --omit-source-map-url src/App.scss src/App.css && stylelint --fix src/App.css",
