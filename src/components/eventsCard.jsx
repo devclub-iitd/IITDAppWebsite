@@ -67,6 +67,7 @@ function EventsCard({ eventsObj }) {
           transform: transform.interpolate(
             (t) => `${t} rotateX(180deg)`,
           ),
+          backgroundImage: `linear-gradient(180deg,rgba(116, 137, 219, 0) 0%,rgba(2, 17, 104, 0.77) 100%),url(${eventsObj.bgImg})`,
         }}
       >
         <h1>

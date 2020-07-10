@@ -1190,8 +1190,9 @@ body.light-mode {
   body.light-mode .left-e .c-btn-group > .c-btn {
     border-radius: 0; }
   body.light-mode .left-e .card-img {
+    object-fit: cover;
     border-radius: 10px;
-    height: 100;
+    height: 160px;
     margin-left: 0.5rem;
     margin-top: 1rem;
     width: 80%; }
@@ -1226,7 +1227,7 @@ body.light-mode {
       grid-column-start: 1;
       grid-row-start: 1; }
       body.light-mode .box .left-e img {
-        height: auto;
+        height: 160px;
         max-width: 160px;
         width: 100%; }
     body.light-mode .box .right-e {
@@ -1763,7 +1764,6 @@ body.light-mode {
     background-size: cover; }
   @media (min-width: 672px) {
     body.light-mode .back {
-      background-image: linear-gradient(180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%), url("./components/images/events/rdv19.jpg");
       background-position: 50% 0%; } }
   @media (max-width: 672px) {
     body.light-mode .back {
@@ -3176,8 +3176,9 @@ body.dark-mode {
   body.dark-mode .left-e .c-btn-group > .c-btn {
     border-radius: 0; }
   body.dark-mode .left-e .card-img {
+    object-fit: cover;
     border-radius: 10px;
-    height: 100;
+    height: 160px;
     margin-left: 0.5rem;
     margin-top: 1rem;
     width: 80%; }
@@ -3212,7 +3213,7 @@ body.dark-mode {
       grid-column-start: 1;
       grid-row-start: 1; }
       body.dark-mode .box .left-e img {
-        height: auto;
+        height: 160px;
         max-width: 160px;
         width: 100%; }
     body.dark-mode .box .right-e {

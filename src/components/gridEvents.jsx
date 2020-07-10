@@ -17,7 +17,7 @@ function Events() {
     layoutLg.push({
       i: j.toString(),
       x: j % 2,
-      y: (j % 3) * 1.8,
+      y: (j % 3),
       w: 1,
       h: 1.8,
       isResizable: false,
