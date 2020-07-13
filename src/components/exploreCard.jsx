@@ -24,17 +24,33 @@ function ExploreCard({ exploreObj, show }) {
                 <Icon.Info height="30" strokeWidth="2" />
               </span>
             </div>
+
+            {exploreObj.fbUrl !== '' && (
             <a className="c-btn fb" href={exploreObj.fbUrl}>
               <span>
                 <Icon.Facebook height="30" strokeWidth="2" />
               </span>
             </a>
-            <a className="c-btn insta" href={exploreObj.instaUrl}>
-              <Icon.Instagram height="30" strokeWidth="2" />
-            </a>
-            <a className="c-btn web" href={exploreObj.webUrl}>
-              <Icon.Globe height="30" strokeWidth="2" />
-            </a>
+            )}
+
+            {exploreObj.instaUrl !== '' && (
+              <a className="c-btn insta" href={exploreObj.instaUrl}>
+                <Icon.Instagram height="30" strokeWidth="2" />
+              </a>
+            )}
+
+            {exploreObj.linkedinUrl !== '' && (
+              <a className="c-btn linkedin" href={exploreObj.linkedinUrl}>
+                <Icon.Linkedin height="40" strokeWidth="2" style={{ paddingLeft: 2, paddingRight: 2 }} />
+              </a>
+            )}
+
+            {exploreObj.webUrl !== '' && (
+              <a className="c-btn web" href={exploreObj.webUrl}>
+                <Icon.Globe height="30" strokeWidth="2" />
+              </a>
+            )}
+
             {exploreObj.extraIcon}
           </div>
         </div>
@@ -109,17 +125,33 @@ function RodalContent({ rodalObj }) {
       </h1>
       <br />
       <div className="c-btn-group">
+        {rodalObj.fbUrl !== '' && (
         <a className="c-btn fb" href={rodalObj.fbUrl}>
           <span>
             <Icon.Facebook height="30" strokeWidth="2" />
           </span>
         </a>
-        <a className="c-btn insta" href={rodalObj.instaUrl}>
-          <Icon.Instagram height="30" strokeWidth="2" />
-        </a>
-        <a className="c-btn web" href={rodalObj.webUrl}>
-          <Icon.Globe height="30" strokeWidth="2" />
-        </a>
+        )}
+
+        {rodalObj.instaUrl !== '' && (
+          <a className="c-btn insta" href={rodalObj.instaUrl}>
+            <Icon.Instagram height="30" strokeWidth="2" />
+          </a>
+        )}
+
+        {rodalObj.linkedinUrl !== '' && (
+          <a className="c-btn linkedin" href={rodalObj.linkedinUrl}>
+            <Icon.Linkedin height="40" strokeWidth="2" style={{ paddingLeft: 2, paddingRight: 2 }} />
+          </a>
+        )}
+
+        {rodalObj.webUrl !== '' && (
+          <a className="c-btn web" href={rodalObj.webUrl}>
+            <Icon.Globe height="30" strokeWidth="2" />
+          </a>
+        )}
+
+        {rodalObj.extraIcon}
       </div>
       <div
         className="left-e"
