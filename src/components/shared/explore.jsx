@@ -523,7 +523,7 @@ const explore = [
     infoUrl: '',
     facebookUrl: 'https://www.facebook.com/iitdrobocon/',
     instaUrl: '',
-    linkedinUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/company/robotics-club-iit-delhi/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BU5HbkWyHRjSK7EouMGDiAQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_companies-search_srp_result&lici=myvkoCFeR2CxosDTEaNIig%3D%3D',
     webUrl: 'http://roboticsclub.iitd.ac.in',
     category: 'technical',
     showcase: [],
@@ -546,7 +546,7 @@ const explore = [
     infoUrl: '',
     facebookUrl: 'https://www.facebook.com/shareiitdelhi',
     instaUrl: 'https://www.instagram.com/share_iitd/',
-    linkedinUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/company/share-iit-delhi/',
     webUrl: '',
     category: 'brca',
     showcase: [],
@@ -727,7 +727,7 @@ const explore = [
     infoUrl: '',
     facebookUrl: 'https://www.facebook.com/SPIC.MACAY.IITD',
     instaUrl: 'https://www.instagram.com/spicmacay_iitd/',
-    linkedinUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/company/spicmacay/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3Bzw6LrYLdQb%2BVBDqfB3ARsg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_companies-search_srp_result&lici=tuHZTy8NS7%2BpCsokonaQcA%3D%3D',
     webUrl: 'https://spicmacay.org/?fbclid=IwAR37TCk6QeM2Oj4VC28nhveC9r1jVzYNqMdz5DcNjRp73cYNURBqsM2XXAk',
     category: 'brca',
     showcase: [],
@@ -754,9 +754,9 @@ const explore = [
     infoUrl: '',
     facebookUrl: 'https://www.facebook.com/IITDOnAir',
     instaUrl: 'https://www.instagram.com/iitdonair/',
-    linkedinUrl: '',
+    linkedinUrl: 'https://www.linkedin.com/company/iitd-onair/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3BeU7umjm6TeqtNq6evtg%2FfQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_companies-search_srp_result&lici=%2F1nSSUEeTbCh%2F4uAOhMsSg%3D%3D',
     webUrl: 'http://radio.iitd.ac.in/?fbclid=IwAR3SRpBbzEI3VUxt6fk8bn7wTFDM47GbcdM2A8JTJnRbGZnK7pz-rj41K7A',
-    category: 'brca',
+    category: 'others',
     showcase: [],
     showcaseDesc: [],
     showcaseLinks: [],
@@ -783,7 +783,34 @@ const explore = [
     instaUrl: 'https://www.instagram.com/iitdonair/',
     linkedinUrl: '',
     webUrl: 'http://radio.iitd.ac.in/?fbclid=IwAR3SRpBbzEI3VUxt6fk8bn7wTFDM47GbcdM2A8JTJnRbGZnK7pz-rj41K7A',
-    category: 'brca',
+    category: 'others',
+    showcase: [],
+    showcaseDesc: [],
+    showcaseLinks: [],
+    eventsShowcase: [],
+    eventsShowcaseLinks: [],
+  },
+  {
+    id: 31,
+    name: 'Physics and Astronomy Club',
+    img: <img
+      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/14329926_10154180659917798_6360307381105740884_n.png?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=FyqXI5HgoJoAX9g0zol&_nc_ht=scontent.fdel17-1.fna&oh=0dbcab9c0e04144184d14efbc3790bb9&oe=5F319FE6"
+      alt="P&C Club"
+      className="card-img"
+    />,
+    desc:
+            'Bazinga! ',
+    extraIcon: (
+      <a href="https://www.youtube.com/channel/UCtpMWTjJBkz3-vKOE4o0sCg" className="c-btn yt">
+        <Icon.Youtube height="30" strokeWidth="2" style={{ paddingLeft: 0.5, paddingRight: 0.5 }} />
+      </a>
+    ),
+    infoUrl: '',
+    facebookUrl: 'https://www.facebook.com/PhysicsAndAstronomyIITD',
+    instaUrl: '',
+    linkedinUrl: '',
+    webUrl: '',
+    category: 'technical',
     showcase: [],
     showcaseDesc: [],
     showcaseLinks: [],
