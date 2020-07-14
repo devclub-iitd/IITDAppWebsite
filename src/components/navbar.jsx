@@ -154,9 +154,9 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname === '/home'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname === '/home'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -168,10 +168,10 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname
-                                            === '/clubs'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname
+                  === '/clubs'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -183,10 +183,10 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname
-                                            === '/events'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname
+                  === '/events'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -198,9 +198,9 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname === '/news'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname === '/news'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -212,10 +212,10 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname
-                                            === '/campus'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname
+                  === '/campus'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -227,10 +227,10 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname
-                                            === '/hostels'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname
+                  === '/hostels'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -242,9 +242,9 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname === '/map'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname === '/map'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>
@@ -256,10 +256,10 @@ function Navbar({
                 height="40"
                 style={{
                   stroke:
-                                            window.location.pathname
-                                            === '/links'
-                                              ? 'rgb(212,216,246)'
-                                              : '',
+                  window.location.pathname
+                  === '/links'
+                    ? 'rgb(212,216,246)'
+                    : '',
                 }}
               />
             </Link>

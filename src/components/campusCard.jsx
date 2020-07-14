@@ -28,7 +28,7 @@ function CampusCard({ locObj }) {
         {locObj.categoryIcon}
         <a className="c-btn learn-e" href={locObj.infoUrl}>
           <span>
-            <Icon.Info />
+            <Icon.ExternalLink />
           </span>
         </a>
         <a className="c-btn map" href={locObj.mapUrl}>
