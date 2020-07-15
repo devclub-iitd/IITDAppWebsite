@@ -2212,7 +2212,7 @@ body.dark-mode {
       border-radius: 10px;
       height: 90vh; }
       body.dark-mode .map-leaf h6 {
-        color: #fff;
+        color: #000000;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -2659,7 +2659,7 @@ body.dark-mode {
       margin-top: -10px;
       z-index: 1; }
       body.dark-mode .map-leaf h6 {
-        color: #fff;
+        color: #000000;
         display: inline;
         font-size: 16px !important;
         margin: 0;

@@ -67,27 +67,35 @@ const acad = loc.map((locObj) => {
           {locObj.img}
           <p>{locObj.desc}</p>
           <div className="c-btn-group">
-            <a href="https://" className="c-btn acad">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
               <span>
-                <Icon.BookOpen />
+                <Icon.ExternalLink />
               </span>
             </a>
-            <a href="https://" className="c-btn learn-e">
-              <span>
-                <Icon.Info />
-              </span>
-            </a>
-            <a href="https://" className="c-btn map">
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
               <span>
                 <Icon.MapPin />
               </span>
             </a>
-            <a href="https://" className="c-btn ph">
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
               <Icon.Phone />
             </a>
-            <a href="https://" className="c-btn web">
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
               <Icon.Globe />
             </a>
+            )}
           </div>
         </Popup>
       </Marker>
@@ -104,27 +112,35 @@ const eat = loc.map((locObj) => {
           {locObj.img}
           <p>{locObj.desc}</p>
           <div className="c-btn-group">
-            <a href="https://" className="c-btn eat">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
               <span>
-                <Icon.Coffee />
+                <Icon.ExternalLink />
               </span>
             </a>
-            <a href="https://" className="c-btn learn-e">
-              <span>
-                <Icon.Info />
-              </span>
-            </a>
-            <a href="https://" className="c-btn map">
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
               <span>
                 <Icon.MapPin />
               </span>
             </a>
-            <a href="https://" className="c-btn ph">
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
               <Icon.Phone />
             </a>
-            <a href="https://" className="c-btn web">
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
               <Icon.Globe />
             </a>
+            )}
           </div>
         </Popup>
       </Marker>
@@ -141,27 +157,35 @@ const hostel = loc.map((locObj) => {
           {locObj.img}
           <p>{locObj.desc}</p>
           <div className="c-btn-group">
-            <a href="https://" className="c-btn hs">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
               <span>
-                <Icon.Briefcase />
+                <Icon.ExternalLink />
               </span>
             </a>
-            <a href="https://" className="c-btn learn-e">
-              <span>
-                <Icon.Info />
-              </span>
-            </a>
-            <a href="https://" className="c-btn map">
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
               <span>
                 <Icon.MapPin />
               </span>
             </a>
-            <a href="https://" className="c-btn ph">
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
               <Icon.Phone />
             </a>
-            <a href="https://" className="c-btn web">
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
               <Icon.Globe />
             </a>
+            )}
           </div>
         </Popup>
       </Marker>
@@ -179,27 +203,35 @@ const sport = loc.map((locObj) => {
           {locObj.img}
           <p>{locObj.desc}</p>
           <div className="c-btn-group">
-            <a href="https://" className="c-btn sp">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
               <span>
-                <Icon.Target />
+                <Icon.ExternalLink />
               </span>
             </a>
-            <a href="https://" className="c-btn learn-e">
-              <span>
-                <Icon.Info />
-              </span>
-            </a>
-            <a href="https://" className="c-btn map">
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
               <span>
                 <Icon.MapPin />
               </span>
             </a>
-            <a href="https://" className="c-btn ph">
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
               <Icon.Phone />
             </a>
-            <a href="https://" className="c-btn web">
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
               <Icon.Globe />
             </a>
+            )}
           </div>
         </Popup>
       </Marker>

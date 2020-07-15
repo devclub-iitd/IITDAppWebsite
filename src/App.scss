@@ -3107,7 +3107,7 @@ body.dark-mode {
       height: 90vh;
 
       h6 {
-        color: #fff;
+        color: #000000;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -3688,7 +3688,7 @@ body.dark-mode {
       z-index: 1;
 
       h6 {
-        color: #fff;
+        color: #000000;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -5532,6 +5532,7 @@ body.dark-mode {
         filter: saturate(1.5);
       }
     }
+
   }
 
   @media (min-width: 694px) {
