@@ -4,7 +4,7 @@ import * as Icon from 'react-feather';
 import Leaflet from 'leaflet';
 import loc from './locations';
 
-const shadow = require('../images/map/marker-shadow.png');
+const shadow = require('../assets/map/marker-shadow.png');
 
 const redIcon = new Leaflet.Icon({
   iconUrl:

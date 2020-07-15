@@ -1,17 +1,17 @@
 import React from 'react';
 import * as Icon from 'react-feather';
-import aravali from '../images/hostels/aravali.png';
-import girnar from '../images/hostels/girnar.jpeg';
-import himadri from '../images/hostels/himadri.png';
-import jwala from '../images/hostels/jwala.png';
-import kailash from '../images/hostels/kailash.png';
-import kumaon from '../images/hostels/kumaon.jpg';
-import nilgiri from '../images/hostels/nilgiri.jpeg';
-import satpura from '../images/hostels/satpura.jpg';
-import shivalik from '../images/hostels/shivalik.png';
-import udaigiri from '../images/hostels/udaigiri.jpg';
-import vindy from '../images/hostels/vindy.jpg';
-import zanskar from '../images/hostels/zanskar.jpg';
+import aravali from '../assets/hostels/aravali.png';
+import girnar from '../assets/hostels/girnar.jpeg';
+import himadri from '../assets/hostels/himadri.png';
+import jwala from '../assets/hostels/jwala.png';
+import kailash from '../assets/hostels/kailash.png';
+import kumaon from '../assets/hostels/kumaon.jpg';
+import nilgiri from '../assets/hostels/nilgiri.jpeg';
+import satpura from '../assets/hostels/satpura.jpg';
+import shivalik from '../assets/hostels/shivalik.png';
+import udaigiri from '../assets/hostels/udaigiri.jpg';
+import vindy from '../assets/hostels/vindy.jpg';
+import zanskar from '../assets/hostels/zanskar.jpg';
 
 const hostels = [
   {

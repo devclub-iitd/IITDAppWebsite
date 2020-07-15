@@ -9,7 +9,7 @@ import {
 import '../App.css';
 import {
   acad, hostel, eat, sport,
-} from './shared/mapFilters';
+} from '../data/mapFilters';
 
 const { BaseLayer, Overlay } = LayersControl;
 

@@ -1,35 +1,76 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import Search from './search';
-import NewsCard from './newsCard';
-import news from './shared/news';
-import CheckBox from './shared/checkBox';
-import ToTop from './minis/goToTop';
-import Empty from './emptyResults';
+import Rodal from 'rodal';
+import PropTypes from 'prop-types';
+import * as Icon from 'react-feather';
+import Search from '../minis/search';
+import { RodalContent, HostelCard } from '../cards/hostels';
+import hostels from '../../data/hostels';
+import CheckBox from '../../data/checkBox';
+import ToTop from '../minis/goToTop';
+import Empty from '../minis/emptyResults';
+import 'rodal/lib/rodal.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-class News extends React.Component {
+class HostelGrid extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchQuery: '',
-      filtered: news,
+      filtered: hostels,
       options: [
         {
           id: 1,
-          value: 'May 2020',
+          value: 'Girls Hostels',
           isChecked: true,
-          month: '2020-05',
+          for: 'girls',
         },
         {
           id: 2,
-          value: 'June 2020',
+          value: 'Boys Hostels',
           isChecked: true,
-          month: '2020-06',
+          for: 'boys',
         },
       ],
       showFilters: false,
+      visible: false,
+      rodalObj: {
+        id: 0,
+        name: 'Aravali Hostel',
+        est: 1965,
+        description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
+        category: (
+          <div className="c-btn fb">
+            <span className="hostel-link">
+              <Icon.User height="15" strokeWidth="3" />
+              Boys
+            </span>
+          </div>
+        ),
+        mapUrl: '',
+        learnUrl: '',
+        image: (
+          <img src="" alt="Jwalamukhi Hostel" className="card-img" />
+        ),
+        for: 'boys',
+        warden: 'Sample Warden',
+        wardenLink: '',
+        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
+        notableAlumniDesc: [
+          'Co-founder, Flipkart',
+          'Co-founder, Flipkart',
+        ],
+        notableAlumniLinks: [
+          'https://devclub.in/#/projects',
+          'https://devclub.in/#/projects',
+        ],
+        notableAlumniImages: [
+          'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
+          'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
+        ],
+      },
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -37,6 +78,8 @@ class News extends React.Component {
     this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
       this,
     );
+    this.show = this.show.bind(this);
+    this.hide = this.hide.bind(this);
   }
 
     handleCheckChieldElement = (event) => {
@@ -52,24 +95,23 @@ class News extends React.Component {
       const chosenOptions = options.filter(
         (option) => option.isChecked === true,
       );
-      const chosenCats = chosenOptions.map((a) => a.month);
+      const chosenCats = chosenOptions.map((a) => a.for);
       let newList = [];
       let currentList = [];
       if (searchQuery !== '') {
-        currentList = news;
+        currentList = hostels;
 
-        currentList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
+        currentList = hostels.filter((item) => chosenCats.includes(item.for));
 
         newList = currentList.filter((item) => {
-          const lc = item.title.toLowerCase();
-          const lc2 = item.description.toLowerCase();
+          const lc = item.name.toLowerCase();
 
           const filterWord = searchQuery.toLowerCase();
 
-          return lc.includes(filterWord) || lc2.includes(filterWord);
+          return lc.includes(filterWord);
         });
       } else {
-        newList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
+        newList = hostels.filter((item) => chosenCats.includes(item.for));
       }
       this.setState({
         filtered: newList,
@@ -90,19 +132,18 @@ class News extends React.Component {
       // If the search bar isn't empty
       if (event.target.value !== '') {
         // Assign the original list to currentList
-        currentList = news;
+        currentList = hostels;
 
         newList = currentList.filter((item) => {
-          const lc = item.title.toLowerCase();
-          const lc2 = item.description.toLowerCase();
+          const lc = item.name.toLowerCase();
 
           const filterWord = event.target.value.toLowerCase();
 
-          return lc.includes(filterWord) || lc2.includes(filterWord);
+          return lc.includes(filterWord);
         });
       } else {
         // If the search bar is empty, set newList to original task list
-        newList = news;
+        newList = hostels;
       }
       // Set the filtered state based on what our rules added to newList
       this.setState({
@@ -110,23 +151,76 @@ class News extends React.Component {
       });
     }
 
+    show(hostelObj) {
+      this.setState({
+        visible: true,
+        rodalObj: hostelObj,
+      });
+    }
+
+    hide() {
+      this.setState({
+        visible: false,
+      });
+    }
+
     render() {
+      const { dark } = this.props;
       const {
-        searchQuery, options, filtered, showFilters,
+        searchQuery,
+        options,
+        filtered,
+        showFilters,
+        visible,
+        rodalObj,
       } = this.state;
+      const lightRodal = {
+        borderRadius: 20,
+        width: '80%',
+        maxWidth: '400px',
+        height: '90%',
+        margin: 'auto',
+        marginTop: 90,
+        marginBottom: 10,
+        backgroundColor: '#C5CAE9',
+        boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+        color: '#4051B5',
+        overflowY: 'scroll',
+        zIndex: 100000000,
+      };
+      const darkRodal = {
+        borderRadius: 20,
+        width: '80%',
+        maxWidth: '400px',
+        height: '90%',
+        margin: 'auto',
+        marginTop: 90,
+        marginBottom: 10,
+        backgroundColor: '#1E1E20',
+        boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
+        color: '#fff',
+        overflowY: 'scroll',
+        zIndex: 100000000,
+      };
+      let rodalStyle = {};
+      if (dark) {
+        rodalStyle = darkRodal;
+      } else {
+        rodalStyle = lightRodal;
+      }
       const layoutLg = [];
       const layoutMd = [];
       const layoutSm = [];
       const layoutXs = [];
       const layoutXxs = [];
-      const newsRoll = [];
+      const hostelRoll = [];
       for (let j = 0; j < filtered.length; j += 1) {
         layoutLg.push({
           i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 1.8,
-          w: 1,
-          h: 1.8,
+          x: (j % 4) * 3,
+          y: (j % 4) * 2,
+          w: 3,
+          h: 2,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -136,10 +230,10 @@ class News extends React.Component {
         });
         layoutMd.push({
           i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 1.8,
-          w: 1,
-          h: 1.8,
+          x: (j % 3) * 3,
+          y: (j % 3) * 2,
+          w: 3,
+          h: 2,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -149,10 +243,10 @@ class News extends React.Component {
         });
         layoutSm.push({
           i: j.toString(),
-          x: j % 2,
-          y: (j % 3) * 2.2,
-          w: 1,
-          h: 1.8,
+          x: (j % 2) * 3,
+          y: (j % 2) * 2,
+          w: 3,
+          h: 2,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -162,10 +256,10 @@ class News extends React.Component {
         });
         layoutXs.push({
           i: j.toString(),
-          x: 0,
-          y: j * 3,
-          w: 1,
-          h: 2.8,
+          x: (j % 2) * 3,
+          y: (j % 2) * 2,
+          w: 3,
+          h: 2,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -175,10 +269,10 @@ class News extends React.Component {
         });
         layoutXxs.push({
           i: j.toString(),
-          x: 0,
-          y: j * 3.4,
-          w: 1,
-          h: 3.3,
+          x: (j % 1) * 3,
+          y: (j % 1) * 2,
+          w: 3,
+          h: 2,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -187,19 +281,24 @@ class News extends React.Component {
           isDraggable: false,
         });
         const value = filtered[j];
-        newsRoll.push(
-          <div key={j} className="newsGrid">
-            <NewsCard newsObj={value} />
+        hostelRoll.push(
+          <div key={j} className="hostelGrid">
+            <HostelCard
+              hostelObj={value}
+              show={this.show}
+              rodalObj={rodalObj}
+            />
           </div>,
         );
       }
       const layouts = {
         lg: layoutLg,
-        xxs: layoutXxs,
-        xs: layoutXs,
         md: layoutMd,
         sm: layoutSm,
+        xs: layoutXs,
+        xxs: layoutXxs,
       };
+
       return (
         <>
           <div className="search">
@@ -239,24 +338,38 @@ class News extends React.Component {
             className="layout"
             layouts={layouts}
             breakpoints={{
-              lg: 1200,
-              md: 996,
-              md2: 768,
-              sm: 620,
-              xs: 396,
-              xxs: 340,
+              lg: 1400,
+              md: 1200,
+              sm: 800,
+              xs: 600,
+              xxs: 0,
             }}
             cols={{
-              lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1,
+              lg: 12, md: 9, sm: 6, xs: 3, xxs: 3,
             }}
             horizontalCompact
+            verticalCompact
+            autoSize
           >
-            {newsRoll}
+            {hostelRoll}
           </ResponsiveGridLayout>
           <ToTop />
+          <Rodal
+            visible={visible}
+            onClose={this.hide}
+            className="rodal-imp"
+            customStyles={rodalStyle}
+            animation="slideUp"
+          >
+            <RodalContent rodalObj={rodalObj} />
+          </Rodal>
         </>
       );
     }
 }
 
-export default News;
+HostelGrid.propTypes = {
+  dark: PropTypes.bool.isRequired,
+};
+
+export default HostelGrid;

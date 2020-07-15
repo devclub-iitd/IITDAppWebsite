@@ -2,7 +2,6 @@ import React from 'react';
 import { Panel } from 'rsuite';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
-import dogra from './images/campus/dogra.jpg';
 
 function CampusCard({ locObj }) {
   return (
@@ -13,13 +12,7 @@ function CampusCard({ locObj }) {
       bodyFill
       style={{ display: 'inline-block' }}
     >
-      <img
-        src={dogra}
-        height="200"
-        alt="Dogra Hall"
-        className="campus-img"
-        borderRadius="10px"
-      />
+      {locObj.img}
       <Panel header={locObj.name} className="campus-card-heading">
         <small>{locObj.desc}</small>
       </Panel>

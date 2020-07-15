@@ -10,13 +10,13 @@ import Leaflet from 'leaflet';
 import useDarkMode from 'use-dark-mode';
 import Navbar from './components/navbar';
 import Appbar from './components/appbar';
-import HostelGrid from './components/gridHostel';
-import News from './components/gridNews';
-import Campus from './components/gridCampus';
-import Explore from './components/gridExplore';
+import Hostels from './components/grids/hostels';
+import News from './components/grids/news';
+import Campus from './components/grids/campus';
+import Clubs from './components/grids/clubs';
 import Home from './components/home';
-import Links from './components/gridLinks';
-import Events from './components/gridEvents';
+import Links from './components/grids/links';
+import Events from './components/grids/events';
 import MapLeaf from './components/map';
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
@@ -160,7 +160,7 @@ function App() {
               <main>
                 <Appbar name="Clubs" />
                 <div className="content-area">
-                  <Explore dark={darkMode.value} />
+                  <Clubs dark={darkMode.value} />
                 </div>
               </main>
             </Route>
@@ -205,7 +205,7 @@ function App() {
               <main>
                 <Appbar name="Hostels" />
                 <div className="content-area">
-                  <HostelGrid dark={darkMode.value} />
+                  <Hostels dark={darkMode.value} />
                 </div>
               </main>
             </Route>

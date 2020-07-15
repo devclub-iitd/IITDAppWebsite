@@ -1,6 +1,6 @@
 import React from 'react';
-import empty from './images/empty.svg';
-import emptyGit from './images/emptyGit.svg';
+import EmptyGit from '../../assets/emptyGit.svg';
+import Empty from '../../assets/empty.svg';
 
 export default function emptyResults() {
   return (
@@ -8,14 +8,14 @@ export default function emptyResults() {
       <a href="mailto:devclub.iitd@gmail.com">
         <img
           className="emptyImg"
-          src={empty}
+          src={Empty}
           alt="No Matching Results"
         />
       </a>
       <a href="https://github.com/devclub-iitd/IITDAppWebsite/issues/new">
         <img
           className="emptyImg"
-          src={emptyGit}
+          src={EmptyGit}
           alt="GitHub Add Issue"
         />
       </a>

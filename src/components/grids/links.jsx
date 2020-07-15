@@ -1,7 +1,7 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import * as Icon from 'react-feather';
-import ToTop from './minis/goToTop';
+import ToTop from '../minis/goToTop';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 

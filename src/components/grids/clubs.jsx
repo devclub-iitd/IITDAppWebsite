@@ -3,81 +3,67 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Rodal from 'rodal';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
-import Search from './search';
-import { RodalContent, HostelCard } from './hostelCard';
-import hostels from './shared/hostels';
-import CheckBox from './shared/checkBox';
-import ToTop from './minis/goToTop';
-import Empty from './emptyResults';
+import Search from '../minis/search';
+import { ExploreCard, RodalContent } from '../cards/clubs';
+import explore from '../../data/explore';
+import CheckBox from '../../data/checkBox';
+import ToTop from '../minis/goToTop';
+import Empty from '../minis/emptyResults';
 import 'rodal/lib/rodal.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-class HostelGrid extends React.Component {
+class Explore extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchQuery: '',
-      filtered: hostels,
+      filtered: explore,
       options: [
         {
           id: 1,
-          value: 'Girls Hostels',
+          value: 'BRCA',
           isChecked: true,
-          for: 'girls',
+          category: 'brca',
         },
         {
           id: 2,
-          value: 'Boys Hostels',
+          value: 'Technical',
           isChecked: true,
-          for: 'boys',
+          category: 'technical',
+        },
+        {
+          id: 3,
+          value: 'Others',
+          isChecked: true,
+          category: 'others',
         },
       ],
       showFilters: false,
       visible: false,
       rodalObj: {
         id: 0,
-        name: 'Aravali Hostel',
-        est: 1965,
-        description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
-        category: (
-          <div className="c-btn fb">
-            <span className="hostel-link">
-              <Icon.User height="15" strokeWidth="3" />
-              Boys
-            </span>
-          </div>
+        name: 'DevClub',
+        img: <img src="" alt="DevClub IITD" className="card-img" />,
+        desc:
+                    'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
+        extraIcon: (
+          <a
+            className="c-btn git"
+            href="https://github.com/devclub-iitd"
+          >
+            <Icon.GitHub height="30" strokeWidth="2" />
+          </a>
         ),
-        mapUrl: '',
-        learnUrl: '',
-        image: (
-          <img src="" alt="Jwalamukhi Hostel" className="card-img" />
-        ),
-        for: 'boys',
-        warden: 'Sample Warden',
-        wardenLink: '',
-        notableAlumni: ['Sachin Bansal', 'Binny Bansal'],
-        notableAlumniDesc: [
-          'Co-founder, Flipkart',
-          'Co-founder, Flipkart',
-        ],
-        notableAlumniLinks: [
-          'https://devclub.in/#/projects',
-          'https://devclub.in/#/projects',
-        ],
-        notableAlumniImages: [
-          'https://img.huffingtonpost.com/asset/5e609d6423000077180bfa8d.jpeg?ops=1200_630',
-          'http://media2.intoday.in/indiatoday/images/stories/graphic3_pullquote_binny_559_062316051520.jpg',
-        ],
+        infoUrl: '',
+        facebookUrl: '',
+        instaUrl: '',
+        webUrl: '',
+        category: 'technical',
       },
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleClickFilter = this.handleClickFilter.bind(this);
-    this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
-      this,
-    );
     this.show = this.show.bind(this);
     this.hide = this.hide.bind(this);
   }
@@ -95,13 +81,13 @@ class HostelGrid extends React.Component {
       const chosenOptions = options.filter(
         (option) => option.isChecked === true,
       );
-      const chosenCats = chosenOptions.map((a) => a.for);
+      const chosenCats = chosenOptions.map((a) => a.category);
       let newList = [];
       let currentList = [];
       if (searchQuery !== '') {
-        currentList = hostels;
+        currentList = explore;
 
-        currentList = hostels.filter((item) => chosenCats.includes(item.for));
+        currentList = explore.filter((item) => chosenCats.includes(item.category));
 
         newList = currentList.filter((item) => {
           const lc = item.name.toLowerCase();
@@ -111,7 +97,7 @@ class HostelGrid extends React.Component {
           return lc.includes(filterWord);
         });
       } else {
-        newList = hostels.filter((item) => chosenCats.includes(item.for));
+        newList = explore.filter((item) => chosenCats.includes(item.category));
       }
       this.setState({
         filtered: newList,
@@ -123,7 +109,13 @@ class HostelGrid extends React.Component {
     };
 
     handleChange(event) {
+      const { options } = this.state;
       this.setState({ searchQuery: event.target.value });
+
+      const chosenOptions = options.filter(
+        (option) => option.isChecked === true,
+      );
+      const chosenCats = chosenOptions.map((a) => a.category);
 
       let currentList = [];
       // Variable to hold the filtered list before putting into state
@@ -132,7 +124,7 @@ class HostelGrid extends React.Component {
       // If the search bar isn't empty
       if (event.target.value !== '') {
         // Assign the original list to currentList
-        currentList = hostels;
+        currentList = explore.filter((item) => chosenCats.includes(item.category));
 
         newList = currentList.filter((item) => {
           const lc = item.name.toLowerCase();
@@ -143,7 +135,7 @@ class HostelGrid extends React.Component {
         });
       } else {
         // If the search bar is empty, set newList to original task list
-        newList = hostels;
+        newList = explore.filter((item) => chosenCats.includes(item.category));
       }
       // Set the filtered state based on what our rules added to newList
       this.setState({
@@ -151,10 +143,10 @@ class HostelGrid extends React.Component {
       });
     }
 
-    show(hostelObj) {
+    show(exploreObj) {
       this.setState({
         visible: true,
-        rodalObj: hostelObj,
+        rodalObj: exploreObj,
       });
     }
 
@@ -179,7 +171,6 @@ class HostelGrid extends React.Component {
         width: '80%',
         maxWidth: '400px',
         height: '90%',
-        margin: 'auto',
         marginTop: 90,
         marginBottom: 10,
         backgroundColor: '#C5CAE9',
@@ -213,14 +204,14 @@ class HostelGrid extends React.Component {
       const layoutSm = [];
       const layoutXs = [];
       const layoutXxs = [];
-      const hostelRoll = [];
+      const exploreRoll = [];
       for (let j = 0; j < filtered.length; j += 1) {
         layoutLg.push({
           i: j.toString(),
           x: (j % 4) * 3,
-          y: (j % 4) * 2,
+          y: Math.floor((j / 4) * 1.75),
           w: 3,
-          h: 2,
+          h: 1.75,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -231,9 +222,9 @@ class HostelGrid extends React.Component {
         layoutMd.push({
           i: j.toString(),
           x: (j % 3) * 3,
-          y: (j % 3) * 2,
+          y: Math.floor((j / 3) * 1.75),
           w: 3,
-          h: 2,
+          h: 1.75,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -244,9 +235,9 @@ class HostelGrid extends React.Component {
         layoutSm.push({
           i: j.toString(),
           x: (j % 2) * 3,
-          y: (j % 2) * 2,
+          y: Math.floor((j / 2) * 1.75),
           w: 3,
-          h: 2,
+          h: 1.75,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -257,9 +248,9 @@ class HostelGrid extends React.Component {
         layoutXs.push({
           i: j.toString(),
           x: (j % 2) * 3,
-          y: (j % 2) * 2,
+          y: Math.floor((j / 2) * 1.75),
           w: 3,
-          h: 2,
+          h: 1.75,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -270,9 +261,9 @@ class HostelGrid extends React.Component {
         layoutXxs.push({
           i: j.toString(),
           x: (j % 1) * 3,
-          y: (j % 1) * 2,
+          y: Math.floor((j / 1) * 1.75),
           w: 3,
-          h: 2,
+          h: 1.75,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -281,16 +272,22 @@ class HostelGrid extends React.Component {
           isDraggable: false,
         });
         const value = filtered[j];
-        hostelRoll.push(
-          <div key={j} className="hostelGrid">
-            <HostelCard
-              hostelObj={value}
+        exploreRoll.push(
+          <div
+            key={j}
+            className="exploreGrid"
+            isResizable="true"
+            autoSize="true"
+          >
+            <ExploreCard
+              exploreObj={value}
               show={this.show}
               rodalObj={rodalObj}
             />
           </div>,
         );
       }
+
       const layouts = {
         lg: layoutLg,
         md: layoutMd,
@@ -338,20 +335,19 @@ class HostelGrid extends React.Component {
             className="layout"
             layouts={layouts}
             breakpoints={{
-              lg: 1400,
-              md: 1200,
-              sm: 800,
-              xs: 600,
+              lg: 1470,
+              md: 1000,
+              sm: 860,
+              xs: 620,
               xxs: 0,
             }}
             cols={{
-              lg: 12, md: 9, sm: 6, xs: 3, xxs: 3,
+              lg: 12, md: 9, sm: 6, xs: 6, xxs: 3,
             }}
             horizontalCompact
-            verticalCompact
             autoSize
           >
-            {hostelRoll}
+            {exploreRoll}
           </ResponsiveGridLayout>
           <ToTop />
           <Rodal
@@ -368,8 +364,8 @@ class HostelGrid extends React.Component {
     }
 }
 
-HostelGrid.propTypes = {
+Explore.propTypes = {
   dark: PropTypes.bool.isRequired,
 };
 
-export default HostelGrid;
+export default Explore;

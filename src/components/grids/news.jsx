@@ -1,71 +1,42 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import Rodal from 'rodal';
-import PropTypes from 'prop-types';
-import * as Icon from 'react-feather';
-import Search from './search';
-import { ExploreCard, RodalContent } from './exploreCard';
-import explore from './shared/explore';
-import CheckBox from './shared/checkBox';
-import ToTop from './minis/goToTop';
-import Empty from './emptyResults';
-import 'rodal/lib/rodal.css';
+import Search from '../minis/search';
+import NewsCard from '../cards/news';
+import news from '../../data/news';
+import CheckBox from '../../data/checkBox';
+import ToTop from '../minis/goToTop';
+import Empty from '../minis/emptyResults';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-class Explore extends React.Component {
+class News extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       searchQuery: '',
-      filtered: explore,
+      filtered: news,
       options: [
         {
           id: 1,
-          value: 'BRCA',
+          value: 'May 2020',
           isChecked: true,
-          category: 'brca',
+          month: '2020-05',
         },
         {
           id: 2,
-          value: 'Technical',
+          value: 'June 2020',
           isChecked: true,
-          category: 'technical',
-        },
-        {
-          id: 3,
-          value: 'Others',
-          isChecked: true,
-          category: 'others',
+          month: '2020-06',
         },
       ],
       showFilters: false,
-      visible: false,
-      rodalObj: {
-        id: 0,
-        name: 'DevClub',
-        img: <img src="" alt="DevClub IITD" className="card-img" />,
-        desc:
-                    'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
-        extraIcon: (
-          <a
-            className="c-btn git"
-            href="https://github.com/devclub-iitd"
-          >
-            <Icon.GitHub height="30" strokeWidth="2" />
-          </a>
-        ),
-        infoUrl: '',
-        facebookUrl: '',
-        instaUrl: '',
-        webUrl: '',
-        category: 'technical',
-      },
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.show = this.show.bind(this);
-    this.hide = this.hide.bind(this);
+    this.handleClickFilter = this.handleClickFilter.bind(this);
+    this.handleCheckChieldElement = this.handleCheckChieldElement.bind(
+      this,
+    );
   }
 
     handleCheckChieldElement = (event) => {
@@ -81,23 +52,24 @@ class Explore extends React.Component {
       const chosenOptions = options.filter(
         (option) => option.isChecked === true,
       );
-      const chosenCats = chosenOptions.map((a) => a.category);
+      const chosenCats = chosenOptions.map((a) => a.month);
       let newList = [];
       let currentList = [];
       if (searchQuery !== '') {
-        currentList = explore;
+        currentList = news;
 
-        currentList = explore.filter((item) => chosenCats.includes(item.category));
+        currentList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
 
         newList = currentList.filter((item) => {
-          const lc = item.name.toLowerCase();
+          const lc = item.title.toLowerCase();
+          const lc2 = item.description.toLowerCase();
 
           const filterWord = searchQuery.toLowerCase();
 
-          return lc.includes(filterWord);
+          return lc.includes(filterWord) || lc2.includes(filterWord);
         });
       } else {
-        newList = explore.filter((item) => chosenCats.includes(item.category));
+        newList = news.filter((item) => chosenCats.includes(item.createdAt.slice(0, 7)));
       }
       this.setState({
         filtered: newList,
@@ -109,13 +81,7 @@ class Explore extends React.Component {
     };
 
     handleChange(event) {
-      const { options } = this.state;
       this.setState({ searchQuery: event.target.value });
-
-      const chosenOptions = options.filter(
-        (option) => option.isChecked === true,
-      );
-      const chosenCats = chosenOptions.map((a) => a.category);
 
       let currentList = [];
       // Variable to hold the filtered list before putting into state
@@ -124,18 +90,19 @@ class Explore extends React.Component {
       // If the search bar isn't empty
       if (event.target.value !== '') {
         // Assign the original list to currentList
-        currentList = explore.filter((item) => chosenCats.includes(item.category));
+        currentList = news;
 
         newList = currentList.filter((item) => {
-          const lc = item.name.toLowerCase();
+          const lc = item.title.toLowerCase();
+          const lc2 = item.description.toLowerCase();
 
           const filterWord = event.target.value.toLowerCase();
 
-          return lc.includes(filterWord);
+          return lc.includes(filterWord) || lc2.includes(filterWord);
         });
       } else {
         // If the search bar is empty, set newList to original task list
-        newList = explore.filter((item) => chosenCats.includes(item.category));
+        newList = news;
       }
       // Set the filtered state based on what our rules added to newList
       this.setState({
@@ -143,75 +110,23 @@ class Explore extends React.Component {
       });
     }
 
-    show(exploreObj) {
-      this.setState({
-        visible: true,
-        rodalObj: exploreObj,
-      });
-    }
-
-    hide() {
-      this.setState({
-        visible: false,
-      });
-    }
-
     render() {
-      const { dark } = this.props;
       const {
-        searchQuery,
-        options,
-        filtered,
-        showFilters,
-        visible,
-        rodalObj,
+        searchQuery, options, filtered, showFilters,
       } = this.state;
-      const lightRodal = {
-        borderRadius: 20,
-        width: '80%',
-        maxWidth: '400px',
-        height: '90%',
-        marginTop: 90,
-        marginBottom: 10,
-        backgroundColor: '#C5CAE9',
-        boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
-        color: '#4051B5',
-        overflowY: 'scroll',
-        zIndex: 100000000,
-      };
-      const darkRodal = {
-        borderRadius: 20,
-        width: '80%',
-        maxWidth: '400px',
-        height: '90%',
-        margin: 'auto',
-        marginTop: 90,
-        marginBottom: 10,
-        backgroundColor: '#1E1E20',
-        boxShadow: '2px 2px 12px 10px rgba(0,0,0,0.10)',
-        color: '#fff',
-        overflowY: 'scroll',
-        zIndex: 100000000,
-      };
-      let rodalStyle = {};
-      if (dark) {
-        rodalStyle = darkRodal;
-      } else {
-        rodalStyle = lightRodal;
-      }
       const layoutLg = [];
       const layoutMd = [];
       const layoutSm = [];
       const layoutXs = [];
       const layoutXxs = [];
-      const exploreRoll = [];
+      const newsRoll = [];
       for (let j = 0; j < filtered.length; j += 1) {
         layoutLg.push({
           i: j.toString(),
-          x: (j % 4) * 3,
-          y: Math.floor((j / 4) * 1.75),
-          w: 3,
-          h: 1.75,
+          x: j % 2,
+          y: (j % 3) * 1.8,
+          w: 1,
+          h: 1.8,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -221,10 +136,10 @@ class Explore extends React.Component {
         });
         layoutMd.push({
           i: j.toString(),
-          x: (j % 3) * 3,
-          y: Math.floor((j / 3) * 1.75),
-          w: 3,
-          h: 1.75,
+          x: j % 2,
+          y: (j % 3) * 1.8,
+          w: 1,
+          h: 1.8,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -234,10 +149,10 @@ class Explore extends React.Component {
         });
         layoutSm.push({
           i: j.toString(),
-          x: (j % 2) * 3,
-          y: Math.floor((j / 2) * 1.75),
-          w: 3,
-          h: 1.75,
+          x: j % 2,
+          y: (j % 3) * 2.2,
+          w: 1,
+          h: 1.8,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -247,10 +162,10 @@ class Explore extends React.Component {
         });
         layoutXs.push({
           i: j.toString(),
-          x: (j % 2) * 3,
-          y: Math.floor((j / 2) * 1.75),
-          w: 3,
-          h: 1.75,
+          x: 0,
+          y: j * 3,
+          w: 1,
+          h: 2.8,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -260,10 +175,10 @@ class Explore extends React.Component {
         });
         layoutXxs.push({
           i: j.toString(),
-          x: (j % 1) * 3,
-          y: Math.floor((j / 1) * 1.75),
-          w: 3,
-          h: 1.75,
+          x: 0,
+          y: j * 3.4,
+          w: 1,
+          h: 3.3,
           isResizable: false,
           useCSSTransforms: true,
           autoSize: true,
@@ -272,30 +187,19 @@ class Explore extends React.Component {
           isDraggable: false,
         });
         const value = filtered[j];
-        exploreRoll.push(
-          <div
-            key={j}
-            className="exploreGrid"
-            isResizable="true"
-            autoSize="true"
-          >
-            <ExploreCard
-              exploreObj={value}
-              show={this.show}
-              rodalObj={rodalObj}
-            />
+        newsRoll.push(
+          <div key={j} className="newsGrid">
+            <NewsCard newsObj={value} />
           </div>,
         );
       }
-
       const layouts = {
         lg: layoutLg,
+        xxs: layoutXxs,
+        xs: layoutXs,
         md: layoutMd,
         sm: layoutSm,
-        xs: layoutXs,
-        xxs: layoutXxs,
       };
-
       return (
         <>
           <div className="search">
@@ -335,37 +239,24 @@ class Explore extends React.Component {
             className="layout"
             layouts={layouts}
             breakpoints={{
-              lg: 1470,
-              md: 1000,
-              sm: 860,
-              xs: 620,
-              xxs: 0,
+              lg: 1200,
+              md: 996,
+              md2: 768,
+              sm: 620,
+              xs: 396,
+              xxs: 340,
             }}
             cols={{
-              lg: 12, md: 9, sm: 6, xs: 6, xxs: 3,
+              lg: 2, md: 1, md2: 1, sm: 1, xs: 1, xxs: 1,
             }}
             horizontalCompact
-            autoSize
           >
-            {exploreRoll}
+            {newsRoll}
           </ResponsiveGridLayout>
           <ToTop />
-          <Rodal
-            visible={visible}
-            onClose={this.hide}
-            className="rodal-imp"
-            customStyles={rodalStyle}
-            animation="slideUp"
-          >
-            <RodalContent rodalObj={rodalObj} />
-          </Rodal>
         </>
       );
     }
 }
 
-Explore.propTypes = {
-  dark: PropTypes.bool.isRequired,
-};
-
-export default Explore;
+export default News;

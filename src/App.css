@@ -1322,8 +1322,8 @@ body.light-mode {
       justify-content: center;
       padding: 0.3rem; }
       body.light-mode .c-btn-group .yt:hover {
-        -webkit-filter: saturate(1.5);
-        filter: saturate(1.5); }
+        -webkit-filter: saturate(0.8);
+        filter: saturate(0.8); }
     body.light-mode .c-btn-group .web {
       background-color: #20c997;
       color: #fff;
@@ -1810,7 +1810,7 @@ body.light-mode {
       background-position: 50% 0%; } }
   @media (max-width: 672px) {
     body.light-mode .back {
-      background-image: linear-gradient(180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%), url("./components/images/events/rdv19.jpg");
+      background-image: linear-gradient(180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%), url("./assets/events/rdv19.jpg");
       background-position: 50% 6%; } }
   body.light-mode .c.front {
     background: rgba(36, 58, 188, 0.8);
@@ -3351,8 +3351,8 @@ body.dark-mode {
       justify-content: center;
       padding: 0.3rem; }
       body.dark-mode .c-btn-group .yt:hover {
-        -webkit-filter: saturate(1.5);
-        filter: saturate(1.5); }
+        -webkit-filter: saturate(0.8);
+        filter: saturate(0.8); }
     body.dark-mode .c-btn-group .web {
       background-color: #20c997;
       color: #fff;
@@ -3836,11 +3836,11 @@ body.dark-mode {
     background-size: cover; }
   @media (min-width: 672px) {
     body.dark-mode .back {
-      background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url("./components/images/events/rdv19.jpg");
+      background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url("./assets/events/rdv19.jpg");
       background-position: 50% 0%; } }
   @media (max-width: 672px) {
     body.dark-mode .back {
-      background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url("./components/images/events/rdv19.jpg");
+      background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url("./assets/events/rdv19.jpg");
       background-position: 50% 6%; } }
   body.dark-mode .c.front {
     background: #1b1b1d;

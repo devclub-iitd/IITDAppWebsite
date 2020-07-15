@@ -1,11 +1,11 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import CampusCard from './campusCard';
-import Search from './search';
-import loc from './shared/locationsCampus';
-import CheckBox from './shared/checkBox';
-import ToTop from './minis/goToTop';
-import Empty from './emptyResults';
+import CampusCard from '../cards/campus';
+import Search from '../minis/search';
+import loc from '../../data/locationsCampus';
+import CheckBox from '../../data/checkBox';
+import ToTop from '../minis/goToTop';
+import Empty from '../minis/emptyResults';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import events from './shared/events';
-import ToTop from './minis/goToTop';
-import EventsCard from './eventsCard';
+import events from '../../data/events';
+import ToTop from '../minis/goToTop';
+import EventsCard from '../cards/events';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
