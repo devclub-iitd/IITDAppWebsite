@@ -13,28 +13,43 @@ function CampusCard({ locObj }) {
       style={{ display: 'inline-block' }}
     >
       {locObj.img}
+
       <Panel header={locObj.name} className="campus-card-heading">
         <small>{locObj.desc}</small>
       </Panel>
       <p />
       <div className="c-btn-group">
+
         {locObj.categoryIcon}
-        <a className="c-btn learn-e" href={locObj.infoUrl}>
-          <span>
-            <Icon.ExternalLink />
-          </span>
-        </a>
-        <a className="c-btn map" href={locObj.mapUrl}>
-          <span>
-            <Icon.MapPin />
-          </span>
-        </a>
-        <a className="c-btn ph" href={locObj.phoneUrl}>
-          <Icon.Phone />
-        </a>
-        <a className="c-btn web" href={locObj.webUrl}>
-          <Icon.Globe />
-        </a>
+
+        {locObj.infoUrl !== '' && (
+          <a className="c-btn learn-e" href={locObj.infoUrl}>
+            <span>
+              <Icon.ExternalLink />
+            </span>
+          </a>
+        )}
+
+        {locObj.mapUrl !== '' && (
+          <a className="c-btn map" href={locObj.mapUrl}>
+            <span>
+              <Icon.MapPin />
+            </span>
+          </a>
+        )}
+
+        {locObj.phoneUrl !== '' && (
+          <a className="c-btn ph" href={locObj.phoneUrl}>
+            <Icon.Phone />
+          </a>
+        )}
+
+        {locObj.webUrl !== '' && (
+          <a className="c-btn web" href={locObj.webUrl}>
+            <Icon.Globe />
+          </a>
+        )}
+
       </div>
     </Panel>
   );

@@ -3,7 +3,7 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from '../minis/search';
 import NewsCard from '../cards/news';
 import news from '../../data/news';
-import CheckBox from '../../data/checkBox';
+import CheckBox from '../checkBox';
 import ToTop from '../minis/goToTop';
 import Empty from '../minis/emptyResults';
 

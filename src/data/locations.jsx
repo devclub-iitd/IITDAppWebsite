@@ -25,7 +25,7 @@ const locations = [
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Dogra+Hall/@28.5901753,77.1735223,13z/data=!4m8!1m2!2m1!1sdogra+hall!3m4!1s0x390d1df65e4c0773:0x20ba4c995cbfbf85!8m2!3d28.5449009!4d77.1921234',
     phoneUrl: '',
     webUrl: '',
   },
@@ -242,15 +242,15 @@ const locations = [
     cd: [28.544668, 77.191461],
     name: 'Central Library',
     img: <img
-      src={dogra}
+      src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flibrary.iitd.ac.in%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fslideshow_image%2Fpublic%2F2019-06%2F2.jpg%3Fitok%3DIUxb5OcO&f=1&nofb=1"
       height="200"
-      alt="Dogra Hall"
+      alt="Central Library"
       className="campus-img"
       borderRadius="10px"
     />,
     category: 'academic',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'IIT Delhi\'s main library with a rich collection of books and academic journals. ',
     categoryIcon: (
       <a href="https://" className="c-btn fd">
         <span>
@@ -259,9 +259,9 @@ const locations = [
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
-    phoneUrl: '',
-    webUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Central+Library/@28.5449056,77.1899347,17z/data=!4m12!1m6!3m5!1s0x390d1df65e4c0773:0x20ba4c995cbfbf85!2sDogra+Hall!8m2!3d28.5449009!4d77.1921234!3m4!1s0x390d1df6f4136245:0x77ecaff1b3699806!8m2!3d28.5446611!4d77.1914528',
+    phoneUrl: 'tel:+91-11-26591451',
+    webUrl: 'http://library.iitd.ac.in/',
   },
   {
     id: 10,

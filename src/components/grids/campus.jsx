@@ -3,7 +3,7 @@ import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from '../cards/campus';
 import Search from '../minis/search';
 import loc from '../../data/locationsCampus';
-import CheckBox from '../../data/checkBox';
+import CheckBox from '../checkBox';
 import ToTop from '../minis/goToTop';
 import Empty from '../minis/emptyResults';
 

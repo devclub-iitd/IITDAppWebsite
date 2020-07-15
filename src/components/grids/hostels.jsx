@@ -6,7 +6,7 @@ import * as Icon from 'react-feather';
 import Search from '../minis/search';
 import { RodalContent, HostelCard } from '../cards/hostels';
 import hostels from '../../data/hostels';
-import CheckBox from '../../data/checkBox';
+import CheckBox from '../checkBox';
 import ToTop from '../minis/goToTop';
 import Empty from '../minis/emptyResults';
 import 'rodal/lib/rodal.css';

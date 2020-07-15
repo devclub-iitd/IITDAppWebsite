@@ -1395,10 +1395,10 @@ body.light-mode {
       padding-right: 0.75rem;
       width: 90%; }
     body.light-mode .campus-card .campus-img {
+      object-fit: cover;
       border-radius: 10px;
-      height: auto;
+      height: 220px;
       margin: 1rem;
-      max-width: 260px;
       width: 85%; }
     body.light-mode .campus-card .c-btn:hover,
     body.light-mode .campus-card .c-btn:focus {
@@ -3424,10 +3424,10 @@ body.dark-mode {
       padding-right: 0.75rem;
       width: 90%; }
     body.dark-mode .campus-card .campus-img {
+      object-fit: cover;
       border-radius: 10px;
-      height: auto;
+      height: 220px;
       margin: 1rem;
-      max-width: 260px;
       width: 85%; }
     body.dark-mode .campus-card .c-btn:hover,
     body.dark-mode .campus-card .c-btn:focus {
