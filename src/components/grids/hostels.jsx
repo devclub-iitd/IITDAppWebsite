@@ -4,6 +4,7 @@ import Rodal from 'rodal';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 import Search from '../minis/search';
+import ResultCounter from '../minis/counter';
 import { RodalContent, HostelCard } from '../cards/hostels';
 import hostels from '../../data/hostels';
 import CheckBox from '../checkBox';
@@ -174,6 +175,7 @@ class HostelGrid extends React.Component {
         visible,
         rodalObj,
       } = this.state;
+      const number = filtered.length;
       const lightRodal = {
         borderRadius: 20,
         width: '80%',
@@ -353,6 +355,8 @@ class HostelGrid extends React.Component {
           >
             {hostelRoll}
           </ResponsiveGridLayout>
+          <br />
+          <ResultCounter number={number} />
           <ToTop />
           <Rodal
             visible={visible}

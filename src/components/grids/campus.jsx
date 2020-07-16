@@ -2,6 +2,7 @@ import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import CampusCard from '../cards/campus';
 import Search from '../minis/search';
+import ResultCounter from '../minis/counter';
 import loc from '../../data/locationsCampus';
 import CheckBox from '../checkBox';
 import ToTop from '../minis/goToTop';
@@ -127,6 +128,7 @@ class Campus extends React.Component {
       const {
         searchQuery, options, filtered, showFilters,
       } = this.state;
+      const number = filtered.length;
       const layoutLg = [];
       const layoutSm = [];
       const layoutMd = [];
@@ -277,6 +279,8 @@ class Campus extends React.Component {
           >
             {campusRoll}
           </ResponsiveGridLayout>
+          <br />
+          <ResultCounter number={number} />
           <ToTop />
         </div>
       );

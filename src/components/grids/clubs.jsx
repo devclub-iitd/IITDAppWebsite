@@ -4,6 +4,7 @@ import Rodal from 'rodal';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 import Search from '../minis/search';
+import ResultCounter from '../minis/counter';
 import { ExploreCard, RodalContent } from '../cards/clubs';
 import explore from '../../data/explore';
 import CheckBox from '../checkBox';
@@ -13,7 +14,7 @@ import 'rodal/lib/rodal.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-class Explore extends React.Component {
+class Clubs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -166,6 +167,7 @@ class Explore extends React.Component {
         visible,
         rodalObj,
       } = this.state;
+      const number = filtered.length;
       const lightRodal = {
         borderRadius: 20,
         width: '80%',
@@ -349,6 +351,8 @@ class Explore extends React.Component {
           >
             {exploreRoll}
           </ResponsiveGridLayout>
+          <br />
+          <ResultCounter number={number} />
           <ToTop />
           <Rodal
             visible={visible}
@@ -364,8 +368,8 @@ class Explore extends React.Component {
     }
 }
 
-Explore.propTypes = {
+Clubs.propTypes = {
   dark: PropTypes.bool.isRequired,
 };
 
-export default Explore;
+export default Clubs;

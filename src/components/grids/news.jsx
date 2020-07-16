@@ -1,6 +1,7 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import Search from '../minis/search';
+import ResultCounter from '../minis/counter';
 import NewsCard from '../cards/news';
 import news from '../../data/news';
 import CheckBox from '../checkBox';
@@ -120,6 +121,7 @@ class News extends React.Component {
       const layoutXs = [];
       const layoutXxs = [];
       const newsRoll = [];
+      const number = filtered.length;
       for (let j = 0; j < filtered.length; j += 1) {
         layoutLg.push({
           i: j.toString(),
@@ -253,6 +255,8 @@ class News extends React.Component {
           >
             {newsRoll}
           </ResponsiveGridLayout>
+          <br />
+          <ResultCounter number={number} />
           <ToTop />
         </>
       );
