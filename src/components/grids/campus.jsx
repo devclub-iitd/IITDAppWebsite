@@ -280,7 +280,7 @@ class Campus extends React.Component {
             {campusRoll}
           </ResponsiveGridLayout>
           <br />
-          <ResultCounter number={number} />
+          {filtered.length > 0 && <ResultCounter number={number} />}
           <ToTop />
         </div>
       );

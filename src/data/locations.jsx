@@ -24,10 +24,10 @@ const locations = [
         </span>
       </a>
     ),
-    infoUrl: '',
+    infoUrl: 'https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Delhi',
     mapUrl: 'https://www.google.com/maps/place/Dogra+Hall/@28.5901753,77.1735223,13z/data=!4m8!1m2!2m1!1sdogra+hall!3m4!1s0x390d1df65e4c0773:0x20ba4c995cbfbf85!8m2!3d28.5449009!4d77.1921234',
-    phoneUrl: '',
-    webUrl: '',
+    phoneUrl: '011-2659-7135',
+    webUrl: 'https://home.iitd.ac.in/',
   },
   {
     id: 1,
@@ -50,10 +50,10 @@ const locations = [
         </span>
       </a>
     ),
-    infoUrl: '',
-    mapUrl: '',
-    phoneUrl: '',
-    webUrl: '',
+    infoUrl: 'https://www.tripadvisor.in/ShowUserReviews-g304551-d13190474-r551981783-Cafe_Coffee_Day-New_Delhi_National_Capital_Territory_of_Delhi.html',
+    mapUrl: 'https://www.google.com/maps/place/Caf%C3%A9+Coffee+Day/@28.5453802,77.192356,15z/data=!4m2!3m1!1s0x0:0xefd3c272b0349c81?sa=X&ved=2ahUKEwiPjMz4p9LqAhUTILcAHVS6BSQQ_BIwG3oECBkQCA',
+    phoneUrl: '+9118001025093',
+    webUrl: 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiPjMz4p9LqAhUTILcAHVS6BSQQhAcwJ3oECCYQAg&url=http%3A%2F%2Fwww.cafecoffeeday.com%2Fcafe-menu%2F&usg=AOvVaw1KfIdk_LDEK6oyvjVTrTQv',
   },
   {
     id: 2,
@@ -77,8 +77,8 @@ const locations = [
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
-    phoneUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/SCOOPS/@28.5454204,77.1918162,15z/data=!4m2!3m1!1s0x0:0x6d4bcc8551f7c0dd?sa=X&ved=2ahUKEwjB8bq6qNLqAhWiW3wKHfmyB0oQ_BIwE3oECBIQCA',
+    phoneUrl: '+911126597155',
     webUrl: '',
   },
   {
@@ -86,7 +86,7 @@ const locations = [
     cd: [28.545488, 77.191608],
     name: 'Dept. Of Electrical Engineering',
     img: <img
-      src={dogra}
+      src="https://lh3.googleusercontent.com/proxy/mdn8RAtdC8fZiHwcbq6OoTwcqqFdUEec2xqpZWuou7rxLY7ZuzQ3XXq6iBDNxa0rAkhTpKgJ9-0Fe28geDDjq_1eeVeXkkdUmzQ"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -102,10 +102,10 @@ const locations = [
         </span>
       </a>
     ),
-    infoUrl: '',
-    mapUrl: '',
-    phoneUrl: '',
-    webUrl: '',
+    infoUrl: 'http://ee.iitd.ernet.in/programmes.html',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Electrical+Engineering/@28.5454915,77.1894161,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df69b432ec5:0x4c7708541c8923b7!8m2!3d28.5454915!4d77.1916048?hl=en',
+    phoneUrl: '+911126596102',
+    webUrl: 'http://ee.iitd.ernet.in/',
   },
   {
     id: 4,
@@ -131,14 +131,14 @@ const locations = [
     infoUrl: '',
     mapUrl: '',
     phoneUrl: '',
-    webUrl: '',
+    webUrl: 'https://www.google.com/maps/place/Red+square,+IIT+DELHI/@28.5454735,77.1215651,12z/data=!4m8!1m2!2m1!1sred+square!3m4!1s0x390d1d41725491fd:0x518fb79156e8806c!8m2!3d28.5451199!4d77.1912828?hl=en',
   },
   {
     id: 5,
     cd: [28.544848, 77.191558],
     name: 'Amul Cafe',
     img: <img
-      src={dogra}
+      src="https://content.jdmagicbox.com/comp/delhi/z3/011pxx11.xx11.170113083022.y6z3/catalogue/amul-cafe-registrar-iit-new-delhi-delhi-coffee-shops-kemiks5i3f.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -148,23 +148,23 @@ const locations = [
     desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
     categoryIcon: (
-      <a href="https://" className="c-btn fd">
+      <a href="https://" className="c-btn eat">
         <span>
-          <Icon.BookOpen />
+          <Icon.Coffee />
         </span>
       </a>
     ),
-    infoUrl: '',
-    mapUrl: '',
+    infoUrl: 'https://www.justdial.com/Delhi/Amul-Cafe-Registrar-IIT-New-Delhi/011PXX11-XX11-170113083022-Y6Z3_BZDET',
+    mapUrl: 'https://www.google.com/maps/place/Amul+Cafe/@28.5449093,77.1898985,17z/data=!4m8!1m2!2m1!1samul+iit+delhi!3m4!1s0x390d1df6f4d3717f:0xfbe464f1c1ada2b9!8m2!3d28.5448431!4d77.191546?hl=en',
     phoneUrl: '',
-    webUrl: '',
+    webUrl: 'http://amul.com/m/cafe-amul',
   },
   {
     id: 6,
     cd: [28.544719, 77.19118],
     name: 'Shiru Cafe',
     img: <img
-      src={dogra}
+      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/47444826_1920290698086829_3395463258587529216_n.jpg?_nc_cat=101&_nc_sid=8bfeb9&_nc_ohc=dNEk0u243lkAX8_WKqJ&_nc_ht=scontent.fdel17-1.fna&oh=642e9d05631a0e42c94d3697de0c215a&oe=5F353A1E"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -174,23 +174,23 @@ const locations = [
     desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
     categoryIcon: (
-      <a href="https://" className="c-btn fd">
+      <a href="https://" className="c-btn eat">
         <span>
-          <Icon.BookOpen />
+          <Icon.Coffee />
         </span>
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Shiru+Caf%C3%A9/@28.5447198,77.18899,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df6f322a9a3:0x169cff78856757e3!8m2!3d28.5447198!4d77.1911787?hl=en',
     phoneUrl: '',
-    webUrl: '',
+    webUrl: 'http://global.shirucafe.com/',
   },
   {
     id: 7,
     cd: [28.544717, 77.191666],
     name: 'HPMC Store',
     img: <img
-      src={dogra}
+      src="https://hpmc.in/portal_content/HPMC%20Final%20Logo.png"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -200,23 +200,23 @@ const locations = [
     desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
     categoryIcon: (
-      <a href="https://" className="c-btn fd">
+      <a href="https://" className="c-btn eat">
         <span>
-          <Icon.BookOpen />
+          <Icon.Coffee />
         </span>
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/HPMC+store/@28.5447125,77.1894686,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df65f7e86b5:0xa7db5cd397466521!8m2!3d28.5447125!4d77.1916573?hl=en',
     phoneUrl: '',
-    webUrl: '',
+    webUrl: 'https://hpmc.gov.in/',
   },
   {
     id: 8,
     cd: [28.544595, 77.191713],
     name: 'Nescafé',
     img: <img
-      src={dogra}
+      src="https://blogs.ubc.ca/dominicinindia/files/2012/09/D-Nescafe.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -226,14 +226,14 @@ const locations = [
     desc:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
     categoryIcon: (
-      <a href="https://" className="c-btn fd">
+      <a href="https://" className="c-btn eat">
         <span>
-          <Icon.BookOpen />
+          <Icon.Coffee />
         </span>
       </a>
     ),
     infoUrl: '',
-    mapUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/HPMC+store/@28.5447125,77.1894686,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df65f7e86b5:0xa7db5cd397466521!8m2!3d28.5447125!4d77.1916573?hl=en',
     phoneUrl: '',
     webUrl: '',
   },

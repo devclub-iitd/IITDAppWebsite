@@ -352,7 +352,7 @@ class Clubs extends React.Component {
             {exploreRoll}
           </ResponsiveGridLayout>
           <br />
-          <ResultCounter number={number} />
+          {filtered.length > 0 && <ResultCounter number={number} />}
           <ToTop />
           <Rodal
             visible={visible}

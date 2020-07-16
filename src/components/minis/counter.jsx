@@ -6,7 +6,6 @@ export default function ResultCounter({ number }) {
     <div style={{ textAlign: 'center' }}>
       <hr style={{ width: '80%' }} className="counterHR" />
       <h1 style={{ paddingLeft: 10 }}>{`Showing ${number} matching results`}</h1>
-      <hr style={{ width: '80%' }} className="counterHR" />
     </div>
   );
 }

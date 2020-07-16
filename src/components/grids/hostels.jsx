@@ -356,7 +356,7 @@ class HostelGrid extends React.Component {
             {hostelRoll}
           </ResponsiveGridLayout>
           <br />
-          <ResultCounter number={number} />
+          {filtered.length > 0 && <ResultCounter number={number} />}
           <ToTop />
           <Rodal
             visible={visible}

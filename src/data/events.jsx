@@ -3,7 +3,7 @@ import rdv from '../assets/events/rdv.svg';
 import tryst from '../assets/events/tryst.svg';
 import convergenz from '../assets/events/convergenz.svg';
 import literati from '../assets/events/literati.svg';
-import sportech from '../assets/events/sportech.webp';
+import sportech from '../assets/events/sportech.png';
 import BECon from '../assets/events/BECon.png';
 import rdvBg from '../assets/events/rdv19.jpg';
 import trystBg from '../assets/events/trystBg.jpeg';
