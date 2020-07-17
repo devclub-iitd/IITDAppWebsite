@@ -1,6 +1,8 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
+import loader from './loader.gif';
 
 const HostelCard = ({ hostelObj, show }) => (
   <>
@@ -13,7 +15,10 @@ const HostelCard = ({ hostelObj, show }) => (
         {hostelObj.est}
       </h1>
       <div key="a" autoSize="true" className="left1">
-        {hostelObj.image}
+        <LazyLoad height="100%" once offset={200} resize placeholder={<img src={loader} alt="loader" className="card-img" />}>
+          {hostelObj.image}
+        </LazyLoad>
+
       </div>
       <div key="b" autoSize="true" className="right">
         <p>

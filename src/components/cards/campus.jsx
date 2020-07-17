@@ -2,6 +2,8 @@ import React from 'react';
 import { Panel } from 'rsuite';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
+import loader from './loader.gif';
 
 function CampusCard({ locObj }) {
   return (
@@ -12,7 +14,24 @@ function CampusCard({ locObj }) {
       bodyFill
       style={{ display: 'inline-block' }}
     >
-      {locObj.img}
+
+      <LazyLoad
+        height="100%"
+        once
+        offset={200}
+        resize
+        placeholder={(
+          <img
+            src={loader}
+            alt="loader"
+            height="200"
+            className="campus-img"
+            borderRadius="10px"
+          />
+)}
+      >
+        {locObj.img}
+      </LazyLoad>
 
       <Panel header={locObj.name} className="campus-card-heading">
         <small>{locObj.desc}</small>

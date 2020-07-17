@@ -1,13 +1,17 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
+import loader from './loader.gif';
 
 function ExploreCard({ exploreObj, show }) {
   return (
     <>
       <div className="box">
         <div key="a" className="left-e">
-          {exploreObj.img}
+          <LazyLoad height="100%" once offset={200} resize placeholder={<img src={loader} alt="loader" className="card-img" />}>
+            {exploreObj.img}
+          </LazyLoad>
 
           <div className="c-btn-group">
             <div
