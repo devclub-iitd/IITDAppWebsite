@@ -58,6 +58,121 @@ const blackIcon = new Leaflet.Icon({
   shadowAnchor: [5, 46],
 });
 
+const greenIcon = new Leaflet.Icon({
+  iconUrl:
+        'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  iconRetinaUrl:
+        'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  iconAnchor: [2.5, 27.5],
+  popupAnchor: [5, -22],
+  iconSize: [17.5, 27.5],
+  shadowUrl: shadow,
+  shadowSize: [34, 47.5],
+  shadowAnchor: [5, 46],
+});
+const greyIcon = new Leaflet.Icon({
+  iconUrl:
+        'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+  iconRetinaUrl:
+        'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+  iconAnchor: [2.5, 27.5],
+  popupAnchor: [5, -22],
+  iconSize: [17.5, 27.5],
+  shadowUrl: shadow,
+  shadowSize: [34, 47.5],
+  shadowAnchor: [5, 46],
+});
+
+const other = loc.map((locObj) => {
+  if (locObj.category === 'other') {
+    return (
+      <Marker position={locObj.cd} className="marker" icon={greyIcon}>
+        <Popup className="pup">
+          <h1>{locObj.name}</h1>
+          {locObj.img}
+          <p>{locObj.desc}</p>
+          <div className="c-btn-group">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
+              <span>
+                <Icon.ExternalLink />
+              </span>
+            </a>
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
+              <span>
+                <Icon.MapPin />
+              </span>
+            </a>
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
+              <Icon.Phone />
+            </a>
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
+              <Icon.Globe />
+            </a>
+            )}
+          </div>
+        </Popup>
+      </Marker>
+    );
+  }
+  return <div />;
+});
+const shop = loc.map((locObj) => {
+  if (locObj.category === 'shop') {
+    return (
+      <Marker position={locObj.cd} className="marker" icon={greenIcon}>
+        <Popup className="pup">
+          <h1>{locObj.name}</h1>
+          {locObj.img}
+          <p>{locObj.desc}</p>
+          <div className="c-btn-group">
+            {locObj.categoryIcon}
+
+            {locObj.infoUrl !== '' && (
+            <a className="c-btn learn-e" href={locObj.infoUrl}>
+              <span>
+                <Icon.ExternalLink />
+              </span>
+            </a>
+            )}
+
+            {locObj.mapUrl !== '' && (
+            <a className="c-btn map" href={locObj.mapUrl}>
+              <span>
+                <Icon.MapPin />
+              </span>
+            </a>
+            )}
+
+            {locObj.phoneUrl !== '' && (
+            <a className="c-btn ph" href={locObj.phoneUrl}>
+              <Icon.Phone />
+            </a>
+            )}
+
+            {locObj.webUrl !== '' && (
+            <a className="c-btn web" href={locObj.webUrl}>
+              <Icon.Globe />
+            </a>
+            )}
+          </div>
+        </Popup>
+      </Marker>
+    );
+  }
+  return <div />;
+});
 const acad = loc.map((locObj) => {
   if (locObj.category === 'academic') {
     return (
@@ -241,5 +356,5 @@ const sport = loc.map((locObj) => {
 });
 
 export {
-  acad, hostel, eat, sport,
+  acad, hostel, eat, sport, shop, other,
 };

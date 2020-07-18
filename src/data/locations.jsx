@@ -14,8 +14,17 @@ import udaigiri from '../assets/hostels/udaigiri.jpg';
 import vindy from '../assets/hostels/vindy.jpg';
 import zanskar from '../assets/hostels/zanskar.jpg';
 import bbe from '../assets/campus/bbe.png';
+import ee from '../assets/campus/ee.png';
 import scoops from '../assets/campus/scoops.png';
 import rs from '../assets/campus/rs.png';
+import ch from '../assets/campus/ch.png';
+import huss from '../assets/campus/huss.png';
+import shadab from '../assets/campus/shadab.png';
+import koolees from '../assets/campus/koolees.png';
+import cp from '../assets/campus/cp.png';
+import sbi from '../assets/campus/sbi.png';
+import csc from '../assets/campus/csc.png';
+import po from '../assets/campus/po.png';
 
 const locations = [
   {
@@ -101,7 +110,7 @@ const locations = [
     cd: [28.545488, 77.191608],
     name: 'Dept. Of Electrical Engineering',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/abljqkGszpfkfXLVDtzk9ErEyn_3EY9guH41XrG3Hvq95J4rMphemj5Pkx__EZbwyCCXYS2KsMSIIUq3hhsSp_OI__s73mFFm7E"
+      src={ee}
       height="200"
       alt="Dept Of EE"
       className="campus-img"
@@ -283,7 +292,7 @@ const locations = [
     cd: [28.546202, 77.191276],
     name: 'Dept. Of Civil Engineering',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/W5hJnUOeIutM3Lah2R-7sWErrnRtDDwC5E_Ezfl283uVfThl0XOeaKTDg4YOEX_RySPe_heX2IIAKecWtj6baU9g75BLblZ6h7ZhFg6sGPk0Rk5o5IrjTsXWx2Kbacs7WURSduvkLG3XmDdGxalYcVoEOk5-KHwJ3NXo"
+      src="http://civil.iitd.ac.in/gallery-images/Department/Department%20of%20Civil%20Engineering%20-%201.jpg"
       height="200"
       alt="Dept. Of Civil Engineering"
       className="campus-img"
@@ -952,6 +961,838 @@ const locations = [
     mapUrl: 'https://www.google.com/maps/place/Tennis+Courts/@28.5481955,77.1843557,19.13z/data=!4m8!1m2!2m1!1sswimming+pool+iit+delhi!3m4!1s0x390d1df24601731f:0x2209fd43671535c0!8m2!3d28.5475886!4d77.1846172?hl=en',
     phoneUrl: '',
     webUrl: '',
+  },
+  {
+    id: 36,
+    cd: [28.544899, 77.19221],
+    name: 'Department of Mathematics',
+    img: <img
+      src="https://ggn.dronacharya.info/CSEDept/photogallery/2014/may_2014/images/1.jpg"
+      height="200"
+      alt="Dept Of Mathematics"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The department of Mathematics IIT Delhi is situated here.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://maths.iitd.ac.in/drupal/Undergraduate',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Mathematics,+IIT+Delhi/@28.5448675,77.1919694,21z/data=!4m5!3m4!1s0x390d1df65ef41ab3:0x776445d9865b62a!8m2!3d28.5447965!4d77.1920067',
+    phoneUrl: '+911126591471',
+    webUrl: 'http://maths.iitd.ac.in/',
+  },
+  {
+    id: 37,
+    cd: [28.546115, 77.193850],
+    name: 'Department of Chemical Engineering',
+    img: <img
+      src={ch}
+      height="200"
+      alt="Dept Of Chemical Engineering"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The department of Chemical Engineering IIT Delhi is situated here.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://chemistry.iitd.ac.in/courses.html',
+    mapUrl: 'https://www.google.com/maps/place/Department+Of+Chemical+Engineering/@28.5458552,77.1933628,19.44z/data=!4m5!3m4!1s0x390d1d96497e8f9d:0xd581fb2eb97cadc7!8m2!3d28.5460689!4d77.1934915',
+    phoneUrl: '',
+    webUrl: 'http://chemistry.iitd.ac.in/',
+  },
+  {
+    id: 37,
+    cd: [28.545029, 77.190730],
+    name: 'Department of Computer Science & Engineering (Bharti School)',
+    img: <img
+      src="https://photos.wikimapia.org/p/00/00/30/72/84_big.jpg"
+      height="200"
+      alt="Dept Of Computer Science & Engineering"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Bharti School',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://www.cse.iitd.ernet.in/index.php/2011-12-29-22-45-50/courses',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Computer+Science+and+Engineering/@28.5450865,77.1885222,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df6aeec8f6b:0xd6886dc6b70b6eb!8m2!3d28.5450865!4d77.1907109',
+    phoneUrl: '+911126591291',
+    webUrl: 'https://www.cse.iitd.ernet.in/',
+  },
+  {
+    id: 38,
+    cd: [28.543435, 77.192915],
+    name: 'Department of Design',
+    img: <img
+      src="https://pbs.twimg.com/media/DZX5isGUQAUCa68.jpg"
+      height="200"
+      alt="Dept Of Design"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Design IIT Delhi is situated here.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://iddcweb.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Design,+IIT+Delhi/@28.5434218,77.1899207,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df7aceb01cf:0x37394bfb5d80173f!8m2!3d28.5434218!4d77.1921094',
+    phoneUrl: '',
+    webUrl: 'http://iddcweb.iitd.ac.in/',
+  },
+  {
+    id: 39,
+    cd: [28.5452869, 77.1923669],
+    name: 'Department of Humanities and Social Sciences',
+    img: <img
+      src={huss}
+      height="200"
+      alt="Dept Of Humanities"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of HuSS IIT Delhi is situated here.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://hss.iitd.ac.in/courses',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Humanities+and+Social+Sciences/@28.5452869,77.1923669,21z/data=!4m14!1m8!2m7!1sdepartment+of+humanities!3m5!1sdepartment+of+humanities!2s28.543425,+77.192915!4m2!1d77.1929154!2d28.5434253!3m4!1s0x390d1df665927a0b:0xe0c148de657541a!8m2!3d28.5454395!4d77.1923219',
+    phoneUrl: '+911126591371',
+    webUrl: 'http://hss.iitd.ac.in/',
+  },
+  {
+    id: 40,
+    cd: [28.542632, 77.183011],
+    name: 'Department of Management Studies (DMS)',
+    img: <img
+      src="https://getmyuni.azureedge.net/college-image/big/department-of-management-studies-dms-iit-delhi-new-delhi.jpg"
+      height="200"
+      alt="DMS IIT Delhi"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Management Studies (DMS) IIT Delhi.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://dms.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Management+Studies,+IIT+Delhi/@28.5426238,77.1808715,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df1d55fb887:0xe469935d376ee021!8m2!3d28.5426238!4d77.1830602',
+    phoneUrl: '+911126591171',
+    webUrl: 'http://dms.iitd.ac.in/',
+  },
+  {
+    id: 41,
+    cd: [28.544346, 77.193415],
+    name: 'Department of Material Science and Engineering',
+    img: <img
+      src="https://lh5.googleusercontent.com/s-8Lll4XfcSpH3WoInIZOsri-exXBlXUY1ldc1-_HyCvhkENmYoR0Lj52hixPILEiymJYbO33Y6WxdSJg1a77w8ah-7y_wYOPpFYnSBiJD1jffDGsB4=w1280"
+      height="200"
+      alt="DMS IIT Delhi"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Material Science and Engineering IITD.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://mse.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Materials+Science+and+Engineering/@28.5443692,77.1913546,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df6309fbc65:0xf97dd8724c49e240!8m2!3d28.5443692!4d77.1935433',
+    phoneUrl: '',
+    webUrl: 'http://mse.iitd.ac.in/',
+  },
+  {
+    id: 42,
+    cd: [28.5458986, 77.1930107],
+    name: 'Department of Mechanical Engineering',
+    img: <img
+      src="https://images.shiksha.com/mediadata/images/1504611236phpFGRISD.jpeg"
+      height="200"
+      alt="Mechanical Engineering IIT Delhi"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Mechanical Engineering IITD.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://mech.iitd.ac.in/content/academic-programmes',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Mechanical+Engineering/@28.5459267,77.1908014,17z/data=!3m1!4b1!4m5!3m4!1s0x390ce209ea4fb5e5:0x284dcb6bb0d51484!8m2!3d28.5459267!4d77.1929901',
+    phoneUrl: '+911126591051',
+    webUrl: 'http://mech.iitd.ac.in/',
+  },
+  {
+    id: 43,
+    cd: [28.5452623, 77.1924184],
+    name: 'Department of Physics',
+    img: <img
+      src={dogra}
+      height="200"
+      alt="Dept of Physics IIT Delhi"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Physics IITD.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://www.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Department+Of+Physics,+IIT+Delhi/@28.5452623,77.1924184,20.06z/data=!4m5!3m4!1s0x390d1dc87305e40d:0xcca0ec09258fe592!8m2!3d28.5454041!4d77.1922877',
+    phoneUrl: '',
+    webUrl: 'http://www.iitd.ac.in/',
+  },
+  {
+    id: 44,
+    cd: [28.543972, 77.193585],
+    name: 'Department of Textile & Fibre Engineering',
+    img: <img
+      src="http://www.smita-iitd.com/_/rsrc/1584102045552/group-members/16-17%20dept.PNG"
+      height="200"
+      alt="Dept of Textile & Fibre Engineering IIT Delhi"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Department Of Textile & Fibre Enginnering IITD.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://textile.iitd.ac.in/programs.htm',
+    mapUrl: 'https://www.google.com/maps/place/Department+of+Textile+and+Fibre+Engineering/@28.5442287,77.1911444,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df63a7bde9d:0xb7e99df7edb5d29a!8m2!3d28.5442287!4d77.1933331',
+    phoneUrl: '+911126591401',
+    webUrl: 'http://textile.iitd.ac.in/',
+  },
+  {
+    id: 44,
+    cd: [28.545558, 77.194176],
+    name: 'Kusuma School of Biological Sciences',
+    img: <img
+      src="http://bioschool.iitd.ac.in/img/Kusuma-2.png"
+      height="200"
+      alt="KSBS"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'The Kusuma Schhol of Biological Sciences.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://bioschool.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Kusuma+School+Of+Biological+Sciences/@28.5455658,77.1919809,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df61c0830cb:0xe9b22b5b631fe9d6!8m2!3d28.5455658!4d77.1941696',
+    phoneUrl: '+911126597500',
+    webUrl: 'http://bioschool.iitd.ac.in/',
+  },
+  {
+    id: 45,
+    cd: [28.5454911, 77.1902656],
+    name: 'Amar Nath and Shashi Khosla School of Information Technology',
+    img: <img
+      src="http://www.sit.iitd.ac.in/images/1-scaled.jpg"
+      height="200"
+      alt="Amar Nath and Shashi Khosla School of Information Technology"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'School of IT.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://www.sit.iitd.ernet.in/',
+    mapUrl: 'https://www.google.com/maps/place/Amar+Nath+and+Shashi+Khosla+School+of+Information+Technology/@28.5454911,77.1902656,20.64z/data=!4m5!3m4!1s0x390d1df6bd59d11d:0x667b88d0e2a5a8a9!8m2!3d28.5454451!4d77.1901989',
+    phoneUrl: '+911126596056',
+    webUrl: 'http://www.sit.iitd.ernet.in/',
+  },
+  {
+    id: 46,
+    cd: [28.5463962, 77.1867577],
+    name: 'Chaayos',
+    img: <img
+      src="https://pbs.twimg.com/media/DUJgLPlXcAAp4Rk?format=jpg&name=large"
+      height="200"
+      alt="Chaayos"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Chaayos\' IIT Delhi outlet. Subsidized rates, amazing ambience and some great chai.',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://www.tripadvisor.in/ShowUserReviews-g304551-d10382590-r561220093-Chaayos_Hauz_Khas_Village-New_Delhi_National_Capital_Territory_of_Delhi.html',
+    mapUrl: 'https://www.google.com/maps/search/chaayos+iit+delhi/@28.5463959,77.1867586,20.99z',
+    phoneUrl: '+919821193375',
+    webUrl: 'http://www.chaayos.com/',
+  },
+  {
+    id: 47,
+    cd: [28.546414, 77.186691],
+    name: 'Roopsagar Bakery',
+    img: <img
+      src="https://img4.nbstatic.in/tr:w-500/5b0277acd60180000c8384fc.jpg"
+      height="200"
+      alt="Roopsagar Bakery"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'This bakery serves pure-vegetarian treats such as cakes, pastries, cookies, snacks, cheesecakes and muffins.',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://www.justdial.com/Delhi/Roop-Sagar-Bakery-Jia-Sarai-IIT/011PXX11-XX11-140624095712-G2R4_BZDET',
+    mapUrl: 'https://www.google.com/maps/place/Roopsagar+Bakery/@28.5462598,77.1867701,20.99z/data=!4m8!1m2!2m1!1schaayos+iit+delhi!3m4!1s0x390d1df3d079797d:0xad66433f77174401!8m2!3d28.5464176!4d77.1866872',
+    phoneUrl: '+917838118004',
+    webUrl: '',
+  },
+  {
+    id: 48,
+    cd: [28.546455, 77.186709],
+    name: 'Quiet Kitchen',
+    img: <img
+      src="https://img4.nbstatic.in/tr:w-500/5cbdb3e7d60180000d7ad0f2.png"
+      height="200"
+      alt="Quiet Kitchen"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Quiet Kitchen IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://www.nearbuy.com/delhi-ncr/quiet-kitchen-iit-campus',
+    mapUrl: 'https://www.google.com/maps/place/Roopsagar+Bakery/@28.5462598,77.1867701,20.99z/data=!4m8!1m2!2m1!1schaayos+iit+delhi!3m4!1s0x390d1df3d079797d:0xad66433f77174401!8m2!3d28.5464176!4d77.1866872',
+    phoneUrl: '',
+    webUrl: '',
+  },
+  {
+    id: 49,
+    cd: [28.546196, 77.186630],
+    name: 'Masala Mix',
+    img: <img
+      src="https://content.jdmagicbox.com/comp/delhi/z6/011pxx11.xx11.181113202746.h7z6/catalogue/masala-mix-hauz-khas-delhi-l801s9i1wn.jpg"
+      height="200"
+      alt="Masala Mix"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Masala Mix IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://magicpin.in/New-Delhi/Jia-Sarai/Restaurant/Masala-Mix/store/24c966/',
+    mapUrl: 'https://www.google.com/maps/place/Masala+Mix/@28.546261,77.1867698,21z/data=!4m8!1m2!2m1!1schaayos+iit+delhi!3m4!1s0x390d1df3d9fde9d3:0xc363b8f7c4ed3f8a!8m2!3d28.5462002!4d77.1866235',
+    phoneUrl: '+919810061748',
+    webUrl: '',
+  },
+  {
+    id: 50,
+    cd: [28.5471611, 77.186354],
+    name: 'Shadab Cafe',
+    img: <img
+      src={shadab}
+      height="200"
+      alt="Shadab Cafe"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Shadab Cafe, near Zanskar Hostel IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Shadab+Cafe/@28.5470604,77.1864516,21z/data=!4m8!1m2!2m1!1schaayos+iit+delhi!3m4!1s0x390d1d42fb9211cd:0x37259187a509c7af!8m2!3d28.5471686!4d77.1863379',
+    phoneUrl: '',
+    webUrl: '',
+  },
+  {
+    id: 51,
+    cd: [28.5483362, 77.1841118],
+    name: 'Koolees',
+    img: <img
+      src={koolees}
+      height="200"
+      alt="Koolees"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Koolees Shakes and Ice Creams',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Koolees/@28.5483362,77.1841118,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipODhrEABfAzgrLd8HtyX6iYGnmanW9_qx5eYjMt!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipODhrEABfAzgrLd8HtyX6iYGnmanW9_qx5eYjMt%3Dw203-h114-k-no!7i1920!8i1080!4m8!1m2!2m1!1schaayos+iit+delhi!3m4!1s0x390d1df2610d33ab:0xcee0f14dea219558!8m2!3d28.5482842!4d77.1842343',
+    phoneUrl: '',
+    webUrl: '',
+  },
+  {
+    id: 52,
+    cd: [28.5450913, 77.1852827],
+    name: 'Open Air Theatre',
+    img: <img
+      src="https://pbs.twimg.com/media/DppLhogWkAMdR6I.jpg"
+      height="200"
+      alt="OAT"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'ent',
+    desc:
+            'Open Air Theatre IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Music />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Open+Air+Theatre,+IIT+Delhi/@28.5450913,77.1852827,11z/data=!4m8!1m2!2m1!1samphitheater+near+Indian+Institute+of+Technology+Delhi,+Hauz+Khas,+New+Delhi,+Delhi!3m4!1s0x390d1df1853f6eed:0xb5bdb65b286c76e0!8m2!3d28.5450913!4d77.1852827',
+    phoneUrl: '+911126597135',
+    webUrl: '',
+  },
+  {
+    id: 53,
+    cd: [28.5450925, 77.1835998],
+    name: 'Faculty Guest House',
+    img: <img
+      src="https://live.staticflickr.com/90/236146739_bfacd506d3_b.jpg"
+      height="200"
+      alt="Faculty Guest House"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'Faculty Guest House IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn fb">
+        <span>
+          <Icon.Home />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Faculty+Guest+House/@28.5450925,77.1835998,19.12z/data=!4m11!1m2!2m1!1siit+delhi!3m7!1s0x390d1df1f9cd908f:0x2f34da024d2322f9!5m2!4m1!1i2!8m2!3d28.5453491!4d77.1836275',
+    phoneUrl: '+911126591699',
+    webUrl: 'http://iitd.ac.in/',
+  },
+  {
+    id: 54,
+    cd: [28.5449127, 77.184791],
+    name: 'Student Activity Center (SAC)',
+    img: <img
+      src="https://s3-ap-southeast-1.amazonaws.com/sportsjig-production-assets/system/assets/files/2675/large/IMG_20151224_142649.jpg?1450948596"
+      height="200"
+      alt="Faculty Guest House"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'Well maintained multi-sports facility. Accessible to the Students, Staff and Alumni only.',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Music />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://m.sportsjig.com/advancedSearch/playspaces/973/IIT-Delhi---Student-Activities-Center',
+    mapUrl: 'https://www.google.com/maps/place/SAC+Library,+IIT+Delhi/@28.5449842,77.1850801,20.04z/data=!4m12!1m6!2m5!1ssac+iit+delhi!5m3!5m2!4m1!1i2!3m4!1s0x390d1d13172d8629:0x6422e160f6070b87!8m2!3d28.545069!4d77.1853048',
+    phoneUrl: '',
+    webUrl: 'http://sac.iitd.ac.in/',
+  },
+  {
+    id: 55,
+    cd: [28.5458768, 77.1880759],
+    name: 'Hospital',
+    img: <img
+      src="http://hospital.iitd.ac.in/sites/default/files/hospital/iitd_hospital.jpg"
+      height="200"
+      alt="Hospital"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'The medical needs of the Campus population met by the Institute Hospital.',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Heart />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://hospital.iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/IITD+Hospital/@28.5458768,77.1880759,21z/data=!4m12!1m6!2m5!1ssac+iit+delhi!5m3!5m2!4m1!1i2!3m4!1s0x390d1df3fd840dfb:0xaa742411591954de!8m2!3d28.5458768!4d77.1882127',
+    phoneUrl: '+911126596628',
+    webUrl: 'http://hospital.iitd.ac.in/',
+  },
+  {
+    id: 56,
+    cd: [28.5458568, 77.1856583],
+    name: 'Apollo Pharmacy',
+    img: <img
+      src="https://content.jdmagicbox.com/comp/delhi/v3/011pxx11.xx11.110223095948.n7v3/catalogue/apollo-pharmacy-r-k-puram-delhi-chemists-4j3skns.jpg?clr="
+      height="200"
+      alt="Apollo pharmacy"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'The campus pharmacy.',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Heart />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://stores.apollopharmacy.in/apollo-pharmacy-greater-kailash-ii-s-block-pharmacy-hauz-khas-new-delhi-30329/Home?utm_source=locator&utm_medium=googleplaces',
+    mapUrl: 'https://www.google.com/maps/place/Apollo+Pharmacy/@28.5458568,77.1856583,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1df15770dce3:0xbb86890ffb8130d9!8m2!3d28.5458568!4d77.187847',
+    phoneUrl: '+911141402222',
+    webUrl: 'http://stores.apollopharmacy.in/apollo-pharmacy-greater-kailash-ii-s-block-pharmacy-hauz-khas-new-delhi-30329/Home?utm_source=locator&utm_medium=googleplaces',
+  },
+  {
+    id: 57,
+    cd: [28.5438559, 77.1933482],
+    name: 'Chai Point',
+    img: <img
+      src={cp}
+      height="200"
+      alt="Chai point"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'eat',
+    desc:
+            'Best place for a cup of tea inside IIT and it\'s quite pocket friendly as well .',
+    categoryIcon: (
+      <a href="https://" className="c-btn eat">
+        <span>
+          <Icon.Coffee />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Chai+point/@28.5438559,77.1933482,21z/data=!4m12!1m6!3m5!1s0x390d1df15770dce3:0xbb86890ffb8130d9!2sApollo+Pharmacy!8m2!3d28.5458568!4d77.187847!3m4!1s0x390d1d0986f3a585:0x141996188ca40268!8m2!3d28.5438882!4d77.1934082',
+    phoneUrl: '+918880141000',
+    webUrl: '',
+  },
+  {
+    id: 58,
+    cd: [28.5437328, 77.1930072],
+    name: 'State Bank Of India',
+    img: <img
+      src={sbi}
+      height="200"
+      alt="SBI"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'State Bank of India (SBI) Iit Hauz Khas core banking branch IFSC Code is SBIN0001077.',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.DollarSign />
+        </span>
+      </a>
+    ),
+    infoUrl: 'https://banksifsccode.com/state-bank-of-india-ifsc-code/delhi/new-delhi/iit-hauz-khas-branch/',
+    mapUrl: 'https://www.google.com/maps/place/State+Bank+of+India+IIT+Delhi/@28.5437328,77.1930072,20.36z/data=!4m12!1m6!3m5!1s0x390d1df15770dce3:0xbb86890ffb8130d9!2sApollo+Pharmacy!8m2!3d28.5458568!4d77.187847!3m4!1s0x390d1df64a7a253b:0xe027cf3d2506106e!8m2!3d28.5438988!4d77.1932251',
+    phoneUrl: '+911126581842',
+    webUrl: '',
+  },
+  {
+    id: 59,
+    cd: [28.5453426, 77.1909557],
+    name: 'Computer Services Centre',
+    img: <img
+      src={csc}
+      height="200"
+      alt="CSC"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'The CSC manages all of the centrally available network, IT resources in IIT .',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Cpu />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Computer+Services+Centre/@28.5453426,77.1909557,18.58z/data=!4m5!3m4!1s0x390d1df66748619d:0x90021d25eee641fc!8m2!3d28.54498!4d77.1920647',
+    phoneUrl: '+919210109494',
+    webUrl: 'http://www.cc.iitd.ac.in/',
+  },
+  {
+    id: 60,
+    cd: [28.5450672, 77.1920865],
+    name: 'Seminar Hall',
+    img: <img
+      src={dogra}
+      height="200"
+      alt="Sem Hall"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'entermainment',
+    desc:
+            'IIT Delhi Seminar Hall.',
+    categoryIcon: (
+      <a href="https://" className="c-btn insta">
+        <span>
+          <Icon.Music />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Seminar+Hall/@28.5450672,77.1920865,19z/data=!3m1!4b1!4m5!3m4!1s0x390d1df669c26951:0x94b46b5f3cfd7d17!8m2!3d28.5450672!4d77.1926337',
+    phoneUrl: '',
+    webUrl: '',
+  },
+  {
+    id: 61,
+    cd: [28.5427956, 77.1984536],
+    name: 'Post Office',
+    img: <img
+      src={po}
+      height="200"
+      alt="Post Office"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'IIT Delhi Post Office.',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.Mail />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Post+Office/@28.5427956,77.1984536,19z/data=!4m12!1m6!3m5!1s0x390d1df669c26951:0x94b46b5f3cfd7d17!2sSeminar+Hall!8m2!3d28.5450672!4d77.1926337!3m4!1s0x390ce208b8849405:0xa3f06d642dc9bccc!8m2!3d28.542719!4d77.1991789',
+    phoneUrl: '+91180012011',
+    webUrl: 'http://www.indiapost.gov.in/',
+  },
+  {
+    id: 62,
+    cd: [28.5427987, 77.1979836],
+    name: 'Kendriya Vidyalaya IIT Delhi',
+    img: <img
+      src="https://d2jg2pri5bpndu.cloudfront.net/schools/covers/870_KV-IIT---Kendriya-Vidyalaya-.png"
+      height="200"
+      alt="KV"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'Kendriya Vidyala IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Kendriya+Vidyalaya/@28.5427987,77.1979836,19z/data=!4m12!1m6!3m5!1s0x390d1df669c26951:0x94b46b5f3cfd7d17!2sSeminar+Hall!8m2!3d28.5450672!4d77.1926337!3m4!1s0x390ce2088d66be57:0xa28ca87f2ea489b1!8m2!3d28.5426165!4d77.1983441',
+    phoneUrl: '+911126741327',
+    webUrl: 'http://www.kvjnu.org/english/',
+  },
+  {
+    id: 63,
+    cd: [28.5423368, 77.1992711],
+    name: 'Kids Planet School',
+    img: <img
+      src={dogra}
+      height="200"
+      alt="Kids Planet School"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'academic',
+    desc:
+            'Kids Planet IIT Delhi : Play School, Nursery School, Kindergarten or Daycare',
+    categoryIcon: (
+      <a href="https://" className="c-btn fd">
+        <span>
+          <Icon.BookOpen />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Kids+Planet+School/@28.5423368,77.1992711,19z/data=!4m12!1m6!3m5!1s0x390d1df669c26951:0x94b46b5f3cfd7d17!2sSeminar+Hall!8m2!3d28.5450672!4d77.1926337!3m4!1s0x390d1f1f6d05414f:0xaaec14c5d0e2a1e1!8m2!3d28.542478!4d77.1997127',
+    phoneUrl: '',
+    webUrl: '',
+  },
+  {
+    id: 64,
+    cd: [28.5433479, 77.1989034],
+    name: 'Mother Dairy Booth & Safal Store',
+    img: <img
+      src="https://content3.jdmagicbox.com/comp/delhi/q3/011pxx11.xx11.121229120836.z8q3/catalogue/safal-mother-dairy-defence-colony-delhi-fruit-vendors-isfkybyfxn.jpg"
+      height="200"
+      alt="Mother Dairy Booth & Safal Store"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'shop',
+    desc:
+            'Mother Dairy Booth & Safal Store',
+    categoryIcon: (
+      <a href="https://" className="c-btn learn-e">
+        <span>
+          <Icon.ShoppingCart />
+        </span>
+      </a>
+    ),
+    infoUrl: '',
+    mapUrl: 'https://www.google.com/maps/place/Mother+Dairy+Booth+%26+Safal+Store/@28.5433479,77.1989034,18.32z/data=!4m12!1m6!3m5!1s0x390d1df669c26951:0x94b46b5f3cfd7d17!2sSeminar+Hall!8m2!3d28.5450672!4d77.1926337!3m4!1s0x390ce208ca8f6a05:0x6825a535f0aca1ee!8m2!3d28.5429564!4d77.2001512',
+    phoneUrl: '+9118001801018',
+    webUrl: 'http://www.motherdairy.com/',
+  },
+  {
+    id: 65,
+    cd: [28.5436112, 77.1983934],
+    name: 'Main Guest House',
+    img: <img
+      src="https://upload.wikimedia.org/wikipedia/commons/0/02/IIT_Delhi_guest_house.jpg"
+      height="200"
+      alt="Main Guest House"
+      className="campus-img"
+      borderRadius="10px"
+    />,
+    category: 'other',
+    desc:
+            'Main Guest House IIT Delhi',
+    categoryIcon: (
+      <a href="https://" className="c-btn fb">
+        <span>
+          <Icon.Home />
+        </span>
+      </a>
+    ),
+    infoUrl: 'http://iitd.ac.in/',
+    mapUrl: 'https://www.google.com/maps/place/Main+Guest+House/@28.5420366,77.1955425,17.25z/data=!4m5!3m4!1s0x390ce209b284742d:0x511dcc6cc45420f8!8m2!3d28.5437039!4d77.1985875',
+    phoneUrl: '+911126597287',
+    webUrl: 'http://iitd.ac.in/',
   },
 ];
 

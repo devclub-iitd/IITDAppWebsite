@@ -8,7 +8,7 @@ import {
 } from 'react-leaflet';
 import '../App.css';
 import {
-  acad, hostel, eat, sport,
+  acad, hostel, eat, sport, shop, other,
 } from '../data/mapFilters';
 
 const { BaseLayer, Overlay } = LayersControl;
@@ -73,6 +73,12 @@ class MapLeaf extends React.Component {
             </Overlay>
             <Overlay checked name="<h6>Sports & Rec.</h6>">
               <FeatureGroup>{sport}</FeatureGroup>
+            </Overlay>
+            <Overlay checked name="<h6>Shop.</h6>">
+              <FeatureGroup>{shop}</FeatureGroup>
+            </Overlay>
+            <Overlay checked name="<h6>Shop.</h6>">
+              <FeatureGroup>{other}</FeatureGroup>
             </Overlay>
             {
                         // {this.state.latlng && (
