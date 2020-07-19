@@ -1,14 +1,12 @@
-/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Icon from 'react-feather';
-// eslint-disable-next-line no-unused-vars
-import { useWindowSize, useLocalStorage } from 'react-use';
-import iitd from './images/home/iitd.jpg';
-import iitSign from './images/home/iit-sign.jpg';
-import graffiti from './images/home/graffiti.png';
-import dogra from './images/home/dogra-roof.jpg';
-import lhc from './images/home/lhc.jpg';
+import { useWindowSize } from 'react-use';
+import iitd from '../assets/home/iitd.jpg';
+import iitSign from '../assets/home/iit-sign.jpg';
+import graffiti from '../assets/home/graffiti.png';
+import dogra from '../assets/home/dogra-roof.jpg';
+import lhc from '../assets/home/lhc.jpg';
 
 function Home() {
   const windowSize = useWindowSize();

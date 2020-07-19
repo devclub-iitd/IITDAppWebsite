@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 body.light-mode {
   background-color: #e8eaf6;
   margin: 0;
@@ -1546,7 +1550,7 @@ body.light-mode .left-e .c-btn-group .fb:hover {
 
 body.light-mode .left-e .c-btn-group .insta {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #fff;
   display: flex;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -1555,6 +1559,35 @@ body.light-mode .left-e .c-btn-group .insta {
 }
 
 body.light-mode .left-e .c-btn-group .insta:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.light-mode .left-e .c-btn-group .linkedin {
+  background: #f09433;
+  background: #4875b4;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.light-mode .left-e .c-btn-group .linkedin:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.light-mode .left-e .c-btn-group .yt {
+  background: #f00;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.light-mode .left-e .c-btn-group .yt:hover {
   -webkit-filter: saturate(1.5);
   filter: saturate(1.5);
 }
@@ -1616,9 +1649,10 @@ body.light-mode .left-e .c-btn-group > .c-btn {
 
 body.light-mode .left-e .card-img {
   border-radius: 10px;
-  height: 100;
+  height: 160px;
   margin-left: 0.5rem;
   margin-top: 1rem;
+  object-fit: cover;
   width: 80%;
 }
 
@@ -1667,7 +1701,7 @@ body.light-mode .box .left-e {
 }
 
 body.light-mode .box .left-e img {
-  height: auto;
+  height: 160px;
   max-width: 160px;
   width: 100%;
 }
@@ -1734,11 +1768,41 @@ body.light-mode .c-btn-group .girls {
 
 body.light-mode .c-btn-group .insta {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #fff;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
   padding: 0.25rem;
   padding-bottom: 0;
+}
+
+body.light-mode .c-btn-group .linkedin {
+  background: #f09433;
+  background: #4875b4;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.light-mode .c-btn-group .linkedin:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.light-mode .c-btn-group .yt {
+  background: #f00;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+body.light-mode .c-btn-group .yt:hover {
+  -webkit-filter: saturate(0.8);
+  filter: saturate(0.8);
 }
 
 body.light-mode .c-btn-group .web {
@@ -1839,9 +1903,9 @@ body.light-mode .campus-card small {
 
 body.light-mode .campus-card .campus-img {
   border-radius: 10px;
-  height: auto;
+  height: 220px;
   margin: 1rem;
-  max-width: 260px;
+  object-fit: cover;
   width: 85%;
 }
 
@@ -2236,7 +2300,7 @@ body.light-mode .newsGrid {
     padding-bottom: 1px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1px;
+    padding-top: 3px;
     position: absolute;
     z-index: 1001;
   }
@@ -2387,15 +2451,13 @@ body.light-mode .back {
 
 @media (min-width: 672px) {
   body.light-mode .back {
-    background-image: linear-gradient 180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%, url('./components/images/events/rdv19.jpg');
     background-position: 50% 0%;
   }
 }
 
 @media (max-width: 672px) {
   body.light-mode .back {
-    background-image: url('./components/images/events/rdv19.jpg');
-    background-image: linear-gradient 180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%, url('./components/images/events/rdv19.jpg');
+    background-image: linear-gradient(180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%), url('./assets/events/rdv19.jpg');
     background-position: 50% 6%;
   }
 }
@@ -2613,7 +2675,7 @@ body.light-mode .linksEvent .fbEvent:hover {
 
 body.light-mode .linksEvent .instaEvent {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   color: #fff;
@@ -2695,6 +2757,10 @@ body.light-mode .rodal-imp {
 body.light-mode .darkIcon {
   padding-left: 10px;
   padding-top: 20px;
+}
+
+body.light-mode .counterHR {
+  border: 1px solid #9ea9ec;
 }
 
 body.dark-mode {
@@ -2967,7 +3033,7 @@ body.dark-mode .love:hover {
   }
 
   body.dark-mode .map-leaf h6 {
-    color: #fff;
+    color: #000;
     display: inline;
     font-size: 16px !important;
     margin: 0;
@@ -3547,7 +3613,7 @@ body.dark-mode .love:hover {
   }
 
   body.dark-mode .map-leaf h6 {
-    color: #fff;
+    color: #000;
     display: inline;
     font-size: 16px !important;
     margin: 0;
@@ -4244,7 +4310,7 @@ body.dark-mode .left-e .c-btn-group .fb:hover {
 
 body.dark-mode .left-e .c-btn-group .insta {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #fff;
   display: flex;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -4253,6 +4319,35 @@ body.dark-mode .left-e .c-btn-group .insta {
 }
 
 body.dark-mode .left-e .c-btn-group .insta:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.dark-mode .left-e .c-btn-group .linkedin {
+  background: #f09433;
+  background: #4875b4;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.dark-mode .left-e .c-btn-group .linkedin:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.dark-mode .left-e .c-btn-group .yt {
+  background: #f00;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.dark-mode .left-e .c-btn-group .yt:hover {
   -webkit-filter: saturate(1.5);
   filter: saturate(1.5);
 }
@@ -4314,9 +4409,10 @@ body.dark-mode .left-e .c-btn-group > .c-btn {
 
 body.dark-mode .left-e .card-img {
   border-radius: 10px;
-  height: 100;
+  height: 160px;
   margin-left: 0.5rem;
   margin-top: 1rem;
+  object-fit: cover;
   width: 80%;
 }
 
@@ -4365,7 +4461,7 @@ body.dark-mode .box .left-e {
 }
 
 body.dark-mode .box .left-e img {
-  height: auto;
+  height: 160px;
   max-width: 160px;
   width: 100%;
 }
@@ -4432,11 +4528,41 @@ body.dark-mode .c-btn-group .girls {
 
 body.dark-mode .c-btn-group .insta {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #fff;
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
   padding: 0.25rem;
   padding-bottom: 0;
+}
+
+body.dark-mode .c-btn-group .linkedin {
+  background: #f09433;
+  background: #4875b4;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+}
+
+body.dark-mode .c-btn-group .linkedin:hover {
+  -webkit-filter: saturate(1.5);
+  filter: saturate(1.5);
+}
+
+body.dark-mode .c-btn-group .yt {
+  background: #f00;
+  color: #fff;
+  display: flex;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+body.dark-mode .c-btn-group .yt:hover {
+  -webkit-filter: saturate(0.8);
+  filter: saturate(0.8);
 }
 
 body.dark-mode .c-btn-group .web {
@@ -4537,9 +4663,9 @@ body.dark-mode .campus-card small {
 
 body.dark-mode .campus-card .campus-img {
   border-radius: 10px;
-  height: auto;
+  height: 220px;
   margin: 1rem;
-  max-width: 260px;
+  object-fit: cover;
   width: 85%;
 }
 
@@ -4934,7 +5060,7 @@ body.dark-mode .newsGrid {
     padding-bottom: 1px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1px;
+    padding-top: 3px;
     position: absolute;
     z-index: 1001;
   }
@@ -5085,15 +5211,14 @@ body.dark-mode .back {
 
 @media (min-width: 672px) {
   body.dark-mode .back {
-    background-image: linear-gradient 180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%, url('./components/images/events/rdv19.jpg');
+    background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url('./assets/events/rdv19.jpg');
     background-position: 50% 0%;
   }
 }
 
 @media (max-width: 672px) {
   body.dark-mode .back {
-    background-image: url('./components/images/events/rdv19.jpg');
-    background-image: linear-gradient 180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%, url('./components/images/events/rdv19.jpg');
+    background-image: linear-gradient(180deg, rgba(2, 17, 104, 0) 0%, rgba(0, 0, 0, 0.96) 100%), url('./assets/events/rdv19.jpg');
     background-position: 50% 6%;
   }
 }
@@ -5311,7 +5436,7 @@ body.dark-mode .linksEvent .fbEvent:hover {
 
 body.dark-mode .linksEvent .instaEvent {
   background: #f09433;
-  background: linear-gradient 45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   color: #fff;
@@ -5399,6 +5524,10 @@ body.dark-mode .linksEvent .siteEvent:hover {
 body.dark-mode .darkIcon {
   padding-left: 10px;
   padding-top: 20px;
+}
+
+body.dark-mode .counterHR {
+  border: 1px solid #1b1b1c;
 }
 
 .rodal-imp {

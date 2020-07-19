@@ -1,26 +1,18 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import {
   Map,
   TileLayer,
   LayersControl,
   FeatureGroup,
-  Marker,
-  Popup,
   ZoomControl,
 } from 'react-leaflet';
 import '../App.css';
-import L from 'leaflet';
-import Control from 'react-leaflet-control';
 import {
-  acad, hostel, eat, sport,
-} from './shared/mapFilters';
+  acad, hostel, eat, sport, shop, other,
+} from '../data/mapFilters';
 
 const { BaseLayer, Overlay } = LayersControl;
 
-// eslint-disable-next-line react/prefer-stateless-function
 class MapLeaf extends React.Component {
   constructor() {
     super();
@@ -43,15 +35,16 @@ class MapLeaf extends React.Component {
     };
 
     render() {
+      const { animate, latlng, handleClick } = this.state;
       return (
         <Map
           className="map-leaf"
           zoom={18}
           minZoom={16}
           maxZoom={19}
-          animate={this.state.animate}
-          center={this.state.latlng}
-          onClick={this.handleClick}
+          animate={animate}
+          center={latlng}
+          onClick={handleClick}
           closePopupOnClick
           zoomControl={false}
         >
@@ -80,6 +73,12 @@ class MapLeaf extends React.Component {
             </Overlay>
             <Overlay checked name="<h6>Sports & Rec.</h6>">
               <FeatureGroup>{sport}</FeatureGroup>
+            </Overlay>
+            <Overlay checked name="<h6>Shop.</h6>">
+              <FeatureGroup>{shop}</FeatureGroup>
+            </Overlay>
+            <Overlay checked name="<h6>Shop.</h6>">
+              <FeatureGroup>{other}</FeatureGroup>
             </Overlay>
             {
                         // {this.state.latlng && (

@@ -60,6 +60,10 @@ $indigo3: #e8eaf6;
 $indigo-content: #c5cae9;
 $indigo-content-active: rgb(212, 216, 246);
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body.light-mode {
   background-color: $indigo3;
   margin: 0;
@@ -1609,13 +1613,41 @@ body.light-mode {
       .insta {
         background: #f09433;
         background:
-          linear-gradient
-          (45deg,
+          linear-gradient(45deg,
           #f09433 0%,
           #e6683c 25%,
           #dc2743 50%,
           #cc2366 75%,
           #bc1888 100%);
+        color: #fff;
+        display: flex;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+        flex-direction: row;
+        justify-content: center;
+
+        &:hover {
+          -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+        }
+      }
+
+      .linkedin {
+        background: #f09433;
+        background: #4875b4;
+        color: #fff;
+        display: flex;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+        flex-direction: row;
+        justify-content: center;
+
+        &:hover {
+          -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+        }
+      }
+
+      .yt {
+        background: #f00;
         color: #fff;
         display: flex;
         filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -1686,9 +1718,10 @@ body.light-mode {
 
     .card-img {
       border-radius: 10px;
-      height: 100;
+      height: 160px;
       margin-left: 0.5rem;
       margin-top: 1rem;
+      object-fit: cover;
       width: 80%;
     }
   }
@@ -1736,7 +1769,7 @@ body.light-mode {
       grid-row-start: 1;
 
       img {
-        height: auto;
+        height: 160px;
         max-width: 160px;
         width: 100%;
       }
@@ -1805,8 +1838,7 @@ body.light-mode {
     .insta {
       background: #f09433;
       background:
-        linear-gradient
-        (45deg,
+        linear-gradient(45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -1817,6 +1849,37 @@ body.light-mode {
       padding: 0.25rem;
       padding-bottom: 0;
     }
+
+    .linkedin {
+      background: #f09433;
+      background: #4875b4;
+      color: #fff;
+      display: flex;
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      flex-direction: row;
+      justify-content: center;
+
+      &:hover {
+        -webkit-filter: saturate(1.5);
+        filter: saturate(1.5);
+      }
+    }
+
+    .yt {
+      background: #f00;
+      color: #fff;
+      display: flex;
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      flex-direction: row;
+      justify-content: center;
+      padding: 0.3rem;
+
+      &:hover {
+        -webkit-filter: saturate(0.8);
+        filter: saturate(0.8);
+      }
+    }
+
 
     .web {
       background-color: $teal;
@@ -1916,9 +1979,9 @@ body.light-mode {
 
     .campus-img {
       border-radius: 10px;
-      height: auto;
+      height: 220px;
       margin: 1rem;
-      max-width: 260px;
+      object-fit: cover;
       width: 85%;
     }
 
@@ -2296,7 +2359,7 @@ body.light-mode {
         padding-bottom: 1px;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 1px;
+        padding-top: 3px;
         position: absolute;
         z-index: 1001;
       }
@@ -2448,25 +2511,13 @@ body.light-mode {
 
   @media (min-width: 672px) {
     .back {
-      background-image:
-        linear-gradient
-        (180deg,
-        rgba(116, 137, 219, 0) 0%,
-        rgba(2, 17, 104, 0.77) 100%),
-        url('./components/images/events/rdv19.jpg');
       background-position: 50% 0%;
     }
   }
 
   @media (max-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
-      background-image:
-        linear-gradient
-        (180deg,
-        rgba(116, 137, 219, 0) 0%,
-        rgba(2, 17, 104, 0.77) 100%),
-        url('./components/images/events/rdv19.jpg');
+      background-image: linear-gradient(180deg, rgba(116, 137, 219, 0) 0%, rgba(2, 17, 104, 0.77) 100%), url('./assets/events/rdv19.jpg');
       background-position: 50% 6%;
     }
   }
@@ -2681,8 +2732,7 @@ body.light-mode {
     .instaEvent {
       background: #f09433;
       background:
-        linear-gradient
-        (45deg,
+        linear-gradient(45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -2772,6 +2822,10 @@ body.light-mode {
   .darkIcon {
     padding-left: 10px;
     padding-top: 20px;
+  }
+
+  .counterHR {
+    border: 1px solid $indigo2;
   }
 }
 
@@ -3063,7 +3117,7 @@ body.dark-mode {
       height: 90vh;
 
       h6 {
-        color: #fff;
+        color: #000;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -3644,7 +3698,7 @@ body.dark-mode {
       z-index: 1;
 
       h6 {
-        color: #fff;
+        color: #000;
         display: inline;
         font-size: 16px !important;
         margin: 0;
@@ -4327,13 +4381,41 @@ body.dark-mode {
       .insta {
         background: #f09433;
         background:
-          linear-gradient
-          (45deg,
+          linear-gradient(45deg,
           #f09433 0%,
           #e6683c 25%,
           #dc2743 50%,
           #cc2366 75%,
           #bc1888 100%);
+        color: #fff;
+        display: flex;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+        flex-direction: row;
+        justify-content: center;
+
+        &:hover {
+          -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+        }
+      }
+
+      .linkedin {
+        background: #f09433;
+        background: #4875b4;
+        color: #fff;
+        display: flex;
+        filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+        flex-direction: row;
+        justify-content: center;
+
+        &:hover {
+          -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+        }
+      }
+
+      .yt {
+        background: #f00;
         color: #fff;
         display: flex;
         filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
@@ -4404,9 +4486,10 @@ body.dark-mode {
 
     .card-img {
       border-radius: 10px;
-      height: 100;
+      height: 160px;
       margin-left: 0.5rem;
       margin-top: 1rem;
+      object-fit: cover;
       width: 80%;
     }
   }
@@ -4454,7 +4537,7 @@ body.dark-mode {
       grid-row-start: 1;
 
       img {
-        height: auto;
+        height: 160px;
         max-width: 160px;
         width: 100%;
       }
@@ -4523,8 +4606,7 @@ body.dark-mode {
     .insta {
       background: #f09433;
       background:
-        linear-gradient
-        (45deg,
+        linear-gradient(45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -4534,6 +4616,36 @@ body.dark-mode {
       filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
       padding: 0.25rem;
       padding-bottom: 0;
+    }
+
+    .linkedin {
+      background: #f09433;
+      background: #4875b4;
+      color: #fff;
+      display: flex;
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      flex-direction: row;
+      justify-content: center;
+
+      &:hover {
+        -webkit-filter: saturate(1.5);
+        filter: saturate(1.5);
+      }
+    }
+
+    .yt {
+      background: #f00;
+      color: #fff;
+      display: flex;
+      filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+      flex-direction: row;
+      justify-content: center;
+      padding: 0.3rem;
+
+      &:hover {
+        -webkit-filter: saturate(0.8);
+        filter: saturate(0.8);
+      }
     }
 
     .web {
@@ -4634,9 +4746,9 @@ body.dark-mode {
 
     .campus-img {
       border-radius: 10px;
-      height: auto;
+      height: 220px;
       margin: 1rem;
-      max-width: 260px;
+      object-fit: cover;
       width: 85%;
     }
 
@@ -5014,7 +5126,7 @@ body.dark-mode {
         padding-bottom: 1px;
         padding-left: 1rem;
         padding-right: 1rem;
-        padding-top: 1px;
+        padding-top: 3px;
         position: absolute;
         z-index: 1001;
       }
@@ -5167,24 +5279,21 @@ body.dark-mode {
   @media (min-width: 672px) {
     .back {
       background-image:
-        linear-gradient
-        (180deg,
+        linear-gradient(180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
-        url('./components/images/events/rdv19.jpg');
+        url('./assets/events/rdv19.jpg');
       background-position: 50% 0%;
     }
   }
 
   @media (max-width: 672px) {
     .back {
-      background-image: url('./components/images/events/rdv19.jpg');
       background-image:
-        linear-gradient
-        (180deg,
+        linear-gradient(180deg,
         rgba(2, 17, 104, 0) 0%,
         rgba(0, 0, 0, 0.96) 100%),
-        url('./components/images/events/rdv19.jpg');
+        url('./assets/events/rdv19.jpg');
       background-position: 50% 6%;
     }
   }
@@ -5399,8 +5508,7 @@ body.dark-mode {
     .instaEvent {
       background: #f09433;
       background:
-        linear-gradient
-        (45deg,
+        linear-gradient(45deg,
         #f09433 0%,
         #e6683c 25%,
         #dc2743 50%,
@@ -5496,6 +5604,10 @@ body.dark-mode {
   .darkIcon {
     padding-left: 10px;
     padding-top: 20px;
+  }
+
+  .counterHR {
+    border: 1px solid $indigo2;
   }
 }
 

@@ -3,6 +3,58 @@ name: Node.js CI
 on: [push, pull_request]
 
 jobs:
+<<<<<<< HEAD
+    super-lint:
+        name: Run Github Super Linter on Full code base
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+            - name: Lint Code base
+              uses: docker://github/super-linter:v3
+              env:
+                  ACTIONS_RUNNER_DEBUG: true
+                  JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+
+    lint:
+        needs: super-lint
+        name: Run eslint and prettier on code base
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+            - name: Install Node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 14.x
+            - name: Install packages
+              run: npm ci
+            - name: Run Eslint
+              run: npm run eslint-test
+            - name: Run prettier
+              run: npm run prettier-test
+
+    build:
+        needs: lint
+        name: Build Code base and run tests
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [10.x, 12.x, 14.x]
+        steps:
+            - name: Checkout code base
+              uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Install packages
+              run: npm ci
+            - name: Run build command
+              run: npm run build
+            - name: Run tests
+              run: npm test
+=======
   super-lint:
     name: Run Github Super Linter on Full code base
     runs-on: ubuntu-latest
@@ -59,3 +111,4 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm test a
+>>>>>>> temp
