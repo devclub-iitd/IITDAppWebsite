@@ -42,7 +42,7 @@ function Home() {
           </a>
         </div>
         <div className="link">
-          <Link to="/explore">
+          <Link to="/clubs">
             Explore Clubs&Activities @ IIT Delhi
             {' '}
             <span>
