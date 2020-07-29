@@ -1,12 +1,13 @@
 import React from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
+import PropTypes from 'prop-types';
 import events from '../../data/events';
 import ToTop from '../minis/goToTop';
 import EventsCard from '../cards/events';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
-function Events() {
+function Events({ darkMode }) {
   const layoutLg = [];
   const layoutMd = [];
   const layoutSm = [];
@@ -82,7 +83,7 @@ function Events() {
     const value = events[j];
     eventsRoll.push(
       <div key={j} className="eventsGridCell">
-        <EventsCard eventsObj={value} />
+        <EventsCard eventsObj={value} darkMode={darkMode} />
       </div>,
     );
   }
@@ -117,5 +118,8 @@ function Events() {
     </>
   );
 }
+Events.propTypes = {
+  darkMode: PropTypes.bool.isRequired,
+};
 
 export default Events;

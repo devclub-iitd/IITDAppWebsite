@@ -146,7 +146,7 @@ function RodalContent({ rodalObj }) {
       <h2 style={{ fontSize: 20, fontWeight: '900' }}>WARDEN</h2>
       <h2>{rodalObj.warden}</h2>
       <a href={rodalObj.wardenLink}>Contact Warden</a>
-      <h2 style={{ fontSize: 20, fontWeight: '900' }}>NOTABLE ALUMNI</h2>
+      { notableAlumni.length > 0 && <h2 style={{ fontSize: 20, fontWeight: '900' }}>NOTABLE ALUMNI</h2>}
       <h2>{notableAlumniRoll}</h2>
     </div>
   );

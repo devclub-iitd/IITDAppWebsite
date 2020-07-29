@@ -248,7 +248,7 @@ function App() {
               <main>
                 <Appbar name="Events" />
                 <div className="content-area">
-                  <Events />
+                  <Events darkMode={darkMode} />
                 </div>
               </main>
             </Route>
