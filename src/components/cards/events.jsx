@@ -3,13 +3,28 @@ import { useSpring, animated as a } from 'react-spring';
 import PropTypes from 'prop-types';
 import * as Icon from 'react-feather';
 
-function EventsCard({ eventsObj }) {
+function EventsCard({ eventsObj, darkMode }) {
   const [flipped, set] = useState(true);
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
     transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
+  const styleLight = {
+    opacity,
+    transform: transform.interpolate(
+      (t) => `${t} rotateX(180deg)`,
+    ),
+    backgroundImage: `linear-gradient(180deg,rgba(116, 137, 219, 0) 0%,rgba(2, 17, 104, 0.77) 100%),url(${eventsObj.bgImg})`,
+  };
+  const styleDark = {
+    opacity,
+    transform: transform.interpolate(
+      (t) => `${t} rotateX(180deg)`,
+    ),
+    backgroundImage: `linear-gradient(180deg,rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.77) 100%),url(${eventsObj.bgImg})`,
+  };
+  const chosenStyle = darkMode ? styleDark : styleLight;
   return (
     <div
       type="button"
@@ -62,13 +77,7 @@ function EventsCard({ eventsObj }) {
 
       <a.div
         class="c back"
-        style={{
-          opacity,
-          transform: transform.interpolate(
-            (t) => `${t} rotateX(180deg)`,
-          ),
-          backgroundImage: `linear-gradient(180deg,rgba(116, 137, 219, 0) 0%,rgba(2, 17, 104, 0.77) 100%),url(${eventsObj.bgImg})`,
-        }}
+        style={chosenStyle}
       >
         <h1>
           {eventsObj.vectorLogo}
@@ -82,6 +91,7 @@ function EventsCard({ eventsObj }) {
 EventsCard.propTypes = {
   eventsObj: PropTypes.objectOf(PropTypes.string, PropTypes.number)
     .isRequired,
+  darkMode: PropTypes.bool.isRequired,
 };
 
 export default EventsCard;

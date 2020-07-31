@@ -1,17 +1,34 @@
 import React from 'react';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazyload';
+import loader from './loader.gif';
 
 function newsCard({ newsObj }) {
   return (
     <div className="news-card">
-      <img
-        src={newsObj.imgUrl}
-        height="200"
-        alt="ICMR approves IIT Delhi's COVID19 Probe Test"
-        className="news-img"
-        borderRadius="10px"
-      />
+      <LazyLoad
+        height="100%"
+        once
+        offset={200}
+        resize
+        placeholder={(
+          <img
+            src={loader}
+            alt="loader"
+            height="200"
+            borderRadius="10px"
+          />
+)}
+      >
+        <img
+          src={newsObj.imgUrl}
+          height="200"
+          alt="ICMR approves IIT Delhi's COVID19 Probe Test"
+          className="news-img"
+          borderRadius="10px"
+        />
+      </LazyLoad>
       <div className="news-card-heading">
         <h3>{newsObj.title}</h3>
         <p className="news-desc">

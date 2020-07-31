@@ -631,7 +631,7 @@ body.light-mode .love:hover {
     object-fit: cover;
     order: 1;
     position: relative;
-    width: 38%;
+    width: 100%;
   }
 
   body.light-mode .news-card .news-card-heading {
@@ -3392,7 +3392,7 @@ body.dark-mode .love:hover {
     object-fit: cover;
     order: 1;
     position: relative;
-    width: 38%;
+    width: 100%;
   }
 
   body.dark-mode .news-card .news-card-heading {

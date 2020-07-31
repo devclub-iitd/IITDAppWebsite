@@ -115,9 +115,9 @@ function RodalContent({ rodalObj }) {
   for (j = 0; j < lenEvents; j += 1) {
     eventsShowcaseRoll.push(
       <div>
-        <a href={rodalObj.eventsShowcaseLinks[i]}>
-          <h2>{eventsShowcase[j]}</h2>
-        </a>
+
+        <h2><a href={rodalObj.eventsShowcaseLinks[i]}>{eventsShowcase[j]}</a></h2>
+
       </div>,
     );
   }
@@ -169,9 +169,9 @@ function RodalContent({ rodalObj }) {
         {rodalObj.img}
       </div>
       <h2>{rodalObj.desc}</h2>
-      <h2 style={{ fontSize: 20, fontWeight: '900' }}>SHOWCASE</h2>
+      { showcaseRoll.length > 0 && <h2 style={{ fontSize: 20, fontWeight: '900' }}>SHOWCASE</h2> }
       <h2>{showcaseRoll}</h2>
-      <h2 style={{ fontSize: 20, fontWeight: '900' }}>EVENTS</h2>
+      { eventsShowcaseRoll.length > 0 && <h2 style={{ fontSize: 20, fontWeight: '900' }}>EVENTS</h2> }
       <h2>{eventsShowcaseRoll}</h2>
     </div>
   );
