@@ -637,7 +637,7 @@ const explore = [
     id: 26,
     name: 'Hindi Samiti',
     img: <img
-      src="http://graph.facebook.com/hindisamiti.iitdelhi/picture?type=large"
+      src="https://yt3.ggpht.com/a/AATXAJwKU44rlHaSVS_rnmam-BsXf5HZdPfBPOBRP_Ug=s288-c-k-c0xffffffff-no-rj-mo"
       alt="Hindi Samiti"
       className="card-img"
     />,
