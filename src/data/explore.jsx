@@ -134,7 +134,7 @@ const explore = [
     id: 5,
     name: 'Board of Sports Activities',
     img: <img
-      src="http://graph.facebook.com/bsa.iitd/picture?type=large"
+      src="http://graph.facebook.com/iitd.bsa/picture?type=large"
       alt="BSA IIT Delhi"
       className="card-img"
     />,
@@ -239,7 +239,7 @@ const explore = [
     id: 9,
     name: 'Economics Club',
     img: <img
-      src="http://graph.facebook.com/echoclubiitd/picture?type=large"
+      src="http://graph.facebook.com/ecoclubiitd/picture?type=large"
       alt="Economics Club"
       className="card-img"
     />,
@@ -537,7 +537,7 @@ const explore = [
     id: 22,
     name: 'Student Mentorship Program',
     img: <img
-      src="http://graph.facebook.com/smp.iitd/picture?type=large"
+      src="http://smp.iitd.ac.in/res/images/SMP-logo.png"
       alt="SMP"
       className="card-img"
     />,
