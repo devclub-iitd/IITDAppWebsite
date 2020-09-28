@@ -126,6 +126,13 @@ function Navbar({
         role="button"
         tabIndex="0"
         className="navbar-right"
+        onClick={() => {
+          setExpand(!expand);
+        }}
+        onMouseEnter={() => {
+        }}
+        onKeyDown={() => {
+        }}
       >
         {windowSize.width < 769 && (
         <span>
