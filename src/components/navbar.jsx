@@ -127,7 +127,9 @@ function Navbar({
         tabIndex="0"
         className="navbar-right"
         onClick={() => {
-          setExpand(!expand);
+          if (windowSize.width < 769) {
+            setExpand(!expand);
+          }
         }}
         onMouseEnter={() => {
         }}
@@ -152,7 +154,16 @@ function Navbar({
           <span>
             <Link
               to="/home"
-              onMouseEnter={() => setHometextVisibility(true)}
+              onMouseEnter={() => {
+                setHometextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setHometextVisibility(false)}
             >
               { !showHomeText && (
@@ -175,7 +186,16 @@ function Navbar({
           <span>
             <Link
               to="/clubs"
-              onMouseEnter={() => setClubtextVisibility(true)}
+              onMouseEnter={() => {
+                setClubtextVisibility(true);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setClubtextVisibility(false)}
             >
               { !showClubText && (
@@ -199,7 +219,16 @@ function Navbar({
           <span>
             <Link
               to="/events"
-              onMouseEnter={() => setEventstextVisibility(true)}
+              onMouseEnter={() => {
+                setEventstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setEventstextVisibility(false)}
             >
               { !showEventsText && (
@@ -223,7 +252,16 @@ function Navbar({
           <span>
             <Link
               to="/news"
-              onMouseEnter={() => setNewstextVisibility(true)}
+              onMouseEnter={() => {
+                setNewstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setNewstextVisibility(false)}
             >
               { !showNewsText && (
@@ -246,7 +284,16 @@ function Navbar({
           <span>
             <Link
               to="/campus"
-              onMouseEnter={() => setCampustextVisibility(true)}
+              onMouseEnter={() => {
+                setCampustextVisibility(true);
+                setClubtextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setCampustextVisibility(false)}
             >
               { !showCampusText && (
@@ -270,7 +317,16 @@ function Navbar({
           <span>
             <Link
               to="/hostels"
-              onMouseEnter={() => setHostelstextVisibility(true)}
+              onMouseEnter={() => {
+                setHostelstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setHostelstextVisibility(false)}
             >
               { !showHostelsText && (
@@ -294,7 +350,16 @@ function Navbar({
           <span>
             <Link
               to="/map"
-              onMouseEnter={() => setMaptextVisibility(true)}
+              onMouseEnter={() => {
+                setMaptextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+              }}
               onMouseLeave={() => setMaptextVisibility(false)}
             >
               { !showMapText && (
@@ -317,7 +382,16 @@ function Navbar({
           <span>
             <Link
               to="/links"
-              onMouseEnter={() => setLinkstextVisibility(true)}
+              onMouseEnter={() => {
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(true);
+                setMaptextVisibility(false);
+              }}
               onMouseLeave={() => setLinkstextVisibility(false)}
             >
               { !showLinksText && (
