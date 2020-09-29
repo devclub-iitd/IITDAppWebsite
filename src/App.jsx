@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -212,7 +213,7 @@ function App() {
                   </div>
                 </main>
               </Route>
-              <Route path="/map">
+              <Route exact path="/map">
                 <Navbar
                   dark={darkMode.value}
                   toggleDark={darkMode.toggle}
@@ -240,6 +241,40 @@ function App() {
                   )}
                 </main>
               </Route>
+              <Route
+                exact
+                path="/map/:locId"
+                render={(props) => (
+                  <div>
+                    <Navbar
+                      dark={darkMode.value}
+                      toggleDark={darkMode.toggle}
+                      pages={pages}
+                      name="Map"
+                      isOpenInit={false}
+                    />
+                    <main>
+                      <Appbar name="Institute Map" />
+                      {windowSize.width < 769 && (
+                      <div
+                        className="content-area"
+                        style={styles.contentAreaMap}
+                      >
+                        <MapLeaf {...props} />
+                      </div>
+                      )}
+                      {windowSize.width >= 769 && (
+                      <div
+                        className="content-area"
+                        style={styles.contentAreaMapLg}
+                      >
+                        <MapLeaf {...props} />
+                      </div>
+                      )}
+                    </main>
+                  </div>
+                )}
+              />
               <Route exact path="/events">
                 <Navbar
                   dark={darkMode.value}

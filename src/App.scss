@@ -60,6 +60,10 @@ $indigo3: #e8eaf6;
 $indigo-content: #c5cae9;
 $indigo-content-active: rgb(212, 216, 246);
 
+*:focus {
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -847,7 +851,7 @@ body.light-mode {
         & > span {
           display: flex;
           flex-direction: row;
-          height: 2.2rem;
+          height: 1.2rem;
           justify-content: center;
           margin-bottom: 1.5rem;
           margin-top: 1.4rem;
@@ -3616,7 +3620,7 @@ body.dark-mode {
         & > span {
           display: flex;
           flex-direction: row;
-          height: 2.2rem;
+          height: 1.2rem;
           justify-content: center;
           margin-bottom: 1.5rem;
           margin-top: 1.4rem;

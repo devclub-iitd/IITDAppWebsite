@@ -169,7 +169,7 @@ function Navbar({
               { !showHomeText && (
               <Icon.Home
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
               window.location.pathname === '/home'
@@ -201,7 +201,7 @@ function Navbar({
               { !showClubText && (
               <Icon.Users
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname
@@ -234,7 +234,7 @@ function Navbar({
               { !showEventsText && (
               <Icon.Calendar
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname
@@ -267,7 +267,7 @@ function Navbar({
               { !showNewsText && (
               <Icon.Rss
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                   window.location.pathname === '/news'
@@ -299,7 +299,7 @@ function Navbar({
               { !showCampusText && (
               <Icon.MapPin
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname
@@ -332,7 +332,7 @@ function Navbar({
               { !showHostelsText && (
               <Icon.Briefcase
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname
@@ -365,7 +365,7 @@ function Navbar({
               { !showMapText && (
               <Icon.Map
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname === '/map'
@@ -397,7 +397,7 @@ function Navbar({
               { !showLinksText && (
               <Icon.Link
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                 window.location.pathname

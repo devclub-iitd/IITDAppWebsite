@@ -16,6 +16,7 @@ import zanskar from '../assets/hostels/zanskar.jpg';
 const hostels = [
   {
     id: 0,
+    mapId: 19,
     name: 'Aravali Hostel',
     est: 1965,
     description:
@@ -47,6 +48,7 @@ const hostels = [
   },
   {
     id: 1,
+    mapId: 11,
     name: 'Girnar Hostel',
     est: 2011,
     description:
@@ -72,6 +74,7 @@ const hostels = [
   },
   {
     id: 2,
+    mapId: 22,
     name: 'Himadri Hostel',
     est: 2001,
     description:
@@ -97,6 +100,7 @@ const hostels = [
   },
   {
     id: 3,
+    mapId: 18,
     name: 'Jwalamukhi Hostel',
     est: 1965,
     description:
@@ -128,6 +132,7 @@ const hostels = [
   },
   {
     id: 4,
+    mapId: 23,
     name: 'Kailash Hostel',
     est: 1965,
     description:
@@ -160,6 +165,7 @@ const hostels = [
   },
   {
     id: 5,
+    mapId: 20,
     name: 'Karakoram Hostel',
     est: 1966,
     description:
@@ -191,6 +197,7 @@ const hostels = [
   },
   {
     id: 6,
+    mapId: 17,
     name: 'Kumaon Hostel',
     est: 1969,
     description:
@@ -224,6 +231,7 @@ const hostels = [
   },
   {
     id: 7,
+    mapId: 21,
     name: 'Nilgiri Hostel',
     est: 1965,
     description:
@@ -259,6 +267,7 @@ const hostels = [
   },
   {
     id: 8,
+    mapId: 13,
     name: 'Satpura Hostel',
     est: 2005,
     description:
@@ -284,6 +293,7 @@ const hostels = [
   },
   {
     id: 9,
+    mapId: 15,
     name: 'Shivalik Hostel',
     est: 1961,
     description:
@@ -315,6 +325,7 @@ const hostels = [
   },
   {
     id: 10,
+    mapId: 12,
     name: 'Udaigiri Hostel',
     est: 2012,
     description:
@@ -340,6 +351,7 @@ const hostels = [
   },
   {
     id: 11,
+    mapId: 14,
     name: 'Vindhyachal Hostel',
     est: 1963,
     description:
@@ -365,6 +377,7 @@ const hostels = [
   },
   {
     id: 12,
+    mapId: 16,
     name: 'Zanskar Hostel',
     est: 2005,
     description:

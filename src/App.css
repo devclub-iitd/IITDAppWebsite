@@ -1,3 +1,7 @@
+*:focus {
+  outline: none;
+}
+
 html {
   scroll-behavior: smooth !important;
 }
@@ -775,7 +779,7 @@ body.light-mode .love:hover {
   body.light-mode .Navbar .navbar-right > span {
     display: flex;
     flex-direction: row;
-    height: 2.2rem;
+    height: 1.2rem;
     justify-content: center;
     margin-bottom: 1.5rem;
     margin-top: 1.4rem;
@@ -3536,7 +3540,7 @@ body.dark-mode .love:hover {
   body.dark-mode .Navbar .navbar-right > span {
     display: flex;
     flex-direction: row;
-    height: 2.2rem;
+    height: 1.2rem;
     justify-content: center;
     margin-bottom: 1.5rem;
     margin-top: 1.4rem;

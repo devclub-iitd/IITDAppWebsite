@@ -3,6 +3,7 @@ import { Panel } from 'rsuite';
 import * as Icon from 'react-feather';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
+import { Link } from 'react-router-dom';
 import loader from './loader.gif';
 
 function CampusCard({ locObj }) {
@@ -50,11 +51,11 @@ function CampusCard({ locObj }) {
         )}
 
         {locObj.mapUrl !== '' && (
-          <a className="c-btn map" href={locObj.mapUrl}>
+          <Link className="c-btn map" to={`map/${locObj.id}`}>
             <span>
               <Icon.MapPin />
             </span>
-          </a>
+          </Link>
         )}
 
         {locObj.phoneUrl !== '' && (
