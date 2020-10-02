@@ -30,6 +30,7 @@ class MapLeaf extends React.Component {
         lat: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[0] : 28.545126,
         lng: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[1] : 77.193483,
       },
+      // eslint-disable-next-line react/no-unused-state
       locId: this.props.match ? parseInt(this.props.match.params.locId, 10) : 0,
     };
 
