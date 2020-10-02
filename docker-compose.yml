@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+    iitdappwebsite:
+        build: .
+        image: iitdappwebsite:1.0
+        ports:
+            - 3000
+        restart: 'unless-stopped'
