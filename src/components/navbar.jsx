@@ -12,6 +12,14 @@ function Navbar({
 }) {
   const [expand, setExpand] = useState(false);
   const [isOpen, setOpen] = useState(isOpenInit);
+  const [showHomeText, setHometextVisibility] = useState(false);
+  const [showClubText, setClubtextVisibility] = useState(false);
+  const [showEventsText, setEventstextVisibility] = useState(false);
+  const [showNewsText, setNewstextVisibility] = useState(false);
+  const [showCampusText, setCampustextVisibility] = useState(false);
+  const [showHostelsText, setHostelstextVisibility] = useState(false);
+  const [showMapText, setMaptextVisibility] = useState(false);
+  const [showLinksText, setLinkstextVisibility] = useState(false);
 
   const toggleOpen = () => {
     setOpen(!isOpen);
@@ -119,17 +127,13 @@ function Navbar({
         tabIndex="0"
         className="navbar-right"
         onClick={() => {
-          setExpand(!expand);
+          if (windowSize.width < 769) {
+            setExpand(!expand);
+          }
         }}
         onMouseEnter={() => {
-          if (window.innerWidth > 769) {
-            setExpand(true);
-          }
         }}
         onKeyDown={() => {
-          if (window.innerWidth > 769) {
-            setExpand(true);
-          }
         }}
       >
         {windowSize.width < 769 && (
@@ -148,54 +152,122 @@ function Navbar({
         {windowSize.width > 769 && (
         <>
           <span>
-            <Link to="/home">
+            <Link
+              to="/home"
+              onMouseEnter={() => {
+                setHometextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setHometextVisibility(false)}
+            >
+              { !showHomeText && (
               <Icon.Home
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname === '/home'
-                    ? 'rgb(212,216,246)'
-                    : '',
+              window.location.pathname === '/home'
+                ? 'rgb(212,216,246)'
+                : '',
                 }}
               />
+              )}
+              { showHomeText && (
+                <h3 style={{ color: 'white' }}><strong>Home</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/clubs">
+            <Link
+              to="/clubs"
+              onMouseEnter={() => {
+                setClubtextVisibility(true);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setClubtextVisibility(false)}
+            >
+              { !showClubText && (
               <Icon.Users
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname
-                  === '/clubs'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname
+                === '/clubs'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showClubText && (
+                <h3 style={{ color: 'white' }}><strong>Clubs</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/events">
+            <Link
+              to="/events"
+              onMouseEnter={() => {
+                setEventstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setEventstextVisibility(false)}
+            >
+              { !showEventsText && (
               <Icon.Calendar
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname
-                  === '/events'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname
+                === '/events'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showEventsText && (
+                <h3 style={{ color: 'white' }}><strong>Events</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/news">
+            <Link
+              to="/news"
+              onMouseEnter={() => {
+                setNewstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setNewstextVisibility(false)}
+            >
+              { !showNewsText && (
               <Icon.Rss
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
                   window.location.pathname === '/news'
@@ -203,65 +275,141 @@ function Navbar({
                     : '',
                 }}
               />
+              )}
+              { showNewsText && (
+                <h3 style={{ color: 'white' }}><strong>News</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/campus">
+            <Link
+              to="/campus"
+              onMouseEnter={() => {
+                setCampustextVisibility(true);
+                setClubtextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setCampustextVisibility(false)}
+            >
+              { !showCampusText && (
               <Icon.MapPin
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname
-                  === '/campus'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname
+                === '/campus'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showCampusText && (
+              <h3 style={{ color: 'white' }}><strong>Campus</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/hostels">
+            <Link
+              to="/hostels"
+              onMouseEnter={() => {
+                setHostelstextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setLinkstextVisibility(false);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setHostelstextVisibility(false)}
+            >
+              { !showHostelsText && (
               <Icon.Briefcase
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname
-                  === '/hostels'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname
+                === '/hostels'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showHostelsText && (
+              <h3 style={{ color: 'white' }}><strong>Hostels</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/map">
+            <Link
+              to="/map"
+              onMouseEnter={() => {
+                setMaptextVisibility(true);
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(false);
+              }}
+              onMouseLeave={() => setMaptextVisibility(false)}
+            >
+              { !showMapText && (
               <Icon.Map
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname === '/map'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname === '/map'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showMapText && (
+              <h3 style={{ color: 'white' }}><strong>Map</strong></h3>
+              )}
             </Link>
           </span>
           <span>
-            <Link to="/links">
+            <Link
+              to="/links"
+              onMouseEnter={() => {
+                setClubtextVisibility(false);
+                setCampustextVisibility(false);
+                setHometextVisibility(false);
+                setEventstextVisibility(false);
+                setNewstextVisibility(false);
+                setHostelstextVisibility(false);
+                setLinkstextVisibility(true);
+                setMaptextVisibility(false);
+              }}
+              onMouseLeave={() => setLinkstextVisibility(false)}
+            >
+              { !showLinksText && (
               <Icon.Link
                 strokeWidth="3"
-                height="40"
+                height="30"
                 style={{
                   stroke:
-                  window.location.pathname
-                  === '/links'
-                    ? 'rgb(212,216,246)'
-                    : '',
+                window.location.pathname
+                === '/links'
+                  ? 'rgb(212,216,246)'
+                  : '',
                 }}
               />
+              )}
+              { showLinksText && (
+                <h3 style={{ color: 'white' }}><strong>Links</strong></h3>
+              )}
             </Link>
           </span>
         </>
@@ -283,6 +431,7 @@ function Navbar({
 
 function Expand({ pages, setExpand, toggleOpen }) {
   const expandElement = useRef(null);
+  const windowSize = useWindowSize();
 
   function collapse() {
     setExpand(false);
@@ -301,65 +450,71 @@ function Expand({ pages, setExpand, toggleOpen }) {
       duration: 250,
     });
   });
-
   return (
-    <div
-      className="expand"
-      ref={expandElement}
-      onMouseLeave={() => {
-        anime({
-          targets: expandElement.current,
-          translateX: '-10rem',
-          easing: 'easeInExpo',
-          duration: 250,
-        });
-        anime({
-          targets: '.expand-font',
-          duration: 250,
-          opacity: 0,
-        });
-        setTimeout(collapse, 250);
-      }}
-    >
-      <div className="expand-top" />
+    <>
+      {
+      windowSize.width < 769 && (
+        <div
+          className="expand"
+          ref={expandElement}
+          onMouseLeave={() => {
+            anime({
+              targets: expandElement.current,
+              translateX: '-10rem',
+              easing: 'easeInExpo',
+              duration: 250,
+            });
+            anime({
+              targets: '.expand-font',
+              duration: 250,
+              opacity: 0,
+            });
+            setTimeout(collapse, 250);
+          }}
+        >
+          <div className="expand-top" />
 
-      {pages.map((page) => {
-        if (page.showInNavbar === true) {
-          return (
-            <Link
-              to={page.pageLink}
-              key={page.id}
-              onClick={() => {
-                setExpand(false);
-                toggleOpen();
-              }}
-            >
-              <span
-                className={
+          {pages.map((page) => {
+            if (page.showInNavbar === true) {
+              return (
+                <Link
+                  to={page.pageLink}
+                  key={page.id}
+                  onClick={() => {
+                    setExpand(false);
+                    toggleOpen();
+                  }}
+                >
+                  <span
+                    className={
                                     window.location.pathname === page.pageLink
                                       ? 'expand-front focused fadeInUp'
                                       : 'expand-front fadeInUp'
                                 }
-              >
-                {page.displayName}
-              </span>
-            </Link>
-          );
-        }
-        return null;
-      })}
-      <h5 className="love">
-        Made by
-        {' '}
-        <a href="https://devclub.in/#/">DevClub</a>
-        {' '}
-        with
-        {' '}
-        <span role="img" aria-label="Love" alt="Love">
-          ❤️
-        </span>
-      </h5>
-    </div>
+                  >
+                    {page.displayName}
+                  </span>
+                </Link>
+              );
+            }
+            return null;
+          })}
+          <h5 className="love">
+            Made by
+            {' '}
+            <a href="https://devclub.in/#/">DevClub</a>
+            {' '}
+            with
+            {' '}
+            <span role="img" aria-label="Love" alt="Love">
+              ❤️
+            </span>
+          </h5>
+        </div>
+      )
+    }
+    </>
+
   );
 }
 Navbar.propTypes = {

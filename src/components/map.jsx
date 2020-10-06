@@ -1,31 +1,49 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-expressions */
 import React from 'react';
+import PropTypes from 'prop-types';
+import * as Icon from 'react-feather';
 import {
   Map,
   TileLayer,
   LayersControl,
   FeatureGroup,
   ZoomControl,
+  Popup,
 } from 'react-leaflet';
 import '../App.css';
 import {
   acad, hostel, eat, sport, shop, other,
 } from '../data/mapFilters';
+import locs from '../data/locations';
 
 const { BaseLayer, Overlay } = LayersControl;
 
 class MapLeaf extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       animate: true,
       latlng: {
-        lat: 28.545126,
-        lng: 77.193483,
+        lat: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[0] : 28.545126,
+        lng: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[1] : 77.193483,
       },
+      // eslint-disable-next-line react/no-unused-state
+      locId: this.props.match ? parseInt(this.props.match.params.locId, 10) : 0,
     };
 
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.handleClick({
+      latlng: {
+        lat: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[0] : 28.545126,
+        lng: this.props.match ? locs[parseInt(this.props.match.params.locId, 10)].cd[1] : 77.193483,
+      },
+    });
   }
 
     handleClick = (e) => {
@@ -35,7 +53,10 @@ class MapLeaf extends React.Component {
     };
 
     render() {
-      const { animate, latlng, handleClick } = this.state;
+      const {
+        animate, latlng, handleClick,
+      } = this.state;
+
       return (
         <Map
           className="map-leaf"
@@ -80,22 +101,96 @@ class MapLeaf extends React.Component {
             <Overlay checked name="<h6>Shop.</h6>">
               <FeatureGroup>{other}</FeatureGroup>
             </Overlay>
+            { // this.props.match && (
+            // <Popup className="pup">
+            //   <h1>{locs[this.props.match.params.locId].name}</h1>
+            //   {locs[this.props.match.params.locId].img}
+            //   <p>{locs[this.props.match.params.locId].desc}</p>
+            //   <div className="c-btn-group">
+            //     {locs[this.props.match.params.locId].categoryIcon}
+
+            //     {locs[this.props.match.params.locId].infoUrl !== '' && (
+            //     <a className="c-btn learn-e" href={locs[this.props.match.params.locId].infoUrl}>
+            //       <span>
+            //         <Icon.ExternalLink />
+            //       </span>
+            //     </a>
+            //     )}
+
+            //     {locs[this.props.match.params.locId].mapUrl !== '' && (
+            //     <a className="c-btn map" href={locs[this.props.match.params.locId].mapUrl}>
+            //       <span>
+            //         <Icon.MapPin />
+            //       </span>
+            //     </a>
+            //     )}
+
+            //     {locs[this.props.match.params.locId].phoneUrl !== '' && (
+            //     <a className="c-btn ph" href={locs[this.props.match.params.locId].phoneUrl}>
+            //       <Icon.Phone />
+            //     </a>
+            //     )}
+
+            //     {locs[this.props.match.params.locId].webUrl !== '' && (
+            //     <a className="c-btn web" href={locs[this.props.match.params.locId].webUrl}>
+            //       <Icon.Globe />
+            //     </a>
+            //     )}
+            //   </div>
+            // </Popup>
+            // )
+          }
+
             {
-                        // {this.state.latlng && (
-                        //     <Marker position={this.state.latlng} draggable>
-                        //         <Popup position={this.state.latlng}>
-                        //             Current location:{' '}
-                        //             <pre>
-                        //                 {JSON.stringify(this.state.latlng, null, 2)}
-                        //             </pre>
-                        //         </Popup>
-                        //     </Marker>
-                        // )}
-                    }
+              this.props.match && (
+                <Popup position={this.state.latlng} className="pup">
+                  <h1>{locs[this.props.match.params.locId].name}</h1>
+                  {locs[this.props.match.params.locId].img}
+                  <p>{locs[this.props.match.params.locId].desc}</p>
+                  <div className="c-btn-group">
+                    {locs[this.props.match.params.locId].categoryIcon}
+
+                    {locs[this.props.match.params.locId].infoUrl !== '' && (
+                    <a className="c-btn learn-e" href={locs[this.props.match.params.locId].infoUrl}>
+                      <span>
+                        <Icon.ExternalLink />
+                      </span>
+                    </a>
+                    )}
+
+                    {locs[this.props.match.params.locId].mapUrl !== '' && (
+                    <a className="c-btn map" href={locs[this.props.match.params.locId].mapUrl}>
+                      <span>
+                        <Icon.MapPin />
+                      </span>
+                    </a>
+                    )}
+
+                    {locs[this.props.match.params.locId].phoneUrl !== '' && (
+                    <a className="c-btn ph" href={locs[this.props.match.params.locId].phoneUrl}>
+                      <Icon.Phone />
+                    </a>
+                    )}
+
+                    {locs[this.props.match.params.locId].webUrl !== '' && (
+                    <a className="c-btn web" href={locs[this.props.match.params.locId].webUrl}>
+                      <Icon.Globe />
+                    </a>
+                    )}
+                  </div>
+                </Popup>
+
+              )
+}
+
           </LayersControl>
         </Map>
       );
     }
 }
+
+MapLeaf.propTypes = {
+  locId: PropTypes.number.isRequired,
+};
 
 export default MapLeaf;

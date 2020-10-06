@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {
   BrowserRouter as Router,
@@ -23,6 +24,7 @@ import '../node_modules/react-resizable/css/styles.css';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet/dist/leaflet';
 import './App.css';
+import ScrollToTop from './ScrollToTop';
 
 Leaflet.Icon.Default.imagePath = './components/shared/marker-icon-red.png';
 
@@ -135,140 +137,177 @@ function App() {
     <>
       <div className="App">
         <Router>
-          <Switch>
-            <Route path="/home">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Home"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="Home" />
-                <Home />
-              </main>
-            </Route>
-            <Route path="/clubs">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Clubs"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="Clubs" />
-                <div className="content-area">
-                  <Clubs dark={darkMode.value} />
-                </div>
-              </main>
-            </Route>
-            <Route path="/news">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="News"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="News" />
-                <div className="content-area">
-                  <News />
-                </div>
-              </main>
-            </Route>
-            <Route path="/campus">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Campus"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="Campus" />
-                <div className="content-area">
-                  <Campus />
-                </div>
-              </main>
-            </Route>
-            <Route exact path="/hostels">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Hostels"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="Hostels" />
-                <div className="content-area">
-                  <Hostels dark={darkMode.value} />
-                </div>
-              </main>
-            </Route>
-            <Route path="/map">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Map"
-                isOpenInit={false}
-              />
-              <main>
-                <Appbar name="Institute Map" />
-                {windowSize.width < 769 && (
-                <div
-                  className="content-area"
-                  style={styles.contentAreaMap}
-                >
-                  <MapLeaf />
-                </div>
+          <>
+            <ScrollToTop />
+            <Switch>
+              <Route path="/home">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Home"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Home" />
+                  <Home />
+                </main>
+              </Route>
+              <Route path="/clubs">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Clubs"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Clubs" />
+                  <div className="content-area">
+                    <Clubs dark={darkMode.value} />
+                  </div>
+                </main>
+              </Route>
+              <Route path="/news">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="News"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="News" />
+                  <div className="content-area">
+                    <News />
+                  </div>
+                </main>
+              </Route>
+              <Route path="/campus">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Campus"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Campus" />
+                  <div className="content-area">
+                    <Campus />
+                  </div>
+                </main>
+              </Route>
+              <Route exact path="/hostels">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Hostels"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Hostels" />
+                  <div className="content-area">
+                    <Hostels dark={darkMode.value} />
+                  </div>
+                </main>
+              </Route>
+              <Route exact path="/map">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Map"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Institute Map" />
+                  {windowSize.width < 769 && (
+                  <div
+                    className="content-area"
+                    style={styles.contentAreaMap}
+                  >
+                    <MapLeaf />
+                  </div>
+                  )}
+                  {windowSize.width >= 769 && (
+                  <div
+                    className="content-area"
+                    style={styles.contentAreaMapLg}
+                  >
+                    <MapLeaf />
+                  </div>
+                  )}
+                </main>
+              </Route>
+              <Route
+                exact
+                path="/map/:locId"
+                render={(props) => (
+                  <div>
+                    <Navbar
+                      dark={darkMode.value}
+                      toggleDark={darkMode.toggle}
+                      pages={pages}
+                      name="Map"
+                      isOpenInit={false}
+                    />
+                    <main>
+                      <Appbar name="Institute Map" />
+                      {windowSize.width < 769 && (
+                      <div
+                        className="content-area"
+                        style={styles.contentAreaMap}
+                      >
+                        <MapLeaf {...props} />
+                      </div>
+                      )}
+                      {windowSize.width >= 769 && (
+                      <div
+                        className="content-area"
+                        style={styles.contentAreaMapLg}
+                      >
+                        <MapLeaf {...props} />
+                      </div>
+                      )}
+                    </main>
+                  </div>
                 )}
-                {windowSize.width >= 769 && (
-                <div
-                  className="content-area"
-                  style={styles.contentAreaMapLg}
-                >
-                  <MapLeaf />
-                </div>
-                )}
-              </main>
-            </Route>
-            <Route exact path="/events">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Events"
-                isOpenInit={false}
               />
-              <main>
-                <Appbar name="Events" />
-                <div className="content-area">
-                  <Events darkMode={darkMode} />
-                </div>
-              </main>
-            </Route>
-            <Route exact path="/links">
-              <Navbar
-                dark={darkMode.value}
-                toggleDark={darkMode.toggle}
-                pages={pages}
-                name="Links"
-                isOpenInit="false"
-              />
-              <main>
-                <Appbar name="Quick Links" />
-                <div className="content-area">
-                  <Links />
-                </div>
-              </main>
-            </Route>
-            <Redirect to="/home" />
-          </Switch>
+              <Route exact path="/events">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Events"
+                  isOpenInit={false}
+                />
+                <main>
+                  <Appbar name="Events" />
+                  <div className="content-area">
+                    <Events darkMode={darkMode} />
+                  </div>
+                </main>
+              </Route>
+              <Route exact path="/links">
+                <Navbar
+                  dark={darkMode.value}
+                  toggleDark={darkMode.toggle}
+                  pages={pages}
+                  name="Links"
+                  isOpenInit="false"
+                />
+                <main>
+                  <Appbar name="Quick Links" />
+                  <div className="content-area">
+                    <Links />
+                  </div>
+                </main>
+              </Route>
+              <Redirect to="/home" />
+            </Switch>
+          </>
         </Router>
       </div>
     </>

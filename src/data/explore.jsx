@@ -10,7 +10,7 @@ const explore = [
     name: 'AcesACM',
     img: (
       <img
-        src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/10419421_331186457035471_22920795032398514_n.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=zQ2Z9iFDMgsAX803II8&_nc_ht=scontent.fdel17-1.fna&oh=fd0f2ce8b9c82e030db62987bc1e9920&oe=5F2EC37F"
+        src="http://graph.facebook.com/acesacm/picture?type=large"
         alt="AcesACM"
         className="card-img"
       />
@@ -33,7 +33,7 @@ const explore = [
     id: 1,
     name: 'Aeromodelling Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/16711809_1259308574105048_5525848308219350850_n.png?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=2J6-9IgoZUYAX8S3zCS&_nc_ht=scontent.fdel17-1.fna&oh=7298b2f81367345417f2b2f25e2c55c6&oe=5F2B965F"
+      src="http://graph.facebook.com/aeroclubiitd/picture?type=large"
       alt="Aeromodelling Club"
       className="card-img"
       style={{ display: 'inlineBlock', objectFit: 'cover' }}
@@ -60,7 +60,7 @@ const explore = [
     id: 2,
     name: 'Algorithms & Coding Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/37928055_1895765703813023_6347345773767688192_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=6cnnCR2Hc3IAX_mE-Jy&_nc_ht=scontent.fdel17-1.fna&oh=de4acb040d8b779a8f77b42574362a19&oe=5F2D429C"
+      src="http://graph.facebook.com/anciitd/picture?type=large"
       alt="ANCC"
       className="card-img"
     />,
@@ -82,7 +82,7 @@ const explore = [
     id: 3,
     name: 'Ankahi',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/37741229_1929101900480367_6949978381735690240_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=plnUrbIuXg4AX9eq1W3&_nc_ht=scontent.fdel17-1.fna&oh=9aa7fe0b973bb45362e2d6183fb8f180&oe=5F2E654B"
+      src="http://graph.facebook.com/dramaiitd/picture?type=large"
       alt="Ankahi - The Dramatics Society"
       className="card-img"
     />,
@@ -108,7 +108,7 @@ const explore = [
     id: 4,
     name: 'AXLR8R',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/70716336_1353544544807435_3853834851455074304_o.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=O8bB8286LgYAX_PFrtW&_nc_ht=scontent.fdel17-1.fna&oh=0b72099219abe717a522be6aaa041f59&oe=5F2C3D59"
+      src="http://graph.facebook.com/Axlr8rFormulaRacing/picture?type=large"
       alt="Axlr8 - Automobile Club"
       className="card-img"
     />,
@@ -134,7 +134,7 @@ const explore = [
     id: 5,
     name: 'Board of Sports Activities',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/80844830_1707260226082261_8811727897166348288_n.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=BcwLWGglqSAAX9Pmcig&_nc_ht=scontent.fdel17-1.fna&oh=10679879b2dac8ef6eaf302c0a322c2d&oe=5F2C1119"
+      src="http://graph.facebook.com/iitd.bsa/picture?type=large"
       alt="BSA IIT Delhi"
       className="card-img"
     />,
@@ -156,7 +156,7 @@ const explore = [
     id: 6,
     name: 'Board of Student Publications',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/36558650_1666885413427588_765641692186411008_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=e5ENp_p-CC0AX-eprOM&_nc_ht=scontent.fdel17-1.fna&oh=a34dabb85dd90b4921c5f353fdb43488&oe=5F2C2F4F"
+      src="http://graph.facebook.com/bspiitd/picture?type=large"
       alt="BSP IIT Delhi"
       className="card-img"
     />,
@@ -178,7 +178,7 @@ const explore = [
     id: 7,
     name: 'Debating Club ',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/29342951_1587967594592003_3863429516336562176_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=a1jHA8BJCD4AX8f3fjm&_nc_ht=scontent.fdel17-1.fna&oh=67bb38648534c6b9abb576c7114678f4&oe=5F2B8580"
+      src="http://graph.facebook.com/debatingclubiitd/picture?type=large"
       alt="DebSoc IIT Delhi"
       className="card-img"
     />,
@@ -204,7 +204,7 @@ const explore = [
     id: 8,
     name: 'DevClub',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/95259558_2392888990986080_4990552028569665536_n.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=G-f7CXQRM3gAX9Nxs0A&_nc_ht=scontent.fdel17-1.fna&oh=993eb203cd3ff4490d5edfecd08340f3&oe=5F318A54"
+      src="http://graph.facebook.com/tech.iitd/picture?type=large"
       alt="DevClub IITD"
       className="card-img"
     />,
@@ -239,7 +239,7 @@ const explore = [
     id: 9,
     name: 'Economics Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/111323733_3541818402496575_5983638240421508624_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=QBXH-RXItdIAX9YTXQb&_nc_ht=scontent.fdel17-1.fna&oh=1092353e46d57a205085ed354800e72e&oe=5F46D32D"
+      src="http://graph.facebook.com/ecoclubiitd/picture?type=large"
       alt="Economics Club"
       className="card-img"
     />,
@@ -261,7 +261,7 @@ const explore = [
     id: 10,
     name: 'Electrical Engineering Society',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/84716649_2953856664677434_6696826206081253376_n.png?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=sCC7_0hJx9gAX8S8S-f&_nc_ht=scontent.fdel17-1.fna&oh=0d1332a3d66429cc38f329dec7a003b7&oe=5F2E3440"
+      src="http://graph.facebook.com/eesiitd/picture?type=large"
       alt="EES"
       className="card-img"
     />,
@@ -283,14 +283,14 @@ const explore = [
     id: 11,
     name: 'Enactus IIT Delhi',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/15895120_1519495211417958_4628612069462296133_n.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=8W7pGsXNkaQAX-V0_a4&_nc_ht=scontent.fdel17-1.fna&oh=574140892c21443a554b935e03d08602&oe=5F2B340F"
+      src="http://graph.facebook.com/enactusiitdelhi/picture?type=large"
       alt="Enactus IITD"
       className="card-img"
     />,
     desc:
             'Enactus IIT Delhi aims to use power of entrepreneurial action to transform lives and shape a better and more sustainable world through various student led ventures.',
     extraIcon: '',
-    facebookUrl: 'https://www.facebook.com/FAC.iitd/events/?ref=page_internal',
+    facebookUrl: 'https://www.facebook.com/enactusiitdelhi/',
     instaUrl: 'https://www.instagram.com/enactusiitdelhi/',
     linkedinUrl: 'https://www.linkedin.com/company/enactusiitdelhi/',
     webUrl: '',
@@ -305,7 +305,7 @@ const explore = [
     id: 12,
     name: 'Azure : Fine Arts Society',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/11817079_495463370613192_129534042995936585_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=-4A35BacfC8AX-E1NHz&_nc_ht=scontent.fdel17-1.fna&oh=515e918617b6de12197e93d7bfb36a29&oe=5F340F93"
+      src="http://graph.facebook.com/FAC.iitd/picture?type=large"
       alt="FAC IIT Delhi"
       className="card-img"
     />,
@@ -331,7 +331,7 @@ const explore = [
     id: 13,
     name: 'Finance Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/71898871_102958561114246_1733234194034720768_n.png?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=WF0ZiSc6lecAX93y8cV&_nc_ht=scontent.fdel17-1.fna&oh=fcc8997581a2fd4ed69185f067916d2f&oe=5F2D214A"
+      src="http://graph.facebook.com/financeatiitdelhi/picture?type=large"
       alt="Finance Club"
       className="card-img"
     />,
@@ -353,7 +353,7 @@ const explore = [
     id: 14,
     name: 'Indoor Sports Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/17862328_1373517026020836_2581233348103928404_n.png?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=QdSQQxyFArQAX_B6Vv8&_nc_ht=scontent.fdel17-1.fna&oh=67878e19b5ec136881e2d83386e0ba34&oe=5F2B9BFB"
+      src="http://graph.facebook.com/isciitd/picture?type=large"
       alt="Indoor Sports CLub"
       className="card-img"
     />,
@@ -375,7 +375,7 @@ const explore = [
     id: 15,
     name: 'Indradhanu',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/15875278_781645965307459_191042554331974862_o.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=g9EEjELuW3EAX_8GdGE&_nc_ht=scontent.fdel17-1.fna&oh=1353e59b29462b26551d298b14ef40bc&oe=5F2AF244"
+      src="http://graph.facebook.com/indradhanu.iitd/picture?type=large"
       alt="Ankahi - The Dramatics Society"
       className="card-img"
     />,
@@ -397,7 +397,7 @@ const explore = [
     id: 16,
     name: 'LitCLub',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/10459096_144619119046558_4916243338981074859_o.jpg?_nc_cat=108&_nc_sid=09cbfe&_nc_ohc=CVOmH_nKF9sAX80kkW2&_nc_ht=scontent.fdel17-1.fna&oh=0d5faf80d9cd9e1d3f23bf426ff8d126&oe=5F2BD635"
+      src="http://graph.facebook.com/litclub.iitd/picture?type=large"
       alt="Ankahi - The Dramatics Society"
       className="card-img"
     />,
@@ -419,7 +419,7 @@ const explore = [
     id: 17,
     name: 'Mathematics Society',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/67938797_1588050614659746_2096340461634453504_n.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=6oC6CmGkyRgAX8okmnx&_nc_ht=scontent.fdel17-1.fna&oh=66ff26fe11df0cff37be1540330addd1&oe=5F2D6674"
+      src="http://graph.facebook.com/maths.society.iitd/picture?type=large"
       alt="Mathematics Society"
       className="card-img"
     />,
@@ -441,7 +441,7 @@ const explore = [
     id: 18,
     name: 'Photography & Films Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/26198030_969602369859643_5898440113031027136_o.png?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=o_4OZ56ZgfMAX-iDG_m&_nc_ht=scontent.fdel17-1.fna&oh=a2b893ed6bd7b99bbeb4b5549b9e90d8&oe=5F2B948B"
+      src="http://graph.facebook.com/pfciitdelhi/picture?type=large"
       alt="PFC"
       className="card-img"
     />,
@@ -467,7 +467,7 @@ const explore = [
     id: 19,
     name: 'Quizzing Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/57439907_2157649327662564_5229402804942012416_o.jpg?_nc_cat=108&_nc_sid=09cbfe&_nc_ohc=jblIiMldJgQAX8Ot7P5&_nc_ht=scontent.fdel17-1.fna&oh=24e794848fecc2291d17eb72a09af008&oe=5F2B63F8"
+      src="http://graph.facebook.com/iitd.qc/picture?type=large"
       alt="QC"
       className="card-img"
     />,
@@ -489,7 +489,7 @@ const explore = [
     id: 20,
     name: 'Robotics Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/21199712_2055104308055653_6902404135633213397_o.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=rryXKfrPgicAX9IRZCH&_nc_ht=scontent.fdel17-1.fna&oh=0d62c90b9fc79b3c0fe51e5368d1261f&oe=5F2E62A2"
+      src="http://graph.facebook.com/iitdrobocon/picture?type=large"
       alt="Robotics Club"
       className="card-img"
     />,
@@ -515,7 +515,7 @@ const explore = [
     id: 21,
     name: 'ShARE',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/37277261_483231358793070_122995992067833856_o.jpg?_nc_cat=110&_nc_sid=09cbfe&_nc_ohc=TOacay9qW0MAX8aJd1i&_nc_ht=scontent.fdel17-1.fna&oh=933367107f465b651b2d06ab46d247af&oe=5F2C7812"
+      src="http://graph.facebook.com/shareiitdelhi/picture?type=large"
       alt="ShARE"
       className="card-img"
     />,
@@ -537,7 +537,7 @@ const explore = [
     id: 22,
     name: 'Student Mentorship Program',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/19388365_1403208099760671_2071582094084196090_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=XUk-iHtwAnsAX-baoqy&_nc_ht=scontent.fdel17-1.fna&oh=72daccba17579d0a99afed740033caaa&oe=5F2C5079"
+      src="http://smp.iitd.ac.in/res/images/SMP-logo.png"
       alt="SMP"
       className="card-img"
     />,
@@ -559,7 +559,7 @@ const explore = [
     id: 23,
     name: 'Wellness Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/19221848_1524651134253276_9084662737945765962_o.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=tgWtykXTBTAAX9Ese_U&_nc_ht=scontent.fdel17-1.fna&oh=7f89f7c8c2a2247dfb15ba077b41bdfa&oe=5F2D2BFE"
+      src="http://graph.facebook.com/wellnessclubiitd/picture?type=large"
       alt="Wellness Club"
       className="card-img"
     />,
@@ -585,7 +585,7 @@ const explore = [
     id: 24,
     name: 'Dance Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/13919_683252508427380_1484054758771413955_n.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=vwgXZkRRemAAX8Cy_pQ&_nc_ht=scontent.fdel17-1.fna&oh=428e5a4039ed06d939857c62bd2601ed&oe=5F337CB5"
+      src="http://graph.facebook.com/DanceClub.IITDelhi/picture?type=large"
       alt="Dance Club"
       className="card-img"
     />,
@@ -611,7 +611,7 @@ const explore = [
     id: 25,
     name: 'edC',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/82459437_3636726446345204_8416599994085146624_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=GnO_7dcshoAAX80Pxgy&_nc_ht=scontent.fdel17-1.fna&oh=cf102cf059991108213cc4510d04d1d3&oe=5F3429D0"
+      src="http://graph.facebook.com/edciitdelhi/picture?type=large"
       alt="eDC"
       className="card-img"
     />,
@@ -637,7 +637,7 @@ const explore = [
     id: 26,
     name: 'Hindi Samiti',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/1275513_166749413514685_1484160222_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_ohc=DqYT4s3xv_0AX_udwCz&_nc_ht=scontent.fdel17-1.fna&oh=6b3c736a3f4a146a7f18549ba8b37a9d&oe=5F321814"
+      src="https://yt3.ggpht.com/a/AATXAJwKU44rlHaSVS_rnmam-BsXf5HZdPfBPOBRP_Ug=s288-c-k-c0xffffffff-no-rj-mo"
       alt="Hindi Samiti"
       className="card-img"
     />,
@@ -659,7 +659,7 @@ const explore = [
     id: 27,
     name: 'Music Club (Cadence)',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/14358800_1232000463538083_2804680986851444301_n.jpg?_nc_cat=104&_nc_sid=09cbfe&_nc_ohc=S7VAdR6kXE0AX9NJSKE&_nc_ht=scontent.fdel17-1.fna&oh=e3c967728f3be44b446dd1198270742a&oe=5F315DD8"
+      src="http://graph.facebook.com/music.iitd/picture?type=large"
       alt="Music Club"
       className="card-img"
     />,
@@ -670,7 +670,7 @@ const explore = [
         <Icon.Youtube height="30" strokeWidth="2" style={{ paddingLeft: 0.5, paddingRight: 0.5 }} />
       </a>
     ),
-    facebookUrl: 'https://www.facebook.com/hindisamiti.iitdelhi',
+    facebookUrl: 'https://www.facebook.com/music.iitd',
     instaUrl: 'https://www.instagram.com/iitdmusicclub/',
     linkedinUrl: '',
     webUrl: 'https://l.facebook.com/l.php?u=http%3A%2F%2Fbrca.iitd.ac.in%2Fmusic.php%3Ffbclid%3DIwAR076idOwX97NZsv-6LZ49bNP8FOcpG9NQPk_xJP_XIqOUrtvwDW-U_K2AI&h=AT2J07k9uaFqozvxDsXsL2OdU9ZncLVOjKWqqA0A-Y-y24GIYV5PQricuMOajoHk_OEfLBBPr5B6aPO-QvwTJer3jt35cUJ1e87zSLva1GdwXg8nUcC1v4u0B2t_8Bs8tdTBSfsLEUU',
@@ -685,7 +685,7 @@ const explore = [
     id: 28,
     name: 'SPIC MACAY',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/12717934_1072246196171279_189904166422729310_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=QdUaQgLchxcAX8wNDcq&_nc_ht=scontent.fdel17-1.fna&oh=ce58c07786eabb9381ebbca9720c9b58&oe=5F32B67E"
+      src="http://graph.facebook.com/SPIC.MACAY.IITD/picture?type=large"
       alt="SPIC MACAY"
       className="card-img"
     />,
@@ -711,7 +711,7 @@ const explore = [
     id: 29,
     name: 'IITD OnAir',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t31.0-8/13765801_265534027158683_4878718013844867982_o.png?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=xf9YfDuJLsoAX-MYm2K&_nc_ht=scontent.fdel17-1.fna&oh=a99dbee12df5a2ba05a69bb7d830fee4&oe=5F318CFF"
+      src="http://graph.facebook.com/IITDOnAir/picture?type=large"
       alt="IITD OnAir"
       className="card-img"
     />,
@@ -737,7 +737,7 @@ const explore = [
     id: 30,
     name: 'V-Defyn',
     img: <img
-      src="https://instagram.fdel17-1.fna.fbcdn.net/v/t51.2885-19/s320x320/52350469_386327395529845_8088323347160498176_n.jpg?_nc_ht=instagram.fdel17-1.fna.fbcdn.net&_nc_ohc=gbYy8W9qv4MAX940Joo&oh=d781e1208d8d6e54356d0caf484e3d28&oe=5F35A211"
+      src="http://graph.facebook.com/vdefyndanceacademy/picture?type=large"
       alt="V-Defyn"
       className="card-img"
     />,
@@ -748,8 +748,8 @@ const explore = [
         <Icon.Youtube height="30" strokeWidth="2" style={{ paddingLeft: 0.5, paddingRight: 0.5 }} />
       </a>
     ),
-    facebookUrl: 'https://www.facebook.com/IITDOnAir',
-    instaUrl: 'https://www.instagram.com/iitdonair/',
+    facebookUrl: 'https://www.facebook.com/vdefyndanceacademy',
+    instaUrl: 'https://www.instagram.com/vdefyn.iitd/?hl=en',
     linkedinUrl: '',
     webUrl: 'http://radio.iitd.ac.in/?fbclid=IwAR3SRpBbzEI3VUxt6fk8bn7wTFDM47GbcdM2A8JTJnRbGZnK7pz-rj41K7A',
     category: 'others',
@@ -763,7 +763,7 @@ const explore = [
     id: 31,
     name: 'Physics and Astronomy Club',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/14329926_10154180659917798_6360307381105740884_n.png?_nc_cat=101&_nc_sid=09cbfe&_nc_ohc=FyqXI5HgoJoAX9g0zol&_nc_ht=scontent.fdel17-1.fna&oh=0dbcab9c0e04144184d14efbc3790bb9&oe=5F319FE6"
+      src="http://graph.facebook.com/PhysicsAndAstronomyIITD/picture?type=large"
       alt="P&C Club"
       className="card-img"
     />,

@@ -1,0 +1,4 @@
+{
+    "aggressiveCompression": "true", // true|false
+    "compressWiki": "true", // true|false
+}

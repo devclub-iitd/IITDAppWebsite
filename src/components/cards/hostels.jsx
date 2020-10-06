@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Icon from 'react-feather';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazyload';
 import loader from './loader.gif';
@@ -29,7 +30,7 @@ const HostelCard = ({ hostelObj, show }) => (
       <div key="c" autoSize="true" className="left2">
         <div className="c-btn-group">
           {hostelObj.category}
-          <a className="c-btn fd" href={hostelObj.mapUrl} target="_blank" rel="noopener noreferrer">
+          <Link className="c-btn fd" to={`map/${hostelObj.mapId}`}>
             <span className="hostel-link">
               <Icon.MapPin height="15" strokeWidth="3" />
               {' '}
@@ -37,7 +38,7 @@ const HostelCard = ({ hostelObj, show }) => (
               Map
               {'  '}
             </span>
-          </a>
+          </Link>
           <div
             className="c-btn learn-e"
             onClick={() => show(hostelObj)}
