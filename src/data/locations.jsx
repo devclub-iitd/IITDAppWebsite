@@ -1,30 +1,6 @@
 import React from 'react';
 import * as Icon from 'react-feather';
-import dogra from '../assets/campus/dogra.jpg';
-import aravali from '../assets/hostels/aravali.png';
-import girnar from '../assets/hostels/girnar.jpeg';
-import himadri from '../assets/hostels/himadri.png';
-import jwala from '../assets/hostels/jwala.png';
-import kailash from '../assets/hostels/kailash.png';
-import kumaon from '../assets/hostels/kumaon.jpg';
-import nilgiri from '../assets/hostels/nilgiri.jpeg';
-import satpura from '../assets/hostels/satpura.jpg';
-import shivalik from '../assets/hostels/shivalik.png';
-import udaigiri from '../assets/hostels/udaigiri.jpg';
-import vindy from '../assets/hostels/vindy.jpg';
-import zanskar from '../assets/hostels/zanskar.jpg';
-import bbe from '../assets/campus/bbe.png';
-import ee from '../assets/campus/ee.png';
 import scoops from '../assets/campus/scoops.png';
-import rs from '../assets/campus/rs.png';
-import ch from '../assets/campus/ch.png';
-import huss from '../assets/campus/huss.png';
-import shadab from '../assets/campus/shadab.png';
-import koolees from '../assets/campus/koolees.png';
-import cp from '../assets/campus/cp.png';
-import sbi from '../assets/campus/sbi.png';
-import csc from '../assets/campus/csc.png';
-import po from '../assets/campus/po.png';
 
 const locations = [
   {
@@ -32,7 +8,7 @@ const locations = [
     cd: [28.544966, 77.192497],
     name: 'Dogra Hall',
     img: <img
-      src={dogra}
+      src="https://live.staticflickr.com/65535/50466766363_db7d2beecd_z.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -110,7 +86,7 @@ const locations = [
     cd: [28.545488, 77.191608],
     name: 'Dept. Of Electrical Engineering',
     img: <img
-      src={ee}
+      src="https://live.staticflickr.com/65535/50466766413_1fa17c1283_h.jpg"
       height="200"
       alt="Dept Of EE"
       className="campus-img"
@@ -136,7 +112,7 @@ const locations = [
     cd: [28.545119, 77.191288],
     name: 'Red Square',
     img: <img
-      src={rs}
+      src="https://live.staticflickr.com/65535/50467622817_5315589ae7_k.jpg"
       height="200"
       alt="Red Square"
       className="campus-img"
@@ -170,7 +146,7 @@ const locations = [
     />,
     category: 'eat',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'It is one of the most sought after Coffee Shops at IIT, allowing students to relish a meal between classes.',
     categoryIcon: (
       <a href="https://" className="c-btn eat">
         <span>
@@ -188,7 +164,7 @@ const locations = [
     cd: [28.544719, 77.19118],
     name: 'Shiru Cafe',
     img: <img
-      src="https://scontent.fdel17-1.fna.fbcdn.net/v/t1.0-9/47444826_1920290698086829_3395463258587529216_n.jpg?_nc_cat=101&_nc_sid=8bfeb9&_nc_ohc=dNEk0u243lkAX8_WKqJ&_nc_ht=scontent.fdel17-1.fna&oh=642e9d05631a0e42c94d3697de0c215a&oe=5F353A1E"
+      src="https://live.staticflickr.com/65535/50466859293_668e643ecd_b.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -196,7 +172,7 @@ const locations = [
     />,
     category: 'eat',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The café is run by sponsor fee from companies. Students can enjoy coffee, tea, and juice for free.',
     categoryIcon: (
       <a href="https://" className="c-btn eat">
         <span>
@@ -214,7 +190,7 @@ const locations = [
     cd: [28.544717, 77.191666],
     name: 'HPMC Store',
     img: <img
-      src="https://hpmc.in/portal_content/HPMC%20Final%20Logo.png"
+      src="https://live.staticflickr.com/65535/50467863657_4c71b82256_h.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -222,7 +198,7 @@ const locations = [
     />,
     category: 'eat',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'H.P. Horticulture Produce Marketing & Processing Corporation Juice Shop.',
     categoryIcon: (
       <a href="https://" className="c-btn eat">
         <span>
@@ -248,7 +224,7 @@ const locations = [
     />,
     category: 'eat',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The place to enjoy Maggi, coffee, sandwiches and more.',
     categoryIcon: (
       <a href="https://" className="c-btn eat">
         <span>
@@ -318,7 +294,7 @@ const locations = [
     cd: [28.547591, 77.188799],
     name: 'Girnar House',
     img: <img
-      src={girnar}
+      src="https://live.staticflickr.com/65535/50458900598_f798439126_w.jpg"
       height="200"
       alt="Girnar Hostel"
       className="campus-img"
@@ -344,7 +320,7 @@ const locations = [
     cd: [28.547718, 77.1892],
     name: 'Udaigiri Hostel',
     img: <img
-      src={udaigiri}
+      src="https://live.staticflickr.com/65535/50458900058_be4bb438a6_z.jpg"
       height="200"
       alt="Udaigir Hostel"
       className="campus-img"
@@ -370,7 +346,7 @@ const locations = [
     cd: [28.548277, 77.187985],
     name: 'Satpura House',
     img: <img
-      src={satpura}
+      src="https://live.staticflickr.com/65535/50458901523_5df7dbc4ad_h.jpg"
       height="200"
       alt="Satpura House"
       className="campus-img"
@@ -396,7 +372,7 @@ const locations = [
     cd: [28.548729, 77.18622],
     name: 'Vindhyachal Hostel',
     img: <img
-      src={vindy}
+      src="https://live.staticflickr.com/65535/50459604371_c04e428227_z.jpg"
       height="200"
       alt="Vindhyachal House"
       className="campus-img"
@@ -422,7 +398,7 @@ const locations = [
     cd: [28.54764, 77.185877],
     name: 'Shivalik Hostel',
     img: <img
-      src={shivalik}
+      src="https://live.staticflickr.com/65535/50459604666_0d0540c2e1_h.jpg"
       height="200"
       alt="Shivalik Hostel"
       className="campus-img"
@@ -448,7 +424,7 @@ const locations = [
     cd: [28.54667, 77.18626],
     name: 'Zanskar Hostel',
     img: <img
-      src={zanskar}
+      src="https://live.staticflickr.com/65535/50459772322_626c8584aa_b.jpg"
       height="200"
       alt="Zanskar Hostel"
       className="campus-img"
@@ -474,7 +450,7 @@ const locations = [
     cd: [28.549264, 77.185153],
     name: 'Kumaon Hostel',
     img: <img
-      src={kumaon}
+      src="https://live.staticflickr.com/65535/50458900283_bc0e7fd6f8_b.jpg"
       height="200"
       alt="Kumaon Hostel"
       className="campus-img"
@@ -500,7 +476,7 @@ const locations = [
     cd: [28.549678, 77.18394],
     name: 'Jwalamukhi Hostel',
     img: <img
-      src={jwala}
+      src="https://live.staticflickr.com/65535/50459772907_8b8d152b1c_b.jpg"
       height="200"
       alt="Jwalamukhi Hostel"
       className="campus-img"
@@ -526,7 +502,7 @@ const locations = [
     cd: [28.548771, 77.183583],
     name: 'Aravali Hostel',
     img: <img
-      src={aravali}
+      src="https://live.staticflickr.com/65535/50459605101_522b60b4e2_k.jpg"
       height="200"
       alt="Dogra Hall"
       className="campus-img"
@@ -578,7 +554,7 @@ const locations = [
     cd: [28.546281, 77.182476],
     name: 'Nilgiri Hostel',
     img: <img
-      src={nilgiri}
+      src="https://live.staticflickr.com/65535/50459604706_0434f8d318_b.jpg"
       height="200"
       alt="Nilgiri Hostel"
       className="campus-img"
@@ -604,7 +580,7 @@ const locations = [
     cd: [28.545202, 77.197092],
     name: 'Himadri Hostel',
     img: <img
-      src={himadri}
+      src="https://live.staticflickr.com/65535/50459772987_776b9e686f_h.jpg"
       height="200"
       alt="Himadri Hostel"
       className="campus-img"
@@ -630,7 +606,7 @@ const locations = [
     cd: [28.544632, 77.196963],
     name: 'Kailash Hostel',
     img: <img
-      src={kailash}
+      src="https://live.staticflickr.com/65535/50459772852_612a3efc97_k.jpg"
       height="200"
       alt="Kailash Hostel"
       className="campus-img"
@@ -708,7 +684,7 @@ const locations = [
     cd: [28.54571905400154, 77.19358921051027],
     name: 'Dept. of Biotechnology',
     img: <img
-      src={bbe}
+      src="https://live.staticflickr.com/65535/50466765793_a4b9589627_h.jpg"
       height="200"
       alt="Dept. of BBE"
       className="campus-img"
@@ -760,7 +736,7 @@ const locations = [
     cd: [28.54370308948772, 77.19027936458589],
     name: 'Hockey/Athletics Field',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/7Dv1I7JDUYjkMsGZwm5sMW3pcWYX8AkQPg4Ow36Rusu8SFk9QOx0jCsUiYrkwkpGi41D2P3JnGz8leBuX-A"
+      src="https://live.staticflickr.com/65535/50467605611_1a22770e16_k.jpg"
       height="200"
       alt="Athletics Field"
       className="campus-img"
@@ -837,7 +813,7 @@ const locations = [
     cd: [28.544833541630556, 77.18754887580873],
     name: 'Football Ground',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/q9lPqmVMcWFJJD4qMyQ1dFdfRZulrD8Tn_mk8HibHkXtmk-cBjul7_kDYQeqmKokjYeP1W-5kFvt2D36SGs"
+      src="https://live.staticflickr.com/65535/50467761162_634f65624d_b.jpg"
       height="200"
       alt="IITD Football"
       className="campus-img"
@@ -871,7 +847,7 @@ const locations = [
     />,
     category: 'sport',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The heart of IIT Delhi campus.',
     categoryIcon: (
       <a href="https://" className="c-btn git">
         <span>
@@ -915,7 +891,7 @@ const locations = [
     cd: [28.548183537902325, 77.18495249748231],
     name: 'Volleyball Courts',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/8nruri5RDpYLrj3mrDdGO0DnwX28XAZBV0_W8Jb1qi9lPOWHfsndAxOtVMKOhJE7kAyJx0dXpztgRy_GkHM"
+      src="https://live.staticflickr.com/65535/50467592356_69c00b5415_b.jpg"
       height="200"
       alt="Volleyball courts"
       className="campus-img"
@@ -941,7 +917,7 @@ const locations = [
     cd: [28.54758896789944, 77.18481838703157],
     name: 'Lawn Tennis Courts',
     img: <img
-      src="https://lh3.googleusercontent.com/proxy/8o9ZHMPOqTU6eyOrgjnXqPz-9Xe0MtSzTh6Qf2dkOKHjceZLcq7zIx3R3UTcdyn1YDzWDx7LoisIuT-0E2oOwmpJVb41VYUuL9QDPeD0ft7RTQLr5W3c-7JIXPklrDIHDPVofpbLUGBh3A"
+      src="https://live.staticflickr.com/65535/50467761857_6e21171774.jpg"
       height="200"
       alt="Lawn Tennis Court IITD"
       className="campus-img"
@@ -967,7 +943,7 @@ const locations = [
     cd: [28.544899, 77.19221],
     name: 'Department of Mathematics',
     img: <img
-      src="https://ggn.dronacharya.info/CSEDept/photogallery/2014/may_2014/images/1.jpg"
+      src="https://live.staticflickr.com/65535/50466928878_1c0515b941_c.jpg"
       height="200"
       alt="Dept Of Mathematics"
       className="campus-img"
@@ -993,7 +969,7 @@ const locations = [
     cd: [28.546115, 77.193850],
     name: 'Department of Chemical Engineering',
     img: <img
-      src={ch}
+      src="https://live.staticflickr.com/65535/50467622152_714b2d52c8_h.jpg"
       height="200"
       alt="Dept Of Chemical Engineering"
       className="campus-img"
@@ -1071,7 +1047,7 @@ const locations = [
     cd: [28.5452869, 77.1923669],
     name: 'Department of Humanities and Social Sciences',
     img: <img
-      src={huss}
+      src="https://live.staticflickr.com/65535/50467465486_cf388e618c_z.jpg"
       height="200"
       alt="Dept Of Humanities"
       className="campus-img"
@@ -1123,7 +1099,7 @@ const locations = [
     cd: [28.544346, 77.193415],
     name: 'Department of Material Science and Engineering',
     img: <img
-      src="https://lh5.googleusercontent.com/s-8Lll4XfcSpH3WoInIZOsri-exXBlXUY1ldc1-_HyCvhkENmYoR0Lj52hixPILEiymJYbO33Y6WxdSJg1a77w8ah-7y_wYOPpFYnSBiJD1jffDGsB4=w1280"
+      src="https://live.staticflickr.com/65535/50467530931_a44664b50c_c.jpg"
       height="200"
       alt="DMS IIT Delhi"
       className="campus-img"
@@ -1175,7 +1151,7 @@ const locations = [
     cd: [28.5452623, 77.1924184],
     name: 'Department of Physics',
     img: <img
-      src={dogra}
+      src="https://live.staticflickr.com/65535/50467552246_b54c3919f3.jpg"
       height="200"
       alt="Dept of Physics IIT Delhi"
       className="campus-img"
@@ -1383,7 +1359,7 @@ const locations = [
     cd: [28.5471611, 77.186354],
     name: 'Shadab Cafe',
     img: <img
-      src={shadab}
+      src="https://live.staticflickr.com/65535/50467465801_9d9f130c4e_b.jpg"
       height="200"
       alt="Shadab Cafe"
       className="campus-img"
@@ -1409,7 +1385,7 @@ const locations = [
     cd: [28.5483362, 77.1841118],
     name: 'Koolees',
     img: <img
-      src={koolees}
+      src="https://live.staticflickr.com/65535/50466766463_b01a3cd043_b.jpg"
       height="200"
       alt="Koolees"
       className="campus-img"
@@ -1565,7 +1541,7 @@ const locations = [
     cd: [28.5438559, 77.1933482],
     name: 'Chai Point',
     img: <img
-      src={cp}
+      src="https://live.staticflickr.com/65535/50467622212_b2a6d097a8_b.jpg"
       height="200"
       alt="Chai point"
       className="campus-img"
@@ -1591,7 +1567,7 @@ const locations = [
     cd: [28.5437328, 77.1930072],
     name: 'State Bank Of India',
     img: <img
-      src={sbi}
+      src="https://live.staticflickr.com/65535/50467622522_2176f5eb6c_h.jpg"
       height="200"
       alt="SBI"
       className="campus-img"
@@ -1617,7 +1593,7 @@ const locations = [
     cd: [28.5453426, 77.1909557],
     name: 'Computer Services Centre',
     img: <img
-      src={csc}
+      src="https://live.staticflickr.com/65535/50466766348_8a1f2ef27b_b.jpg"
       height="200"
       alt="CSC"
       className="campus-img"
@@ -1643,7 +1619,7 @@ const locations = [
     cd: [28.5450672, 77.1920865],
     name: 'Seminar Hall',
     img: <img
-      src={dogra}
+      src="https://live.staticflickr.com/65535/50468070382_cdef2478d7_k.jpg"
       height="200"
       alt="Sem Hall"
       className="campus-img"
@@ -1669,7 +1645,7 @@ const locations = [
     cd: [28.5427956, 77.1984536],
     name: 'Post Office',
     img: <img
-      src={po}
+      src="https://live.staticflickr.com/65535/50467622452_b22e18d821_b.jpg"
       height="200"
       alt="Post Office"
       className="campus-img"
@@ -1721,7 +1697,7 @@ const locations = [
     cd: [28.5423368, 77.1992711],
     name: 'Kids Planet School',
     img: <img
-      src={dogra}
+      src="https://live.staticflickr.com/65535/50466766363_db7d2beecd_z.jpg"
       height="200"
       alt="Kids Planet School"
       className="campus-img"

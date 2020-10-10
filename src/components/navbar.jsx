@@ -1,7 +1,7 @@
 import anime from 'animejs';
 import React, { useState, useRef } from 'react';
 import * as Icon from 'react-feather';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useLockBodyScroll, useWindowSize, useMount } from 'react-use';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
@@ -27,6 +27,7 @@ function Navbar({
 
   useLockBodyScroll(expand);
   const windowSize = useWindowSize();
+  const history = useHistory();
 
   return (
     <div className="Navbar">
@@ -165,6 +166,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setHometextVisibility(false)}
+              onClick={() => history.push('/home')}
             >
               { !showHomeText && (
               <Icon.Home
@@ -197,6 +199,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setClubtextVisibility(false)}
+              onClick={() => history.push('/clubs')}
             >
               { !showClubText && (
               <Icon.Users
@@ -230,6 +233,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setEventstextVisibility(false)}
+              onClick={() => history.push('/events')}
             >
               { !showEventsText && (
               <Icon.Calendar
@@ -263,6 +267,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setNewstextVisibility(false)}
+              onClick={() => history.push('/news')}
             >
               { !showNewsText && (
               <Icon.Rss
@@ -295,6 +300,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setCampustextVisibility(false)}
+              onClick={() => history.push('/news')}
             >
               { !showCampusText && (
               <Icon.MapPin
@@ -328,6 +334,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setHostelstextVisibility(false)}
+              onClick={() => history.push('/hostels')}
             >
               { !showHostelsText && (
               <Icon.Briefcase
@@ -361,6 +368,7 @@ function Navbar({
                 setLinkstextVisibility(false);
               }}
               onMouseLeave={() => setMaptextVisibility(false)}
+              onClick={() => history.push('/map')}
             >
               { !showMapText && (
               <Icon.Map
@@ -393,6 +401,7 @@ function Navbar({
                 setMaptextVisibility(false);
               }}
               onMouseLeave={() => setLinkstextVisibility(false)}
+              onClick={() => history.push('/links')}
             >
               { !showLinksText && (
               <Icon.Link
@@ -432,6 +441,7 @@ function Navbar({
 function Expand({ pages, setExpand, toggleOpen }) {
   const expandElement = useRef(null);
   const windowSize = useWindowSize();
+  const history = useHistory();
 
   function collapse() {
     setExpand(false);
@@ -483,6 +493,7 @@ function Expand({ pages, setExpand, toggleOpen }) {
                   onClick={() => {
                     setExpand(false);
                     toggleOpen();
+                    history.push(page.pageLink);
                   }}
                 >
                   <span

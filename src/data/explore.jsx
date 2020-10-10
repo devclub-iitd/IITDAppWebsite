@@ -18,7 +18,7 @@ const explore = [
     desc:
             'ACES ACM is the Computer Science department society of IIT Delhi.',
     extraIcon: '',
-    facebookUrl: 'https://www.facebook.com/acesacm/about/?ref=page_internal',
+    facebookUrl: 'https://www.facebook.com/acesacm',
     instaUrl: '',
     linkedinUrl: '',
     webUrl: 'http://www.cse.iitd.ac.in/aces-acm',
@@ -209,7 +209,7 @@ const explore = [
       className="card-img"
     />,
     desc:
-            'Dev Club is a community of tech-minded people in IIT Delhi. Dev Club is a community of tech-minded people in IIT Delhi.',
+            'Dev Club is a community of tech-minded people in IIT Delhi.',
     extraIcon: (
       <a href="https://github.com/devclub-iitd" className="c-btn git">
         <Icon.GitHub height="30" strokeWidth="2" />

@@ -1,17 +1,5 @@
 import React from 'react';
 import * as Icon from 'react-feather';
-import aravali from '../assets/hostels/aravali.png';
-import girnar from '../assets/hostels/girnar.jpeg';
-import himadri from '../assets/hostels/himadri.png';
-import jwala from '../assets/hostels/jwala.png';
-import kailash from '../assets/hostels/kailash.png';
-import kumaon from '../assets/hostels/kumaon.jpg';
-import nilgiri from '../assets/hostels/nilgiri.jpeg';
-import satpura from '../assets/hostels/satpura.jpg';
-import shivalik from '../assets/hostels/shivalik.png';
-import udaigiri from '../assets/hostels/udaigiri.jpg';
-import vindy from '../assets/hostels/vindy.jpg';
-import zanskar from '../assets/hostels/zanskar.jpg';
 
 const hostels = [
   {
@@ -31,7 +19,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/mWKenH5ZZrESUHVD8',
     learnUrl: '',
-    image: <img src={aravali} alt="Aravali Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459605101_522b60b4e2_k.jpg" alt="Aravali Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Dr SUDARSHAN GHOSH, Associate Professor, Department of Mechanical Engineering',
     wardenLink: 'http://web.iitd.ac.in/~ghoshs/',
@@ -63,7 +51,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/w63tTyrBJgxzAkHc8',
     learnUrl: '',
-    image: <img src={girnar} alt="Girnar Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50458900598_f798439126_w.jpg" alt="Girnar Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Dr. D. Sundar, Professor and Head, Department of Biochemical Engineering and Biotechnology',
     wardenLink: 'http://web.iitd.ac.in/~sundar/index.html',
@@ -89,7 +77,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/uzupEtgPEoAg1vPq6',
     learnUrl: '',
-    image: <img src={himadri} alt="Himadri Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459772987_776b9e686f_h.jpg" alt="Himadri Hostel" className="card-img" />,
     for: 'girls',
     warden: 'Dr. Sreedevi Upadhyayula, Professor, Department of Chemical Engineering',
     wardenLink: 'http://web.iitd.ac.in/~sreedevi/biosketch.html',
@@ -115,7 +103,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/eAmS1TsNP5m1LnDh6',
     learnUrl: '',
-    image: <img src={jwala} alt="Jwalamukhi Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459772907_8b8d152b1c_b.jpg" alt="Jwalamukhi Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Ravi P. Singh, Associate Professor, Department of Chemistry',
     wardenLink: 'https://sites.google.com/site/ccsliitdelhi/home',
@@ -147,7 +135,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/eD7q11byMmBTYRfB7',
     learnUrl: '',
-    image: <img src={kailash} alt="Kailash Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459772852_612a3efc97_k.jpg" alt="Kailash Hostel" className="card-img" />,
     for: 'girls',
     warden: 'Dr. Seema Sharma, Professor, Department of Management Studies',
     wardenLink: 'http://web.iitd.ac.in/~seemash/contact.html',
@@ -212,7 +200,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/Kze1176A9LS8TrPG7',
     learnUrl: '',
-    image: <img src={kumaon} alt="Kumaon Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50458900283_bc0e7fd6f8_b.jpg" alt="Kumaon Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Rajendra S. Dhaka, Associate Professor , Department of Physics',
     wardenLink: 'http://web.iitd.ac.in/~rsdhaka/',
@@ -246,7 +234,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/JgHDHNw9WYRDckFn6',
     learnUrl: '',
-    image: <img src={nilgiri} alt="Nilgiri Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459604706_0434f8d318_b.jpg" alt="Nilgiri Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Abhijit Majumdar, Professor, Department of Textile Technology',
     wardenLink: 'http://textile.iitd.ac.in/faculty/majumdar/majumdar.html',
@@ -282,7 +270,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/c7UZDwrC8wKhPdXb8',
     learnUrl: '',
-    image: <img src={satpura} alt="Satpura Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50458901523_5df7dbc4ad_h.jpg" alt="Satpura Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Sudip Kumar Pattanayek, Professor, Department of Chemical Engineering',
     wardenLink: 'http://web.iitd.ac.in/~sudip/',
@@ -308,7 +296,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/ujqQ6UiyD38w8KDy5',
     learnUrl: '',
-    image: <img src={shivalik} alt="Shivalik Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459604666_0d0540c2e1_h.jpg" alt="Shivalik Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Dipayan Das, Professor, Department of Textile Technology',
     wardenLink: 'http://textile.iitd.ac.in/faculty/dipayan/dipayandas.html',
@@ -340,7 +328,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/1KjtHKaA37fSdiq8A',
     learnUrl: '',
-    image: <img src={udaigiri} alt="Udaigiri Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50458900058_be4bb438a6_z.jpg" alt="Udaigiri Hostel" className="card-img" />,
     for: 'boys',
     warden: 'RS Sarangi, Department of Computer Science & Engineering',
     wardenLink: 'http://www.cse.iitd.ac.in/~srsarangi/contact.html',
@@ -366,7 +354,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/ek7e1odhwHGSoSkq5',
     learnUrl: '',
-    image: <img src={vindy} alt="Vindhyachal Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459604371_c04e428227_z.jpg" alt="Vindhyachal Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Dr, Dipti Ranjan Sahoo, Associate Professor, Structural Engineering Section',
     wardenLink: 'http://web.iitd.ac.in/~drsahoo/',
@@ -392,7 +380,7 @@ const hostels = [
     ),
     mapUrl: 'https://goo.gl/maps/ZgxCSeRtxHGF1PdUA',
     learnUrl: '',
-    image: <img src={zanskar} alt="Zanskar Hostel" className="card-img" />,
+    image: <img src="https://live.staticflickr.com/65535/50459772322_626c8584aa_b.jpg" alt="Zanskar Hostel" className="card-img" />,
     for: 'boys',
     warden: 'Saif K Mohammed, Associate Professor, Department of Electrical Engineering',
     wardenLink: 'http://web.iitd.ac.in/~saifkm/',

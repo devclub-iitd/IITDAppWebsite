@@ -30,7 +30,7 @@ function ExploreCard({ exploreObj, show }) {
             </div>
 
             {exploreObj.fbUrl !== '' && (
-            <a className="c-btn fb" href={exploreObj.fbUrl}>
+            <a className="c-btn fb" href={exploreObj.facebookUrl}>
               <span>
                 <Icon.Facebook height="30" strokeWidth="2" />
               </span>
