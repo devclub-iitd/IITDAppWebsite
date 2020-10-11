@@ -5,7 +5,7 @@ services:
         build: .
         image: "${REGISTRY_NAME}devclubiitd/iitdappwebsite:1.0"
         ports:
-            - 3000
+            - 80
         restart: 'unless-stopped'
         networks:
             - "internal"
