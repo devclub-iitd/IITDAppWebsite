@@ -5,12 +5,6 @@ import convergenz from '../assets/events/convergenz.svg';
 import literati from '../assets/events/literati.svg';
 import sportech from '../assets/events/sportech.png';
 import BECon from '../assets/events/BECon.png';
-import rdvBg from '../assets/events/rdv19.jpg';
-import trystBg from '../assets/events/trystBg.jpeg';
-import convergenzBg from '../assets/events/convergenzBG.jpg';
-import literatiBg from '../assets/events/literatiBG.png';
-import BEConBg from '../assets/events/BEConBG.jpg';
-import sportechBg from '../assets/events/sportechBG.jpg';
 
 const events = [
   {
@@ -27,7 +21,7 @@ const events = [
     instaLink:
             'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwin2LXfq5vqAhXJV30KHbhVCG8QFjACegQIARAB&url=https%3A%2F%2Fwww.instagram.com%2Frendezvous.iitd%2F%3Fhl%3Den&usg=AOvVaw2xk_tl5yvdZ8AgD9KXGrHM',
     vectorLogo: <img src={rdv} alt="RDV Logo" />,
-    bgImg: rdvBg,
+    bgImg: 'https://live.staticflickr.com/65535/50459249748_d96f982031_k.jpg',
   },
   {
     id: 1,
@@ -43,7 +37,7 @@ const events = [
     instaLink:
             'https://www.instagram.com/trystiitd/',
     vectorLogo: <img src={tryst} alt="Tryst Logo" style={{ position: 'static' }} />,
-    bgImg: trystBg,
+    bgImg: 'https://live.staticflickr.com/65535/50460122707_8bb3592529_b.jpg',
   },
   {
     id: 2,
@@ -58,7 +52,7 @@ const events = [
     instaLink:
                 'https://instagram.com/bsw_iitd?igshid=tk3g77eeb4fc',
     vectorLogo: <img src={convergenz} alt="Convergenz Logo" />,
-    bgImg: convergenzBg,
+    bgImg: 'https://live.staticflickr.com/65535/50460121327_ebed10faa8_z.jpg',
   },
   {
     id: 3,
@@ -73,7 +67,7 @@ const events = [
     instaLink:
                     'https://instagram.com/bsp.iitdelhi?igshid=1373knzn0sswz',
     vectorLogo: <img src={literati} alt="Literati Logo" />,
-    bgImg: literatiBg,
+    bgImg: 'https://live.staticflickr.com/65535/50460121442_8912abc234_k.jpg',
   },
   {
     id: 4,
@@ -88,7 +82,7 @@ const events = [
     instaLink:
                         'https://instagram.com/edc_iitd?igshid=1r47o3s7lqj0k',
     vectorLogo: <img src={BECon} alt="BECon Logo" />,
-    bgImg: BEConBg,
+    bgImg: 'https://live.staticflickr.com/65535/50460121202_199b9e4b5a_c.jpg',
   },
   {
     id: 5,
@@ -103,7 +97,7 @@ const events = [
     instaLink:
                             'https://instagram.com/sportech.iitd?igshid=16rz1ey6al2p',
     vectorLogo: <img src={sportech} alt="Sportech Logo" />,
-    bgImg: sportechBg,
+    bgImg: 'https://live.staticflickr.com/65535/50459955396_3d9644609e_k.jpg',
   },
 ];
 

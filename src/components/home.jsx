@@ -2,17 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as Icon from 'react-feather';
 import { useWindowSize } from 'react-use';
-import iitd from '../assets/home/iitd.jpg';
-import iitSign from '../assets/home/iit-sign.jpg';
-import graffiti from '../assets/home/graffiti.png';
-import dogra from '../assets/home/dogra-roof.jpg';
-import lhc from '../assets/home/lhc.jpg';
 
 function Home() {
   const windowSize = useWindowSize();
   return (
     <div className="home-banner">
-      <img src={iitd} alt="IITD Main Building" className="home-img-1" />
+      <img src="https://live.staticflickr.com/65535/50459857877_5d435e30b3_k.jpg" alt="IITD Main Building" className="home-img-1" />
       <div className="top-left-1">
         Indian Institute of Technology
         <span>
@@ -27,7 +22,7 @@ function Home() {
         in science, engineering and technology In India.
       </div>
       <img
-        src={iitSign}
+        src="https://live.staticflickr.com/65535/50459690276_51867a2164_k.jpg"
         alt="IITD Main Building"
         className="home-img-2"
       />
@@ -106,17 +101,17 @@ function Home() {
         </div>
 
         {windowSize.width < 769 && (
-        <img src={graffiti} alt="IITD" className="home-img-3" />
+        <img src="https://live.staticflickr.com/65535/50459858007_895ddb3c6c_h.jpg" alt="IITD" className="home-img-3" />
         )}
       </div>
       {windowSize.width < 769 && (
-        <img src={dogra} alt="IITD Dogra Hall" className="home-img-4" />
+        <img src="https://live.staticflickr.com/65535/50459856472_c961b60d1e_k.jpg" alt="IITD Dogra Hall" className="home-img-4" />
       )}
       {windowSize.width >= 769 && (
-        <img src={graffiti} alt="IITD" className="home-img-3" />
+        <img src="https://live.staticflickr.com/65535/50459858007_895ddb3c6c_h.jpg" alt="IITD" className="home-img-3" />
       )}
       {windowSize.width >= 769 && (
-        <img src={lhc} alt="IITD LHC" className="home-img-5" />
+        <img src="https://live.staticflickr.com/65535/50459857907_bca5c87a2b_k.jpg" alt="IITD LHC" className="home-img-5" />
       )}
       <p className="disc">
         {' '}
