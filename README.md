@@ -20,6 +20,9 @@ An overview of all the student hostel facilities available at IIT Delhi. Listing
 #### Map
 The campus map of IIT Delhi, built using [React Leaflet](https://react-leaflet.js.org/)
 
+### Deployed at
+<http://campus.devclub.in>
+
 ### Live preview
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b76d0eaa-960a-48b9-91fa-db744d51ebb5/deploy-status)](https://app.netlify.com/sites/iitdwebapp/deploys)\
