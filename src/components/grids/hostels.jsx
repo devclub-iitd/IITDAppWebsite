@@ -41,7 +41,7 @@ class HostelGrid extends React.Component {
         name: 'Aravali Hostel',
         est: 1965,
         description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet.sit amet.',
+                    'Aravali is one of the oldest hostels, abode of the Ara Knights! It has a capacity of over 400 residents.',
         category: (
           <div className="c-btn fb">
             <span className="hostel-link">

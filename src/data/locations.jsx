@@ -302,7 +302,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'One of the latest hostels in the campus, the red bricked building has a capacity of over 600 residents.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -328,7 +328,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The newest and arguably the biggest hostel at IIT Delhi with a capacity of over 600 residents.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -354,7 +354,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Satpura houses around 450 \'Samurais\' and being a new hostel, has some cool architecture.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -380,7 +380,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'One of the oldest hostels in IIT Delhi, Vindhyachal is also the smallest with a capacity of under 400. Jai Vindy!',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -406,7 +406,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The oldest hostel of IIT Delhi, Shivalik has a capacity of around 420 residents. Jai Shiva!',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -432,7 +432,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Zanskar has a unique infrastructure and is one of the newer hostels. It houses ~450 students.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -458,7 +458,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Kumaon has around 440 residents and is one of the oldest hostels in the campus.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -484,7 +484,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'One of the oldest hostels, Jwala house 450 \'dragons\', often heard chanting "Jai Jwala!"',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -510,7 +510,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Aravali is one of the oldest hostels, abode of the Ara Knights! It has a capacity of over 400 residents.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -536,7 +536,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'With 450 residents, Karakoram or \'Kara\' goes by the motto सर्वश्रेष्ठम् सर्वसुंदरम् काराकोरम् काराकोरम्',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -562,7 +562,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Nilgiri is home to ~410 \'Nilgirites\'. Lovingly called Nil, memories made here are nything but nil',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -588,7 +588,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'The second girls\' hostel, Himadri has over 450 residents and boasts of its food outlet BBC- Best Brains Cafe',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
@@ -614,7 +614,7 @@ const locations = [
     />,
     category: 'hostel',
     desc:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
+            'Kailash is the first girls\' hostel @ IITD, with the motto "Burn to Emerge". It is home to 450 students.',
     categoryIcon: (
       <a href="https://" className="c-btn fb">
         <span>
