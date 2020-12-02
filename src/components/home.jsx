@@ -17,7 +17,7 @@ function Home() {
         Hauz Khas, New Delhi
       </div>
       <div className="top-left-2">
-        Estabilished in 1961, IIT Delhi is one of the 15 IITs created to
+        Estabilished in 1961, IIT Delhi is one of the 23 IITs created to
         be Centres of Excellence for training, research and development
         in science, engineering and technology In India.
       </div>
